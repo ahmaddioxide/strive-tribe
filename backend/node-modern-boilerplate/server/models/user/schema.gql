@@ -1,0 +1,15 @@
+scalar DateTime
+
+type User {
+  id: String
+  email: String
+  roles: [String!]
+}
+
+type Query {
+  me: User
+}
+
+type Mutation {
+  updateUser(password: String): User
+}

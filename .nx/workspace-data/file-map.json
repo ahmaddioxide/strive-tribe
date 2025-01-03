@@ -1,0 +1,296 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.3.0",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "lobay": [
+        {
+          "file": ".nx/workspace-data/d/daemon.log",
+          "hash": "8700481662160096544"
+        },
+        {
+          "file": ".nx/workspace-data/file-map.json",
+          "hash": "8879548126959142143"
+        },
+        {
+          "file": ".nx/workspace-data/project-graph.json",
+          "hash": "16579391568286193"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/.editorconfig",
+          "hash": "17597215387590408262"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/.env-example",
+          "hash": "13385249849962943485"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/.gitattributes",
+          "hash": "9373922340063931806"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/.gitignore",
+          "hash": "1318651487374395602"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/.vscode/launch.json",
+          "hash": "11746106616702383209"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/.vscode/settings.json",
+          "hash": "4771696118532718172"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/Procfile",
+          "hash": "8730677090721263354"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/README.md",
+          "hash": "7426728768175929501"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/appspec.yml",
+          "hash": "4586196762432535426"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/ava.config.js",
+          "hash": "3878165080763716504"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/buildspec.yml",
+          "hash": "141501657576163221"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/cli/_validation.ts",
+          "hash": "8015044079963999179"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/cli/createAdmin.ts",
+          "hash": "17815714040392888930"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/aws.ts",
+          "hash": "1283905175498248930"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/env.ts",
+          "hash": "13620129728689102937"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/express.ts",
+          "hash": "14399426639322186002"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/forestadmin.ts",
+          "hash": "2036778814974807154"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/graphql/index.ts",
+          "hash": "9759885500639714882"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/graphql/merge.ts",
+          "hash": "12319359417359042338"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/logger.ts",
+          "hash": "9301133370074472563"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/mongoose.ts",
+          "hash": "17195783932166596145"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/config/sentry.ts",
+          "hash": "8861546359593232636"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/docker-compose.yml",
+          "hash": "16195782339099615203"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/email-templates/action.handlebars",
+          "hash": "4004683724188366757"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/email-templates/alert.handlebars",
+          "hash": "17255549772935274768"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/email-templates/info.handlebars",
+          "hash": "12633576212324849481"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/email-templates/welcome.handlebars",
+          "hash": "1092733198632798980"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/nodemon.json",
+          "hash": "7586960176287468382"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/package-lock.json",
+          "hash": "6420232994206715642"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/package.json",
+          "hash": "7318262361152936332"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/controllers/auth.controller.ts",
+          "hash": "4583309409804413300"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/helpers/auth.ts",
+          "hash": "15822463121383662851"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/helpers/email.ts",
+          "hash": "13768581159094783331"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/helpers/error.ts",
+          "hash": "4128760282627606232"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/helpers/random.ts",
+          "hash": "16358504612558003002"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/helpers/regex.ts",
+          "hash": "3601824012928634911"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/helpers/s3.ts",
+          "hash": "6483163993061884869"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/helpers/validation.ts",
+          "hash": "8126308685033611139"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/index.ts",
+          "hash": "10412394419926672707"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/models/index.ts",
+          "hash": "18437385031628611182"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/models/user/model.ts",
+          "hash": "9019680982709586002"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/models/user/mutations.ts",
+          "hash": "15550227904890041302"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/models/user/query.ts",
+          "hash": "11129110508249585642"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/models/user/resolvers.ts",
+          "hash": "4453960334236770174"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/models/user/schema.gql",
+          "hash": "5035521586780955588"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/public_routes/auth/index.ts",
+          "hash": "8337964637571096148"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/public_routes/auth/validation.ts",
+          "hash": "14453400003892329985"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/public_routes/index.ts",
+          "hash": "433492463789898090"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/public_routes/misc/index.ts",
+          "hash": "697697280294364710"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/server/system/ratelimiter.ts",
+          "hash": "2263424293608402391"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/helpers/mongo.ts",
+          "hash": "8210053492701131346"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/helpers/request.ts",
+          "hash": "8919339416304971212"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/helpers/time.ts",
+          "hash": "1903742972831076348"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/helpers/user.ts",
+          "hash": "5477631650608412733"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/helpers/validation.ts",
+          "hash": "76322644988498184"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/login.test.ts",
+          "hash": "17019705747292120634"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/misc.test.ts",
+          "hash": "12574003717757897925"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/register.test.ts",
+          "hash": "12754175258378798043"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/system.test.ts",
+          "hash": "3485577631135994335"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tests/user.test.ts",
+          "hash": "10135303900072746329"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tsconfig.json",
+          "hash": "1829835296314536327"
+        },
+        {
+          "file": "backend/node-modern-boilerplate/tslint.json",
+          "hash": "15739071662859348066"
+        },
+        {
+          "file": "node_modules/@nx/nx-linux-x64-musl/nx.linux-x64-musl.node",
+          "hash": "15337223597566561026"
+        },
+        {
+          "file": "node_modules/@nx/nx-linux-x64-musl/package.json",
+          "hash": "9314073018901737369"
+        },
+        {
+          "file": "nx.json",
+          "hash": "2933536800231048536"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "12830447472529214810"
+        },
+        {
+          "file": "package.json",
+          "hash": "12659770607341631697",
+          "deps": [
+            "npm:nx"
+          ]
+        }
+      ]
+    }
+  }
+}

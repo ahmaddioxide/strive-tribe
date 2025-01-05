@@ -2,278 +2,200 @@
   "version": "6.0",
   "nxVersion": "20.3.0",
   "pathMappings": {},
-  "nxJsonPlugins": [],
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
+  ],
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
       "lobay": [
         {
           "file": ".gitignore",
-          "hash": "1994955502262352077"
+          "hash": "7663861978715868291"
         },
         {
-          "file": "apps/backend/node-modern-boilerplate/.editorconfig",
-          "hash": "17597215387590408262"
+          "file": ".prettierignore",
+          "hash": "14688272390704683536"
         },
         {
-          "file": "apps/backend/node-modern-boilerplate/.env-example",
-          "hash": "13385249849962943485"
+          "file": ".prettierrc",
+          "hash": "16267754514737964994"
         },
         {
-          "file": "apps/backend/node-modern-boilerplate/.gitattributes",
-          "hash": "9373922340063931806"
+          "file": "eslint.config.cjs",
+          "hash": "4219588132382477313",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
         },
         {
-          "file": "apps/backend/node-modern-boilerplate/.gitignore",
-          "hash": "1318651487374395602"
+          "file": "jest.config.ts",
+          "hash": "3494843969422251966",
+          "deps": [
+            "npm:@nx/jest"
+          ]
         },
         {
-          "file": "apps/backend/node-modern-boilerplate/.vscode/launch.json",
-          "hash": "11746106616702383209"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/.vscode/settings.json",
-          "hash": "4771696118532718172"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/Procfile",
-          "hash": "8730677090721263354"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/README.md",
-          "hash": "7426728768175929501"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/appspec.yml",
-          "hash": "4586196762432535426"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/ava.config.js",
-          "hash": "3878165080763716504"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/buildspec.yml",
-          "hash": "141501657576163221"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/cli/_validation.ts",
-          "hash": "8015044079963999179"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/cli/createAdmin.ts",
-          "hash": "17815714040392888930"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/aws.ts",
-          "hash": "1283905175498248930"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/env.ts",
-          "hash": "13620129728689102937"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/express.ts",
-          "hash": "14399426639322186002"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/forestadmin.ts",
-          "hash": "2036778814974807154"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/graphql/index.ts",
-          "hash": "9759885500639714882"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/graphql/merge.ts",
-          "hash": "12319359417359042338"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/logger.ts",
-          "hash": "9301133370074472563"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/mongoose.ts",
-          "hash": "17195783932166596145"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/config/sentry.ts",
-          "hash": "8861546359593232636"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/docker-compose.yml",
-          "hash": "16195782339099615203"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/email-templates/action.handlebars",
-          "hash": "4004683724188366757"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/email-templates/alert.handlebars",
-          "hash": "17255549772935274768"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/email-templates/info.handlebars",
-          "hash": "12633576212324849481"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/email-templates/welcome.handlebars",
-          "hash": "1092733198632798980"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/nodemon.json",
-          "hash": "7586960176287468382"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/package-lock.json",
-          "hash": "6420232994206715642"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/package.json",
-          "hash": "7318262361152936332"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/controllers/auth.controller.ts",
-          "hash": "4583309409804413300"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/helpers/auth.ts",
-          "hash": "15822463121383662851"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/helpers/email.ts",
-          "hash": "13768581159094783331"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/helpers/error.ts",
-          "hash": "4128760282627606232"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/helpers/random.ts",
-          "hash": "16358504612558003002"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/helpers/regex.ts",
-          "hash": "3601824012928634911"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/helpers/s3.ts",
-          "hash": "6483163993061884869"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/helpers/validation.ts",
-          "hash": "8126308685033611139"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/index.ts",
-          "hash": "10412394419926672707"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/models/index.ts",
-          "hash": "18437385031628611182"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/models/user/model.ts",
-          "hash": "9019680982709586002"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/models/user/mutations.ts",
-          "hash": "15550227904890041302"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/models/user/query.ts",
-          "hash": "11129110508249585642"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/models/user/resolvers.ts",
-          "hash": "4453960334236770174"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/models/user/schema.gql",
-          "hash": "5035521586780955588"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/public_routes/auth/index.ts",
-          "hash": "8337964637571096148"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/public_routes/auth/validation.ts",
-          "hash": "14453400003892329985"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/public_routes/index.ts",
-          "hash": "433492463789898090"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/public_routes/misc/index.ts",
-          "hash": "697697280294364710"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/server/system/ratelimiter.ts",
-          "hash": "2263424293608402391"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/helpers/mongo.ts",
-          "hash": "8210053492701131346"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/helpers/request.ts",
-          "hash": "8919339416304971212"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/helpers/time.ts",
-          "hash": "1903742972831076348"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/helpers/user.ts",
-          "hash": "5477631650608412733"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/helpers/validation.ts",
-          "hash": "76322644988498184"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/login.test.ts",
-          "hash": "17019705747292120634"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/misc.test.ts",
-          "hash": "12574003717757897925"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/register.test.ts",
-          "hash": "12754175258378798043"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/system.test.ts",
-          "hash": "3485577631135994335"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tests/user.test.ts",
-          "hash": "10135303900072746329"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tsconfig.json",
-          "hash": "1829835296314536327"
-        },
-        {
-          "file": "apps/backend/node-modern-boilerplate/tslint.json",
-          "hash": "15739071662859348066"
+          "file": "jest.preset.js",
+          "hash": "9430166341120122740",
+          "deps": [
+            "npm:@nx/jest"
+          ]
         },
         {
           "file": "nx.json",
-          "hash": "2933536800231048536"
+          "hash": "5865172469346868646"
         },
         {
           "file": "package-lock.json",
-          "hash": "9980739708415350588"
+          "hash": "15487447064644580311"
         },
         {
           "file": "package.json",
-          "hash": "2369871375529585950",
+          "hash": "177815876433551754",
           "deps": [
+            "npm:@eslint/js",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
             "npm:@nx/express",
+            "npm:@nx/jest",
+            "npm:@nx/js",
+            "npm:@nx/node",
+            "npm:@nx/web",
+            "npm:@nx/webpack",
+            "npm:@pmmmwh/react-refresh-webpack-plugin",
+            "npm:@svgr/webpack",
+            "npm:@swc-node/register",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:jest",
+            "npm:jest-environment-node",
             "npm:nx",
+            "npm:prettier",
+            "npm:react-refresh",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:webpack-cli",
+            "npm:axios",
             "npm:express"
+          ]
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "16936441711144470533"
+        }
+      ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
+        }
+      ],
+      "my-express-api": [
+        {
+          "file": "apps/my-express-api/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api/jest.config.ts",
+          "hash": "3923302940049323941"
+        },
+        {
+          "file": "apps/my-express-api/project.json",
+          "hash": "6165743298282356474"
+        },
+        {
+          "file": "apps/my-express-api/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/my-express-api/src/main.ts",
+          "hash": "16539378517884709050",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/tsconfig.app.json",
+          "hash": "7882563681638815931"
+        },
+        {
+          "file": "apps/my-express-api/tsconfig.json",
+          "hash": "3490524966360018312"
+        },
+        {
+          "file": "apps/my-express-api/tsconfig.spec.json",
+          "hash": "6622138706846345436"
+        },
+        {
+          "file": "apps/my-express-api/webpack.config.js",
+          "hash": "9206641348907792653",
+          "deps": [
+            "npm:@nx/webpack"
           ]
         }
       ]

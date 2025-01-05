@@ -190,3 +190,12 @@ Node.js v20.18.1
 [NX Daemon Server] - 2025-01-05T14:30:25.957Z - Time taken for 'total for creating and serializing project graph' 2.858918000012636ms
 [NX Daemon Server] - 2025-01-05T14:30:25.961Z - Done responding to the client project-graph
 [NX Daemon Server] - 2025-01-05T14:30:25.961Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 3. Response time: 6.
+[NX Daemon Server] - 2025-01-05T14:35:25.012Z - Closed a connection. Number of open connections: 4
+[NX Daemon Server] - 2025-01-05T14:35:25.012Z - Closed a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-01-05T14:36:10.212Z - [WATCHER]: .gitignore was modified
+[NX Daemon Server] - 2025-01-05T14:36:10.213Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-01-05T14:36:10.213Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-01-05T14:36:10.213Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-01-05T14:36:10.214Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-01-05T14:36:10.215Z - [WATCHER]: Stopping the watcher for /home/hamza/Documents/Hamza-Taimoor/lobay (sources)
+[NX Daemon Server] - 2025-01-05T14:36:10.215Z - [WATCHER]: Stopping the watcher for /home/hamza/Documents/Hamza-Taimoor/lobay (outputs)

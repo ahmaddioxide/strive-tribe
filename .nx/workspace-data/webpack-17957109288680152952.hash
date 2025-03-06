@@ -1,5 +1,5 @@
 {
-  "11176685199468841581": {
+  "9848558159960384024": {
     "targets": {
       "build": {
         "command": "webpack-cli build",
@@ -104,6 +104,17 @@
           "buildTarget": "build",
           "spa": true
         }
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "npx nx watch --projects my-express-api --includeDependentProjects -- npx nx build-deps my-express-api"
       }
     },
     "metadata": {}

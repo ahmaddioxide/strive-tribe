@@ -6,9 +6,17 @@
       <excludeFolder url="file://$MODULE_DIR$/apps/lobay_app/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/apps/lobay_app/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/apps/lobay_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.nx/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.nx/workspace-data" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/Runner.xcworkspace/xcuserdata" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>

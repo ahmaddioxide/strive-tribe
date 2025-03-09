@@ -1,0 +1,3016 @@
+<changelist name="Uncommitted_changes_before_Update_at_09_03_2025,_4_09 PM_[Changes]" date="1741518578779" recycled="false" toDelete="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_03_2025,_4_09 PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 09/03/2025, 4:09 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/mutate.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/resolve.exports/dist/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/plugins/installed-plugins.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/core/dist/emnapi-core.min.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/assert-supported-platform.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/node_modules/.bin/semver" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/configuration.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/block-hoist-plugin.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/composer.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/helpers/environment.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/enquirer/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/filesystem.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/strip-ansi/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-unicode-supported/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-19-2-4/set-project-name.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/isolation/plugin-pool.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/try-path.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/react-is/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-wsl/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/add-nx-to-nest.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/get-registered-sync-generators.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/module-types.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/util/clone-deep.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/add-vite-commands-to-package-scripts.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/hasher/native-task-hasher-impl.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/utilities/axios.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/build-dependencies/typescript-import-locator.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/build-project-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/get-context-file-data.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/common/map.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ansi-colors/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/define-lazy-prop/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/util-empty-scalar-position.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/update-workspace-context.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/stringifyNumber.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/resolve-flow-collection.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-docker/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/compose-doc.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs-parser/build/index.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/utils/resolve-relative-to-dir.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/buffer/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/wrappy/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/lines-and-columns/build/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/Pair.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/hasher/hasher.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/float.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/utils/find-project-for-path.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/output.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/update-manager.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/node_modules/semver/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/git.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/cache.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/flow.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/get-sync-generator-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/affected/tsconfig-json-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/stringifyComment.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/errors.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/dot-nx/add-nx-scripts.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/try-path.test.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-regexp-features-plugin/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/native-file-cache-location.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/chalk/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/ts-node-esm" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/resolve-block-map.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/helpers/helpers.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/static-run-many-terminal-output-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/lines-and-columns/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/utils/normalize-project-nodes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/package-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/sprintf-js/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/validation/removed.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/register.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/ast.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/grammars/syml.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/equal.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/affected/lock-file-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/base.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/escape.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/markdown.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/json-schema.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/string-width/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/file/babel-7-helpers.cjs.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/get-touched-projects-for-group.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/release.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/params.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/deprecated/command-objects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/restore-cursor/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/wasi-worker.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/unescape.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/check-for-custom-webpack-setup.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/calculate-default-project-name.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/parser" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/dot-nx/nxw.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/package.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/base64-js/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/task-results-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/pretty-time.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/visit.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/legacy-task-history.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/util-flow-indent-check.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/node_modules/semver/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-20-0-1/use-legacy-cache.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/filesystem.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/string_decoder/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/hash.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/tags.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/project-graph-builder.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/lib/decorators.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/YAMLSeq.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/report/report.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/tsconfig-loader.test.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/lib/platform-shims/browser.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/graph/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/run-command.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/examples.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/connect/view-logs.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/plugins/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/pseudo-ipc.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/ast.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/brace-expressions.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/json/schema.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/config-loader.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/resolve-block-seq.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/bool.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/parse/lexer.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-regexp-features-plugin/lib/features.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/gensync-utils/functional.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/watcher.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/src/config/files/index-browser.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/format/format.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/utils/packages.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/devkit-testing-exports.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/dynamic-run-one-terminal-output-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/axios.min.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/plugin.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/activate-powerpack/activate-powerpack.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-hash-tasks.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/set.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/tsconfig-setup.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/convert.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/get-files-in-directory.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/shutdown-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/models/onboarding-status.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/login/login.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/core/graph/favicon.ico" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/server.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/sprintf-js/dist/sprintf.min.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/y18n/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/load-resolved-plugin.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/file/generate.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/utils/project-configuration.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/types/build-source-map-tree.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/outputs-tracking.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/utilities/is-workspace-claimed.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/safe-buffer/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/bin/nx.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ansi-styles/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-define-polyfill-provider/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/esparse" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/resolve.exports/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/remapping.mjs.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/brace-expressions.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/mapping-entry.test.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/core/dist/emnapi-core.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/affected/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/is-docker" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-define-polyfill-provider/esm/index.node.mjs.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/update-nxw.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/normalize-file.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/bin/run-executor.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/utilities/url-shorten.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/brace-expressions.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/match-path-async.test.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/cache.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/common/seq.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/combined-stream/yarn.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/code-frame/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/affected/npm-packages.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/project-json/build-nodes/project-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/YAMLMap.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-annotate-as-pure/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/project-graph-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/node_modules/semver/range.bnf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/compose-scalar.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/doc/createNode.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/validation/options.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/json5" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/core/dist/emnapi-core.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/hasher/task-hasher.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/client/exec-is-server-available.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/merge.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/lib/targets.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/pattern-to-regex.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/resolution-helpers.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/import.cjs.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/semver" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/lock-file/lock-file.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-annotate-as-pure/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/js-yaml" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/versions.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-update-workspace-context.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/pointer.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/node-machine-id/.babelrc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/dotenv.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/path-key/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/browser/axios.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/safe-buffer/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-17-3-0/update-nxw.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/nx" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/wasi-threads/dist/wasi-threads.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/object-sort.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/utils/glob.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/detect-port" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-define-polyfill-provider/esm/index.node.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/import.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/define-lazy-prop/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/delta.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/json5/dist/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/brace-expressions.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/diff-sequences/build/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/activate-powerpack/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/strip-indents.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/nx.wasi.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/check-for-uncommitted-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/log-symbols/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/lib/options.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/chunkify.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/index.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/print-help.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/match-path-sync.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-define-polyfill-provider/esm/index.browser.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escalade/dist/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/create.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/dist/emnapi.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/modules.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/import/utils/merge-remote-source.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/parse/cst.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/migrate/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/path-key/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/combined-stream/License" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/grammars/shell.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/bin.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/task-env.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/file/babel-7-helpers.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/common/string.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/show/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/compiler/compiler.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/config/conventional-commits.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/create-task-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/node-machine-id/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/plugin-pass.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-nx-workspace-files.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/try-path.test.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/grammars/syml.pegjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/y18n/build/index.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/stringifyString.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/affected/locators/project-glob-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/identity.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/utilities/get-cloud-options.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/node_modules/semver/range.bnf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/npm-run-path/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/json5/lib/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/get-nx-workspace-files.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/add-craco-commands-to-package-scripts.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/start.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/resolve" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/delayed-stream/Makefile" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/adapter/angular-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/project-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/plan.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/config/filter-release-groups.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/mapping-entry.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/stringify.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/force-shutdown.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/show/projects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/sync-generators.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/ejs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-context-file-data.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/onetime/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/types/remapping.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/filesystem.test.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/config-loader.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/grammars/shell.pegjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/config/config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/code-frames.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/wrap-ansi/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-get-registered-sync-generators.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/filesystem.test.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@jest/schemas/build/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/error-types.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/client/client.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/file-watching/changed-projects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/get-caller-file/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-fullwidth-code-point/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/try-path.test.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/argparse/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/ts-node-transpile-only" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/pretty-format/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/resolution.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escalade/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/read-name-from-package-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/escape.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/stringifyDocument.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/perf-logging.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/cast.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/json5/lib/unicode.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/unescape.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/jest-get-type/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/cli-spinners/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/dotenv-expand/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/util.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/hasher/create-task-hasher.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/register.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/filesystem.test.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/daemon/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/nx-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/dist/wasm-util.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/acorn" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/tree.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/flat/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/executors/run-commands/run-commands.impl.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/generate/generate.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/angular/standalone-workspace.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/readable-stream/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ansi-regex/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/open/xdg-open" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/utils/nx-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/build-dependencies/build-dependencies.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/tasks-schedule.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/jsesc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/log-symbols/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/remove-old-cache-records.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/cli-cursor/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ieee754/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/config-loader.test.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/esm/axios.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/jest-diff/build/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/has-flag/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/parse/cst-stringify.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/token-map.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/sprintf-js/dist/angular-sprintf.min.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-17-0-0/use-minimal-config-for-tasks-runner-options.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/resolve-props.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/chalk/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/config/deep-merge-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/nx.wasm32-wasi.wasm" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/errors/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/run/executor-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/dist/emnapi.min.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/unescape.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/debug-logger.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/error.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/workspace-json-project-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/package-json/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/assert-workspace-validity.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/follow-redirects/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/gensync-utils/fs.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/gensync-utils/async.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/path.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/jsx.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-define-polyfill-provider/esm/index.browser.mjs.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/resolve-semver-specifier.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/core/bool.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/shared.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/bin/init-local.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/flush-sync-generator-changes-to-disk.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/lock-file/project-graph-pruning.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/resolve.exports/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/browser.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/front-matter/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/match-path-sync.test.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/validation/option-assertions.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/serializable-error.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transform.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/timestamp.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/run/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/command-line-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/wasi-threads/dist/wasi-threads.min.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/parse/cst-scalar.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/config/version-plans.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/connect/connect-to-nx-cloud.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/classes.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/plugins/plugin-capabilities.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/invoke-runner-terminal-output-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/node-machine-id/.eslintrc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/devkit-internals.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/lib/decorators-2018-09.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/cjs-proxy.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/errors/rewrite-stack-trace.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/forked-process-task-runner.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/escape.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/clean-up-files.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-get-sync-generator-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/add/add.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/tsconfig-loader.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tmp/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/store-run-information-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/repair/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/parse/parser.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/preview1.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/index.d.cts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/register.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/vendor/import-meta-resolve.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/wasi-threads/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/affected/affected.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/task-history-life-cycle-old.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/ts-script" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tar-stream/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/npm-run-path/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/assert-valid-pattern.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transform-file-browser.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/new/new.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/types.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/mime-types/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/all-file-data.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/public-api.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/public-api.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/fs.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/lib/misc.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/utils/typescript.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/operators.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/build-nodes/build-npm-package-nodes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/import/import.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@napi-rs/wasm-runtime/fs-proxy.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/doc/Document.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/pseudo-terminal.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transform-file.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/expressions.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/adapter/decorate-cli.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/omap.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/yargs-utils/shared-options.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/utils/retrieve-workspace-files.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@zkochan/js-yaml/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/yaml" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/list/list.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/dist/emnapi.cjs.min.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/match-path-sync.test.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/ast.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/default-tasks-runner.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/brace-expansion/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/ts-node" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@napi-rs/wasm-runtime/runtime.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/tasks-runners/default.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/core/int.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-20-0-0/move-use-daemon-process.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/generators/connect-to-nx-cloud/connect-to-nx-cloud.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/print-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/dynamic-run-many-terminal-output-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/helpers/deep-array.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/escape.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/lib/typescript.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/core/dist/emnapi-core.cjs.min.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/restore-cursor/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/to-project-name.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/child-process.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/ab-testing.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/esprima/ChangeLog" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/types/types.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/strip-ansi/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/sprintf-js/.npmignore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/util.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/nx-cloud-tasks-runner-shell.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escalade/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-task-history.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/plugins/output.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/reset/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/devkit-exports.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/reset/reset.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ora/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/index-browser.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/tsconfig-loader.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/run-many/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/core/dist/emnapi-core.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/versions.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-wsl/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/schema.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/clone/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/internal-utils/format-changed-files-with-prettier-if-available.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/serialize-overrides-into-command-line.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/match-path-sync.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-outputs-tracking.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/file-watching/file-watcher-sockets.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/browserslist" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/value.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/transform-objects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/src/transform-file-browser.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/pretty-format/node_modules/ansi-styles/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/write-vite-config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/has-flag/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/stringifyCollection.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/file/file.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/types.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/client/generate-help-output.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/resolve-nx-json-error-message.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/executors/noop/noop.impl.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/update-browserslist-db" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/affected/affected-project-graph-models.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/clone/.npmignore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/shell.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/semver/range.bnf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-regexp-features-plugin/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/color-convert/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/Schema.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/task-history.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/mapping-entry.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/remapping.umd.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/match-path-async.test.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/lock-file/yarn-parser.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/wasi-threads/dist/wasi-threads.min.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/tsconfig-loader.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/empty-terminal-output-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/parser/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/fs-constants/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/statements.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/try-path.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/import/utils/prepare-source-repo.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/project-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/unescape.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/string-width/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/core/float.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ansi-regex/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/assert-valid-pattern.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/cache-directory.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/dotenv/lib/main.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/isolation/plugin-worker.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/promised-based-queue.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/mime-db/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/rights.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/yargs.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/powerpack.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tslib/tslib.es6.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-force-shutdown.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/src/transform-file.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/hasher/hash-task.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/types.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/parser/util/missing-plugin-helper.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/fd.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/batch-projects-by-generator-config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/package-manager.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/lock-file/utils/pnpm-normalizer.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/workspace-context.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escalade/index.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/connect/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/commands-runner/command-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/lock-file/npm-parser.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/logger.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/format/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-19-2-0/move-workspace-data-directory.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/utils/json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/cli-cursor/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/utils/register.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-request-shutdown.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/utils/build-all-workspace-files.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/flat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/cliui/build/index.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/brace-expressions.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/binary.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/batch/run-batch.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/figures/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transform-ast.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/config-loader.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/strip-bom/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/resolve-changelog-renderer.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/utilities/client.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/dist/emnapi.min.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/tsc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/match-path-async.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/config-loader.test.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/check.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/node_modules/semver/range.bnf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/detect" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/hasher/file-hasher.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/tmp-dir.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/async-iterator.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-process-in-background.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/mapping-entry.test.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/data/match-path-data.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/y18n/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/tsserver" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/printer.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/util.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/sync-generators.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/src/config/resolve-targets.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/buffer/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/view-logs-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/logout/logout.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/glob.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/serialize-target.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/code-frame/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escalade/sync/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/task-history.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/exec-command.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/supports-color/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/toJS.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/testing-utils/create-tree-with-empty-workspace.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/get-plugins.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/executors/run-script/run-script.impl.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/util-deprecate/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/add-nx-to-monorepo.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/template-literals.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/show/project.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/login/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-unicode-supported/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/tsconfig-loader.test.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/proxy-from-env/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/helpers/config-api.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-17-3-0/nx-release-path.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/wcwidth/.npmignore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/consume-messages-from-socket.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/plugins/package-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/dotenv-expand/config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/regjsparser" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/types/source-map-tree.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/delayed-spinner.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/pairs.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/commands-runner/create-command-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/cli-spinners/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/nx-cloud-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/utilities/onboarding.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/match-path-async.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/report/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/generators/testing-utils/create-tree.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tslib/modules/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/init-v2.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/socket-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/daemon/daemon.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/wasi-threads/dist/wasi-threads.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/add-nx-to-npm-repo.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/repair/repair.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/core/schema.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/jest-get-type/build/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/brace-expressions.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/fork.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/path.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/tools/build-external-helpers.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/new/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/parse/cst-visit.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-interactive/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/yaml-1.1/int.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/figures/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/esvalidate" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/batch/batch-messages.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/errors/config-error.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/node/axios.cjs.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/try-path.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/package-json/create-nodes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/cli.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimist/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/adapter/rxjs-for-await.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/misc-interfaces.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/rename-js-to-jsx.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/front-matter/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/build-dependencies/strip-source-code.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/unescape.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/affected/locators/workspace-json-changes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/form-data/License" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/cliui/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/partial.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/globs.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/src/config/files/index.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/grammars/resolution.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/enquirer/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/message-types/hash-glob.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/get-package-name-from-import-path.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/webassembly.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/methods.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/ast.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escape-string-regexp/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/json5/dist/index.min.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/remapping.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/util-map-includes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/nx-cloud/utilities/environment.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/sprintf-js/dist/sprintf.min.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/resolve-flow-scalar.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@ampproject/remapping/dist/types/source-map.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/wcwidth/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/adapter/ngcli-adapter.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/schema-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/github.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/wasi-threads/dist/wasi-threads.cjs.min.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/angular/integrated-workspace.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/angular/types.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/match-path-sync.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/delayed-stream/License" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/require-directory/.jshintrc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/write-craco-config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/errors/errors.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/logger.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/semver/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/init-tasks-runner.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/__tests__/data/match-path-data.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/yargs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/changelog.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/exec/exec.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/doc/directives.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-docker/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/configuration.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-get-files-in-directory.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-regexp-features-plugin/lib/util.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-fullwidth-code-point/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/addPairToJSMap.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/react/write-vite-index-html.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-hash-glob.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/split-target.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/collapse-expanded-outputs.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/lines-and-columns/build/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/cache-contexts.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/is.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/workspace-root.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/static-run-one-terminal-output-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/node-machine-id/.flowconfig" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimist/.nycrc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/parse.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/bin/nx-cloud.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/emoji-regex/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/config-chain.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/pretty-format/node_modules/ansi-styles/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/pretty-format/build/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/find-workspace-root.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/mimic-fn/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/assert-valid-pattern.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/typebox.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/json5/lib/parse.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ansi-colors/types/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-regexp-features-plugin/node_modules/semver/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/ts-node-cwd" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/test-events.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/angular/legacy-angular-versions.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/resolve-end.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/resolve-block-scalar.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/task-graph-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ignore/LICENSE-MIT" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/dist/emnapi.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/normalize-opts.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/affected/affected-project-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/run-many/run-many.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/require-directory/.npmignore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/git-utils.tree-filter.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/plugins/core-plugins.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@napi-rs/wasm-runtime/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/bin/post-install.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/native/wasi-worker-browser.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/compose-collection.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escalade/sync/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/task-profiling-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/inherits/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/buffer.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/options.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/index.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/add/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/sync/sync.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/doc/applyReviver.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/file-map-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/require-directory/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/build-dependencies/explicit-package-json-dependencies.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/print-config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/utils/project-configuration-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/lock-file/pnpm-parser.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimist/.eslintrc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/utils.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/full.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/dist/emnapi.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/lib/platform-shims/esm.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/generate/generator-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/graph/graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/assert-valid-pattern.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-18-0-0/disable-crystal-for-existing-workspaces.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/axios.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/esprima/LICENSE.BSD" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/value/clone.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/lib/features.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/tasks-runner.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/lib/filter-items.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/parse/line-counter.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/node/whitespace.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/base64-js/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/default-base.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/mimic-fn/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-17-2-0/move-default-base.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-request-project-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/match-path-async.test.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/tsconfig-loader.test.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/installation-directory.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/data/match-path-data.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/node/axios.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/memory.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/delayed-stream/.npmignore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ieee754/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/affected/locators/workspace-projects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ansi-styles/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/version.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/node/parentheses.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@jest/schemas/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/dotenv/config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/isolation/messaging.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-glob.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/run/run-one.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/commands-runner/get-command-projects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/js-yaml/node_modules/argparse/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/build/index.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/form-data/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/nx-commands.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/log.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-17-0-0/move-cache-directory.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/match-path-async.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/escape.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/esm/axios.min.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/sprintf-js/dist/angular-sprintf.min.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/Node.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/git-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-regexp-features-plugin/node_modules/semver/range.bnf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/launch-editor.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/client/daemon-socket-messenger.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/yargs-utils/documentation.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/plugins/local-plugins.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/defaults/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/index.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/migrate/migrate.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/config-loader.test.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/mapping-entry.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/task-orchestrator.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/source-map.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/config/task-graph.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/package-json/create-package-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/generators/typescript.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/task-history-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/dotenv/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/util-contains-newline.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/sync/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/affected/touched-projects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/git-utils.index-filter.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/lines-and-columns/build/index.cjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/get-caller-file/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/node-machine-id/types/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/plugins/isolation/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/once/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/fileutils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/find-matching-projects.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/import/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/stringifyPair.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/asyncify.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/cli.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/grammars/resolution.pegjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/js-yaml/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/ts-node-script" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/color-name/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/handle-flush-sync-generator-changes-to-disk.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/list/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/cliui/build/index.d.cts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/build-dependencies/target-project-locator.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/lib/debug.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/utils/config.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/Scalar.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/config-descriptors.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/dotenv-expand/lib/main.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/nx-cloud" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/watch/watch.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/unescape.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/validation/plugins.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/implementation/angular/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/src/index.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/jest-diff/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/open/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tslib/tslib.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/json5/lib/stringify.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/nx-deps-cache.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/is-ci.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yargs/browser.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/system/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/utils/implicit-project-dependencies.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/src/config/resolve-targets-browser.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/plan-check.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/ignore.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/onetime/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/run/run.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/assert-valid-pattern.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/files/plugins.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/is-on-daemon.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/doc/anchors.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/configure-plugins.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/exit-codes.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/jake" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/diff-sequences/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/migrations/update-17-0-0/rm-default-collection-npm-scope.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/json-diff.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/watch/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/lib/utils.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/match-path-sync.test.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/Collection.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/init/init-v1.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/project-graph/file-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/core/dist/emnapi-core.min.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/compose/compose-node.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/compat-data/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/escalade/sync/index.d.mts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/stringify/foldFlowLines.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/load.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/end-of-stream/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/item.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/is-interactive/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/lib/pretty.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/schema/common/null.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/node/index.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/task-timings-life-cycle.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/wasi/types.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/ast.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/escape.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/yaml/dist/nodes/Alias.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/resolve-targets-browser.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ignore/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/core/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/asynckit/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/semver.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/publish.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/handle-errors.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/adapter/compat.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/executors/utils/convert-nx-executor.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/jsonc-parser/lib/umd/main.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/open/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/lock-file/utils/package-json.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/logout/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@yarnpkg/parsers/lib/syml.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/compiler/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/json5/lib/util.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@sinclair/typebox/system/system.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/jspi.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/tasks-runner/life-cycles/formatting-utils.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@tybys/wasm-util/lib/mjs/index.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/cjs/assert-valid-pattern.d.ts.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/node_modules/semver/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/release/changelog-renderer/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/minimatch/dist/mjs/ast.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/runtime/dist/emnapi.iife.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/generator/lib/printer.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/utils/db-connection.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/caching.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/.bin/mime" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/transformation/file/merge-map.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@zkochan/js-yaml/dist/js-yaml.mjs" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/axios/dist/browser/axios.cjs.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/generate/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/proxy-from-env/.eslintrc" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/filesystem.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/ora/license" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/core/lib/config/resolve-targets.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/release/index.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/plugins/js/project-graph/build-dependencies/explicit-project-dependencies.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-create-class-features-plugin/lib/fields.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@emnapi/wasi-threads/dist/wasi-threads.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/exec/command-object.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/command-line/release/utils/generate-version-plan-content.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/tsconfig-paths/lib/__tests__/mapping-entry.test.js.map" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/node-machine-id/.eslintignore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/jsonc-parser/lib/esm/main.d.ts" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.d.ts" />
+  </binary>
+</changelist>

@@ -1,4 +1,4 @@
-import 'package:lobay/utlilities/constants/app_enums.dart';
+import 'package:lobay/utilities/constants/app_enums.dart';
 
 class AppConfig {
   static Environment environment = Environment.dev; // Change this as needed

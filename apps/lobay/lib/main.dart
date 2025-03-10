@@ -1,13 +1,14 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lobay/utlilities/constants/app_constants.dart';
-import 'package:lobay/utlilities/theme_utils/app_theme.dart';
+import 'package:lobay/features/sign_up/sign_in/signin_screen.dart';
+import 'package:lobay/utilities/constants/app_constants.dart';
+import 'package:lobay/utilities/theme_utils/app_theme.dart';
 
 void main() {
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       builder: (context) => MyApp(), // Wrap your app
     ),
   );
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       title: AppConstants.appName,
       theme: AppTheme.lightTheme,
-      home: TestScreen(),
+      home: SigninScreen(),
     );
   }
 }

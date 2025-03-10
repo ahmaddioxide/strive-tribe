@@ -2,5 +2,9 @@
 class Assets {
   Assets._();
 
+  static const String imagesAppIconWhite = 'assets/images/app_icon_white.png';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
+  static const String svgsAppIcon = 'assets/svgs/app_icon.svg';
+  static const String svgsAppIconWhite = 'assets/svgs/app_icon_white.svg';
+
 }

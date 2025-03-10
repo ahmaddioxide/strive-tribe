@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lobay/common_widgets/widget_constants.dart';
 import 'package:lobay/generated/assets.dart';
-import 'package:lobay/utlilities/theme_utils/app_colors.dart';
+import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class AppImageWidget extends StatelessWidget {
   final String imagePathOrURL;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lobay/utlilities/theme_utils/app_colors.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
@@ -7,5 +8,6 @@ class AppTheme {
     primaryColor: AppColors.primaryLight,
     scaffoldBackgroundColor: Colors.white,
     splashColor: AppColors.primaryLight,
+    textTheme: GoogleFonts.interTextTheme(),
   );
 }

@@ -49,7 +49,7 @@ class ApiClient {
       {Map<String, dynamic>? queryParams,
       required Function() retryCallback}) async {
     try {
-      return await _dio.get(path ?? '', queryParameters: queryParams);
+      return await _dio.get(path, queryParameters: queryParams);
     } catch (e) {
       throw ApiException.handleError(e, retryCallback);
     }

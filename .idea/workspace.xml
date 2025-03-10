@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="changes app icon, imported assets, added core functionalities, constants, theme setting, base color classes, created mixins and enums etc" />
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="created common models and app utils">
+      <change afterPath="$PROJECT_DIR$/apps/lobay/assets/images/placeholder.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_click_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_image_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/widget_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,16 +66,18 @@
     "git-widget-placeholder": "app/flutter-integration",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ahamd/Development/Lobay/lobay/apps/lobay/data",
+    "last_opened_file_path": "/Users/ahamd/Development/Lobay/lobay/apps/lobay/assets",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/lobay/assets" />
       <recent name="$PROJECT_DIR$/apps/lobay/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/lobay/assets/images" />
       <recent name="$PROJECT_DIR$/apps/lobay/lib/utlilities/constants" />
     </key>
   </component>
@@ -100,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741627937728</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created common models and app utils">
+      <option name="closed" value="true" />
+      <created>1741628348311</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741628348311</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +133,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added to tracked" />
     <MESSAGE value="changes app icon, imported assets, added core functionalities, constants, theme setting, base color classes, created mixins and enums etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes app icon, imported assets, added core functionalities, constants, theme setting, base color classes, created mixins and enums etc" />
+    <MESSAGE value="created common models and app utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="created common models and app utils" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/apps/lobay/lib/core/shared_preferences/shared_pref.dart</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

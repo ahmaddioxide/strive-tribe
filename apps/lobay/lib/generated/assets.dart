@@ -2,9 +2,12 @@
 class Assets {
   Assets._();
 
+  static const String assetsGoogleIcon = 'assets/google_icon.png';
   static const String imagesAppIconWhite = 'assets/images/app_icon_white.png';
+  static const String imagesFacebookLogo = 'assets/images/facebook_logo.png';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
   static const String svgsAppIcon = 'assets/svgs/app_icon.svg';
   static const String svgsAppIconWhite = 'assets/svgs/app_icon_white.svg';
+  static const String svgsGoogleLogo = 'assets/svgs/google_logo.svg';
 
 }

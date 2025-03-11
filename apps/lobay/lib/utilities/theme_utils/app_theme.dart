@@ -7,7 +7,13 @@ class AppTheme {
     brightness: Brightness.light,
     primaryColor: AppColors.primaryLight,
     scaffoldBackgroundColor: Colors.white,
-    splashColor: AppColors.primaryLight,
+    splashColor: AppColors.primaryLight.withOpacity(0.2),
     textTheme: GoogleFonts.interTextTheme(),
+    checkboxTheme: CheckboxThemeData(
+      checkColor: WidgetStateProperty.all(Colors.white),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(3),
+      ),
+    ),
   );
 }

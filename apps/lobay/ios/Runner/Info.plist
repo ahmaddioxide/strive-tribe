@@ -22,6 +22,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>NSCameraUsageDescription</key>
+    <string>Lobay need to access you camera to add your profile picture</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Lobay need to access your photos to let you select and upload profile pics and more</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

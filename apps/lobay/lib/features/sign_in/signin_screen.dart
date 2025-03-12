@@ -4,7 +4,8 @@ import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
-import 'package:lobay/features/sign_up/sign_in/signin_controller.dart';
+import 'package:lobay/features/sign_in/signin_controller.dart';
+import 'package:lobay/features/sign_up/signup_screen.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -87,7 +88,9 @@ class TopContainer extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => SignupScreen());
+                  },
                   child: Text(
                     'Register',
                     style: TextStyle(

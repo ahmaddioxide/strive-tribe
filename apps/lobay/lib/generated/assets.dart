@@ -8,6 +8,7 @@ class Assets {
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
   static const String svgsAppIcon = 'assets/svgs/app_icon.svg';
   static const String svgsAppIconWhite = 'assets/svgs/app_icon_white.svg';
+  static const String svgsCircleUser = 'assets/svgs/circle_user.svg';
   static const String svgsGoogleLogo = 'assets/svgs/google_logo.svg';
 
 }

@@ -6,12 +6,14 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
   final String? buttonText;
   final Function()? onPressed;
   final Widget? child;
+  final bool isEnabled;
 
   const AppButton({
     super.key,
     this.buttonText,
     this.onPressed,
     this.child,
+    this.isEnabled = true,
   });
 
   @override
@@ -19,7 +21,7 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         minimumSize: Size(double.infinity, getDeviceHeight() * 0.06),
-        backgroundColor: AppColors.primaryLight,
+        backgroundColor:isEnabled==true? AppColors.primaryLight:AppColors.grey,
         padding: EdgeInsets.symmetric(vertical: 15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),

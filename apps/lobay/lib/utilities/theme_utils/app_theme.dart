@@ -6,13 +6,20 @@ class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     primaryColor: AppColors.primaryLight,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: AppColors.white,
     splashColor: AppColors.primaryLight.withOpacity(0.2),
     textTheme: GoogleFonts.interTextTheme(),
     checkboxTheme: CheckboxThemeData(
-      checkColor: WidgetStateProperty.all(Colors.white),
+      checkColor: WidgetStateProperty.all(AppColors.white),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(3),
+      ),
+    ),
+    cardColor: Colors.white,
+    dropdownMenuTheme: DropdownMenuThemeData(
+      menuStyle: MenuStyle(
+        backgroundColor: WidgetStateProperty.all(AppColors.white),
+        surfaceTintColor: WidgetStateProperty.all(AppColors.white),
       ),
     ),
   );

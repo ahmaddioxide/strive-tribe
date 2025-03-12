@@ -16,6 +16,8 @@ class AppTextField extends StatefulWidget {
   final Function()? onEditingComplete;
   final Function()? onFieldSubmitted;
   final bool isPassword;
+  final Widget? trailingIcon;
+  final Function()? onTrailingIconTap;
 
   //validation
   final String? Function(String?)? validator;
@@ -41,6 +43,8 @@ class AppTextField extends StatefulWidget {
     this.validator,
     this.autoValidateMode = AutovalidateMode.onUserInteraction,
     this.isPassword = false,
+    this.trailingIcon,
+    this.onTrailingIconTap,
   });
 
   @override
@@ -105,7 +109,12 @@ class _AppTextFieldState extends State<AppTextField> {
                   });
                 },
               )
-            : null,
+            : widget.trailingIcon != null
+                ? IconButton(
+                    icon: widget.trailingIcon!,
+                    onPressed: widget.onTrailingIconTap,
+                  )
+                : null,
       ),
     );
   }

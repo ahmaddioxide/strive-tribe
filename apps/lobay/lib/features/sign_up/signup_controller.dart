@@ -5,12 +5,16 @@ import 'package:image_picker/image_picker.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class SignupController extends GetxController {
+  final formKey = GlobalKey<FormState>();
+
   final emailController = TextEditingController();
   final nameController = TextEditingController();
   final passwordController = TextEditingController();
   final dateOfBirthController = TextEditingController();
   final locationController = TextEditingController();
   final phoneController = TextEditingController();
+
+  RxString gender='Male'.obs;
 
   Rx<XFile?> profileImage = Rx<XFile?>(null);
 
@@ -52,7 +56,7 @@ class SignupController extends GetxController {
         context: context,
         initialDate: DateTime.now(),
         firstDate: DateTime(1900),
-        lastDate: DateTime(2100),
+        lastDate: DateTime.now(),
         barrierColor: Colors.black.withOpacity(0.7),
         builder: (BuildContext context, Widget? child) {
           return Theme(

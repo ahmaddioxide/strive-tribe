@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class AppDropDown extends StatefulWidget {
   final List<String> options;
   final String hint;
+  final RxString selectedValue;
 
-  const AppDropDown({super.key, required this.options, required this.hint});
+  const AppDropDown(
+      {super.key,
+      required this.options,
+      required this.hint,
+      required this.selectedValue});
 
   @override
   _AppDropDownState createState() => _AppDropDownState();
 }
 
 class _AppDropDownState extends State<AppDropDown> with DeviceSizeUtil {
-  String? selectedValue;
   late double width;
   late double height;
 
@@ -41,11 +46,11 @@ class _AppDropDownState extends State<AppDropDown> with DeviceSizeUtil {
         dropdownColor: AppColors.white,
         disabledHint: Text(widget.hint),
         hint: Text(widget.hint),
-        value: selectedValue,
+        value: widget.selectedValue.value,
         onChanged: (String? newValue) {
           setState(
             () {
-              selectedValue = newValue;
+              widget.selectedValue.value = newValue!;
             },
           );
         },

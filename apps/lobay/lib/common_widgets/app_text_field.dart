@@ -41,7 +41,7 @@ class AppTextField extends StatefulWidget {
     this.onEditingComplete,
     this.onFieldSubmitted,
     this.validator,
-    this.autoValidateMode = AutovalidateMode.onUserInteraction,
+    this.autoValidateMode = AutovalidateMode.onUnfocus,
     this.isPassword = false,
     this.trailingIcon,
     this.onTrailingIconTap,

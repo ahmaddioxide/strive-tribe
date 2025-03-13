@@ -29,4 +29,31 @@ class Validator {
     }
     return null;
   }
+
+  //
+  static String? validateDateOfBirth(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Date of birth cannot be empty';
+    }
+    return null;
+  }
+
+  static String? validatePhoneNumber(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Phone number cannot be empty';
+    }
+    final phoneRegex = RegExp(r'^[0-9]{10}$');
+    if (!phoneRegex.hasMatch(value)) {
+      return 'Enter a valid phone number';
+    }
+    return null;
+  }
+
+  //location
+  static String? validateLocation(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Location cannot be empty';
+    }
+    return null;
+  }
 }

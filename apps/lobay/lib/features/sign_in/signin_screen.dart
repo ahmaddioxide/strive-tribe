@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_button.dart';
@@ -7,6 +9,7 @@ import 'package:lobay/common_widgets/app_text_field.dart';
 import 'package:lobay/features/sign_in/signin_controller.dart';
 import 'package:lobay/features/sign_up/signup_screen.dart';
 import 'package:lobay/generated/assets.dart';
+import 'package:lobay/utilities/app_utils/validators.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
@@ -122,230 +125,244 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final signInController = Get.find<SignInController>();
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: width * 0.03),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: height * 0.02),
-          Text(
-            'Email',
-            style: TextStyle(
-              color: AppColors.grey,
+    return Form(
+      key: signInController.formKey,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: width * 0.03),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: height * 0.02),
+            Text(
+              'Email',
+              style: TextStyle(
+                color: AppColors.grey,
+              ),
             ),
-          ),
-          SizedBox(height: height * 0.006),
-          AppTextField(
-            hintText: 'Email',
-            controller: signInController.emailController,
-            keyboardType: TextInputType.emailAddress,
-          ),
-          SizedBox(height: height * 0.02),
-          Text(
-            'Password',
-            style: TextStyle(
-              color: AppColors.grey,
+            SizedBox(height: height * 0.006),
+            AppTextField(
+              hintText: 'Email',
+              controller: signInController.emailController,
+              keyboardType: TextInputType.emailAddress,
+              validator: Validator.validateEmail,
             ),
-          ),
-          SizedBox(height: height * 0.006),
-          AppTextField(
-            hintText: 'Password',
-            controller: signInController.passwordController,
-            keyboardType: TextInputType.emailAddress,
-            isPassword: true,
-          ),
-          SizedBox(height: height * 0.01),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Obx(() {
-                    return Checkbox(
-                      checkColor: AppColors.white,
-                      activeColor: AppColors.primaryLight,
-                      value: signInController.rememberMe.value,
-                      onChanged: (value) {
-                        signInController.rememberMe.value =
-                            !signInController.rememberMe.value;
-                      },
-                    );
-                  }),
-                  Text(
-                    'Remember me',
+            SizedBox(height: height * 0.02),
+            Text(
+              'Password',
+              style: TextStyle(
+                color: AppColors.grey,
+              ),
+            ),
+            SizedBox(height: height * 0.006),
+            AppTextField(
+              hintText: 'Password',
+              controller: signInController.passwordController,
+              keyboardType: TextInputType.emailAddress,
+              isPassword: true,
+              validator: Validator.validatePassword,
+            ),
+            SizedBox(height: height * 0.01),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Obx(() {
+                      return Checkbox(
+                        checkColor: AppColors.white,
+                        activeColor: AppColors.primaryLight,
+                        value: signInController.rememberMe.value,
+                        onChanged: (value) {
+                          signInController.rememberMe.value =
+                              !signInController.rememberMe.value;
+                        },
+                      );
+                    }),
+                    Text(
+                      'Remember me',
+                      style: TextStyle(
+                        color: AppColors.grey,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      color: AppColors.grey,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      decorationColor: AppColors.grey,
+                      decorationStyle: TextDecorationStyle.solid,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: height * 0.02),
+            AppButton(
+              buttonText: 'Log In',
+              onPressed: () {
+                //validate and submit
+                if (signInController.formKey.currentState!.validate()) {
+                  // signInController.formKey.currentState!.save();
+                  log('Validated');
+                  // signInController.signIn();
+                } else {
+                  log('Not Validated');
+                }
+              },
+            ),
+            //-----------------OR-----------------
+            SizedBox(height: height * 0.02),
+            Row(
+              children: [
+                Expanded(
+                  child: Divider(
+                    color: AppColors.border,
+                    thickness: 2,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.02),
+                  child: Text(
+                    'Or continue with',
                     style: TextStyle(
                       color: AppColors.grey,
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                ],
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    color: AppColors.grey,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                    decorationColor: AppColors.grey,
-                    decorationStyle: TextDecorationStyle.solid,
+                ),
+                Expanded(
+                  child: Divider(
+                    color: AppColors.border,
+                    thickness: 2,
                   ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: height * 0.02),
-          AppButton(
-            buttonText: 'Log In',
-            onPressed: () {},
-          ),
-          //-----------------OR-----------------
-          SizedBox(height: height * 0.02),
-          Row(
-            children: [
-              Expanded(
-                child: Divider(
-                  color: AppColors.border,
-                  thickness: 2,
+              ],
+            ),
+            SizedBox(height: height * 0.02),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: height * 0.06,
+                  width: width * 0.4,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: AppColors.border,
+                      width: 2,
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      AppImageWidget(
+                        imagePathOrURL: Assets.assetsGoogleIcon,
+                      ),
+                      SizedBox(width: width * 0.03),
+                      Text(
+                        'Google',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.02),
-                child: Text(
-                  'Or continue with',
+                Container(
+                  height: height * 0.06,
+                  width: width * 0.4,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: AppColors.border,
+                      width: 2,
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      AppImageWidget(
+                        imagePathOrURL: Assets.imagesFacebookLogo,
+                      ),
+                      SizedBox(width: width * 0.03),
+                      Text(
+                        'Facebook',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            // Spacer(),
+            // By signing up, you agree to the Terms of Service and Data Processing Agreement
+            SizedBox(height: height * 0.02),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'By signing up, you agree to the ',
                   style: TextStyle(
                     color: AppColors.grey,
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-              ),
-              Expanded(
-                child: Divider(
-                  color: AppColors.border,
-                  thickness: 2,
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: height * 0.02),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                height: height * 0.06,
-                width: width * 0.4,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: AppColors.border,
-                    width: 2,
+                AppClickWidget(
+                  onTap: () {},
+                  child: Text(
+                    'Terms of Service',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      decorationColor: AppColors.grey,
+                      decorationStyle: TextDecorationStyle.solid,
+                    ),
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    AppImageWidget(
-                      imagePathOrURL: Assets.assetsGoogleIcon,
-                    ),
-                    SizedBox(width: width * 0.03),
-                    Text(
-                      'Google',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                height: height * 0.06,
-                width: width * 0.4,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: AppColors.border,
-                    width: 2,
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    AppImageWidget(
-                      imagePathOrURL: Assets.imagesFacebookLogo,
-                    ),
-                    SizedBox(width: width * 0.03),
-                    Text(
-                      'Facebook',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          // Spacer(),
-          // By signing up, you agree to the Terms of Service and Data Processing Agreement
-          SizedBox(height: height * 0.02),
+              ],
+            ),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'By signing up, you agree to the ',
-                style: TextStyle(
-                  color: AppColors.grey,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              AppClickWidget(
-                onTap: () {},
-                child: Text(
-                  'Terms of Service',
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  ' and ',
                   style: TextStyle(
+                    color: AppColors.grey,
                     fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                    decorationColor: AppColors.grey,
-                    decorationStyle: TextDecorationStyle.solid,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
-              ),
-            ],
-          ),
-
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                ' and ',
-                style: TextStyle(
-                  color: AppColors.grey,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              AppClickWidget(
-                onTap: () {},
-                child: Text(
-                  'Data Processing Agreement',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                    decorationColor: AppColors.grey,
-                    decorationStyle: TextDecorationStyle.solid,
+                AppClickWidget(
+                  onTap: () {},
+                  child: Text(
+                    'Data Processing Agreement',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      decorationColor: AppColors.grey,
+                      decorationStyle: TextDecorationStyle.solid,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

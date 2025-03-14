@@ -9,6 +9,7 @@ import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_drop_down.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
+import 'package:lobay/features/sign_up/activity_selection_screen.dart';
 import 'package:lobay/features/sign_up/signup_controller.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/app_utils/validators.dart';
@@ -264,6 +265,7 @@ class SignupForm extends StatelessWidget {
                   log('Form is valid');
                 } else {
                   log('Form is invalid');
+                  Get.to(()=>ActivitySelectionScreen());
                 }
               },
             ),

@@ -7,12 +7,15 @@ class AppDropDown extends StatefulWidget {
   final List<String> options;
   final String hint;
   final RxString selectedValue;
+  Color? borderColor;
 
-  const AppDropDown(
-      {super.key,
-      required this.options,
-      required this.hint,
-      required this.selectedValue});
+   AppDropDown({
+    super.key,
+    required this.options,
+    required this.hint,
+    required this.selectedValue,
+    this.borderColor,
+  });
 
   @override
   _AppDropDownState createState() => _AppDropDownState();
@@ -36,7 +39,7 @@ class _AppDropDownState extends State<AppDropDown> with DeviceSizeUtil {
       height: height * 0.061,
       padding: EdgeInsets.symmetric(horizontal: width * 0.03),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.grey),
+        border: Border.all(color: widget.borderColor ?? AppColors.grey),
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: DropdownButton<String>(

@@ -4,8 +4,14 @@ class Assets {
 
   static const String assetsGoogleIcon = 'assets/google_icon.png';
   static const String imagesAppIconWhite = 'assets/images/app_icon_white.png';
+  static const String imagesBadminton = 'assets/images/badminton.png';
+  static const String imagesBaseball = 'assets/images/baseball.png';
+  static const String imagesBaseketball = 'assets/images/baseketball.png';
+  static const String imagesCricket = 'assets/images/cricket.png';
   static const String imagesFacebookLogo = 'assets/images/facebook_logo.png';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
+  static const String imagesSoccer = 'assets/images/soccer.png';
+  static const String imagesTennis = 'assets/images/tennis.png';
   static const String svgsAppIcon = 'assets/svgs/app_icon.svg';
   static const String svgsAppIconWhite = 'assets/svgs/app_icon_white.svg';
   static const String svgsCircleUser = 'assets/svgs/circle_user.svg';

@@ -1,7 +1,14 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lobay/common_widgets/app_button.dart';
+import 'package:lobay/common_widgets/app_drop_down.dart';
+import 'package:lobay/generated/assets.dart';
+import 'package:lobay/utilities/commom_models/pairs_model.dart';
+import 'package:lobay/utilities/commom_models/tuple_model.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class SignupController extends GetxController {
@@ -14,7 +21,25 @@ class SignupController extends GetxController {
   final locationController = TextEditingController();
   final phoneController = TextEditingController();
 
-  RxString gender='Male'.obs;
+  RxList<Tuple> activities = <Tuple>[
+    Tuple(
+        first: 'Badminton',
+        second: Assets.imagesBadminton,
+        third: RxBool(false)),
+    Tuple(
+        first: 'Basketball',
+        second: Assets.imagesBaseketball,
+        third: RxBool(false)),
+    Tuple(first: 'Cricket', second: Assets.imagesCricket, third: RxBool(false)),
+    Tuple(first: 'Soccer', second: Assets.imagesSoccer, third: RxBool(false)),
+    Tuple(first: 'Tennis', second: Assets.imagesTennis, third: RxBool(false)),
+    Tuple(
+        first: 'Baseball', second: Assets.imagesBaseball, third: RxBool(false)),
+  ].obs;
+  RxList<Pair> selectedActivities = <Pair>[].obs;
+  List<String> expertiseLevel = ['Beginner', 'Intermediate', 'Professional'];
+
+  RxString gender = 'Male'.obs;
 
   Rx<XFile?> profileImage = Rx<XFile?>(null);
 
@@ -83,6 +108,61 @@ class SignupController extends GetxController {
         },
       );
     }
+  }
+
+  Future<String> showExpertiseLevelDialog(String activityName) async {
+    RxString selectedValue = expertiseLevel.first.obs;
+    return await Get.defaultDialog(
+      barrierDismissible: false,
+
+      title: 'Select  Level',
+      titleStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+      content: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Text(
+              'Kindly select level of expertise you have in the this activity.',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
+            AppDropDown(
+              options: expertiseLevel,
+              hint: 'Select level',
+              selectedValue: selectedValue,
+              borderColor: AppColors.primaryLight,
+            ),
+            SizedBox(height: 20),
+            AppButton(
+              buttonText: 'Done',
+              onPressed: () {
+                //remove the previous value if it exists
+                selectedActivities
+                    .removeWhere((element) => element.first == activityName);
+                selectedActivities.add(
+                  Pair(
+                    activityName,
+                    selectedValue.value,
+                  ),
+                );
+                activities
+                    .firstWhere((element) => element.first == activityName)
+                    .third
+                    .value = true;
+                Get.back(result: selectedValue.value);
+                log('Selected Value: ${selectedValue.value}');
+                log('Selected Activities: $selectedActivities');
+                log('Activities: $activities');
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Future<void> pickImage() async {

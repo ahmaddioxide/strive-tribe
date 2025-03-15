@@ -114,7 +114,6 @@ class SignupController extends GetxController {
     RxString selectedValue = expertiseLevel.first.obs;
     return await Get.defaultDialog(
       barrierDismissible: false,
-
       title: 'Select  Level',
       titleStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
       content: Padding(

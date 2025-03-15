@@ -5,6 +5,7 @@ import 'package:lobay/utilities/theme_utils/app_colors.dart';
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryLight),
     primaryColor: AppColors.primaryLight,
     scaffoldBackgroundColor: AppColors.white,
     splashColor: AppColors.primaryLight.withOpacity(0.2),
@@ -20,6 +21,13 @@ class AppTheme {
       menuStyle: MenuStyle(
         backgroundColor: WidgetStateProperty.all(AppColors.white),
         surfaceTintColor: WidgetStateProperty.all(AppColors.white),
+      ),
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.white,
+      elevation: 0,
+      iconTheme: IconThemeData(
+        color: AppColors.grey,
       ),
     ),
   );

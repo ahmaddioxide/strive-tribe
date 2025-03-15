@@ -9,6 +9,9 @@ class Assets {
   static const String imagesBaseketball = 'assets/images/baseketball.png';
   static const String imagesCricket = 'assets/images/cricket.png';
   static const String imagesFacebookLogo = 'assets/images/facebook_logo.png';
+  static const String imagesOnboarding1 = 'assets/images/onboarding_1.png';
+  static const String imagesOnboarding2 = 'assets/images/onboarding_2.png';
+  static const String imagesOnboarding3 = 'assets/images/onboarding_3.png';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
   static const String imagesSoccer = 'assets/images/soccer.png';
   static const String imagesTennis = 'assets/images/tennis.png';
@@ -16,5 +19,9 @@ class Assets {
   static const String svgsAppIconWhite = 'assets/svgs/app_icon_white.svg';
   static const String svgsCircleUser = 'assets/svgs/circle_user.svg';
   static const String svgsGoogleLogo = 'assets/svgs/google_logo.svg';
+  static const String svgsHomeIcon = 'assets/svgs/home_icon.svg';
+  static const String svgsMessagesIcon = 'assets/svgs/messages_icon.svg';
+  static const String svgsNotificationIcon = 'assets/svgs/notification_icon.svg';
+  static const String svgsPlayersIcon = 'assets/svgs/players_icon.svg';
 
 }

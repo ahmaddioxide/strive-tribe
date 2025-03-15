@@ -38,6 +38,14 @@ class Validator {
     return null;
   }
 
+  //validate time
+  static String? validateTime(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Time cannot be empty';
+    }
+    return null;
+  }
+
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
       return 'Phone number cannot be empty';

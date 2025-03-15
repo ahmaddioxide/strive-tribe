@@ -7,6 +7,8 @@ class TextUtils {
     FontWeight fontWeight = FontWeight.normal,
     FontStyle fontStyle = FontStyle.normal,
     TextDecoration textDecoration = TextDecoration.none,
+
+
   }) {
     return TextStyle(
       color: color,
@@ -15,6 +17,7 @@ class TextUtils {
       fontStyle: fontStyle,
       decoration: textDecoration,
       fontFamily: 'Inter',
+      decorationColor: color,
     );
   }
 }

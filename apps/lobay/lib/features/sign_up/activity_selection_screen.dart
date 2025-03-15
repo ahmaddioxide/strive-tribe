@@ -41,7 +41,9 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
               ),
             );
           }),
-          SizedBox(height: height*0.02,),
+          SizedBox(
+            height: height * 0.02,
+          ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05),
             child: AppButton(
@@ -49,7 +51,9 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
               onPressed: () {},
             ),
           ),
-          SizedBox(height: height*0.02,)
+          SizedBox(
+            height: height * 0.02,
+          )
         ],
       ),
     );

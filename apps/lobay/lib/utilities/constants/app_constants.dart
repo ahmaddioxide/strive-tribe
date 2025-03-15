@@ -6,4 +6,19 @@ class AppConstants {
   static const String appName = 'Lobay';
 
   static String authBaseToken = '';
+
+  static const List<String> activities = [
+    'Soccer',
+    'Basketball',
+    'Tennis',
+    'Cricket',
+    'Badminton',
+    'Baseball',
+  ];
+
+  static const List<String> expertiseLevel = [
+    'Beginner',
+    'Intermediate',
+    'Professional'
+  ];
 }

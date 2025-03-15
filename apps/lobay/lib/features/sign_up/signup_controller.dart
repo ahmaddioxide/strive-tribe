@@ -9,6 +9,7 @@ import 'package:lobay/common_widgets/app_drop_down.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/commom_models/pairs_model.dart';
 import 'package:lobay/utilities/commom_models/tuple_model.dart';
+import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class SignupController extends GetxController {
@@ -37,8 +38,7 @@ class SignupController extends GetxController {
         first: 'Baseball', second: Assets.imagesBaseball, third: RxBool(false)),
   ].obs;
   RxList<Pair> selectedActivities = <Pair>[].obs;
-  List<String> expertiseLevel = ['Beginner', 'Intermediate', 'Professional'];
-
+  List<String> expertiseLevel = AppConstants.expertiseLevel;
   RxString gender = 'Male'.obs;
 
   Rx<XFile?> profileImage = Rx<XFile?>(null);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
+import 'package:lobay/features/create_activity/create_activity_screen.dart';
 import 'package:lobay/features/home/home_screen.dart';
 import 'package:lobay/features/inbox/inbox_screen.dart';
 import 'package:lobay/features/notifications/notifications_screen.dart';
@@ -28,7 +29,9 @@ class BottomNavigationScreen extends StatelessWidget {
     return Scaffold(
       body: Obx(() => _pages[_controller.currentIndex.value]),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.to(()=>CreateActivityScreen());
+        },
         shape: CircleBorder(),
         backgroundColor: AppColors.primaryLight,
         child: Icon(

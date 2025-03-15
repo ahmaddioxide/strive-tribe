@@ -4,7 +4,6 @@ import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/features/sign_up/signup_controller.dart';
-import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
@@ -34,7 +33,7 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
                 ),
                 itemCount: signupController.activities.length,
                 itemBuilder: (context, index) {
-                  final activity = signupController.activities[index];
+                  // final activity = signupController.activities[index];
                   return ActivityContainer(
                     index: index,
                   );

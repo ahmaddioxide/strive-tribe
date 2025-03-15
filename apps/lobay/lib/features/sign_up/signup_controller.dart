@@ -82,7 +82,7 @@ class SignupController extends GetxController {
         initialDate: DateTime.now(),
         firstDate: DateTime(1900),
         lastDate: DateTime.now(),
-        barrierColor: Colors.black.withOpacity(0.7),
+        barrierColor: Colors.black.withAlpha(50),
         builder: (BuildContext context, Widget? child) {
           return Theme(
             data: ThemeData.light().copyWith(

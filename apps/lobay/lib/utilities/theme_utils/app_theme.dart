@@ -8,7 +8,7 @@ class AppTheme {
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryLight),
     primaryColor: AppColors.primaryLight,
     scaffoldBackgroundColor: AppColors.white,
-    splashColor: AppColors.primaryLight.withOpacity(0.2),
+    splashColor: AppColors.primaryLight.withAlpha(50),
     textTheme: GoogleFonts.interTextTheme(),
     checkboxTheme: CheckboxThemeData(
       checkColor: WidgetStateProperty.all(AppColors.white),

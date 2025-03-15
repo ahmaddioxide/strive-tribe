@@ -2,7 +2,6 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/features/onboarding/onboarding_screen.dart';
-import 'package:lobay/features/sign_in/signin_screen.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/theme_utils/app_theme.dart';
 

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
@@ -16,7 +18,7 @@ class OnboardingController extends GetxController {
     } else {
       Get.offAll(() => BottomNavigationScreen());
       // For now, just print:
-      print("Onboarding finished!");
+      log("Onboarding finished!");
     }
   }
 

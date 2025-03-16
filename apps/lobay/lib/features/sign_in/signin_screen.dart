@@ -27,7 +27,7 @@ class SigninScreen extends StatelessWidget with DeviceSizeUtil {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TopContainer(height: height, width: width),
+            SigninScreenTopContainer(),
             LoginForm(height: height, width: width),
           ],
         ),
@@ -36,14 +36,13 @@ class SigninScreen extends StatelessWidget with DeviceSizeUtil {
   }
 }
 
-class TopContainer extends StatelessWidget {
-  final double height;
-  final double width;
-
-  const TopContainer({required this.height, required this.width, super.key});
+class SigninScreenTopContainer extends StatelessWidget with DeviceSizeUtil {
+  const SigninScreenTopContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final height = getDeviceHeight();
+    final width = getDeviceWidth();
     return Container(
       height: height * 0.3,
       decoration: BoxDecoration(

@@ -13,6 +13,7 @@ class Assets {
   static const String imagesOnboarding2 = 'assets/images/onboarding_2.png';
   static const String imagesOnboarding3 = 'assets/images/onboarding_3.png';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
+  static const String imagesPlaceholderPerson = 'assets/images/placeholder_person.jpg';
   static const String imagesSoccer = 'assets/images/soccer.png';
   static const String imagesTennis = 'assets/images/tennis.png';
   static const String svgsAppIcon = 'assets/svgs/app_icon.svg';

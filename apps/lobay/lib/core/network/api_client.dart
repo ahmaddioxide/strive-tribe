@@ -10,7 +10,6 @@ class ApiClient {
   ApiClient() {
     _dio = Dio(BaseOptions(
       baseUrl: AppConfig.baseUrl,
-      // Dynamically set base URL
       sendTimeout: Duration(seconds: RequestTimeoutConstants.sendTimeout),
       connectTimeout: Duration(seconds: RequestTimeoutConstants.connectTimeout),
       receiveTimeout: Duration(seconds: RequestTimeoutConstants.receiveTimeout),

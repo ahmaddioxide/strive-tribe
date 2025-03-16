@@ -1,13 +1,97 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:lobay/common_widgets/app_click_widget.dart';
+import 'package:lobay/common_widgets/app_image_widget.dart';
+import 'package:lobay/features/home/filter_bottomsheet_widget.dart';
+import 'package:lobay/features/home/home_screen_controller.dart';
+import 'package:lobay/generated/assets.dart';
+import 'package:lobay/utilities/constants/app_enums.dart';
+import 'package:lobay/utilities/mixins/device_size_util.dart';
+import 'package:lobay/utilities/text_utils/text_style_utils.dart';
+import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget with DeviceSizeUtil {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final height = getDeviceHeight();
+    final width = getDeviceWidth();
+    final homeController = Get.put(HomeScreenController());
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        leading: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(height * 0.05),
+            child: AppImageWidget(
+              imagePathOrURL: Assets.imagesPlaceholderPerson,
+              height: height * 0.05,
+              width: width * 0.05,
+            ),
+          ),
+        ),
+        title: Column(
+          children: [
+            Text(
+              'Activities',
+              style: TextUtils.getStyle(
+                color: AppColors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Home',
+              style: TextUtils.getStyle(
+                color: AppColors.grey,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          AppClickWidget(
+            type: ClickType.gestureDetector,
+            onTap: () {
+              Get.isBottomSheetOpen!
+                  ? Get.back()
+                  : Get.bottomSheet(
+                      FilterBottomSheetWidget(),
+                      isScrollControlled: true,
+                      backgroundColor: AppColors.white,
+                      barrierColor: AppColors.black.withAlpha(50),
+                      isDismissible: true,
+                    );
+            },
+            child: Obx(() {
+              return homeController.selectedPlayerLevel.isNotEmpty ||
+                      homeController.selectedActivities.isNotEmpty
+                  ? Container(
+                      margin: EdgeInsets.only(right: width * 0.02),
+                      padding: EdgeInsets.all(height * 0.01),
+                      decoration: BoxDecoration(
+                        color: AppColors.primaryLight,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Icon(
+                        Icons.filter_list_rounded,
+                        color: AppColors.white,
+                      ),
+                    )
+                  : Container(
+                      margin: EdgeInsets.only(right: width * 0.02),
+                      padding: EdgeInsets.all(height * 0.01),
+                      decoration: BoxDecoration(
+                        color: AppColors.grey.withAlpha(50),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Icon(Icons.filter_list_rounded),
+                    );
+            }),
+          ),
+        ],
       ),
       body: const Center(
         child: Text('Home Screen'),

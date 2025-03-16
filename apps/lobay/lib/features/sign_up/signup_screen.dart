@@ -1,16 +1,15 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:lobay/common_widgets/app_button.dart';
-import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_drop_down.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
 import 'package:lobay/features/sign_up/activity_selection_screen.dart';
 import 'package:lobay/features/sign_up/signup_controller.dart';
+import 'package:lobay/features/sign_up/widgets/signup_screen_top_container.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/app_utils/validators.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -28,7 +27,7 @@ class SignupScreen extends StatelessWidget with DeviceSizeUtil {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TopContainer(height: height, width: width),
+            SignupScreenTopContainer(height: height, width: width),
             SignupForm(height: height, width: width),
           ],
         ),
@@ -265,83 +264,11 @@ class SignupForm extends StatelessWidget {
                   log('Form is valid');
                 } else {
                   log('Form is invalid');
-                  Get.to(()=>ActivitySelectionScreen());
+                  Get.to(() => ActivitySelectionScreen());
                 }
               },
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class TopContainer extends StatelessWidget {
-  final double height;
-  final double width;
-
-  const TopContainer({required this.height, required this.width, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height * 0.18,
-      decoration: BoxDecoration(
-        color: AppColors.primaryLight,
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-        child: Column(
-          children: [
-            SizedBox(height: height * 0.06),
-            Row(
-              children: [
-                AppClickWidget(
-                  onTap: () {
-                    Get.back();
-                  },
-                  child: Icon(Icons.arrow_back_rounded, color: Colors.white),
-                ),
-                SizedBox(width: width * 0.02),
-                Text(
-                  'Register',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: height * 0.032,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: -0.4),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Text(
-                  'Already have an account?',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  child: Text(
-                    'Login',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700,
-                      decoration: TextDecoration.underline,
-                      decorationColor: AppColors.white,
-                      decorationThickness: 1.5,
-                      decorationStyle: TextDecorationStyle.solid,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            SizedBox(height: height * 0.02),
           ],
         ),
       ),

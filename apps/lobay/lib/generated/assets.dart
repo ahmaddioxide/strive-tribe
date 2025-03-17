@@ -22,6 +22,7 @@ class Assets {
   static const String svgsGoogleLogo = 'assets/svgs/google_logo.svg';
   static const String svgsHomeIcon = 'assets/svgs/home_icon.svg';
   static const String svgsMessagesIcon = 'assets/svgs/messages_icon.svg';
+  static const String svgsNoActivity = 'assets/svgs/no_activity.svg';
   static const String svgsNotificationIcon = 'assets/svgs/notification_icon.svg';
   static const String svgsPlayersIcon = 'assets/svgs/players_icon.svg';
 

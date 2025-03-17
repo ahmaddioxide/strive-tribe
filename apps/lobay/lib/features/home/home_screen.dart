@@ -4,6 +4,7 @@ import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/features/home/filter_bottomsheet_widget.dart';
 import 'package:lobay/features/home/home_screen_controller.dart';
+import 'package:lobay/features/home/widgets/no_activity_widget.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/constants/app_enums.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -93,8 +94,30 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
           ),
         ],
       ),
-      body: const Center(
-        child: Text('Home Screen'),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              SizedBox(height: height * 0.01),
+              Text(
+                'Games in your area',
+                style: TextUtils.getStyle(
+                  color: AppColors.grey,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Divider(),
+              SizedBox(height: height * 0.16),
+              Center(
+                child: NoActivityWidget(),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

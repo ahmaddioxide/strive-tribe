@@ -4,6 +4,7 @@ import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/features/home/filter_bottomsheet_widget.dart';
 import 'package:lobay/features/home/home_screen_controller.dart';
+import 'package:lobay/features/home/widgets/activities.dart';
 import 'package:lobay/features/home/widgets/no_activity_widget.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/constants/app_enums.dart';
@@ -111,9 +112,14 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
                 ),
               ),
               Divider(),
-              SizedBox(height: height * 0.16),
+              // SizedBox(height: height * 0.16),
               Center(
-                child: NoActivityWidget(),
+                child: Expanded(
+                  child: SizedBox(
+                    height: height * 0.7,
+                    child: ActivitiesList(),
+                  ),
+                ),
               ),
             ],
           ),

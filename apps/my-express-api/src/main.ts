@@ -2,20 +2,27 @@
  * This is not a production server yet!
  * This is only a minimal backend to get started.
  */
+import dotenv from 'dotenv';
+import { IDatabase } from './database/IDatabase';
+import  container  from "./config/installer";
+import { Identifier } from "./constants/identifiers";
+import Server from "./auth/interface/http/server";
+import IController from "./auth/interface/http/IController";
 
-import express from 'express';
-import * as path from 'path';
+dotenv.config(); // Load environment variables from a .env file
 
-const app = express();
+let config = container.get<any>(Identifier.config);
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to my-express-api 2!' });
+let dbDriver:IDatabase = container.get<IDatabase>(Identifier.databaseDriver);
+dbDriver.connect().then((data) => {
+  const server = new Server(
+    [
+      container.get<IController>(Identifier.authController),
+  
+    ],
+    config.port,
+  );
+  console.log('Database Connected');
+}).catch((error:Error) => {
+  console.error(error);
 });
-
-const port = process.env.PORT || 3333;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
-});
-server.on('error', console.error);

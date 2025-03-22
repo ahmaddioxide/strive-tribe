@@ -5,6 +5,15 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "outputPath": "dist/apps/my-express-api",
+        "tsConfig": "apps/my-express-api/tsconfig.app.json",
+        "assets": [],
+        "main": "apps/my-express-api/src/main.ts"
+      }
+    },
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",

@@ -4,14 +4,6 @@
   "pathMappings": {},
   "nxJsonPlugins": [
     {
-      "name": "@nx/webpack/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview"
-      }
-    },
-    {
       "name": "@nx/eslint/plugin",
       "options": {
         "targetName": "lint"
@@ -22,6 +14,18 @@
       "options": {
         "targetName": "test"
       }
+    },
+    {
+      "name": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json"
+        }
+      }
     }
   ],
   "fileMap": {
@@ -29,8 +33,12 @@
     "projectFileMap": {
       "lobay": [
         {
+          "file": ".github/workflows/ci.yml",
+          "hash": "6968453139367291536"
+        },
+        {
           "file": ".gitignore",
-          "hash": "7663861978715868291"
+          "hash": "6756664851412345862"
         },
         {
           "file": ".prettierignore",
@@ -39,6 +47,10 @@
         {
           "file": ".prettierrc",
           "hash": "16267754514737964994"
+        },
+        {
+          "file": "README.md",
+          "hash": "2245616644392301080"
         },
         {
           "file": "eslint.config.cjs",
@@ -63,15 +75,15 @@
         },
         {
           "file": "nx.json",
-          "hash": "5865172469346868646"
+          "hash": "12288214862335458854"
         },
         {
           "file": "package-lock.json",
-          "hash": "15487447064644580311"
+          "hash": "6576444340150790058"
         },
         {
           "file": "package.json",
-          "hash": "177815876433551754",
+          "hash": "11038665175353531241",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/eslint",
@@ -93,17 +105,23 @@
             "npm:eslint-config-prettier",
             "npm:jest",
             "npm:jest-environment-node",
+            "npm:nodemon",
             "npm:nx",
             "npm:prettier",
             "npm:react-refresh",
             "npm:ts-jest",
             "npm:ts-node",
+            "npm:ts-node-dev",
             "npm:tslib",
             "npm:typescript",
             "npm:typescript-eslint",
             "npm:webpack-cli",
             "npm:axios",
-            "npm:express"
+            "npm:cors",
+            "npm:express",
+            "npm:helmet",
+            "npm:inversify",
+            "npm:mongoose"
           ]
         },
         {
@@ -157,6 +175,10 @@
       ],
       "my-express-api": [
         {
+          "file": "apps/my-express-api/.env.serve.development",
+          "hash": "4090191037405691720"
+        },
+        {
           "file": "apps/my-express-api/eslint.config.cjs",
           "hash": "7759795430795630113"
         },
@@ -166,17 +188,98 @@
         },
         {
           "file": "apps/my-express-api/project.json",
-          "hash": "6165743298282356474"
+          "hash": "11775276660013653898"
         },
         {
           "file": "apps/my-express-api/src/assets/.gitkeep",
           "hash": "3244421341483603138"
         },
         {
-          "file": "apps/my-express-api/src/main.ts",
-          "hash": "16539378517884709050",
+          "file": "apps/my-express-api/src/auth/application/register.ts",
+          "hash": "7314652771314245090",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/domain/user.ts",
+          "hash": "952090549188839887"
+        },
+        {
+          "file": "apps/my-express-api/src/auth/infrastructure/database.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/my-express-api/src/auth/infrastructure/models/User.ts",
+          "hash": "8524437365070989093",
+          "deps": [
+            "npm:mongoose"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/IController.ts",
+          "hash": "660318815169794890",
           "deps": [
             "npm:express"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/auth.controller.ts",
+          "hash": "8889517026508630534",
+          "deps": [
+            "npm:express",
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/docs/auth.swagger.json",
+          "hash": "4943592924709020321"
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/server.ts",
+          "hash": "16869814731620123420",
+          "deps": [
+            "npm:express",
+            "npm:body-parser",
+            "npm:inversify",
+            "npm:cors"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/config/config.ts",
+          "hash": "12555988523725096497",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/config/installer.ts",
+          "hash": "13642499785573643964",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/constants/identifiers.ts",
+          "hash": "6587876120445579895"
+        },
+        {
+          "file": "apps/my-express-api/src/database/IDatabase.ts",
+          "hash": "18065881163473294224"
+        },
+        {
+          "file": "apps/my-express-api/src/database/index.ts",
+          "hash": "18247043905871772015",
+          "deps": [
+            "npm:mongoose",
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/main.ts",
+          "hash": "9671555832903483783",
+          "deps": [
+            "npm:dotenv"
           ]
         },
         {
@@ -190,13 +293,6 @@
         {
           "file": "apps/my-express-api/tsconfig.spec.json",
           "hash": "6622138706846345436"
-        },
-        {
-          "file": "apps/my-express-api/webpack.config.js",
-          "hash": "9206641348907792653",
-          "deps": [
-            "npm:@nx/webpack"
-          ]
         }
       ]
     }

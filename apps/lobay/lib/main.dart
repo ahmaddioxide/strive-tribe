@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
@@ -7,8 +8,14 @@ import 'package:lobay/features/sign_in/signin_screen.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/theme_utils/app_theme.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+Future<void> main() async {
   // debugRepaintRainbowEnabled = false;
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     DevicePreview(
       enabled: false,

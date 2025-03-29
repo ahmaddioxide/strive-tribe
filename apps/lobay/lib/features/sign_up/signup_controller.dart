@@ -1,11 +1,14 @@
 import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_drop_down.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
+import 'package:lobay/core/services/auth_service.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/commom_models/pairs_model.dart';
 import 'package:lobay/utilities/commom_models/tuple_model.dart';
@@ -170,6 +173,27 @@ class SignupController extends GetxController {
     if (pickedFile != null) {
       profileImage.value = XFile(pickedFile.path);
       update();
+    }
+  }
+
+  Future<bool> signup() async {
+    try {
+      final User? user = await AuthService().signUpWithEmailAndPassword(
+          email: emailController.text.trim(),
+          password: passwordController.text);
+      if (user != null) {
+        // User signed up successfully
+        // You can perform additional actions here, like navigating to another screen
+        return true;
+      } else {
+        // Sign-up failed
+        return false;
+      }
+    } on FirebaseAuthException catch (e) {
+      // Handle sign-up error
+      log('Sign-up error: $e');
+      AppSnackbar().showErrorSnackBar(message: e.message.toString());
+      return false;
     }
   }
 }

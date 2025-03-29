@@ -6,6 +6,7 @@ import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
+import 'package:lobay/core/services/auth_service.dart';
 import 'package:lobay/features/sign_in/signin_controller.dart';
 import 'package:lobay/features/sign_up/signup_screen.dart';
 import 'package:lobay/generated/assets.dart';
@@ -249,31 +250,36 @@ class LoginForm extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  height: height * 0.06,
-                  width: width * 0.4,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: AppColors.border,
-                      width: 2,
+                AppClickWidget(
+                  onTap: () async {
+                    await AuthService().signInWithGoogle();
+                  },
+                  child: Container(
+                    height: height * 0.06,
+                    width: width * 0.4,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: AppColors.border,
+                        width: 2,
+                      ),
                     ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      AppImageWidget(
-                        imagePathOrURL: Assets.assetsGoogleIcon,
-                      ),
-                      SizedBox(width: width * 0.03),
-                      Text(
-                        'Google',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        AppImageWidget(
+                          imagePathOrURL: Assets.assetsGoogleIcon,
                         ),
-                      ),
-                    ],
+                        SizedBox(width: width * 0.03),
+                        Text(
+                          'Google',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Container(

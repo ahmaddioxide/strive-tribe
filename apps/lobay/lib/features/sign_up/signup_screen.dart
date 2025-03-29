@@ -257,15 +257,18 @@ class SignupForm extends StatelessWidget {
                   Icon(Icons.arrow_forward, color: AppColors.white),
                 ],
               ),
-              onPressed: () {
+              onPressed: () async {
                 //validate form
-                if (signupController.formKey.currentState!.validate()) {
-                  // signupController.formKey.currentState!.save();
-                  log('Form is valid');
-                } else {
-                  log('Form is invalid');
-                  Get.to(() => ActivitySelectionScreen());
-                }
+                await signupController.signup();
+
+                // if (signupController.formKey.currentState!.validate()) {
+                //   // signupController.formKey.currentState!.save();
+                //  await signupController.signup();
+                //   log('Form is valid');
+                // } else {
+                //   log('Form is invalid');
+                //   Get.to(() => ActivitySelectionScreen());
+                // }
               },
             ),
             SizedBox(height: height * 0.02),

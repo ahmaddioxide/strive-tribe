@@ -48,7 +48,11 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
               return AppButton(
                 isEnabled: signupController.selectedActivities.isNotEmpty,
                 buttonText: 'Register',
-                onPressed: () {},
+                onPressed: () async {
+                  if (signupController.formKey.currentState!.validate()) {
+                    await signupController.signup();
+                  }
+                },
               );
             }),
           ),

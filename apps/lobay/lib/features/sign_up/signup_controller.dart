@@ -177,6 +177,7 @@ class SignupController extends GetxController {
   }
 
   Future<bool> signup() async {
+    // return false;
     try {
       final User? user = await AuthService().signUpWithEmailAndPassword(
           email: emailController.text.trim(),
@@ -184,6 +185,26 @@ class SignupController extends GetxController {
       if (user != null) {
         // User signed up successfully
         // You can perform additional actions here, like navigating to another screen
+        final body = {
+          'user_id': user.uid,
+          'email': emailController.text.trim(),
+          'password': passwordController.text,
+          'name': nameController.text.trim(),
+          'gender': gender.value.toLowerCase(),
+          'date_of_birth': dateOfBirthController.text, // YYYY-MM-DD
+          'location': locationController.text.trim(),
+          'phone': phoneController.text.trim(),
+          'profile_image': profileImage.value?.path,
+          //selected activities to map with activity name and expertise level
+          'activities': selectedActivities
+              .map((activity) => {
+                    'name': activity.first,
+                    'expertise_level': activity.second,
+                  })
+              .toList(),
+        };
+
+        log('Body: $body');
         return true;
       } else {
         // Sign-up failed
@@ -192,7 +213,7 @@ class SignupController extends GetxController {
     } on FirebaseAuthException catch (e) {
       // Handle sign-up error
       log('Sign-up error: $e');
-      AppSnackbar().showErrorSnackBar(message: e.message.toString());
+      AppSnackbar.showErrorSnackBar(message: e.message.toString());
       return false;
     }
   }

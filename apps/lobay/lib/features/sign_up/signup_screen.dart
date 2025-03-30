@@ -6,6 +6,7 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_drop_down.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
 import 'package:lobay/features/sign_up/activity_selection_screen.dart';
 import 'package:lobay/features/sign_up/signup_controller.dart';
@@ -259,16 +260,17 @@ class SignupForm extends StatelessWidget {
               ),
               onPressed: () async {
                 //validate form
-                await signupController.signup();
+                // await signupController.signup();
 
-                // if (signupController.formKey.currentState!.validate()) {
-                //   // signupController.formKey.currentState!.save();
-                //  await signupController.signup();
-                //   log('Form is valid');
-                // } else {
-                //   log('Form is invalid');
-                //   Get.to(() => ActivitySelectionScreen());
-                // }
+                if (signupController.formKey.currentState!.validate()) {
+                  // signupController.formKey.currentState!.save();
+                  Get.to(() => ActivitySelectionScreen());
+                  log('Form is valid');
+                } else {
+                  log('Form is invalid');
+                  AppSnackbar.showErrorSnackBar(
+                      message: 'Please enter the valid values to continue');
+                }
               },
             ),
             SizedBox(height: height * 0.02),

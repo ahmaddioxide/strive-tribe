@@ -22,7 +22,6 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
           Obx(() {
             return Expanded(
               child: GridView.builder(
-                // physics: NeverScrollableScrollPhysics(),
                 padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,

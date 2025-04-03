@@ -2,7 +2,7 @@ export class User {
     public name: string;
     public email: string;
     public gender: string;
-    public dateOfBirth: Date;
+    public dateOfBirth: string;
     public location: string;
     public phoneNumber: string;
     public profileImage: string;

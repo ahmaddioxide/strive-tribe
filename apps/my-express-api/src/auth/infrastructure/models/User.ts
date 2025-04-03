@@ -10,7 +10,7 @@ export interface IUser extends Document {
   email: string;
   name: string;
   gender: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
   location: string;
   phoneNumber: string;
   profileImage?: string;
@@ -23,7 +23,7 @@ const UserSchema: Schema = new Schema({
   email: { type: String, required: true, unique: true },
   name: { type: String, required: true },
   gender: { type: String, required: true },
-  dateOfBirth: { type: Date, required: true },
+  dateOfBirth: { type: String, required: true },
   location: { type: String, required: true },
   phoneNumber: { type: String, required: true },
   profileImage: { type: String },

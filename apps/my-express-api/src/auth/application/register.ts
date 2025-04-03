@@ -44,7 +44,7 @@ export class RegisterUser {
         email: userData.email,
         name: userData.name,
         gender: userData.gender,
-        dateOfBirth: new Date(userData.date_of_birth),
+        dateOfBirth: userData.dateOfBirth,
         location: userData.location,
         phoneNumber: userData.phone,
         profileImage: profileImageUrl,

@@ -6,7 +6,7 @@ export const validateRegister = [
   body("email").isEmail().withMessage("Invalid email format"),
   body("name").notEmpty().withMessage("Name is required"),
   body("gender").notEmpty().withMessage("Gender is required"),
-  body("date_of_birth").isDate().withMessage("Invalid date format (YYYY-MM-DD)"),
+  body("dateOfBirth").notEmpty().withMessage("Invalid date format (YYYY-MM-DD)"),
   body("location").notEmpty().withMessage("Location is required"),
   body("phone").notEmpty().withMessage("Phone number is required"),
   body("signInWith")

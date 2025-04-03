@@ -1004,3 +1004,965 @@
 [NX v20.7.1 Daemon Server] - 2025-04-03T18:40:22.680Z - Established a connection. Number of open connections: 4
 [NX v20.7.1 Daemon Server] - 2025-04-03T18:40:28.174Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
 [NX v20.7.1 Daemon Server] - 2025-04-03T18:40:28.177Z - [SYNC]: @nx/js:typescript-sync error: Missing root "tsconfig.json"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.206Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.207Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.208Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.208Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.208Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.208Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (sources)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.208Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (outputs)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:10.212Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.204Z - Started listening on: /var/folders/__/jz8x1t9n3bsb9f1p4qbrbs5m0000gn/T/1e5af09223539c30f97d/d.sock
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.206Z - [WATCHER]: Subscribed to changes within: /Users/ahamd/Development/Lobay/lobay (native)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.208Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.211Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.216Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.217Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.218Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.230Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.268Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.521Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/package-json' 301.1211250126362ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.522Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 301.8169170022011ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.550Z - Time taken for 'loadDefaultNxPlugins' 330.7359999716282ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.596Z - Time taken for 'Load Nx Plugin: @nx/eslint/plugin' 377.29595798254013ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.598Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 378.79408299922943ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.633Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.633Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.634Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.644Z - Time taken for 'loadSpecifiedNxPlugins' 412.85895800590515ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.647Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.647Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.648Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.651Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.652Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.652Z - Handled GLOB. Handling time: 2. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.652Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.653Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.669Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.669Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.669Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.671Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.671Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.671Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:21.673Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.372Z - Error detected when creating a project graph: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.372Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.373Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.373Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1154. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.373Z - Time taken for 'build-project-configs' 704.6902079880238ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.376Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.377Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.377Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.378Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.442Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.442Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.442Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.443Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.443Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.443Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:22.443Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.449Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.451Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.452Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.452Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.452Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.452Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.454Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.454Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.454Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.454Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.497Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.497Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.498Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.498Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.498Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.498Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:23.498Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.501Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.503Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.503Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.504Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.504Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.504Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.507Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.507Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.507Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 2. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.508Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.548Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.548Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.548Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.549Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.549Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.549Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:27.549Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.552Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.554Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.555Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.556Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.556Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.559Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.559Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.560Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.560Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.561Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.598Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.598Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.599Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.600Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+Error: InvalidSymbol in /Users/ahamd/Development/Lobay/lobay/package.json at 32:1
+  30 |     "@types/multer": "^1.4.12",
+  31 |     "@types/node": "~18.16.9",
+> 32 | <<<<<<< HEAD
+     | ^^^^^^^
+  33 |     "eslint": "^9.21.0",
+  34 | =======
+  35 |     "@types/uuid": "^10.0.0",
+
+    at parseJson (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/json.js:29:15)
+    at readJsonFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/utils/fileutils.js:32:37)
+    at readCombinedDeps (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:119:40)
+    at buildProjectGraphUsingProjectFileMap (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/build-project-graph.js:69:29)
+    at createAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:241:124)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:172:19)
+    at async getCachedSerializedProjectGraphPromise (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+    at async handleRequestProjectGraph (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/daemon/server/server.js:186:16)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.600Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.600Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:48:36.600Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.101Z - [WATCHER]: package.json was modified
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.102Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.203Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.204Z - [REQUEST]: package.json
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.204Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.215Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.215Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.215Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.215Z - Time taken for 'hash changed files from watcher' 0.4621250033378601ms
+
+ NX   Failed to parse npm lockfile
+
+Please open an issue at `https://github.com/nrwl/nx/issues/new?template=1-bug.yml` and provide a reproduction.
+
+Original error: Unexpected token < in JSON at position 396
+
+
+SyntaxError: Unexpected token < in JSON at position 396
+    at JSON.parse (<anonymous>)
+    at parsePackageLockFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:22:26)
+    at getNpmLockfileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:28:18)
+    at getLockFileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/lock-file.js:56:57)
+    at exports.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/index.js:47:64)
+    at /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:10:33
+    at Array.map (<anonymous>)
+    at createNodesFromFiles (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:8:35)
+    at LoadedNxPlugin.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:19:76)
+    at Array.LoadedNxPlugin.createNodes.<computed> (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:36:34)
+
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.221Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.223Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.223Z - Handled HASH_GLOB. Handling time: 4. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.227Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.227Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.227Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.259Z - Time taken for 'build-project-configs' 47.36041700839996ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.260Z - Time taken for '@nx/js/typescript:createDependencies' 1.2217920124530792ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:17.447Z - Time taken for 'total execution time for createProjectGraph()' 190.87491700053215ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.104Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.106Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.107Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - package-lock.json: SyntaxError: Unexpected token < in JSON at position 396
+      at JSON.parse (<anonymous>)
+      at parsePackageLockFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:22:26)
+      at getNpmLockfileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:28:18)
+      at getLockFileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/lock-file.js:56:57)
+      at exports.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/index.js:47:64)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:10:33
+      at Array.map (<anonymous>)
+      at createNodesFromFiles (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:8:35)
+      at LoadedNxPlugin.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:19:76)
+      at Array.LoadedNxPlugin.createNodes.<computed> (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:36:34)
+     - apps/my-express-api/eslint.config.cjs: SyntaxError: Error parsing /Users/ahamd/Development/Lobay/lobay/package.json: Unexpected token < in JSON at position 820
+      at parse (<anonymous>)
+      at readPackage (node:internal/modules/cjs/loader:367:42)
+      at readPackageScope (node:internal/modules/cjs/loader:403:19)
+      at trySelf (node:internal/modules/cjs/loader:518:40)
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1005:24)
+      at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+      at Module.require (node:internal/modules/cjs/loader:1100:19)
+      at require (node:internal/modules/cjs/helpers:119:18)
+      at Object.<anonymous> (/Users/ahamd/Development/Lobay/lobay/apps/my-express-api/eslint.config.cjs:1:20)
+      at Module._compile (node:internal/modules/cjs/loader:1198:14)
+   - eslint.config.cjs: SyntaxError: Error parsing /Users/ahamd/Development/Lobay/lobay/package.json: Unexpected token < in JSON at position 820
+      at parse (<anonymous>)
+      at readPackage (node:internal/modules/cjs/loader:367:42)
+      at readPackageScope (node:internal/modules/cjs/loader:403:19)
+      at trySelf (node:internal/modules/cjs/loader:518:40)
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1005:24)
+      at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+      at Module.require (node:internal/modules/cjs/loader:1100:19)
+      at require (node:internal/modules/cjs/helpers:119:18)
+      at Object.<anonymous> (/Users/ahamd/Development/Lobay/lobay/eslint.config.cjs:1:12)
+      at Module._compile (node:internal/modules/cjs/loader:1198:14)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.108Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.108Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.108Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.112Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.112Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.112Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.113Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.155Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.155Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.155Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.155Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - package-lock.json: SyntaxError: Unexpected token < in JSON at position 396
+      at JSON.parse (<anonymous>)
+      at parsePackageLockFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:22:26)
+      at getNpmLockfileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:28:18)
+      at getLockFileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/lock-file.js:56:57)
+      at exports.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/index.js:47:64)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:10:33
+      at Array.map (<anonymous>)
+      at createNodesFromFiles (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:8:35)
+      at LoadedNxPlugin.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:19:76)
+      at Array.LoadedNxPlugin.createNodes.<computed> (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:36:34)
+     - apps/my-express-api/eslint.config.cjs: SyntaxError: Error parsing /Users/ahamd/Development/Lobay/lobay/package.json: Unexpected token < in JSON at position 820
+      at parse (<anonymous>)
+      at readPackage (node:internal/modules/cjs/loader:367:42)
+      at readPackageScope (node:internal/modules/cjs/loader:403:19)
+      at trySelf (node:internal/modules/cjs/loader:518:40)
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1005:24)
+      at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+      at Module.require (node:internal/modules/cjs/loader:1100:19)
+      at require (node:internal/modules/cjs/helpers:119:18)
+      at Object.<anonymous> (/Users/ahamd/Development/Lobay/lobay/apps/my-express-api/eslint.config.cjs:1:20)
+      at Module._compile (node:internal/modules/cjs/loader:1198:14)
+   - eslint.config.cjs: SyntaxError: Error parsing /Users/ahamd/Development/Lobay/lobay/package.json: Unexpected token < in JSON at position 820
+      at parse (<anonymous>)
+      at readPackage (node:internal/modules/cjs/loader:367:42)
+      at readPackageScope (node:internal/modules/cjs/loader:403:19)
+      at trySelf (node:internal/modules/cjs/loader:518:40)
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1005:24)
+      at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+      at Module.require (node:internal/modules/cjs/loader:1100:19)
+      at require (node:internal/modules/cjs/helpers:119:18)
+      at Object.<anonymous> (/Users/ahamd/Development/Lobay/lobay/eslint.config.cjs:1:12)
+      at Module._compile (node:internal/modules/cjs/loader:1198:14)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.156Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.156Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.156Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.156Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.157Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - package-lock.json: SyntaxError: Unexpected token < in JSON at position 396
+      at JSON.parse (<anonymous>)
+      at parsePackageLockFile (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:22:26)
+      at getNpmLockfileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/npm-parser.js:28:18)
+      at getLockFileNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/lock-file/lock-file.js:56:57)
+      at exports.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js/index.js:47:64)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:10:33
+      at Array.map (<anonymous>)
+      at createNodesFromFiles (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/utils.js:8:35)
+      at LoadedNxPlugin.createNodes (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:19:76)
+      at Array.LoadedNxPlugin.createNodes.<computed> (/Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/project-graph/plugins/loaded-nx-plugin.js:36:34)
+     - apps/my-express-api/eslint.config.cjs: SyntaxError: Error parsing /Users/ahamd/Development/Lobay/lobay/package.json: Unexpected token < in JSON at position 820
+      at parse (<anonymous>)
+      at readPackage (node:internal/modules/cjs/loader:367:42)
+      at readPackageScope (node:internal/modules/cjs/loader:403:19)
+      at trySelf (node:internal/modules/cjs/loader:518:40)
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1005:24)
+      at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+      at Module.require (node:internal/modules/cjs/loader:1100:19)
+      at require (node:internal/modules/cjs/helpers:119:18)
+      at Object.<anonymous> (/Users/ahamd/Development/Lobay/lobay/apps/my-express-api/eslint.config.cjs:1:20)
+      at Module._compile (node:internal/modules/cjs/loader:1198:14)
+   - eslint.config.cjs: SyntaxError: Error parsing /Users/ahamd/Development/Lobay/lobay/package.json: Unexpected token < in JSON at position 820
+      at parse (<anonymous>)
+      at readPackage (node:internal/modules/cjs/loader:367:42)
+      at readPackageScope (node:internal/modules/cjs/loader:403:19)
+      at trySelf (node:internal/modules/cjs/loader:518:40)
+      at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1005:24)
+      at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+      at Module.require (node:internal/modules/cjs/loader:1100:19)
+      at require (node:internal/modules/cjs/helpers:119:18)
+      at Object.<anonymous> (/Users/ahamd/Development/Lobay/lobay/eslint.config.cjs:1:12)
+      at Module._compile (node:internal/modules/cjs/loader:1198:14)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.157Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.157Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:18.157Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.112Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.112Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.113Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.113Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.113Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.114Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (sources)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.115Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (outputs)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:19.115Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.129Z - Started listening on: /var/folders/__/jz8x1t9n3bsb9f1p4qbrbs5m0000gn/T/1e5af09223539c30f97d/d.sock
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.130Z - [WATCHER]: Subscribed to changes within: /Users/ahamd/Development/Lobay/lobay (native)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.137Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.140Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.152Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.152Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.153Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.173Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.189Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.433Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/package-json' 277.3403750061989ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.433Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 277.85149997472763ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.496Z - Time taken for 'loadDefaultNxPlugins' 340.1466670036316ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.517Z - Time taken for 'Load Nx Plugin: @nx/eslint/plugin' 362.8751250207424ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.527Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 371.52708399295807ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.542Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.542Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.542Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.550Z - Time taken for 'loadSpecifiedNxPlugins' 387.95745798945427ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.552Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.552Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.556Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.556Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.556Z - Handled GLOB. Handling time: 3. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.557Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.560Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.560Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.560Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.560Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.560Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.561Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.562Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.562Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:23.562Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.279Z - Time taken for 'build-project-configs' 720.7545410096645ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.282Z - Time taken for '@nx/js/typescript:createDependencies' 5.46424999833107ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.342Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - apps/my-express-api/eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+   - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.344Z - Time taken for 'total execution time for createProjectGraph()' 64.3262500166893ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.344Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.344Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1189. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.347Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.347Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.347Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.348Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.373Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.374Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.374Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.374Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - apps/my-express-api/eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+   - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.376Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.376Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.376Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.379Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.379Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - apps/my-express-api/eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+   - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.382Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.382Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:49:24.384Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.934Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.935Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.935Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.935Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.935Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.935Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (sources)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.935Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (outputs)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:29.935Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.286Z - Started listening on: /var/folders/__/jz8x1t9n3bsb9f1p4qbrbs5m0000gn/T/1e5af09223539c30f97d/d.sock
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.289Z - [WATCHER]: Subscribed to changes within: /Users/ahamd/Development/Lobay/lobay (native)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.293Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.294Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.295Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.298Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.502Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 200.513541ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.518Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/package-json' 217.985542ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.533Z - Time taken for 'loadDefaultNxPlugins' 233.74558299999998ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.548Z - Time taken for 'Load Nx Plugin: @nx/eslint/plugin' 249.159583ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.567Z - Time taken for 'Load Nx Plugin: @nx/jest/plugin' 267.541792ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.571Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.571Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.571Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.577Z - Time taken for 'loadSpecifiedNxPlugins' 271.712125ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.578Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.579Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.579Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.581Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.581Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.581Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.583Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.583Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.583Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.584Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.585Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.585Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.585Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.586Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:44.586Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.416Z - Time taken for 'build-project-configs' 828.5776659999999ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.419Z - Time taken for '@nx/js/typescript:createDependencies' 4.09741699999995ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.470Z - [SYNC]: collect registered sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.470Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.470Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.471Z - Time taken for 'total for creating and serializing project graph' 1172.4329160000002ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.475Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.475Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1172. Response time: 5.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.482Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.482Z - Done responding to the client handleRunPreTasksExecution
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.482Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.482Z - Time taken for 'preTasksExecution' 0.22245799999996052ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.534Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.534Z - Done responding to the client handleHashTasks
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.534Z - Handled HASH_TASKS. Handling time: 18. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.573Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.573Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.573Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 15. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.574Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:45.702Z - [SYNC]: @nx/js:typescript-sync error: Missing root "tsconfig.json"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.005Z - [WATCHER]: tmp/apps/my-express-api/build/tsconfig.generated.dd599691-6f07-4676-a0cd-6fb6c3ffd43d.json was created or restored
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.006Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.106Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.106Z - [REQUEST]: tmp/apps/my-express-api/build/tsconfig.generated.dd599691-6f07-4676-a0cd-6fb6c3ffd43d.json
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.106Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.111Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.111Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.111Z - Handled GLOB. Handling time: 2. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.111Z - Time taken for 'hash changed files from watcher' 0.19595800000001873ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.111Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.112Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.112Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.113Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.113Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.113Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.135Z - Time taken for 'build-project-configs' 25.32241699999986ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.138Z - Time taken for '@nx/js/typescript:createDependencies' 4.249084000000039ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.151Z - [SYNC]: collect registered sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.151Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.151Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.151Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.151Z - Time taken for 'total execution time for createProjectGraph()' 13.787666999999828ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.352Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:46.353Z - [SYNC]: @nx/js:typescript-sync error: Missing root "tsconfig.json"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.010Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.010Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.010Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.010Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.010Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.011Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.011Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.011Z - Time taken for 'total for creating and serializing project graph' 0.1293749999999818ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.020Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.020Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 9.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.024Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.024Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.024Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.025Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.094Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.094Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.094Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.095Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.095Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.095Z - Time taken for 'total for creating and serializing project graph' 0.12037499999996726ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.098Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.098Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.101Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.101Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.102Z - Time taken for 'total for creating and serializing project graph' 0.22412500000018554ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.105Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.105Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.107Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.504Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.505Z - Done responding to the client recordOutputsHash
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.505Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.507Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.507Z - Done responding to the client handleRecordTaskRuns
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.507Z - Handled RECORD_TASK_RUNS. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.507Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.507Z - Done responding to the client handleGetFlakyTasks
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.507Z - Handled GET_FLAKY_TASKS. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.509Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.509Z - Done responding to the client handleRunPostTasksExecution
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.509Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.509Z - Time taken for 'postTasksExecution' 0.06500000000005457ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.512Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.542Z - [WATCHER]: tmp/apps/my-express-api/build/tsconfig.generated.dd599691-6f07-4676-a0cd-6fb6c3ffd43d.json was deleted
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.542Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.542Z - Done responding to the client File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.542Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.543Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.543Z - Time taken for 'changed-projects' 0.21833300000025702ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.641Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.641Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.642Z - [REQUEST]: tmp/apps/my-express-api/build/tsconfig.generated.dd599691-6f07-4676-a0cd-6fb6c3ffd43d.json
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.646Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.646Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.646Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.646Z - Time taken for 'hash changed files from watcher' 0.17716699999982666ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.647Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.647Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.647Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.648Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.649Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.649Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.655Z - Time taken for 'build-project-configs' 9.288332999999966ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.660Z - Time taken for '@nx/js/typescript:createDependencies' 6.333667000000332ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.673Z - [SYNC]: collect registered sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.673Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.673Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.673Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:47.673Z - Time taken for 'total execution time for createProjectGraph()' 15.946709000000283ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.074Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.076Z - [SYNC]: @nx/js:typescript-sync error: Missing root "tsconfig.json"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.546Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.548Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.548Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.550Z - Time taken for 'total for creating and serializing project graph' 0.5088329999998678ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.550Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.552Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.552Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.558Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.558Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.558Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.559Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.601Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.601Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.601Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.602Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.602Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.602Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.602Z - Time taken for 'total for creating and serializing project graph' 0.14916600000015023ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.603Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.603Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.606Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.606Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.606Z - Time taken for 'total for creating and serializing project graph' 0.13312500000029104ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.607Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.607Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:51:48.610Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.469Z - [WATCHER]: apps/my-express-api/src/auth/interface/http/auth.controller.ts was modified
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.470Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.470Z - Done responding to the client File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.470Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.470Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.471Z - Time taken for 'changed-projects' 0.3218750000014552ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.570Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.570Z - [REQUEST]: apps/my-express-api/src/auth/interface/http/auth.controller.ts
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.570Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.598Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.598Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.598Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.598Z - Time taken for 'hash changed files from watcher' 0.5044579999994312ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.599Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.599Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.599Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.602Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.603Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.603Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.619Z - Time taken for 'build-project-configs' 18.599500000000262ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.625Z - Time taken for '@nx/js/typescript:createDependencies' 10.2501250000023ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.645Z - [SYNC]: collect registered sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.645Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.645Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.645Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:13.646Z - Time taken for 'total execution time for createProjectGraph()' 27.592917000001762ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.446Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.448Z - [SYNC]: @nx/js:typescript-sync error: Missing root "tsconfig.json"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.477Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.479Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.480Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.481Z - Time taken for 'total for creating and serializing project graph' 0.909749999998894ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.481Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.483Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.483Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.488Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.488Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.488Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.489Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.536Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.537Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.538Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.538Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.539Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.539Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.539Z - Time taken for 'total for creating and serializing project graph' 0.2778330000001006ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.540Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.540Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.543Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.543Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.544Z - Time taken for 'total for creating and serializing project graph' 0.19754100000136532ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.544Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.544Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:52:14.547Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:23.906Z - [WATCHER]: apps/my-express-api/src/auth/interface/http/auth.controller.ts was modified
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:23.908Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:23.908Z - Done responding to the client File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:23.908Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:23.908Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:23.908Z - Time taken for 'changed-projects' 0.10941699999966659ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.009Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.009Z - [REQUEST]: apps/my-express-api/src/auth/interface/http/auth.controller.ts
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.010Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.013Z - Time taken for 'hash changed files from watcher' 0.24354199998197146ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.021Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.021Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.021Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.022Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.022Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.022Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.023Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.023Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.023Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+(node:5831) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.453Z - Time taken for 'build-project-configs' 438.00800000000163ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.457Z - Time taken for '@nx/js/typescript:createDependencies' 6.365749999997206ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.477Z - [SYNC]: collect registered sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.477Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.477Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.477Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.477Z - Time taken for 'total execution time for createProjectGraph()' 22.469333000015467ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.910Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.910Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.911Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.911Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.911Z - Time taken for 'total for creating and serializing project graph' 0.14095800000359304ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.913Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.913Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.917Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.917Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.917Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.917Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.947Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.947Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.948Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.948Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.948Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.948Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.948Z - Time taken for 'total for creating and serializing project graph' 0.1002499999885913ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.949Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.949Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.951Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.951Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.951Z - Time taken for 'total for creating and serializing project graph' 0.07500000001164153ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.952Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.952Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:24.954Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:26.078Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:26.082Z - [SYNC]: @nx/js:typescript-sync error: Missing root "tsconfig.json"
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.679Z - [WATCHER]: apps/my-express-api/src/auth/interface/http/auth.controller.ts was modified
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.679Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.679Z - Done responding to the client File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.679Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.679Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.679Z - Time taken for 'changed-projects' 0.05087500001536682ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.779Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.779Z - [REQUEST]: apps/my-express-api/src/auth/interface/http/auth.controller.ts
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.779Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.782Z - Time taken for 'hash changed files from watcher' 0.18770799998310395ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.785Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.785Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.785Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.786Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.786Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.786Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.787Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.787Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.787Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.793Z - Time taken for 'build-project-configs' 8.869791000004625ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.796Z - Time taken for '@nx/js/typescript:createDependencies' 5.1823330000042915ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.808Z - [SYNC]: collect registered sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.808Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.808Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.808Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:30.809Z - Time taken for 'total execution time for createProjectGraph()' 13.890666999999667ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.685Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.686Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.686Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.686Z - Time taken for 'total for creating and serializing project graph' 0.2569999999832362ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.687Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.690Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.690Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.696Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.697Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.697Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.697Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.735Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.736Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.736Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.736Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.736Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.736Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.737Z - Time taken for 'total for creating and serializing project graph' 0.12812499998835847ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.738Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.738Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.740Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.740Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.741Z - Time taken for 'total for creating and serializing project graph' 0.1401670000050217ms
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.742Z - Done responding to the client project-graph
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.742Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:31.744Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:34.009Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v20.7.1 Daemon Server] - 2025-04-03T18:55:34.012Z - [SYNC]: @nx/js:typescript-sync error: Missing root "tsconfig.json"

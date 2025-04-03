@@ -53,6 +53,14 @@
           "hash": "3244421341483603138"
         },
         {
+          "file": "apps/my-express-api/src/auth/application/login.ts",
+          "hash": "3730909278014474067",
+          "deps": [
+            "npm:inversify",
+            "npm:jsonwebtoken"
+          ]
+        },
+        {
           "file": "apps/my-express-api/src/auth/application/register.ts",
           "hash": "3528400409991083654",
           "deps": [
@@ -108,6 +116,29 @@
           ]
         },
         {
+          "file": "apps/my-express-api/src/auth/interface/middleware/auth.ts",
+          "hash": "10004597076496442156",
+          "deps": [
+            "npm:express",
+            "npm:jsonwebtoken"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/middleware/errorHandler.ts",
+          "hash": "13405577176580844872",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
+          "hash": "3964232169307541641",
+          "deps": [
+            "npm:express",
+            "npm:express-validator"
+          ]
+        },
+        {
           "file": "apps/my-express-api/src/config/config.ts",
           "hash": "4452170719457815919",
           "deps": [
@@ -117,7 +148,7 @@
         },
         {
           "file": "apps/my-express-api/src/config/firebase.ts",
-          "hash": "9596762652308284752",
+          "hash": "1657404876172512994",
           "deps": [
             "npm:firebase-admin"
           ]
@@ -163,6 +194,50 @@
         {
           "file": "apps/my-express-api/tsconfig.spec.json",
           "hash": "6622138706846345436"
+        }
+      ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
         }
       ],
       "lobay": [
@@ -212,7 +287,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "16036634560452465022"
+          "hash": "16448446601230620001"
         },
         {
           "file": ".prettierignore",
@@ -889,11 +964,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "3915373310166802370"
+          "hash": "8216557660101602389"
         },
         {
           "file": "package.json",
-          "hash": "14421376670089154338",
+          "hash": "49540037687616226",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/eslint",
@@ -910,6 +985,7 @@
             "npm:@swc-node/register",
             "npm:@swc/core",
             "npm:@swc/helpers",
+            "npm:@types/aws-sdk",
             "npm:@types/jest",
             "npm:@types/jsonwebtoken",
             "npm:@types/multer",
@@ -929,64 +1005,26 @@
             "npm:typescript",
             "npm:typescript-eslint",
             "npm:webpack-cli",
+            "npm:aws-sdk",
             "npm:axios",
+            "npm:bcryptjs",
             "npm:cors",
             "npm:express",
+            "npm:express-validator",
+            "npm:fb",
             "npm:firebase-admin",
+            "npm:google-auth-library",
             "npm:helmet",
             "npm:inversify",
             "npm:jsonwebtoken",
             "npm:mongoose",
-            "npm:multer"
+            "npm:multer",
+            "npm:uuid"
           ]
         },
         {
           "file": "tsconfig.base.json",
           "hash": "16936441711144470533"
-        }
-      ],
-      "my-express-api-e2e": [
-        {
-          "file": "apps/my-express-api-e2e/eslint.config.cjs",
-          "hash": "7759795430795630113"
-        },
-        {
-          "file": "apps/my-express-api-e2e/jest.config.ts",
-          "hash": "7741689681773748875"
-        },
-        {
-          "file": "apps/my-express-api-e2e/project.json",
-          "hash": "11462360534563815238"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
-          "hash": "4579662685003779048",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
-          "hash": "2568409276037275290"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
-          "hash": "5275447082211835490"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
-          "hash": "14954872453723519891"
         }
       ]
     }

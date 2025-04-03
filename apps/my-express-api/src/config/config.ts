@@ -16,6 +16,8 @@ export class Config {
     public firebaseApiKey: string;
     public firebaseClientEmail: string;
     public firebasePrivateKey: string;
+    public firebaseServiceAccount: admin.ServiceAccount;
+    public firebaseDatabaseURL: string;
     
     constructor() {
         // Core App Config

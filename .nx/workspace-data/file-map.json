@@ -1,6 +1,6 @@
 {
   "version": "6.0",
-  "nxVersion": "20.3.0",
+  "nxVersion": "20.7.1",
   "pathMappings": {},
   "nxJsonPlugins": [
     {
@@ -29,51 +29,8 @@
     }
   ],
   "fileMap": {
+    "nonProjectFiles": [],
     "projectFileMap": {
-      "my-express-api-e2e": [
-        {
-          "file": "apps/my-express-api-e2e/eslint.config.cjs",
-          "hash": "11302093848765058524"
-        },
-        {
-          "file": "apps/my-express-api-e2e/jest.config.ts",
-          "hash": "6295460344012307609"
-        },
-        {
-          "file": "apps/my-express-api-e2e/project.json",
-          "hash": "11290554083383534240"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
-          "hash": "3026045886657059088",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
-          "hash": "18221119270488052961"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
-          "hash": "17927034305001160425"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
-          "hash": "3131268884761417701",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.json",
-          "hash": "1422418700492434985"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
-          "hash": "5623794208198348967"
-        }
-      ],
       "my-express-api": [
         {
           "file": "apps/my-express-api/.env.serve.development",
@@ -81,31 +38,23 @@
         },
         {
           "file": "apps/my-express-api/eslint.config.cjs",
-          "hash": "11302093848765058524"
+          "hash": "7759795430795630113"
         },
         {
           "file": "apps/my-express-api/jest.config.ts",
-          "hash": "16290288680816405688"
+          "hash": "3923302940049323941"
         },
         {
           "file": "apps/my-express-api/project.json",
-          "hash": "7645576948297045236"
+          "hash": "11775276660013653898"
         },
         {
           "file": "apps/my-express-api/src/assets/.gitkeep",
           "hash": "3244421341483603138"
         },
         {
-          "file": "apps/my-express-api/src/auth/application/login.ts",
-          "hash": "2940520648238025245",
-          "deps": [
-            "npm:inversify",
-            "npm:jsonwebtoken"
-          ]
-        },
-        {
           "file": "apps/my-express-api/src/auth/application/register.ts",
-          "hash": "10359545670539930880",
+          "hash": "3528400409991083654",
           "deps": [
             "npm:inversify",
             "npm:firebase-admin",
@@ -114,7 +63,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/domain/user.ts",
-          "hash": "14084433300710535936"
+          "hash": "16088509640231101242"
         },
         {
           "file": "apps/my-express-api/src/auth/infrastructure/database.ts",
@@ -122,21 +71,21 @@
         },
         {
           "file": "apps/my-express-api/src/auth/infrastructure/models/User.ts",
-          "hash": "10340583360887255290",
+          "hash": "14634837142985458811",
           "deps": [
             "npm:mongoose"
           ]
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/IController.ts",
-          "hash": "5860677984405698053",
+          "hash": "7020420628230583663",
           "deps": [
             "npm:express"
           ]
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/auth.controller.ts",
-          "hash": "9760479808608067484",
+          "hash": "2180633941853445292",
           "deps": [
             "npm:express",
             "npm:inversify",
@@ -145,11 +94,11 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/docs/auth.swagger.json",
-          "hash": "553643713063499385"
+          "hash": "4943592924709020321"
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/server.ts",
-          "hash": "13797468994708176032",
+          "hash": "14720956656776578204",
           "deps": [
             "npm:express",
             "npm:body-parser",
@@ -159,31 +108,8 @@
           ]
         },
         {
-          "file": "apps/my-express-api/src/auth/interface/middleware/auth.ts",
-          "hash": "958562817444632370",
-          "deps": [
-            "npm:express",
-            "npm:jsonwebtoken"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/middleware/errorHandler.ts",
-          "hash": "1644440531363396009",
-          "deps": [
-            "npm:express"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
-          "hash": "12677680756330569032",
-          "deps": [
-            "npm:express",
-            "npm:express-validator"
-          ]
-        },
-        {
           "file": "apps/my-express-api/src/config/config.ts",
-          "hash": "10960330046493404544",
+          "hash": "4452170719457815919",
           "deps": [
             "npm:inversify",
             "npm:firebase-admin"
@@ -191,29 +117,29 @@
         },
         {
           "file": "apps/my-express-api/src/config/firebase.ts",
-          "hash": "2297452942660650417",
+          "hash": "9596762652308284752",
           "deps": [
             "npm:firebase-admin"
           ]
         },
         {
           "file": "apps/my-express-api/src/config/installer.ts",
-          "hash": "13307136867862116291",
+          "hash": "9177274178200519681",
           "deps": [
             "npm:inversify"
           ]
         },
         {
           "file": "apps/my-express-api/src/constants/identifiers.ts",
-          "hash": "507964486836100991"
+          "hash": "2999542831064606726"
         },
         {
           "file": "apps/my-express-api/src/database/IDatabase.ts",
-          "hash": "799590471414891637"
+          "hash": "18065881163473294224"
         },
         {
           "file": "apps/my-express-api/src/database/index.ts",
-          "hash": "3542000973804201278",
+          "hash": "3080665628720662262",
           "deps": [
             "npm:mongoose",
             "npm:inversify"
@@ -221,77 +147,753 @@
         },
         {
           "file": "apps/my-express-api/src/main.ts",
-          "hash": "5511894490035150665",
+          "hash": "16498973212869122900",
           "deps": [
             "npm:dotenv"
           ]
         },
         {
           "file": "apps/my-express-api/tsconfig.app.json",
-          "hash": "5340118297766739939"
+          "hash": "7882563681638815931"
         },
         {
           "file": "apps/my-express-api/tsconfig.json",
-          "hash": "7462419380158041776"
+          "hash": "3490524966360018312"
         },
         {
           "file": "apps/my-express-api/tsconfig.spec.json",
-          "hash": "16260686058541983629"
+          "hash": "6622138706846345436"
         }
       ],
       "lobay": [
         {
+          "file": ".DS_Store",
+          "hash": "17031389523020257837"
+        },
+        {
           "file": ".github/workflows/ci.yml",
-          "hash": "4933880018887165072"
+          "hash": "6968453139367291536"
         },
         {
           "file": ".gitignore",
-          "hash": "8350713005422432993"
+          "hash": "6756664851412345862"
+        },
+        {
+          "file": ".idea/caches/deviceStreaming.xml",
+          "hash": "15287499778931663405"
+        },
+        {
+          "file": ".idea/libraries/Dart_Packages.xml",
+          "hash": "7777430230057243859"
+        },
+        {
+          "file": ".idea/libraries/Dart_SDK.xml",
+          "hash": "5704959341021233754"
+        },
+        {
+          "file": ".idea/lobay.iml",
+          "hash": "499999831583068149"
+        },
+        {
+          "file": ".idea/material_theme_project_new.xml",
+          "hash": "15689621775398881808"
+        },
+        {
+          "file": ".idea/misc.xml",
+          "hash": "355524226910183859"
+        },
+        {
+          "file": ".idea/modules.xml",
+          "hash": "15644791202527746667"
+        },
+        {
+          "file": ".idea/vcs.xml",
+          "hash": "14600148892634157659"
+        },
+        {
+          "file": ".idea/workspace.xml",
+          "hash": "16036634560452465022"
         },
         {
           "file": ".prettierignore",
-          "hash": "17085498363870782104"
+          "hash": "14688272390704683536"
         },
         {
           "file": ".prettierrc",
-          "hash": "6820402234827505055"
+          "hash": "16267754514737964994"
         },
         {
           "file": "README.md",
-          "hash": "14633386058278931445"
+          "hash": "2245616644392301080"
+        },
+        {
+          "file": "apps/.DS_Store",
+          "hash": "5849863529637681190"
+        },
+        {
+          "file": "apps/lobay/.gitignore",
+          "hash": "1487491545795915773"
+        },
+        {
+          "file": "apps/lobay/.metadata",
+          "hash": "6764411668264621536"
+        },
+        {
+          "file": "apps/lobay/README.md",
+          "hash": "10673631665495574986"
+        },
+        {
+          "file": "apps/lobay/analysis_options.yaml",
+          "hash": "3650987223333083373"
+        },
+        {
+          "file": "apps/lobay/android/.gitignore",
+          "hash": "7220182562130177456"
+        },
+        {
+          "file": "apps/lobay/android/app/build.gradle",
+          "hash": "4209498354159379663"
+        },
+        {
+          "file": "apps/lobay/android/app/google-services.json",
+          "hash": "14107740137587153525"
+        },
+        {
+          "file": "apps/lobay/android/app/src/debug/AndroidManifest.xml",
+          "hash": "2424010824173831934"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/AndroidManifest.xml",
+          "hash": "4093173391939177742"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/kotlin/com/lobay/app/lobay/MainActivity.kt",
+          "hash": "6984342698986002516"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/drawable-v21/launch_background.xml",
+          "hash": "4986171810521098768"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/drawable/launch_background.xml",
+          "hash": "750324681697267716"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+          "hash": "6127639912104919491"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+          "hash": "9755888237755811154"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+          "hash": "3140589550079853370"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+          "hash": "14467722886953532767"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+          "hash": "10469269528108147861"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/values-night/styles.xml",
+          "hash": "1856035890191000928"
+        },
+        {
+          "file": "apps/lobay/android/app/src/main/res/values/styles.xml",
+          "hash": "315751654984603465"
+        },
+        {
+          "file": "apps/lobay/android/app/src/profile/AndroidManifest.xml",
+          "hash": "2424010824173831934"
+        },
+        {
+          "file": "apps/lobay/android/build.gradle",
+          "hash": "2830036735361506935"
+        },
+        {
+          "file": "apps/lobay/android/gradle.properties",
+          "hash": "1264519489710196683"
+        },
+        {
+          "file": "apps/lobay/android/gradle/wrapper/gradle-wrapper.properties",
+          "hash": "3833905432515876602"
+        },
+        {
+          "file": "apps/lobay/android/settings.gradle",
+          "hash": "9054759822568259146"
+        },
+        {
+          "file": "apps/lobay/assets/google_icon.png",
+          "hash": "16374093962262309100"
+        },
+        {
+          "file": "apps/lobay/assets/images/app_icon_white.png",
+          "hash": "17611603604500169073"
+        },
+        {
+          "file": "apps/lobay/assets/images/badminton.png",
+          "hash": "13571960488810890761"
+        },
+        {
+          "file": "apps/lobay/assets/images/baseball.png",
+          "hash": "7911151909843245722"
+        },
+        {
+          "file": "apps/lobay/assets/images/baseketball.png",
+          "hash": "3459098203030218512"
+        },
+        {
+          "file": "apps/lobay/assets/images/cricket.png",
+          "hash": "7642543861408685952"
+        },
+        {
+          "file": "apps/lobay/assets/images/facebook_logo.png",
+          "hash": "9512436441072692577"
+        },
+        {
+          "file": "apps/lobay/assets/images/onboarding_1.png",
+          "hash": "5414321896895676856"
+        },
+        {
+          "file": "apps/lobay/assets/images/onboarding_2.png",
+          "hash": "1809156066109698974"
+        },
+        {
+          "file": "apps/lobay/assets/images/onboarding_3.png",
+          "hash": "16047049896765843114"
+        },
+        {
+          "file": "apps/lobay/assets/images/placeholder.jpg",
+          "hash": "14495447474628958138"
+        },
+        {
+          "file": "apps/lobay/assets/images/placeholder_person.jpg",
+          "hash": "16195943128726153215"
+        },
+        {
+          "file": "apps/lobay/assets/images/soccer.png",
+          "hash": "16287583672827953073"
+        },
+        {
+          "file": "apps/lobay/assets/images/tennis.png",
+          "hash": "10397943186457830004"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/app_icon.svg",
+          "hash": "9362490645472849133"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/app_icon_white.svg",
+          "hash": "14705602014097012263"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/circle_user.svg",
+          "hash": "1133457113890852734"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/google_logo.svg",
+          "hash": "10502003153657425423"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/home_icon.svg",
+          "hash": "1329662099392899942"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/messages_icon.svg",
+          "hash": "7067301840741827582"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/no_activity.svg",
+          "hash": "9974920062642900221"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/notification_icon.svg",
+          "hash": "14513594925921314065"
+        },
+        {
+          "file": "apps/lobay/assets/svgs/players_icon.svg",
+          "hash": "1280784505109841687"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/1024.png",
+          "hash": "10173080723653904572"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/114.png",
+          "hash": "16630895577558439485"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/120.png",
+          "hash": "9483028185456882607"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/180.png",
+          "hash": "13002878681065205244"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/29.png",
+          "hash": "3436623672060201065"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/40.png",
+          "hash": "16473736484916678828"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/57.png",
+          "hash": "15348718231639716758"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/58.png",
+          "hash": "13820215108512162843"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/60.png",
+          "hash": "10189624918733378485"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/80.png",
+          "hash": "2960813159296618757"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/87.png",
+          "hash": "363883167942980088"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/Assets.xcassets/AppIcon.appiconset/Contents.json",
+          "hash": "14223733867353523907"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/android/mipmap-hdpi/ic_launcher.png",
+          "hash": "6127639912104919491"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/android/mipmap-mdpi/ic_launcher.png",
+          "hash": "9755888237755811154"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/android/mipmap-xhdpi/ic_launcher.png",
+          "hash": "3140589550079853370"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/android/mipmap-xxhdpi/ic_launcher.png",
+          "hash": "14467722886953532767"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/android/mipmap-xxxhdpi/ic_launcher.png",
+          "hash": "10469269528108147861"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/appstore.png",
+          "hash": "10173080723653904572"
+        },
+        {
+          "file": "apps/lobay/data/generated_icon/playstore.png",
+          "hash": "11879075240538826835"
+        },
+        {
+          "file": "apps/lobay/data/lobay_icon_1024.png",
+          "hash": "5490868129080197737"
+        },
+        {
+          "file": "apps/lobay/firebase.json",
+          "hash": "8602813807028000352"
+        },
+        {
+          "file": "apps/lobay/ios/.gitignore",
+          "hash": "11829594315324166477"
+        },
+        {
+          "file": "apps/lobay/ios/Flutter/AppFrameworkInfo.plist",
+          "hash": "7792689663883631766"
+        },
+        {
+          "file": "apps/lobay/ios/Flutter/Debug.xcconfig",
+          "hash": "869674052259773556"
+        },
+        {
+          "file": "apps/lobay/ios/Flutter/Release.xcconfig",
+          "hash": "10210930790230762332"
+        },
+        {
+          "file": "apps/lobay/ios/Podfile",
+          "hash": "6698087925410976045"
+        },
+        {
+          "file": "apps/lobay/ios/Podfile.lock",
+          "hash": "6848616726802399815"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcodeproj/project.pbxproj",
+          "hash": "2913169624135896185"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+          "hash": "7905627858604825927"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "hash": "12722229457274558422"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+          "hash": "11015238449633062087"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+          "hash": "15140801185183868753"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcworkspace/contents.xcworkspacedata",
+          "hash": "11392897894790070714"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "hash": "12722229457274558422"
+        },
+        {
+          "file": "apps/lobay/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+          "hash": "11015238449633062087"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/AppDelegate.swift",
+          "hash": "10107173367169013511"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/1024.png",
+          "hash": "10173080723653904572"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/114.png",
+          "hash": "16630895577558439485"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/120.png",
+          "hash": "9483028185456882607"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/180.png",
+          "hash": "13002878681065205244"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/29.png",
+          "hash": "3436623672060201065"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/40.png",
+          "hash": "16473736484916678828"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/57.png",
+          "hash": "15348718231639716758"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/58.png",
+          "hash": "13820215108512162843"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/60.png",
+          "hash": "10189624918733378485"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/80.png",
+          "hash": "2960813159296618757"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/87.png",
+          "hash": "363883167942980088"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+          "hash": "14223733867353523907"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+          "hash": "9910583525975909610"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png",
+          "hash": "8198580046434161737"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png",
+          "hash": "8198580046434161737"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png",
+          "hash": "8198580046434161737"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+          "hash": "1692426015314638624"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Base.lproj/LaunchScreen.storyboard",
+          "hash": "10838346425801468425"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Base.lproj/Main.storyboard",
+          "hash": "8711865626386969945"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/GoogleService-Info.plist",
+          "hash": "4514338533017883599"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Info.plist",
+          "hash": "16213194812215186300"
+        },
+        {
+          "file": "apps/lobay/ios/Runner/Runner-Bridging-Header.h",
+          "hash": "9345155165121591741"
+        },
+        {
+          "file": "apps/lobay/ios/RunnerTests/RunnerTests.swift",
+          "hash": "6335546013279342170"
+        },
+        {
+          "file": "apps/lobay/lib/common_widgets/app_button.dart",
+          "hash": "2698264179035953443"
+        },
+        {
+          "file": "apps/lobay/lib/common_widgets/app_click_widget.dart",
+          "hash": "17813150119566863773"
+        },
+        {
+          "file": "apps/lobay/lib/common_widgets/app_drop_down.dart",
+          "hash": "3998004125185951666"
+        },
+        {
+          "file": "apps/lobay/lib/common_widgets/app_image_widget.dart",
+          "hash": "10548402880080922780"
+        },
+        {
+          "file": "apps/lobay/lib/common_widgets/app_snackbars.dart",
+          "hash": "14570649379587472681"
+        },
+        {
+          "file": "apps/lobay/lib/common_widgets/app_text_field.dart",
+          "hash": "15835992467963077861"
+        },
+        {
+          "file": "apps/lobay/lib/common_widgets/widget_constants.dart",
+          "hash": "7175491108031342924"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/api_client.dart",
+          "hash": "17878895438076371808"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/api_exception.dart",
+          "hash": "13464990658594785887"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/app_config.dart",
+          "hash": "8569987495258632506"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/network_constants.dart",
+          "hash": "9706340685326314303"
+        },
+        {
+          "file": "apps/lobay/lib/core/services/auth_service.dart",
+          "hash": "17456933984364130037"
+        },
+        {
+          "file": "apps/lobay/lib/core/shared_preferences/shared_pref.dart",
+          "hash": "1775961838784076765"
+        },
+        {
+          "file": "apps/lobay/lib/features/bottom_navigation/bottom_navigation_controller.dart",
+          "hash": "6551735517737147024"
+        },
+        {
+          "file": "apps/lobay/lib/features/bottom_navigation/bottom_navigation_main.dart",
+          "hash": "15496018404867671520"
+        },
+        {
+          "file": "apps/lobay/lib/features/create_activity/create_activity_controller.dart",
+          "hash": "6385197682334247821"
+        },
+        {
+          "file": "apps/lobay/lib/features/create_activity/create_activity_screen.dart",
+          "hash": "9141677444141887654"
+        },
+        {
+          "file": "apps/lobay/lib/features/home/filter_bottomsheet_widget.dart",
+          "hash": "5684019198734657503"
+        },
+        {
+          "file": "apps/lobay/lib/features/home/home_screen.dart",
+          "hash": "10433461309461387136"
+        },
+        {
+          "file": "apps/lobay/lib/features/home/home_screen_controller.dart",
+          "hash": "2208069807571797341"
+        },
+        {
+          "file": "apps/lobay/lib/features/home/widgets/activities.dart",
+          "hash": "13912857546689869411"
+        },
+        {
+          "file": "apps/lobay/lib/features/home/widgets/activities_tile.dart",
+          "hash": "2002143828898440753"
+        },
+        {
+          "file": "apps/lobay/lib/features/home/widgets/no_activity_widget.dart",
+          "hash": "10964320604201572963"
+        },
+        {
+          "file": "apps/lobay/lib/features/inbox/inbox_screen.dart",
+          "hash": "3071819273245505564"
+        },
+        {
+          "file": "apps/lobay/lib/features/notifications/notifications_screen.dart",
+          "hash": "16112026398857039993"
+        },
+        {
+          "file": "apps/lobay/lib/features/onboarding/onboarding_controller.dart",
+          "hash": "1254872438715879196"
+        },
+        {
+          "file": "apps/lobay/lib/features/onboarding/onboarding_screen.dart",
+          "hash": "17981045567824566974"
+        },
+        {
+          "file": "apps/lobay/lib/features/players/players_screen.dart",
+          "hash": "579987137180880736"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_in/signin_controller.dart",
+          "hash": "7998752491347625224"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_in/signin_screen.dart",
+          "hash": "10016380687667380472"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_up/activity_selection_screen.dart",
+          "hash": "9021583869123723089"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_up/signup_controller.dart",
+          "hash": "18199675370594739804"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_up/signup_screen.dart",
+          "hash": "13515334732330187282"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_up/widgets/activity_container.dart",
+          "hash": "7800061252401467136"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_up/widgets/select_activity_top_bar.dart",
+          "hash": "10438058479970415051"
+        },
+        {
+          "file": "apps/lobay/lib/features/sign_up/widgets/signup_screen_top_container.dart",
+          "hash": "3619907503967564471"
+        },
+        {
+          "file": "apps/lobay/lib/firebase_options.dart",
+          "hash": "1133680934563488374"
+        },
+        {
+          "file": "apps/lobay/lib/generated/assets.dart",
+          "hash": "13029587485537301379"
+        },
+        {
+          "file": "apps/lobay/lib/main.dart",
+          "hash": "2343685933890825561"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/app_utils/app_utils.dart",
+          "hash": "11207076786652030076"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/app_utils/validators.dart",
+          "hash": "532064868086043359"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/commom_models/pairs_model.dart",
+          "hash": "15122539001876331957"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/commom_models/tuple_model.dart",
+          "hash": "8993576882348605051"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/constants/app_constants.dart",
+          "hash": "14130610788865945372"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/constants/app_enums.dart",
+          "hash": "4071528563990464933"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/mixins/device_size_util.dart",
+          "hash": "16901265441185106186"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/text_utils/text_style_utils.dart",
+          "hash": "14642459214032526968"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/theme_utils/app_colors.dart",
+          "hash": "6290079297304205091"
+        },
+        {
+          "file": "apps/lobay/lib/utilities/theme_utils/app_theme.dart",
+          "hash": "14504644988868964461"
+        },
+        {
+          "file": "apps/lobay/pubspec.lock",
+          "hash": "10614759888069334369"
+        },
+        {
+          "file": "apps/lobay/pubspec.yaml",
+          "hash": "5899381325054136574"
+        },
+        {
+          "file": "apps/lobay/test/widget_test.dart",
+          "hash": "10986653475748964200"
         },
         {
           "file": "eslint.config.cjs",
-          "hash": "13933208012680746256",
+          "hash": "4219588132382477313",
           "deps": [
             "npm:@nx/eslint-plugin"
           ]
         },
         {
           "file": "jest.config.ts",
-          "hash": "7544409015863045561",
+          "hash": "3494843969422251966",
           "deps": [
             "npm:@nx/jest"
           ]
         },
         {
           "file": "jest.preset.js",
-          "hash": "7473220183190921152",
+          "hash": "9430166341120122740",
           "deps": [
             "npm:@nx/jest"
           ]
         },
         {
           "file": "nx.json",
-          "hash": "11386847333843409267"
+          "hash": "12288214862335458854"
         },
         {
           "file": "package-lock.json",
-          "hash": "804727864529030350"
+          "hash": "3915373310166802370"
         },
         {
           "file": "package.json",
-          "hash": "2651202194867492159",
+          "hash": "14421376670089154338",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/eslint",
@@ -302,15 +904,16 @@
             "npm:@nx/node",
             "npm:@nx/web",
             "npm:@nx/webpack",
+            "npm:@nxrocks/nx-flutter",
             "npm:@pmmmwh/react-refresh-webpack-plugin",
             "npm:@svgr/webpack",
             "npm:@swc-node/register",
             "npm:@swc/core",
             "npm:@swc/helpers",
-            "npm:@types/aws-sdk",
             "npm:@types/jest",
+            "npm:@types/jsonwebtoken",
+            "npm:@types/multer",
             "npm:@types/node",
-            "npm:@types/uuid",
             "npm:eslint",
             "npm:eslint-config-prettier",
             "npm:jest",
@@ -326,33 +929,66 @@
             "npm:typescript",
             "npm:typescript-eslint",
             "npm:webpack-cli",
-            "npm:aws-sdk",
             "npm:axios",
-            "npm:bcryptjs",
             "npm:cors",
             "npm:express",
-            "npm:express-validator",
-            "npm:fb",
             "npm:firebase-admin",
-            "npm:google-auth-library",
             "npm:helmet",
             "npm:inversify",
             "npm:jsonwebtoken",
             "npm:mongoose",
-            "npm:multer",
-            "npm:uuid"
+            "npm:multer"
           ]
         },
         {
-          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.json",
-          "hash": "4508182324654425681"
+          "file": "tsconfig.base.json",
+          "hash": "16936441711144470533"
+        }
+      ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
         },
         {
-          "file": "tsconfig.base.json",
-          "hash": "12471885200579325840"
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
         }
       ]
-    },
-    "nonProjectFiles": []
+    }
   }
 }

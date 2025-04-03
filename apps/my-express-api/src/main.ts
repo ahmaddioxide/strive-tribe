@@ -1,21 +1,37 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
+// src/main.ts
+import dotenv from 'dotenv';
+import { IDatabase } from './database/IDatabase';
+import container from "./config/installer";
+import { Identifier } from "./constants/identifiers";
+import Server from "./auth/interface/http/server";
+import IController from "./auth/interface/http/IController";
+import { Config } from "./config/config";
+import { initializeFirebase } from "./config/firebase";
 
-import express from 'express';
-import * as path from 'path';
+dotenv.config();
 
-const app = express();
+async function bootstrap() {
+  try {
+    // Get dependencies from container
+    const dbDriver = container.get<IDatabase>(Identifier.databaseDriver);
+    const config = container.get<Config>(Identifier.config);
+    const authController = container.get<IController>(Identifier.authController);
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+    // Initialize Firebase
+    initializeFirebase(config);
+    
+    await dbDriver.connect();
+    
+    const server = new Server(
+      [authController],
+      config.port
+    );
+    
+    server.listen();
+  } catch (error) {
+    console.error('Failed to start application:', error);
+    process.exit(1);
+  }
+}
 
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to my-express-api 2!' });
-});
-
-const port = process.env.PORT || 3333;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
-});
-server.on('error', console.error);
+bootstrap();

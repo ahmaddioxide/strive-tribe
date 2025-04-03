@@ -1,0 +1,5 @@
+export class Identifier {
+    public static databaseDriver = Symbol("DatabaseDriver");
+    public static config = Symbol("Config");
+    public static authController = Symbol("authController");
+}

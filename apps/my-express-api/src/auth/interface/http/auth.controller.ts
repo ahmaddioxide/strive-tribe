@@ -1,16 +1,9 @@
-// src/auth/interface/http/auth.controller.ts
 import { Router, Request, Response, NextFunction } from "express";
 import { inject, injectable } from "inversify";
 import { RegisterUser } from "../../application/register";
 import { LoginUser } from "../../application/login";
 import IController from "./IController";
-import multer from "multer";
-import { File } from "multer"; 
 import { validateRegister, validateLogin } from "../middleware/validation";
-
-interface MulterRequest extends Request {
-  file?: File;
-}
 
 @injectable()
 export default class AuthController implements IController {
@@ -18,7 +11,6 @@ export default class AuthController implements IController {
   public router: Router = Router();
   private registerUser: RegisterUser;
   private loginUser: LoginUser;
-  private upload = multer({ storage: multer.memoryStorage() });
 
   constructor(
     @inject(RegisterUser) registerUser: RegisterUser,
@@ -32,23 +24,29 @@ export default class AuthController implements IController {
   private initializeRoutes() {
     this.router.post(
       `${this.path}/register`,
-      this.upload.single("profile_image"),
       validateRegister,
-      this.register
+      this.register.bind(this)
     );
     this.router.post(
       `${this.path}/login`, 
       validateLogin, 
-      this.login
+      this.login.bind(this)
     );
   }
 
   private register = async (req: Request, res: Response) => {
     try {
       const { profile_image, ...userData } = req.body;
-  
-      const response = await this.registerUser.execute(userData, profile_image);
       
+      // Base64 validation
+      /*if(profile_image && !this.isValidBase64Image(profile_image)) {
+        return res.status(400).json({
+          success: false,
+          error: "Invalid image format. Use base64 encoded image with data:image/ prefix"
+        });
+      }*/
+
+      const response = await this.registerUser.execute(userData, profile_image);
       res.status(201).json(response);
     } catch (error: any) {
       res.status(500).json({ 
@@ -64,7 +62,10 @@ export default class AuthController implements IController {
       const { user_id } = req.body;
   
       if (!user_id) {
-        return res.status(400).json({ error: "user_id is required" });
+        return res.status(400).json({ 
+          success: false,
+          error: "user_id is required" 
+        });
       }
   
       const response = await this.loginUser.execute(user_id);
@@ -83,4 +84,8 @@ export default class AuthController implements IController {
       }
     }
   };
+
+  private isValidBase64Image(base64String: string): boolean {
+    return base64String.startsWith('data:image/');
+  }
 }

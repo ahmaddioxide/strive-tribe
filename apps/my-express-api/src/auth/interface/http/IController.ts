@@ -1,5 +1,5 @@
-import * as express from 'express';
+import * as express from "express";
 
 export default interface IController {
-     router: express.Router;
+  router: express.Router;
 }

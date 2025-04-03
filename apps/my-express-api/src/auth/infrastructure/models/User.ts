@@ -1,58 +1,41 @@
-import mongoose, { Schema, Document, Query } from "mongoose";
+import mongoose, { Schema, Document } from "mongoose";
 
-export interface IUserModel extends Document {
-  username: string;
-  active: boolean;
-  hash_password: string;
-  gender: string;
-  system_role: string;
-  first_name: string;
-  last_name: string;
-  father_name: string;
-  cnic: string;
-  date_of_birth: Date;
+interface Activity {
+  name: string;
+  expertise_level: string;
+}
+
+export interface IUser extends Document {
+  userId: string;
   email: string;
-  phone_number: string;
-  landline_number: string;
-  address_1: string;
-  address_2: string;
-  qualification: string;
-  designation:string;
-  joiningDate: Date;
-  departureDate: Date;
-  site: string;
-  id: string;
-  lastLoginTimeStamp: Date;
-  firstTimeLogin:boolean;
-
+  name: string;
+  gender: string;
+  dateOfBirth: Date;
+  location: string;
+  phoneNumber: string;
+  profileImage?: string;
+  activities: Activity[];
+  signInWith: 'google' | 'facebook' | 'email_password';
 }
 
 const UserSchema: Schema = new Schema({
-  username: { type: String },
-  active: { type: Boolean },
-  hash_password: { type: String },
-  system_role: { type: String },
-  first_name: { type: String },
-  gender: { type: String },
-  last_name: { type: String },
-  father_name: { type: String },
-  cnic: { type: String },
-  date_of_birth: { type: Date },
-  email: { type: String,unique:true },
-  phone_number: { type: String },
-  landline_number: { type: String },
-  address_1: { type: String },
-  address_2: { type: String },
-  qualification: { type: String },
-  designation: { type: String },
-  joiningDate: { type: Date },
-  departureDate: { type: Date },
-  site: { type: String},
-  lastLoginTimeStamp: { type: Date },
-  firstTimeLogin: { type: Boolean, default:false},
-
-  _id: { type: String }
+  userId: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
+  gender: { type: String, required: true },
+  dateOfBirth: { type: Date, required: true },
+  location: { type: String, required: true },
+  phoneNumber: { type: String, required: true },
+  profileImage: { type: String },
+  activities: [{
+    name: String,
+    expertise_level: String
+  }],
+  signInWith: {
+    type: String,
+    enum: ['google', 'facebook', 'email_password'],
+    required: true
+  }
 }, { timestamps: true });
 
-const UserModel = mongoose.model<IUserModel>("user", UserSchema);
-export default UserModel;
+export default mongoose.model<IUser>("User", UserSchema);

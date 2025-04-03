@@ -1,28 +1,37 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
+// src/main.ts
 import dotenv from 'dotenv';
 import { IDatabase } from './database/IDatabase';
-import  container  from "./config/installer";
+import container from "./config/installer";
 import { Identifier } from "./constants/identifiers";
 import Server from "./auth/interface/http/server";
 import IController from "./auth/interface/http/IController";
+import { Config } from "./config/config";
+import { initializeFirebase } from "./config/firebase";
 
-dotenv.config(); // Load environment variables from a .env file
+dotenv.config();
 
-let config = container.get<any>(Identifier.config);
+async function bootstrap() {
+  try {
+    // Get dependencies from container
+    const dbDriver = container.get<IDatabase>(Identifier.databaseDriver);
+    const config = container.get<Config>(Identifier.config);
+    const authController = container.get<IController>(Identifier.authController);
 
-let dbDriver:IDatabase = container.get<IDatabase>(Identifier.databaseDriver);
-dbDriver.connect().then((data) => {
-  const server = new Server(
-    [
-      container.get<IController>(Identifier.authController),
-  
-    ],
-    config.port,
-  );
-  console.log('Database Connected');
-}).catch((error:Error) => {
-  console.error(error);
-});
+    // Initialize Firebase
+    initializeFirebase(config);
+    
+    await dbDriver.connect();
+    
+    const server = new Server(
+      [authController],
+      config.port
+    );
+    
+    server.listen();
+  } catch (error) {
+    console.error('Failed to start application:', error);
+    process.exit(1);
+  }
+}
+
+bootstrap();

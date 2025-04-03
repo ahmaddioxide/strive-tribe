@@ -1,9 +1,11 @@
 export class User {
-    public firstName: string;
-    public lastName: string;
-    public dateOfBirth: Date;
+    public name: string;
     public email: string;
+    public gender: string;
+    public dateOfBirth: Date;
+    public location: string;
     public phoneNumber: string;
-    public profilePictureUrl: string;
-    private passwordHash: string;
-}
+    public profileImage: string;
+    private password: string;
+  }
+  

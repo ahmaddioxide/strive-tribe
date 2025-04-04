@@ -93,11 +93,10 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/auth.controller.ts",
-          "hash": "2180633941853445292",
+          "hash": "9398020433970455816",
           "deps": [
             "npm:express",
-            "npm:inversify",
-            "npm:multer"
+            "npm:inversify"
           ]
         },
         {
@@ -246,6 +245,10 @@
           "hash": "17031389523020257837"
         },
         {
+          "file": ".env",
+          "hash": "7961779597993376075"
+        },
+        {
           "file": ".github/workflows/ci.yml",
           "hash": "6968453139367291536"
         },
@@ -287,7 +290,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "16448446601230620001"
+          "hash": "1244561284991071637"
         },
         {
           "file": ".prettierignore",

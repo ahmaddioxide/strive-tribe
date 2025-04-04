@@ -12003,11 +12003,6 @@
       },
       {
         "source": "my-express-api",
-        "target": "npm:multer",
-        "type": "static"
-      },
-      {
-        "source": "my-express-api",
         "target": "npm:body-parser",
         "type": "static"
       },
@@ -27805,6 +27800,132 @@
     ]
   },
   "version": "6.0",
-  "errors": [],
-  "computedAt": 1743706530805
+  "errors": [
+    {
+      "stack": " - eslint.config.cjs: ConfigError: Config (unnamed): Key \"rules\": Key \"curly\": structuredClone is not defined\n    at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5\n    at Array.reduce (<anonymous>)\n    at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)\n    at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)\n    at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)\n    at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)\n    at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19\n    at async Promise.all (index 0)\n    at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)",
+      "message": "An error occurred while processing files for the @nx/eslint/plugin plugin\n.\n  - eslint.config.cjs: Config (unnamed): Key \"rules\": Key \"curly\": structuredClone is not defined",
+      "errors": [
+        [
+          "eslint.config.cjs",
+          {
+            "stack": "ConfigError: Config (unnamed): Key \"rules\": Key \"curly\": structuredClone is not defined\n    at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5\n    at Array.reduce (<anonymous>)\n    at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)\n    at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)\n    at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)\n    at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)\n    at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19\n    at async Promise.all (index 0)\n    at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)",
+            "message": "Config (unnamed): Key \"rules\": Key \"curly\": structuredClone is not defined",
+            "cause": {
+              "stack": "Error: Key \"rules\": Key \"curly\": structuredClone is not defined\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/object-schema/dist/cjs/index.cjs:399:12\n    at Array.reduce (<anonymous>)\n    at ObjectSchema.merge (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/object-schema/dist/cjs/index.cjs:382:18)\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1169:43\n    at Array.reduce (<anonymous>)\n    at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)\n    at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)\n    at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)\n    at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)\n    at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19",
+              "message": "Key \"rules\": Key \"curly\": structuredClone is not defined",
+              "cause": {
+                "stack": "Error: Key \"curly\": structuredClone is not defined\n    at ObjectSchema.merge (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/config/flat-config-schema.js:499:11)\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/object-schema/dist/cjs/index.cjs:389:27\n    at Array.reduce (<anonymous>)\n    at ObjectSchema.merge (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/object-schema/dist/cjs/index.cjs:382:18)\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1169:43\n    at Array.reduce (<anonymous>)\n    at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)\n    at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)\n    at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)\n    at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)",
+                "message": "Key \"curly\": structuredClone is not defined",
+                "cause": {
+                  "stack": "ReferenceError: structuredClone is not defined\n    at normalizeRuleOptions (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/config/flat-config-schema.js:138:2)\n    at ObjectSchema.merge (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/config/flat-config-schema.js:466:22)\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/object-schema/dist/cjs/index.cjs:389:27\n    at Array.reduce (<anonymous>)\n    at ObjectSchema.merge (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/object-schema/dist/cjs/index.cjs:382:18)\n    at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1169:43\n    at Array.reduce (<anonymous>)\n    at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)\n    at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)\n    at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)",
+                  "message": "structuredClone is not defined"
+                }
+              }
+            },
+            "name": "ConfigError",
+            "index": 12
+          }
+        ]
+      ],
+      "partialResults": [
+        [
+          "apps/my-express-api/eslint.config.cjs",
+          {
+            "projects": {
+              "apps/my-express-api": {
+                "targets": {
+                  "lint": {
+                    "command": "eslint .",
+                    "cache": true,
+                    "options": {
+                      "cwd": "apps/my-express-api"
+                    },
+                    "inputs": [
+                      "default",
+                      "^default",
+                      "{workspaceRoot}/eslint.config.cjs",
+                      "{projectRoot}/eslint.config.cjs",
+                      "{workspaceRoot}/tools/eslint-rules/**/*",
+                      {
+                        "externalDependencies": [
+                          "eslint"
+                        ]
+                      }
+                    ],
+                    "outputs": [
+                      "{options.outputFile}"
+                    ],
+                    "metadata": {
+                      "technologies": [
+                        "eslint"
+                      ],
+                      "description": "Runs ESLint on project",
+                      "help": {
+                        "command": "npx eslint --help",
+                        "example": {
+                          "options": {
+                            "max-warnings": 0
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        [
+          "apps/my-express-api-e2e/eslint.config.cjs",
+          {
+            "projects": {
+              "apps/my-express-api-e2e": {
+                "targets": {
+                  "lint": {
+                    "command": "eslint .",
+                    "cache": true,
+                    "options": {
+                      "cwd": "apps/my-express-api-e2e"
+                    },
+                    "inputs": [
+                      "default",
+                      "^default",
+                      "{workspaceRoot}/eslint.config.cjs",
+                      "{projectRoot}/eslint.config.cjs",
+                      "{workspaceRoot}/tools/eslint-rules/**/*",
+                      {
+                        "externalDependencies": [
+                          "eslint"
+                        ]
+                      }
+                    ],
+                    "outputs": [
+                      "{options.outputFile}"
+                    ],
+                    "metadata": {
+                      "technologies": [
+                        "eslint"
+                      ],
+                      "description": "Runs ESLint on project",
+                      "help": {
+                        "command": "npx eslint --help",
+                        "example": {
+                          "options": {
+                            "max-warnings": 0
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      ],
+      "name": "AggregateCreateNodesError",
+      "pluginIndex": 0
+    }
+  ],
+  "computedAt": 1743764078040
 }

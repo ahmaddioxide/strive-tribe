@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_button.dart';
-import 'package:lobay/features/sign_up/signup_controller.dart';
-import 'package:lobay/features/sign_up/widgets/activity_container.dart';
-import 'package:lobay/features/sign_up/widgets/select_activity_top_bar.dart';
+import 'package:lobay/features/authentication/sign_up/signup_controller.dart';
+import 'package:lobay/features/authentication/sign_up/widgets/activity_container.dart';
+import 'package:lobay/features/authentication/sign_up/widgets/select_activity_top_bar.dart';
+
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 
 class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {

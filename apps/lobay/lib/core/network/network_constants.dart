@@ -6,6 +6,8 @@ class RequestTimeoutConstants {
   static int receiveTimeout = durationFactor * 1000; // 60 seconds
   static int sendTimeout = durationFactor * 1000; // 60 seconds
 }
-class EndPoints{
 
+class EndPoints {
+  static const String register = 'api/auth/register';
+  static const String login = 'api/auth/login';
 }

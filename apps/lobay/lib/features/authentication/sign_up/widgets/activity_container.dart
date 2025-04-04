@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
-import 'package:lobay/features/sign_up/signup_controller.dart';
+import 'package:lobay/features/authentication/sign_up/signup_controller.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 

@@ -27,17 +27,6 @@ class AuthService {
       );
       final User? user = userCredential.user;
 
-      // If new user created, optionally send data to your backend
-      // (e.g., to store more user profile info in your DB).
-      // if (user != null) {
-      //   await _sendUserDataToBackend(
-      //     uid: user.uid,
-      //     email: user.email!,
-      //     displayName: user.displayName ?? '',
-      //     provider: 'email-password',
-      //   );
-      // }
-
       return user;
     } on FirebaseAuthException catch (e) {
       // Handle Firebase Auth errors with dedicated function

@@ -1,7 +1,7 @@
 import 'package:lobay/utilities/constants/app_enums.dart';
 
 class AppConfig {
-  static Environment environment = Environment.dev; // Change this as needed
+  static Environment environment = Environment.dev;
 
   static String get baseUrl {
     switch (environment) {
@@ -10,7 +10,7 @@ class AppConfig {
       case Environment.prod:
         return '';
       case Environment.dev:
-        return '';
+        return 'http://localhost:3000/';
     }
   }
 }

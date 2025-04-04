@@ -8,6 +8,7 @@ class ApiClient {
   late Dio _dio;
 
   ApiClient() {
+    String? token = '';
     _dio = Dio(BaseOptions(
       baseUrl: AppConfig.baseUrl,
       sendTimeout: Duration(seconds: RequestTimeoutConstants.sendTimeout),

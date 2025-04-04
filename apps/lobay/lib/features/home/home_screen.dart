@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
+import 'package:lobay/features/authentication/repository/auth_repo.dart';
 import 'package:lobay/features/home/filter_bottomsheet_widget.dart';
 import 'package:lobay/features/home/home_screen_controller.dart';
 import 'package:lobay/features/home/widgets/activities.dart';
 import 'package:lobay/features/home/widgets/no_activity_widget.dart';
+import 'package:lobay/features/onboarding/onboarding_screen.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/constants/app_enums.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -24,12 +26,18 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(height * 0.05),
-            child: AppImageWidget(
-              imagePathOrURL: Assets.imagesPlaceholderPerson,
-              height: height * 0.05,
-              width: width * 0.05,
+          child: AppClickWidget(
+            onTap: () async {
+              await AuthenticationRepository().logout();
+              Get.offAll(() => OnboardingScreen());
+            },
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(height * 0.05),
+              child: AppImageWidget(
+                imagePathOrURL: Assets.imagesPlaceholderPerson,
+                height: height * 0.05,
+                width: width * 0.05,
+              ),
             ),
           ),
         ),

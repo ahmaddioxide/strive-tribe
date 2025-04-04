@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
+import 'package:lobay/features/authentication/sign_in/signin_screen.dart';
 
 class OnboardingController extends GetxController {
   var currentPage = 0.obs;
@@ -16,8 +16,8 @@ class OnboardingController extends GetxController {
         curve: Curves.ease,
       );
     } else {
-      Get.offAll(() => BottomNavigationScreen());
-      // For now, just print:
+      Get.offAll(() => SigninScreen());
+      //
       log("Onboarding finished!");
     }
   }

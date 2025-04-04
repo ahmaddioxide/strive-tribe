@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,14 +9,20 @@ import 'package:image_picker/image_picker.dart';
 import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_drop_down.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
+import 'package:lobay/core/network/network_models/register_body_model.dart';
 import 'package:lobay/core/services/auth_service.dart';
+import 'package:lobay/core/services/shared_pref_service.dart';
+import 'package:lobay/features/authentication/repository/auth_repo.dart';
+import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/commom_models/pairs_model.dart';
 import 'package:lobay/utilities/commom_models/tuple_model.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
+import '../../../core/network/network_models/register_response_body.dart';
 
 class SignupController extends GetxController {
+  final AuthenticationRepository _authRepo = AuthenticationRepository();
   final formKey = GlobalKey<FormState>();
 
   final emailController = TextEditingController();
@@ -183,31 +190,57 @@ class SignupController extends GetxController {
           email: emailController.text.trim(),
           password: passwordController.text);
       if (user != null) {
-        // User signed up successfully
-        // You can perform additional actions here, like navigating to another screen
-        final body = {
-          'user_id': user.uid,
-          'email': emailController.text.trim(),
-          'password': passwordController.text,
-          'name': nameController.text.trim(),
-          'gender': gender.value.toLowerCase(),
-          'date_of_birth': dateOfBirthController.text, // YYYY-MM-DD
-          'location': locationController.text.trim(),
-          'phone': phoneController.text.trim(),
-          'profile_image': profileImage.value?.path,
-          //selected activities to map with activity name and expertise level
-          'activities': selectedActivities
-              .map((activity) => {
-                    'name': activity.first,
-                    'expertise_level': activity.second,
-                  })
-              .toList(),
-        };
+        List<Activity> activities = [];
+        for (var activity in selectedActivities) {
+          activities.add(Activity(
+            name: activity.first,
+            expertiseLevel: activity.second,
+          ));
+        }
+        final RegisterBodyModel registerBodyModel = RegisterBodyModel(
+          userId: user.uid,
+          email: emailController.text,
+          name: nameController.text.trim(),
+          gender: gender.value,
+          dateOfBirth: dateOfBirthController.text,
+          location: locationController.text.trim(),
+          phone: phoneController.text.trim(),
+          signInWith: 'google',
+          activities: activities,
+          profileImage: await profileImage.value!
+              .readAsBytes()
+              .then((value) => 'data:image/png;base64,${base64Encode(value)}'),
+        );
 
-        log('Body: $body');
+        final RegisterResponseBody? registerResponse =
+            await _authRepo.register(registerBodyModel);
+
+        if (registerResponse != null) {
+          if (registerResponse.success) {
+            // Registration successful
+            log('Registration successful: ${registerResponse.user}');
+            await AppSnackbar.showSuccessSnackBar(
+                message: 'Registration successful');
+
+            await PreferencesManager.getInstance()
+                .setStringValue('userId', registerResponse.user.id);
+            await PreferencesManager.getInstance()
+                .setStringValue('userName', registerResponse.user.name);
+            await PreferencesManager.getInstance()
+                .setStringValue('token', registerResponse.token);
+            await PreferencesManager.getInstance()
+                .setStringValue('userEmail', registerResponse.user.email);
+
+            Get.offAll(() => BottomNavigationScreen());
+          } else {
+            AppSnackbar.showErrorSnackBar(
+                message: 'Registration failed: ${registerResponse.token}');
+          }
+        } else {
+          AppSnackbar.showErrorSnackBar(message: 'Registration failed');
+        }
         return true;
       } else {
-        // Sign-up failed
         return false;
       }
     } on FirebaseAuthException catch (e) {

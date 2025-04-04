@@ -7,8 +7,9 @@ import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
 import 'package:lobay/core/services/auth_service.dart';
-import 'package:lobay/features/sign_in/signin_controller.dart';
-import 'package:lobay/features/sign_up/signup_screen.dart';
+import 'package:lobay/features/authentication/sign_in/signin_controller.dart';
+import 'package:lobay/features/authentication/sign_up/signup_screen.dart';
+
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/app_utils/validators.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
@@ -206,10 +207,11 @@ class LoginForm extends StatelessWidget {
             SizedBox(height: height * 0.02),
             AppButton(
               buttonText: 'Log In',
-              onPressed: () {
+              onPressed: () async {
                 //validate and submit
                 if (signInController.formKey.currentState!.validate()) {
                   // signInController.formKey.currentState!.save();
+                await  signInController.signin();
                   log('Validated');
                   // signInController.signIn();
                 } else {

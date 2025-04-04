@@ -8,9 +8,10 @@ import 'package:lobay/common_widgets/app_drop_down.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
-import 'package:lobay/features/sign_up/activity_selection_screen.dart';
-import 'package:lobay/features/sign_up/signup_controller.dart';
-import 'package:lobay/features/sign_up/widgets/signup_screen_top_container.dart';
+import 'package:lobay/features/authentication/sign_up/activity_selection_screen.dart';
+import 'package:lobay/features/authentication/sign_up/signup_controller.dart';
+import 'package:lobay/features/authentication/sign_up/widgets/signup_screen_top_container.dart';
+
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/app_utils/validators.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';

@@ -30,7 +30,7 @@ class BottomNavigationScreen extends StatelessWidget {
       body: Obx(() => _pages[_controller.currentIndex.value]),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(()=>CreateActivityScreen());
+          Get.to(() => CreateActivityScreen());
         },
         shape: CircleBorder(),
         backgroundColor: AppColors.primaryLight,

@@ -4,33 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="Resolved api issues and tested login and signup api">
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/enums/login_type.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/login_body_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/login_reponse_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/register_body_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/register_response_body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/core/services/shared_pref_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="Login and signup api integration">
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/api_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/api_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/app_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/app_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/services/auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/services/auth_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/bottom_navigation/bottom_navigation_main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/bottom_navigation/bottom_navigation_main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_in/signin_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_in/signin_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_up/activity_selection_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_up/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_up/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_up/widgets/activity_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/widgets/activity_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_up/widgets/select_activity_top_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/widgets/select_activity_top_bar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/sign_up/widgets/signup_screen_top_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/widgets/signup_screen_top_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743764107065</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Login and signup api integration">
+      <option name="closed" value="true" />
+      <created>1743788608072</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743788608072</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,7 +154,8 @@
     <MESSAGE value="changes app icon, imported assets, added core functionalities, constants, theme setting, base color classes, created mixins and enums etc" />
     <MESSAGE value="created common models and app utils" />
     <MESSAGE value="Resolved api issues and tested login and signup api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolved api issues and tested login and signup api" />
+    <MESSAGE value="Login and signup api integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login and signup api integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -188,7 +172,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/apps/lobay/lib/core/network/api_client.dart</url>
-          <line>11</line>
+          <line>12</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

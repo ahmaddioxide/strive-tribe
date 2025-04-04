@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:lobay/core/network/api_exception.dart';
 import 'package:lobay/core/network/app_config.dart';
 import 'package:lobay/core/network/network_constants.dart';
+import 'package:lobay/core/services/shared_pref_service.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class ApiClient {
@@ -32,9 +33,10 @@ class ApiClient {
 
     // Authentication Interceptor
     _dio.interceptors.add(InterceptorsWrapper(
-      onRequest: (options, handler) {
-        final token = '';
-        if (token.isNotEmpty) {
+      onRequest: (options, handler) async {
+        final token =
+            await PreferencesManager.getInstance().getStringValue('token', '');
+        if (token != null && token.isNotEmpty) {
           options.headers['Authorization'] = 'Bearer $token';
         }
         return handler.next(options);

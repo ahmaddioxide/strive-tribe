@@ -15,12 +15,12 @@ export class RegisterUser {
     try {
       let profileImageUrl = "NULL";
       
-      /*if (profileImageBase64) {
+      if (profileImageBase64) {
         // Remove data URL prefix if present
         const base64Data = profileImageBase64.replace(/^data:image\/\w+;base64,/, '');
         
         const bucket = firebaseAdmin.storage().bucket();
-        const fileName = `profile_images/${Date.now()}_${Math.random().toString(36).substring(2, 8)}.jpg`;
+        const fileName = `strive-tribe_profile_images/${Date.now()}_${Math.random().toString(36).substring(2, 8)}.jpg`;
         const file = bucket.file(fileName);
         
         const buffer = Buffer.from(base64Data, 'base64');
@@ -37,7 +37,7 @@ export class RegisterUser {
         
         await file.makePublic();
         profileImageUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`;
-      }*/
+      }
 
       const newUser = new UserModel({ 
         userId: userData.user_id,

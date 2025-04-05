@@ -39,12 +39,12 @@ export default class AuthController implements IController {
       const { profile_image, ...userData } = req.body;
       
       // Base64 validation
-      /*if(profile_image && !this.isValidBase64Image(profile_image)) {
+      if(profile_image && !this.isValidBase64Image(profile_image)) {
         return res.status(400).json({
           success: false,
           error: "Invalid image format. Use base64 encoded image with data:image/ prefix"
         });
-      }*/
+      }
 
       const response = await this.registerUser.execute(userData, profile_image);
       res.status(201).json(response);

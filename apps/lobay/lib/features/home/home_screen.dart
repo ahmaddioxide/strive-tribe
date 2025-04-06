@@ -121,12 +121,10 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
               ),
               Divider(),
               // SizedBox(height: height * 0.16),
-              Center(
-                child: Expanded(
-                  child: SizedBox(
-                    height: height * 0.7,
-                    child: ActivitiesList(),
-                  ),
+              Expanded(
+                child: SizedBox(
+                  height: height * 0.7,
+                  child: ActivitiesList(),
                 ),
               ),
             ],

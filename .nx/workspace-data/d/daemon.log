@@ -10266,3 +10266,233 @@ SyntaxError: Unexpected token < in JSON at position 396
 [NX v20.7.1 Daemon Server] - 2025-04-04T17:47:04.712Z - Time taken for 'build-project-configs' 16.744750000536442ms
 [NX v20.7.1 Daemon Server] - 2025-04-04T17:47:04.716Z - Time taken for '@nx/js/typescript:createDependencies' 6.536667000502348ms
 [NX v20.7.1 Daemon Server] - 2025-04-04T17:47:04.740Z - Time taken for 'total execution time for createProjectGraph()' 27.094916999340057ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:53.914Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:53.925Z - [WATCHER]: .idea/workspace.xml was modified
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.727Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.727Z - [REQUEST]: .idea/workspace.xml
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.727Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.740Z - Time taken for 'hash changed files from watcher' 0.6151250004768372ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.751Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.751Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.751Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.753Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.753Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.753Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.755Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.755Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.755Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.774Z - Time taken for 'build-project-configs' 37.34462499991059ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.781Z - Time taken for '@nx/js/typescript:createDependencies' 9.577583000063896ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:50:54.799Z - Time taken for 'total execution time for createProjectGraph()' 24.248666997998953ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:20.723Z - [WATCHER]: apps/lobay/lib/features/home/home_screen.dart was modified
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:20.723Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:20.810Z - [WATCHER]: .idea/workspace.xml was modified
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:20.811Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.325Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.325Z - [REQUEST]: apps/lobay/lib/features/home/home_screen.dart,.idea/workspace.xml
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.325Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.334Z - Time taken for 'hash changed files from watcher' 0.45966700091958046ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.342Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.342Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.342Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.344Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.344Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.344Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.345Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.346Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.346Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.359Z - Time taken for 'build-project-configs' 28.581792000681162ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.367Z - Time taken for '@nx/js/typescript:createDependencies' 9.913249999284744ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:22.384Z - Time taken for 'total execution time for createProjectGraph()' 22.66704199835658ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:27.675Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:54:57.792Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:55:10.644Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:55:18.509Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:13.734Z - [WATCHER]: .idea/workspace.xml was modified
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:13.735Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.937Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.937Z - [REQUEST]: .idea/workspace.xml
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.937Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.946Z - Time taken for 'hash changed files from watcher' 0.5052080005407333ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.956Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.956Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.956Z - Handled GLOB. Handling time: 2. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.959Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.960Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.960Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.963Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.963Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.963Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.985Z - Time taken for 'build-project-configs' 33.788166999816895ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:16.991Z - Time taken for '@nx/js/typescript:createDependencies' 9.746915999799967ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T17:57:17.009Z - Time taken for 'total execution time for createProjectGraph()' 28.880458999425173ms
+[NX v20.7.1 Daemon Server] - 2025-04-04T21:00:38.657Z - Closed a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-04T21:00:38.658Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-04T21:00:38.659Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (sources)
+[NX v20.7.1 Daemon Server] - 2025-04-04T21:00:38.659Z - [WATCHER]: Stopping the watcher for /Users/ahamd/Development/Lobay/lobay (outputs)
+[NX v20.7.1 Daemon Server] - 2025-04-04T21:00:38.670Z - Server stopped because: "10800000ms of inactivity"
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.476Z - Started listening on: /var/folders/__/jz8x1t9n3bsb9f1p4qbrbs5m0000gn/T/1e5af09223539c30f97d/d.sock
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.481Z - [WATCHER]: Subscribed to changes within: /Users/ahamd/Development/Lobay/lobay (native)
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.484Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.485Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.495Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.496Z - Closed a connection. Number of open connections: 0
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.496Z - Established a connection. Number of open connections: 1
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.497Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.839Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/js' 337.88079100847244ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.896Z - Time taken for 'Load Nx Plugin: /Users/ahamd/Development/Lobay/lobay/node_modules/nx/src/plugins/package-json' 394.8080410063267ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:22.946Z - Time taken for 'loadDefaultNxPlugins' 444.5819999873638ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.007Z - Time taken for 'Load Nx Plugin: @nx/eslint/plugin' 508.7976249754429ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.019Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 518.2921250164509ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.032Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.032Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.033Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.043Z - Time taken for 'loadSpecifiedNxPlugins' 533.3627080023289ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.044Z - Established a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.044Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.046Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.047Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.047Z - Handled GLOB. Handling time: 1. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.048Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.050Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.050Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.050Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.050Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.050Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.052Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.052Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.052Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.052Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.924Z - Time taken for 'build-project-configs' 871.9219999909401ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.928Z - Time taken for '@nx/js/typescript:createDependencies' 7.108375012874603ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.959Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.962Z - Time taken for 'total execution time for createProjectGraph()' 35.109166979789734ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.967Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.967Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1462. Response time: 8.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.973Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.975Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.975Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 2.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:23.977Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.130Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.130Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.131Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.131Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.134Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.138Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.138Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 7.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.142Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.142Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.149Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.149Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 7.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:24.152Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.753Z - [WATCHER]: .idea/workspace.xml was modified
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.754Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.755Z - Done responding to the client File watch changed
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.755Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.755Z - [WATCHER]: Processing file changes in outputs
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.755Z - Time taken for 'changed-projects' 0.3400839865207672ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.854Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.854Z - [REQUEST]: .idea/workspace.xml
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.854Z - [REQUEST]: 
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.859Z - Time taken for 'hash changed files from watcher' 0.2045000195503235ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.862Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.863Z - Done responding to the client handleGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.863Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.864Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.864Z - Done responding to the client handleHashGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.864Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.865Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.865Z - Done responding to the client handleHashMultiGlob
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.865Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.876Z - Time taken for 'build-project-configs' 16.629790991544724ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.881Z - Time taken for '@nx/js/typescript:createDependencies' 6.064666002988815ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:50.897Z - Time taken for 'total execution time for createProjectGraph()' 18.295500010252ms
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.760Z - Established a connection. Number of open connections: 5
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.761Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.761Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.764Z - Closed a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.772Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.772Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 11.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.776Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.776Z - Done responding to the client handleContextFileData
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.776Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.777Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.848Z - Closed a connection. Number of open connections: 2
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.849Z - Established a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.849Z - Established a connection. Number of open connections: 4
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.850Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.850Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.853Z - Closed a connection. Number of open connections: 3
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.856Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.857Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 7.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.860Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.860Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - eslint.config.cjs: ConfigError: Config (unnamed): Key "rules": Key "curly": structuredClone is not defined
+      at rethrowConfigError (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:328:8)
+      at /Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1174:5
+      at Array.reduce (<anonymous>)
+      at FlatConfigArray.getConfigWithStatus (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1167:43)
+      at FlatConfigArray.getConfig (/Users/ahamd/Development/Lobay/lobay/node_modules/@eslint/config-array/dist/cjs/index.cjs:1196:15)
+      at ESLint.calculateConfigForFile (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1129:18)
+      at async ESLint.isPathIgnored (/Users/ahamd/Development/Lobay/lobay/node_modules/eslint/lib/eslint/eslint.js:1160:18)
+      at async /Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:129:19
+      at async Promise.all (index 0)
+      at async internalCreateNodesV2 (/Users/ahamd/Development/Lobay/lobay/node_modules/@nx/eslint/src/plugins/plugin.js:117:5)
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.869Z - Done responding to the client null
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.869Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 9.
+[NX v20.7.1 Daemon Server] - 2025-04-06T05:21:51.872Z - Established a connection. Number of open connections: 4

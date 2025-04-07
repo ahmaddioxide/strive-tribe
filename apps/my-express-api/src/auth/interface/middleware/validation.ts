@@ -12,6 +12,7 @@ export const validateRegister = [
   body("signInWith")
     .isIn(['google', 'facebook', 'email_password'])
     .withMessage("Invalid sign in method"),
+  body("isVarified").optional().isBoolean().withMessage("isVarified must be a boolean"),
   body("activities").optional().isArray(),
   (req: Request, res: Response, next: NextFunction) => {
     const errors = validationResult(req);
@@ -30,6 +31,77 @@ export const validateLogin = [
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
+    }
+    next();
+  }
+];
+
+
+export const validateUpdate = [
+  body("user_id")
+    .notEmpty().withMessage("user_id is required")
+    .isString().withMessage("user_id must be a string"),
+
+  body("name")
+    .optional()
+    .notEmpty().withMessage("Name cannot be empty")
+    .isString().withMessage("Name must be a string"),
+
+  body("email")
+    .optional()
+    .isEmail().withMessage("Invalid email format"),
+
+  body("location")
+    .optional()
+    .notEmpty().withMessage("Location cannot be empty")
+    .isString().withMessage("Location must be a string"),
+
+  body("phone")
+    .optional()
+    .notEmpty().withMessage("Phone number cannot be empty")
+    .isMobilePhone("any").withMessage("Invalid phone number format"),
+
+  body("dateOfBirth")
+    .optional()
+    .matches(/^\d{4}-\d{2}-\d{2}$/).withMessage("Invalid date format (YYYY-MM-DD)")
+    .custom((value) => {
+      const date = new Date(value);
+      if (isNaN(date.getTime())) {
+        throw new Error("Invalid date of birth");
+      }
+      return true;
+    }),
+
+  body("gender")
+    .optional()
+    .notEmpty().withMessage("Gender cannot be empty")
+    .isString().withMessage("Gender must be a string"),
+
+  body("activities")
+    .optional()
+    .isArray().withMessage("Activities must be an array"),
+
+  body("profile_image")
+    .optional()
+    .isString().withMessage("Profile image must be a base64 string")
+    .custom((value) => {
+      if (!value.startsWith('data:image/')) {
+        throw new Error('Invalid image format. Must start with data:image/');
+      }
+      return true;
+    }),
+
+  body("isVarified")
+    .optional()
+    .isBoolean().withMessage("isVarified must be a boolean"),
+
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array() 
+      });
     }
     next();
   }

@@ -49,7 +49,8 @@ export class RegisterUser {
         phoneNumber: userData.phone,
         profileImage: profileImageUrl,
         activities: userData.activities || [],
-        signInWith: userData.signInWith
+        signInWith: userData.signInWith,
+        isVarified: userData.isVarified
       });
       
       await newUser.save();
@@ -67,7 +68,8 @@ export class RegisterUser {
           name: newUser.name,
           email: newUser.email,
           profileImage: newUser.profileImage,
-          signInWith: newUser.signInWith
+          signInWith: newUser.signInWith,
+          isVarified: newUser.isVarified
         }
       };
     } catch (error: any) {

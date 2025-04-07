@@ -16,6 +16,7 @@ export interface IUser extends Document {
   profileImage?: string;
   activities: Activity[];
   signInWith: 'google' | 'facebook' | 'email_password';
+  isVarified: boolean;
 }
 
 const UserSchema: Schema = new Schema({
@@ -35,7 +36,8 @@ const UserSchema: Schema = new Schema({
     type: String,
     enum: ['google', 'facebook', 'email_password'],
     required: true
-  }
+  },
+  isVarified: { type: Boolean, default: false }
 }, { timestamps: true });
 
 export default mongoose.model<IUser>("User", UserSchema);

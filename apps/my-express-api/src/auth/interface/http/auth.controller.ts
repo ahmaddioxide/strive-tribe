@@ -2,8 +2,9 @@ import { Router, Request, Response, NextFunction } from "express";
 import { inject, injectable } from "inversify";
 import { RegisterUser } from "../../application/register";
 import { LoginUser } from "../../application/login";
+import { UpdateUser } from "../../application/update";
 import IController from "./IController";
-import { validateRegister, validateLogin } from "../middleware/validation";
+import { validateRegister, validateLogin, validateUpdate } from "../middleware/validation";
 
 @injectable()
 export default class AuthController implements IController {
@@ -11,13 +12,16 @@ export default class AuthController implements IController {
   public router: Router = Router();
   private registerUser: RegisterUser;
   private loginUser: LoginUser;
+  private updateUser: UpdateUser;
 
   constructor(
     @inject(RegisterUser) registerUser: RegisterUser,
     @inject(LoginUser) loginUser: LoginUser,
+    @inject(UpdateUser) updateUser: UpdateUser
   ) {
     this.registerUser = registerUser;
     this.loginUser = loginUser;
+    this.updateUser = updateUser;
     this.initializeRoutes();
   }
 
@@ -31,6 +35,11 @@ export default class AuthController implements IController {
       `${this.path}/login`, 
       validateLogin, 
       this.login.bind(this)
+    );
+    this.router.put(
+      `${this.path}/update`,
+      validateUpdate,
+      this.update.bind(this)
     );
   }
 
@@ -82,6 +91,26 @@ export default class AuthController implements IController {
           error: error.message || "Login failed"
         });
       }
+    }
+  };
+
+  private update = async (req: Request, res: Response) => {
+    try {
+      const { user_id, profile_image, ...updateData } = req.body;
+      
+      const response = await this.updateUser.execute(
+        user_id,
+        updateData,
+        profile_image
+      );
+      
+      res.status(200).json(response);
+    } catch (error: any) {
+      res.status(500).json({ 
+        success: false,
+        error: error.message || "Update failed",
+        ...(process.env.NODE_ENV === 'development' && { stack: error.stack })
+      });
     }
   };
 

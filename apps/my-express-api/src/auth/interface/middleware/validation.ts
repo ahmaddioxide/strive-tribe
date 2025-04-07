@@ -106,3 +106,20 @@ export const validateUpdate = [
     next();
   }
 ];
+
+// Add to validation.ts
+export const validateCheckUser = [
+  body("user_id")
+    .notEmpty().withMessage("user_id is required")
+    .isString().withMessage("user_id must be a string"),
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array() 
+      });
+    }
+    next();
+  }
+];

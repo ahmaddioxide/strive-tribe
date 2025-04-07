@@ -1,14 +1,24 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
+import 'package:lobay/core/network/network_models/login_body_model.dart';
+import 'package:lobay/core/network/network_models/login_reponse_model.dart';
 import 'package:lobay/core/repo/auth_repo.dart';
+import 'package:lobay/core/shared_preferences/shared_pref.dart';
+import 'package:lobay/features/authentication/repository/auth_repo.dart';
+import 'package:lobay/features/authentication/sign_in/signin_controller.dart';
+import 'package:lobay/features/authentication/sign_up/signup_screen.dart';
+import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
 
 class AuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FacebookAuth _facebookAuth = FacebookAuth.instance;
+  final AuthenticationRepository _authRepo = AuthenticationRepository();
 
   /// ---------------------------------------------
   /// SIGN UP WITH EMAIL & PASSWORD
@@ -112,13 +122,33 @@ class AuthService {
 
       final userId = user?.uid;
       //check if user exists in the backend
-      final ifUserAlreadyExists =
-          await AuthenticationRepository().ifUserExists(userId!);
+      final ifUserAlreadyExists = await _authRepo.ifUserExists(userId!);
 
       if (ifUserAlreadyExists) {
-        print('User already exists in the backend');
+        log('User already exists in the backend');
+        final loginBody = LoginBodyModel(
+          userId: userId,
+        );
+
+        final LoginResponseModel? response = await _authRepo.login(loginBody);
+        if (response != null) {
+          // Store user data in shared preferences
+          await PreferencesManager.getInstance()
+              .setStringValue('token', response.token);
+          await PreferencesManager.getInstance()
+              .setStringValue('userId', response.user.id);
+          await PreferencesManager.getInstance()
+              .setStringValue('userName', response.user.name);
+          await PreferencesManager.getInstance()
+              .setStringValue('userEmail', response.user.email);
+          AppSnackbar.showSuccessSnackBar(message: 'Sign-in successful');
+          Get.offAll(() => BottomNavigationScreen());
+        }
       } else {
         print('User does not exist in the backend');
+        Get.offAll(SignupScreen(
+          isGoogleLogin: true,
+        ));
       }
 
       return user;

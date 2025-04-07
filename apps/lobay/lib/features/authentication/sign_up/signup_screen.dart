@@ -18,19 +18,25 @@ import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class SignupScreen extends StatelessWidget with DeviceSizeUtil {
-  const SignupScreen({super.key});
+  final bool isGoogleLogin;
+
+  const SignupScreen({super.key, this.isGoogleLogin = false});
 
   @override
   Widget build(BuildContext context) {
     final signupController = Get.put(SignupController());
     final height = getDeviceHeight();
     final width = getDeviceWidth();
+    if (isGoogleLogin) {
+      log('Google Login in signup screen');
+      signupController.populateIfSignupWithGoogle();
+    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             SignupScreenTopContainer(height: height, width: width),
-            SignupForm(height: height, width: width),
+            SignupForm(height: height, width: width,isGoogleLogin: isGoogleLogin,),
           ],
         ),
       ),
@@ -39,14 +45,20 @@ class SignupScreen extends StatelessWidget with DeviceSizeUtil {
 }
 
 class SignupForm extends StatelessWidget {
+  final bool isGoogleLogin;
   final double height;
   final double width;
 
-  const SignupForm({super.key, required this.height, required this.width});
+  const SignupForm(
+      {super.key,
+      required this.height,
+      required this.width,
+      this.isGoogleLogin = false});
 
   @override
   Widget build(BuildContext context) {
     final signupController = Get.find<SignupController>();
+
     return Form(
       key: signupController.formKey,
       child: Padding(
@@ -67,6 +79,7 @@ class SignupForm extends StatelessWidget {
               controller: signupController.emailController,
               keyboardType: TextInputType.emailAddress,
               validator: Validator.validateEmail,
+              enabled: !isGoogleLogin,
             ),
             SizedBox(height: height * 0.01),
             Row(
@@ -87,6 +100,7 @@ class SignupForm extends StatelessWidget {
                         controller: signupController.nameController,
                         keyboardType: TextInputType.name,
                         validator: Validator.validateName,
+                        enabled: !isGoogleLogin,
                       ),
                     ],
                   ),
@@ -186,13 +200,15 @@ class SignupForm extends StatelessWidget {
             ),
             Text('Set password', style: TextStyle(color: AppColors.grey)),
             SizedBox(height: height * 0.006),
-            AppTextField(
-              hintText: 'Password',
-              controller: signupController.passwordController,
-              keyboardType: TextInputType.visiblePassword,
-              isPassword: true,
-              validator: Validator.validatePassword,
-            ),
+            !isGoogleLogin
+                ? AppTextField(
+                    hintText: 'Password',
+                    controller: signupController.passwordController,
+                    keyboardType: TextInputType.visiblePassword,
+                    isPassword: true,
+                    validator: Validator.validatePassword,
+                  )
+                : SizedBox.shrink(),
             SizedBox(height: height * 0.01),
             Text('Profile Picture', style: TextStyle(color: AppColors.grey)),
             SizedBox(height: height * 0.006),
@@ -265,7 +281,11 @@ class SignupForm extends StatelessWidget {
 
                 if (signupController.formKey.currentState!.validate()) {
                   // signupController.formKey.currentState!.save();
-                  Get.to(() => ActivitySelectionScreen());
+                  Get.to(
+                    () => ActivitySelectionScreen(
+                      isGoogleLogin: isGoogleLogin,
+                    ),
+                  );
                   log('Form is valid');
                 } else {
                   log('Form is invalid');

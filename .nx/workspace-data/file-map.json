@@ -138,7 +138,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "15520001860484801336"
+          "hash": "11842548604008501756"
         },
         {
           "file": ".prettierignore",
@@ -638,7 +638,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/register_body_model.dart",
-          "hash": "4373657485706982667"
+          "hash": "768844773931401468"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/register_response_body.dart",
@@ -646,11 +646,11 @@
         },
         {
           "file": "apps/lobay/lib/core/repo/auth_repo.dart",
-          "hash": "5076925106179331549"
+          "hash": "892689367761870460"
         },
         {
           "file": "apps/lobay/lib/core/services/auth_service.dart",
-          "hash": "10923826455671983662"
+          "hash": "5361999333982008236"
         },
         {
           "file": "apps/lobay/lib/core/services/shared_pref_service.dart",
@@ -662,7 +662,7 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/repository/auth_repo.dart",
-          "hash": "13119987148004721068"
+          "hash": "11727302399942776549"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_in/signin_controller.dart",
@@ -674,15 +674,15 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart",
-          "hash": "726018613285548534"
+          "hash": "12021900117359610586"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_controller.dart",
-          "hash": "14799189066446163549"
+          "hash": "17494854692923763799"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_screen.dart",
-          "hash": "6466362282276343055"
+          "hash": "5753628827784731697"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/widgets/activity_container.dart",

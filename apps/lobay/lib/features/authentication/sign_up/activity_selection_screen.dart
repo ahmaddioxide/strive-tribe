@@ -8,7 +8,9 @@ import 'package:lobay/features/authentication/sign_up/widgets/select_activity_to
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 
 class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
-  const ActivitySelectionScreen({super.key});
+  final bool isGoogleLogin;
+
+  const ActivitySelectionScreen({super.key, this.isGoogleLogin = false});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,14 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
                 buttonText: 'Register',
                 onPressed: () async {
                   if (signupController.formKey.currentState!.validate()) {
-                    await signupController.signup();
+                    if (isGoogleLogin) {
+                      await signupController.signupWithGoogle();
+                      return;
+                    } else {
+                      // Call the signup method
+                      await signupController.signup();
+                      return;
+                    }
                   }
                 },
               );

@@ -205,6 +205,71 @@ class SignupController extends GetxController {
           dateOfBirth: dateOfBirthController.text,
           location: locationController.text.trim(),
           phone: phoneController.text.trim(),
+          signInWith: 'email',
+          activities: activities,
+          profileImage: await profileImage.value!
+              .readAsBytes()
+              .then((value) => 'data:image/png;base64,${base64Encode(value)}'),
+        );
+
+        final RegisterResponseBody? registerResponse =
+            await _authRepo.register(registerBodyModel);
+
+        if (registerResponse != null) {
+          if (registerResponse.success) {
+            // Registration successful
+            log('Registration successful: ${registerResponse.user}');
+            await AppSnackbar.showSuccessSnackBar(
+                message: 'Registration successful');
+
+            await PreferencesManager.getInstance()
+                .setStringValue('userId', registerResponse.user.id);
+            await PreferencesManager.getInstance()
+                .setStringValue('userName', registerResponse.user.name);
+            await PreferencesManager.getInstance()
+                .setStringValue('token', registerResponse.token);
+            await PreferencesManager.getInstance()
+                .setStringValue('userEmail', registerResponse.user.email);
+
+            Get.offAll(() => BottomNavigationScreen());
+          } else {
+            AppSnackbar.showErrorSnackBar(
+                message: 'Registration failed: ${registerResponse.token}');
+          }
+        } else {
+          AppSnackbar.showErrorSnackBar(message: 'Registration failed');
+        }
+        return true;
+      } else {
+        return false;
+      }
+    } on FirebaseAuthException catch (e) {
+      // Handle sign-up error
+      log('Sign-up error: $e');
+      AppSnackbar.showErrorSnackBar(message: e.message.toString());
+      return false;
+    }
+  }
+
+  Future<bool> signupWithGoogle() async {
+    try {
+      final User? user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        List<Activity> activities = [];
+        for (var activity in selectedActivities) {
+          activities.add(Activity(
+            name: activity.first,
+            expertiseLevel: activity.second,
+          ));
+        }
+        final RegisterBodyModel registerBodyModel = RegisterBodyModel(
+          userId: user.uid,
+          email: emailController.text,
+          name: nameController.text.trim(),
+          gender: gender.value,
+          dateOfBirth: dateOfBirthController.text,
+          location: locationController.text.trim(),
+          phone: phoneController.text.trim(),
           signInWith: 'google',
           activities: activities,
           profileImage: await profileImage.value!
@@ -248,6 +313,14 @@ class SignupController extends GetxController {
       log('Sign-up error: $e');
       AppSnackbar.showErrorSnackBar(message: e.message.toString());
       return false;
+    }
+  }
+
+  populateIfSignupWithGoogle() {
+    if (FirebaseAuth.instance.currentUser != null) {
+      emailController.text = FirebaseAuth.instance.currentUser!.email!;
+      nameController.text = FirebaseAuth.instance.currentUser!.displayName!;
+
     }
   }
 }

@@ -11950,10 +11950,317 @@
         "source": "my-express-api-e2e",
         "target": "my-express-api",
         "type": "implicit"
+      },
+      {
+        "source": "my-express-api-e2e",
+        "target": "npm:axios",
+        "type": "static"
       }
     ],
-    "my-express-api": [],
-    "lobay": [],
+    "my-express-api": [
+      {
+        "source": "my-express-api",
+        "target": "npm:inversify",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:firebase-admin",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:express",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:body-parser",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:helmet",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:cors",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:express-validator",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:dotenv",
+        "type": "static"
+      }
+    ],
+    "lobay": [
+      {
+        "source": "lobay",
+        "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@eslint/js",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/eslint",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/express",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/js",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/web",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/webpack",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nxrocks/nx-flutter",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@pmmmwh/react-refresh-webpack-plugin",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@svgr/webpack",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@swc-node/register",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@swc/core",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@swc/helpers",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/aws-sdk",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/multer",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:eslint",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:eslint-config-prettier",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:jest-environment-node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:nodemon",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:nx",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:prettier",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:react-refresh",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:ts-jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:ts-node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:ts-node-dev",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:typescript-eslint",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:webpack-cli",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:aws-sdk",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:axios",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:bcryptjs",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:cors",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:express",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:express-validator",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:fb",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:firebase-admin",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:google-auth-library",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:helmet",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:inversify",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:multer",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:uuid",
+        "type": "static"
+      }
+    ],
     "npm:@ampproject/remapping": [
       {
         "source": "npm:@ampproject/remapping",
@@ -27554,5 +27861,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1743919908732
+  "computedAt": 1744050489862
 }

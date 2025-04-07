@@ -49,9 +49,10 @@ class ApiClient {
 
   Future<Response> get(String path,
       {Map<String, dynamic>? queryParams,
+      dynamic data,
       required Function() retryCallback}) async {
     try {
-      return await _dio.get(path, queryParameters: queryParams);
+      return await _dio.get(path, queryParameters: queryParams, data: data);
     } catch (e) {
       throw ApiException.handleError(e, retryCallback);
     }

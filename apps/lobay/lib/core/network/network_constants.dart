@@ -10,4 +10,7 @@ class RequestTimeoutConstants {
 class EndPoints {
   static const String register = 'api/auth/register';
   static const String login = 'api/auth/login';
+
+  static userExists(String userId) => 'api/auth/checkuser';
+
 }

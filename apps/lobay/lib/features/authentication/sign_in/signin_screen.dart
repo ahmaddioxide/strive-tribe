@@ -211,7 +211,7 @@ class LoginForm extends StatelessWidget {
                 //validate and submit
                 if (signInController.formKey.currentState!.validate()) {
                   // signInController.formKey.currentState!.save();
-                await  signInController.signin();
+                  await signInController.signin();
                   log('Validated');
                   // signInController.signIn();
                 } else {
@@ -284,33 +284,33 @@ class LoginForm extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  height: height * 0.06,
-                  width: width * 0.4,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: AppColors.border,
-                      width: 2,
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      AppImageWidget(
-                        imagePathOrURL: Assets.imagesFacebookLogo,
-                      ),
-                      SizedBox(width: width * 0.03),
-                      Text(
-                        'Facebook',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Container(
+                //   height: height * 0.06,
+                //   width: width * 0.4,
+                //   decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.circular(10),
+                //     border: Border.all(
+                //       color: AppColors.border,
+                //       width: 2,
+                //     ),
+                //   ),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     children: [
+                //       AppImageWidget(
+                //         imagePathOrURL: Assets.imagesFacebookLogo,
+                //       ),
+                //       SizedBox(width: width * 0.03),
+                //       Text(
+                //         'Facebook',
+                //         style: TextStyle(
+                //           fontSize: 14,
+                //           fontWeight: FontWeight.w500,
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
               ],
             ),
             // Spacer(),

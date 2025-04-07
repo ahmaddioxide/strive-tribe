@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
+import 'package:lobay/core/repo/auth_repo.dart';
 
 class AuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
@@ -108,6 +109,17 @@ class AuthService {
       //     provider: 'google',
       //   );
       // }
+
+      final userId = user?.uid;
+      //check if user exists in the backend
+      final ifUserAlreadyExists =
+          await AuthenticationRepository().ifUserExists(userId!);
+
+      if (ifUserAlreadyExists) {
+        print('User already exists in the backend');
+      } else {
+        print('User does not exist in the backend');
+      }
 
       return user;
     } on FirebaseAuthException catch (e) {
@@ -238,8 +250,7 @@ class AuthService {
         break;
       default:
         print('Auth Error: ${e.code} - ${e.message}');
-        // AppSnackbar().showErrorSnackBar(message: e.message.toString());
-
+      // AppSnackbar().showErrorSnackBar(message: e.message.toString());
     }
   }
 

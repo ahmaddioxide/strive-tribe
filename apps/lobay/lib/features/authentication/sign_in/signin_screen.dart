@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
 import 'package:lobay/core/services/auth_service.dart';
 import 'package:lobay/features/authentication/sign_in/signin_controller.dart';
@@ -190,7 +191,52 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (signInController.emailController.text.isEmpty) {
+                      AppSnackbar.showErrorSnackBar(
+                          message: 'Please enter your email');
+                    } else {
+                      showAdaptiveDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: Text('Reset Password'),
+                              content: Text(
+                                'A password reset link will be sent to ${signInController.emailController.text}.',
+                              ),
+                              actions: [
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: AppColors.red,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    foregroundColor: AppColors.white,
+                                  ),
+                                  onPressed: () {
+                                    Get.back();
+                                  },
+                                  child: Text('Cancel'),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: AppColors.primaryLight,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    foregroundColor: AppColors.white,
+                                  ),
+                                  onPressed: () {
+                                    signInController.resetPassword();
+                                    Get.back();
+                                  },
+                                  child: Text('OK'),
+                                ),
+                              ],
+                            );
+                          });
+                    }
+                  },
                   child: Text(
                     'Forgot Password?',
                     style: TextStyle(

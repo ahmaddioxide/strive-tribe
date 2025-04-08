@@ -319,4 +319,16 @@ class AuthService {
     //   print('Error sending user data to backend: $e');
     // }
   }
+
+  // Reset password
+  Future<void> resetPassword({required String email}) async {
+    try {
+      await _firebaseAuth.sendPasswordResetEmail(email: email);
+      AppSnackbar.showSuccessSnackBar(
+          message: 'Password reset email sent, please check your inbox');
+    } on FirebaseAuthException catch (e) {
+      log('Reset password error: $e');
+      AppSnackbar.showErrorSnackBar(message: e.message.toString());
+    }
+  }
 }

@@ -20,7 +20,7 @@ class SignInController extends GetxController {
   // form key
   final formKey = GlobalKey<FormState>();
 
-  RxBool rememberMe = false.obs;
+  RxBool rememberMe = true.obs;
 
   Future<bool> signin() async {
     try {
@@ -60,5 +60,9 @@ class SignInController extends GetxController {
       AppSnackbar.showErrorSnackBar(message: e.message.toString());
       return false;
     }
+  }
+
+  Future<void> resetPassword() async {
+    await AuthService().resetPassword(email: emailController.text);
   }
 }

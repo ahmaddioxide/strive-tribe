@@ -138,7 +138,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "11842548604008501756"
+          "hash": "11689172938724708685"
         },
         {
           "file": ".prettierignore",
@@ -662,7 +662,7 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/repository/auth_repo.dart",
-          "hash": "11727302399942776549"
+          "hash": "13739418631372036455"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_in/signin_controller.dart",
@@ -904,10 +904,6 @@
             "npm:multer",
             "npm:uuid"
           ]
-        },
-        {
-          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.1177ea77-8dea-4340-8bff-f376d35f4539.json",
-          "hash": "14086997084547600071"
         },
         {
           "file": "tsconfig.base.json",

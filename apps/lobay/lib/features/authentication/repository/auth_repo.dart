@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/api_client.dart';
 import 'package:lobay/core/network/network_constants.dart';
@@ -60,6 +61,9 @@ class AuthenticationRepository {
   Future<void> logout() async {
     try {
       await FirebaseAuth.instance.signOut();
+      //google sign out
+      await GoogleSignIn().signOut();
+
       await PreferencesManager.getInstance().clearAllPref();
 
       // Handle successful logout

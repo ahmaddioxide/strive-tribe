@@ -52,7 +52,7 @@ class AppTextField extends StatefulWidget {
 }
 
 class _AppTextFieldState extends State<AppTextField> {
-  bool _obscureText = true;
+  bool _obscureText = false;
 
   @override
   void initState() {

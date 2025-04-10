@@ -205,7 +205,7 @@ class SignupController extends GetxController {
           dateOfBirth: dateOfBirthController.text,
           location: locationController.text.trim(),
           phone: phoneController.text.trim(),
-          signInWith: 'email',
+          signInWith: 'email_password',
           activities: activities,
           profileImage: await profileImage.value!
               .readAsBytes()

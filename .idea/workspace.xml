@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="login signup with google integrated">
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="reset password functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/services/auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/services/auth_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/apps/my-express-api/serve/tsconfig.generated.1177ea77-8dea-4340-8bff-f376d35f4539.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_text_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744053123274</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="reset password functionality">
+      <option name="closed" value="true" />
+      <created>1744124308564</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744124308564</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,7 +214,8 @@
     <MESSAGE value="resolved the api run issue" />
     <MESSAGE value="added check user id api only" />
     <MESSAGE value="login signup with google integrated" />
-    <option name="LAST_COMMIT_MESSAGE" value="login signup with google integrated" />
+    <MESSAGE value="reset password functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="reset password functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

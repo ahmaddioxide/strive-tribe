@@ -5,6 +5,7 @@ import UserModel from "../infrastructure/models/User";
 @injectable()
 export class CheckUser {
   async execute(userId: string): Promise<boolean> {
+    
     const user = await UserModel.findOne({ userId });
     return !!user;
   }

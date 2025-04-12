@@ -138,8 +138,8 @@ export default class AuthController implements IController {
 
   private checkUserHandler = async (req: Request, res: Response) => {
     try {
-      const { user_id } = req.body;
-      const exists = await this.checkUser.execute(user_id);
+      const { user_id } = req.query;
+      const exists = await this.checkUser.execute(user_id as string);
       
       res.status(200).json({
         success: true,
@@ -155,8 +155,8 @@ export default class AuthController implements IController {
 
   private getUserHandler = async (req: Request, res: Response) => {
     try {
-      const { user_id } = req.body;
-      const userData = await this.getUser.execute(user_id);
+      const { user_id } = req.query;
+      const userData = await this.getUser.execute(user_id as string);
       
       res.status(200).json({
         success: true,

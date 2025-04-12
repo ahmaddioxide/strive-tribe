@@ -16,7 +16,7 @@ export interface IUser extends Document {
   profileImage?: string;
   activities: Activity[];
   signInWith: 'google' | 'facebook' | 'email_password';
-  isVarified: boolean;
+  isVerified: boolean;
   scheduledActivities?: string[]; // Optional field for scheduled activities
   gamesPlayed?: number[]; // Optional field for games played
 }
@@ -39,7 +39,7 @@ const UserSchema: Schema = new Schema({
     enum: ['google', 'facebook', 'email_password'],
     required: true
   },
-  isVarified: { type: Boolean, default: false },
+  isVerified: { type: Boolean, default: false },
   scheduledActivities: [{ type: String, default: [] }],
   gamesPlayed: [{ type: Number, default: 0 }]
 }, { timestamps: true });

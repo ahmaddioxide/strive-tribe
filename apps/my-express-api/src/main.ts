@@ -12,18 +12,17 @@ dotenv.config();
 
 async function bootstrap() {
   try {
-    // Get dependencies from container
     const dbDriver = container.get<IDatabase>(Identifier.databaseDriver);
     const config = container.get<Config>(Identifier.config);
     const authController = container.get<IController>(Identifier.authController);
+    const activityController = container.get<IController>(Identifier.activityController);
 
-    // Initialize Firebase
     initializeFirebase(config);
     
     await dbDriver.connect();
     
     const server = new Server(
-      [authController],
+      [authController, activityController],
       config.port
     );
     

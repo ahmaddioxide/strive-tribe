@@ -61,7 +61,7 @@ export class UpdateUser {
         ...(updateData.gender && { gender: updateData.gender }),
         ...(updateData.activities && { activities: updateData.activities }),
         profileImage: profileImageUrl,
-        ...(updateData.isVarified !== undefined && { isVarified: updateData.isVarified })
+        ...(updateData.isVerified !== undefined && { isVarified: updateData.isVerified })
       };
 
       const updatedUser = await UserModel.findOneAndUpdate(
@@ -88,7 +88,7 @@ export class UpdateUser {
           gender: updatedUser.gender,
           activities: updatedUser.activities,
           signInWith: updatedUser.signInWith,
-          isVarified: updatedUser.isVarified
+          isVerified: updatedUser.isVerified
         }
       };
     } catch (error: any) {

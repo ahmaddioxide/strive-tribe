@@ -55,7 +55,7 @@ export class RegisterUser {
         profileImage: profileImageUrl,
         activities: userData.activities || [],
         signInWith: userData.signInWith,
-        isVarified: userData.isVarified
+        isVerified: userData.isVerified
       });
       
       await newUser.save();
@@ -74,7 +74,7 @@ export class RegisterUser {
           email: newUser.email,
           profileImage: newUser.profileImage,
           signInWith: newUser.signInWith,
-          isVarified: newUser.isVarified
+          isVerified: newUser.isVerified
         }
       };
     } catch (error: any) {

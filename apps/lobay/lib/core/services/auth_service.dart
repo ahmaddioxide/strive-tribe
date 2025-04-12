@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -7,10 +6,8 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/login_body_model.dart';
 import 'package:lobay/core/network/network_models/login_reponse_model.dart';
-import 'package:lobay/core/repo/auth_repo.dart';
 import 'package:lobay/core/shared_preferences/shared_pref.dart';
 import 'package:lobay/features/authentication/repository/auth_repo.dart';
-import 'package:lobay/features/authentication/sign_in/signin_controller.dart';
 import 'package:lobay/features/authentication/sign_up/signup_screen.dart';
 import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
 
@@ -282,42 +279,6 @@ class AuthService {
         print('Auth Error: ${e.code} - ${e.message}');
       // AppSnackbar().showErrorSnackBar(message: e.message.toString());
     }
-  }
-
-  /// ---------------------------------------------
-  /// SEND USER DATA TO BACKEND (OPTIONAL)
-  /// ---------------------------------------------
-  /// - If you want to store data in your own backend,
-  ///   call this method after a successful sign-up or
-  ///   first time sign-in (Google, Facebook).
-  Future<void> _sendUserDataToBackend({
-    required String uid,
-    required String email,
-    required String displayName,
-    required String provider,
-  }) async {
-    // final Uri url = Uri.parse('https://YOUR_BACKEND_URL/api/users');
-    //
-    // // try {
-    // //   final response = await http.post(
-    // //     url,
-    // //     headers: {'Content-Type': 'application/json'},
-    // //     body: jsonEncode({
-    // //       'uid': uid,
-    // //       'email': email,
-    // //       'displayName': displayName,
-    // //       'provider': provider,
-    // //     }),
-    // //   );
-    //
-    //   if (response.statusCode != 200) {
-    //     print('Failed to store user data in backend: ${response.statusCode}');
-    //   } else {
-    //     print('User data stored in backend successfully.');
-    //   }
-    // } catch (e) {
-    //   print('Error sending user data to backend: $e');
-    // }
   }
 
   // Reset password

@@ -10,26 +10,37 @@ import 'package:lobay/features/onboarding/onboarding_screen.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/theme_utils/app_theme.dart';
 
+import 'core/services/shared_pref_service.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
   // debugRepaintRainbowEnabled = false;
+
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  final String token =
+      await PreferencesManager.getInstance().getStringValue('token', '');
   runApp(
     DevicePreview(
       enabled: false,
-      builder: (context) => MyApp(), // Wrap your app
+      builder: (context) => MyApp(
+        token: token,
+      ), // Wrap your app
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final String token;
 
-  // This widget is the root of your application.
+  const MyApp({
+    super.key,
+    required this.token,
+  });
+
+// This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -37,9 +48,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppConstants.appName,
       theme: AppTheme.lightTheme,
-      home: FirebaseAuth.instance.currentUser == null
-          ?  OnboardingScreen()
-          :  BottomNavigationScreen(),
+      home: token.isEmpty
+          ? OnboardingScreen()
+          : BottomNavigationScreen(),
     );
   }
 }

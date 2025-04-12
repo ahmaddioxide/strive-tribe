@@ -66,6 +66,7 @@ class SignupForm extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
             SizedBox(height: height * 0.01),
             Text(
               'Email',

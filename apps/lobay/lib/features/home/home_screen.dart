@@ -6,8 +6,8 @@ import 'package:lobay/features/authentication/repository/auth_repo.dart';
 import 'package:lobay/features/home/filter_bottomsheet_widget.dart';
 import 'package:lobay/features/home/home_screen_controller.dart';
 import 'package:lobay/features/home/widgets/activities.dart';
-import 'package:lobay/features/home/widgets/no_activity_widget.dart';
 import 'package:lobay/features/onboarding/onboarding_screen.dart';
+import 'package:lobay/features/profile/profile_screen.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/constants/app_enums.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -28,8 +28,9 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
           child: AppClickWidget(
             onTap: () async {
-              await AuthenticationRepository().logout();
-              Get.offAll(() => OnboardingScreen());
+              // await AuthenticationRepository().logout();
+              // Get.offAll(() => OnboardingScreen());
+              Get.to(()=>ProfileScreen());
             },
             child: ClipRRect(
               borderRadius: BorderRadius.circular(height * 0.05),

@@ -10,7 +10,6 @@
 // }
 // }
 
-import 'package:lobay/core/network/network_models/enums/login_type.dart';
 
 class LoginResponseModel {
   String token;
@@ -95,10 +94,10 @@ class UserModel {
   @override
   int get hashCode {
     return id.hashCode ^
-        userId.hashCode ^
-        name.hashCode ^
-        email.hashCode ^
-        profileImage.hashCode ^
-        signInWith.hashCode;
+    userId.hashCode ^
+    name.hashCode ^
+    email.hashCode ^
+    profileImage.hashCode ^
+    signInWith.hashCode;
   }
 }

@@ -19,7 +19,7 @@ class PreferencesManager {
     sharedPreferences.setString(key, value);
   }
 
-  Future<String?> getStringValue(String key, String defaultValue) async {
+  Future<String> getStringValue(String key, String defaultValue) async {
     final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     return sharedPreferences.getString(key) ?? defaultValue;
   }

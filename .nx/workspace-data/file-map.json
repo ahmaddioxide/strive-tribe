@@ -120,7 +120,7 @@
         },
         {
           "file": "apps/my-express-api/src/activity/interface/http/activity.controller.ts",
-          "hash": "2938526967990991052",
+          "hash": "10855431544904543147",
           "deps": [
             "npm:express",
             "npm:inversify"
@@ -220,7 +220,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/server.ts",
-          "hash": "11163811827117532476",
+          "hash": "12383336077015754086",
           "deps": [
             "npm:express",
             "npm:body-parser",
@@ -246,7 +246,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
-          "hash": "4014765620994771454",
+          "hash": "12038798444173111255",
           "deps": [
             "npm:express",
             "npm:express-validator"
@@ -269,14 +269,14 @@
         },
         {
           "file": "apps/my-express-api/src/config/installer.ts",
-          "hash": "16891049093550242438",
+          "hash": "14600871781668640942",
           "deps": [
             "npm:inversify"
           ]
         },
         {
           "file": "apps/my-express-api/src/constants/identifiers.ts",
-          "hash": "1427335019288663967"
+          "hash": "11727137067262500347"
         },
         {
           "file": "apps/my-express-api/src/database/IDatabase.ts",
@@ -292,7 +292,7 @@
         },
         {
           "file": "apps/my-express-api/src/main.ts",
-          "hash": "14640704526190818992",
+          "hash": "14896333839634290001",
           "deps": [
             "npm:dotenv"
           ]
@@ -373,7 +373,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "12491786616330747455"
+          "hash": "18073390904121032820"
         },
         {
           "file": ".prettierignore",

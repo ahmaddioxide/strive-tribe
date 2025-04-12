@@ -155,8 +155,8 @@ export default class AuthController implements IController {
 
   private getUserHandler = async (req: Request, res: Response) => {
     try {
-      const { user_id } = req.query;
-      const userData = await this.getUser.execute(user_id as string);
+      const  user_id  = req.query.user_id as string;
+      const userData = await this.getUser.execute(user_id);
       
       res.status(200).json({
         success: true,

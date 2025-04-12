@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { body, validationResult } from "express-validator";
+import { body, validationResult, query, param } from "express-validator";
 
 export const validateRegister = [
   body("user_id").notEmpty().withMessage("User ID is required"),
@@ -126,7 +126,7 @@ export const validateUpdate = [
 
 // Add to validation.ts
 export const validateCheckUser = [
-  body("user_id")
+  query("user_id")
     .notEmpty().withMessage("user_id is required")
     .isString().withMessage("user_id must be a string"),
   (req: Request, res: Response, next: NextFunction) => {
@@ -142,7 +142,7 @@ export const validateCheckUser = [
 ];
 
 export const validateGetUser = [
-  body("user_id")
+  query("user_id")
     .notEmpty().withMessage("user_id is required")
     .isString().withMessage("user_id must be a string"),
   (req: Request, res: Response, next: NextFunction) => {

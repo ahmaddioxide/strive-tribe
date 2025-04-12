@@ -5,6 +5,7 @@ import UserModel from "../infrastructure/models/User";
 @injectable()
 export class GetUser {
   async execute(userId: string) {
+    
     const user = await UserModel.findOne({ userId })
       .select('-__v -createdAt -updatedAt') // Exclude unnecessary fields
       .lean();

@@ -14,17 +14,17 @@ import { AddActivity } from "../activity/application/AddActivity";
 
 let container = new Container();
 
-container.bind<Config>(Identifier.config).to(Config).inSingletonScope();
-container.bind<Config>(Config).toService(Identifier.config);
+container.bind<Config>(Identifier.Config).to(Config).inSingletonScope();
+container.bind<Config>(Config).toService(Identifier.Config);
 
-container.bind<IDatabase>(Identifier.databaseDriver).to(Database);
+container.bind<IDatabase>(Identifier.DatabaseDriver).to(Database);
 container.bind<RegisterUser>(RegisterUser).toSelf();
 container.bind<LoginUser>(LoginUser).toSelf();
 container.bind<UpdateUser>(UpdateUser).toSelf();
 container.bind<CheckUser>(CheckUser).toSelf();
 container.bind<GetUser>(GetUser).toSelf();
 container.bind<AddActivity>(AddActivity).toSelf();
-container.bind<AuthController>(Identifier.authController).to(AuthController);
-container.bind<ActivityController>(Identifier.activityController).to(ActivityController);
+container.bind<AuthController>(Identifier.AuthController).to(AuthController);
+container.bind<ActivityController>(Identifier.ActivityController).to(ActivityController);
 
 export default container;

@@ -14,6 +14,23 @@ export const validateRegister = [
     .withMessage("Invalid sign in method"),
   body("isVarified").optional().isBoolean().withMessage("isVarified must be a boolean"),
   body("activities").optional().isArray(),
+  body("profile_image")
+    .optional()
+    .isString().withMessage("Profile image must be a base64 string")
+    .custom((value) => {
+      if (!value.startsWith('data:image/')) {
+        throw new Error('Invalid image format. Must start with data:image/');
+      }
+      
+      // Check base64 size before processing
+      const base64Data = value.replace(/^data:image\/\w+;base64,/, '');
+      const buffer = Buffer.from(base64Data, 'base64');
+      if (buffer.length > 100 * 1024 * 1024) {
+        throw new Error('Profile image size exceeds 100MB limit');
+      }
+      
+      return true;
+    }),
   (req: Request, res: Response, next: NextFunction) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

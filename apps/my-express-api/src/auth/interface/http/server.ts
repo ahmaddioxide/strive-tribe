@@ -22,7 +22,10 @@ class Server {
   private initializeMiddlewares() {
     this.app.use(cors());
     this.app.use(helmet());
-    this.app.use(bodyParser.json());
+    //this.app.use(bodyParser.json());
+    
+    this.app.use(express.json({ limit: '200mb' }));
+    this.app.use(express.urlencoded({ extended: true, limit: '200mb' }));
   }
 
   private initializeControllers(controllers: IController[]) {

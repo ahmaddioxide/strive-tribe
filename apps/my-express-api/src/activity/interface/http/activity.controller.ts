@@ -18,7 +18,7 @@ export class ActivityController implements IController {
 
   private initializeRoutes() {
     this.router.post(
-      `${this.path}`,
+      `${this.path}/create-activity`,
       validateAddActivity,
       this.addActivityHandler.bind(this)
     );

@@ -12,10 +12,10 @@ dotenv.config();
 
 async function bootstrap() {
   try {
-    const dbDriver = container.get<IDatabase>(Identifier.databaseDriver);
-    const config = container.get<Config>(Identifier.config);
-    const authController = container.get<IController>(Identifier.authController);
-    const activityController = container.get<IController>(Identifier.activityController);
+    const dbDriver = container.get<IDatabase>(Identifier.DatabaseDriver);
+    const config = container.get<Config>(Identifier.Config);
+    const authController = container.get<IController>(Identifier.AuthController);
+    const activityController = container.get<IController>(Identifier.ActivityController);
 
     initializeFirebase(config);
     

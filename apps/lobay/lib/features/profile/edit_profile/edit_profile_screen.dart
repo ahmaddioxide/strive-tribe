@@ -23,7 +23,7 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
   Widget build(BuildContext context) {
     final height = getDeviceHeight();
     final width = getDeviceWidth();
-    final controller = Get.put(EditProfileController());
+    final controller = Get.find<EditProfileController>();
 
     return Scaffold(
       appBar: AppBar(),
@@ -144,6 +144,7 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                 Text('Phone number', style: TextStyle(color: AppColors.grey)),
                 SizedBox(height: height * 0.006),
                 IntlPhoneField(
+                  controller: controller.phoneController,
                   decoration: InputDecoration(
                     hintText: '(123) 456-7890',
                     hintStyle: TextStyle(color: AppColors.grey),
@@ -152,7 +153,7 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  initialCountryCode: 'GB',
+                  // initialCountryCode: 'GB',
                   autovalidateMode: AutovalidateMode.onUnfocus,
                   onChanged: (phone) {
                     controller.phoneController.text = phone.completeNumber;
@@ -181,21 +182,29 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                   () {
                     return Row(
                       children: [
-                        controller.profileImage.value.isEmpty
-                            ? AppImageWidget(
-                                imagePathOrURL: Assets.svgsCircleUser,
-                                height: 50,
-                                width: 50)
-                            : CircleAvatar(
-                                radius: 30,
-                                child: ClipOval(
-                                  child: Image.file(
-                                    File(
-                                        controller.profileImageFile.value.path),
-                                    height: 60,
-                                    width: 60,
-                                    fit: BoxFit.cover,
-                                  ),
+                        controller.profileImageFile.value == null
+                            ? controller.profileImage.value.isEmpty
+                                ? ClipOval(
+                                    child: AppImageWidget(
+                                        imagePathOrURL: Assets.svgsCircleUser,
+                                        height: 50,
+                                        width: 50),
+                                  )
+                                : ClipOval(
+                                    child: AppImageWidget(
+                                      height: 50,
+                                      width: 50,
+                                      networkImage: true,
+                                      imagePathOrURL:
+                                          controller.profileImage.value,
+                                    ),
+                                  )
+                            : ClipOval(
+                                child: AppImageWidget(
+                                  height: 50,
+                                  width: 50,
+                                  imagePathOrURL:
+                                      controller.profileImageFile.value!.path,
                                 ),
                               ),
                         TextButton(

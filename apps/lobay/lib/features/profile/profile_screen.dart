@@ -33,41 +33,63 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                 ),
               ),
               SizedBox(height: height * 0.02),
-              Align(
-                alignment: Alignment.center,
-                child: Column(
-                  children: [
-                    CircleAvatar(
-                      radius: height * 0.07,
-                      backgroundColor: AppColors.grey,
-                      child: ClipOval(
-                        child: AppImageWidget(
-                          imagePathOrURL: Assets.imagesPlaceholderPerson,
-                          height: height * 0.13,
-                          width: height * 0.13,
+              Obx(() {
+                if (editProfileController.isLoading.value) {
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+
+                final bool ifImageExists =
+                    editProfileController.userModel.value == null ||
+                        (editProfileController
+                                    .userModel.value!.user.profileImage ==
+                                null ||
+                            editProfileController
+                                .userModel.value!.user.profileImage.isEmpty);
+                return Align(
+                  alignment: Alignment.center,
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: height * 0.07,
+                        backgroundColor: AppColors.grey,
+                        child: ClipOval(
+                          child: AppImageWidget(
+                            networkImage: !ifImageExists,
+                            imagePathOrURL: !ifImageExists
+                                ? editProfileController
+                                    .userModel.value!.user.profileImage
+                                : Assets.imagesPlaceholderPerson,
+                            height: height * 0.13,
+                            width: height * 0.13,
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(height: height * 0.01),
-                    Text(
-                      '20',
-                      style: TextUtils.getStyle(
-                        color: AppColors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                      SizedBox(height: height * 0.01),
+                      Text(
+                        editProfileController
+                                .userModel.value?.user.gamesPlayed.length
+                                .toString() ??
+                            '0',
+                        style: TextUtils.getStyle(
+                          color: AppColors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'Games Played',
-                      style: TextUtils.getStyle(
-                        color: AppColors.grey,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                      Text(
+                        'Games Played',
+                        style: TextUtils.getStyle(
+                          color: AppColors.grey,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
+                    ],
+                  ),
+                );
+              }),
               SizedBox(height: height * 0.01),
               Text(
                 'Account',

@@ -83,7 +83,7 @@ class AuthenticationRepository {
     if (response.statusCode == 200) {
       final responseData = response.data;
       final Map<String, dynamic> responseMap =
-      responseData as Map<String, dynamic>;
+          responseData as Map<String, dynamic>;
       // Check if the user exists
       if (responseMap['exists'] == true) {
         // User exists

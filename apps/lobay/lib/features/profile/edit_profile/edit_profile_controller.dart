@@ -13,14 +13,8 @@ import 'package:lobay/features/profile/repository/profile_repo.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class EditProfileController extends GetxController {
-  @override
-  void onInit() {
-    // TODO: implement onInit
-    super.onInit();
-    getUser();
-  }
-
   RxBool isGoogleLogin = false.obs;
+  RxBool isLoading = false.obs;
   final formKey = GlobalKey<FormState>();
 
   final TextEditingController emailController = TextEditingController();
@@ -30,12 +24,21 @@ class EditProfileController extends GetxController {
   final TextEditingController dateOfBirthController = TextEditingController();
   final TextEditingController locationController = TextEditingController();
   RxString gender = 'Male'.obs;
+  RxString initialCountry = 'us'.obs;
   RxString profileImage = ''.obs;
-  Rx<XFile> profileImageFile = XFile('').obs;
+  Rx<XFile?> profileImageFile = Rx<XFile?>(null);
 
   Rx<GetUserResponseBody?> userModel = Rx<GetUserResponseBody?>(null);
 
   final profileRepo = ProfileRepo();
+
+  @override
+  void onInit() {
+    isLoading.value = true;
+    super.onInit();
+    getUser();
+    isLoading.value = false;
+  }
 
   Future<void> getUser() async {
     final userId = FirebaseAuth.instance.currentUser!.uid;
@@ -48,6 +51,14 @@ class EditProfileController extends GetxController {
       return;
     }
     userModel.value = response;
+    emailController.text = response.user.email;
+    nameController.text = response.user.name;
+    phoneController.text = response.user.phoneNumber;
+    dateOfBirthController.text = response.user.dateOfBirth;
+    gender.value = response.user.gender;
+    locationController.text = response.user.location;
+    profileImage.value = response.user.profileImage;
+    removeCountryCode();
   }
 
   Future<void> pickImage() async {
@@ -107,8 +118,6 @@ class EditProfileController extends GetxController {
               ),
               child: Text('Yes'),
               onPressed: () async {
-                // Perform logout action
-                // Navigator.of(context).pop();
                 await AuthenticationRepository().logout();
                 Get.offAll(() => OnboardingScreen());
               },
@@ -184,5 +193,11 @@ class EditProfileController extends GetxController {
         },
       );
     }
+  }
+
+  void removeCountryCode() {
+    initialCountry.value = phoneController.text =
+        phoneController.text.replaceAll(RegExp(r'^\+?\d{1,3}'), '');
+    // initialCountry.value=
   }
 }

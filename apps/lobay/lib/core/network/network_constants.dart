@@ -14,5 +14,5 @@ class EndPoints {
   static checkUserExistance(String userId) =>
       'api/auth/checkuser?user_id=$userId';
 
-  static getUser(String userId) => 'api/user/getuser?user_id=$userId';
+  static getUser(String userId) => 'api/auth/getuser?user_id=$userId';
 }

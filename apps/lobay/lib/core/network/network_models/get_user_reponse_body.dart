@@ -54,8 +54,12 @@ class UserModel {
   String name;
   String email;
   String profileImage;
+  String phoneNumber;
   String signInWith;
+  String dateOfBirth;
   bool isVerified;
+  String gender;
+  String location;
   List<dynamic> scheduledActivities;
   List<dynamic> gamesPlayed;
 
@@ -65,7 +69,14 @@ class UserModel {
     required this.name,
     required this.email,
     required this.profileImage,
+    required this.phoneNumber,
     required this.signInWith,
+    required this.gender,
+    required this.dateOfBirth,
+    required this.location,
+
+
+
     this.isVerified = false,
     this.scheduledActivities = const [],
     this.gamesPlayed = const [],
@@ -78,8 +89,12 @@ class UserModel {
       name: json['name'],
       email: json['email'],
       profileImage: json['profileImage'],
+      phoneNumber: json['phoneNumber'],
       signInWith: json['signInWith'],
+      gender: json['gender'],
       isVerified: json['isVarified'] ?? false,
+      dateOfBirth: json['dateOfBirth'],
+      location: json['location'] ,
       scheduledActivities: json['scheduledActivities'] ?? [],
       gamesPlayed: json['gamesPlayed'] ?? [],
     );
@@ -92,8 +107,12 @@ class UserModel {
       'name': name,
       'email': email,
       'profileImage': profileImage,
+      'phoneNumber': phoneNumber,
       'signInWith': signInWith,
       'isVarified': isVerified,
+      'dateOfBirth': dateOfBirth,
+      'location':location,
+      'gender':gender,
       'scheduledActivities': scheduledActivities,
       'gamesPlayed': gamesPlayed,
     };

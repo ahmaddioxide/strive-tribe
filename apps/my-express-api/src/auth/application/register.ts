@@ -14,17 +14,22 @@ export class RegisterUser {
   async execute(userData: any, profileImageBase64?: string) {
     try {
       let profileImageUrl = "NULL";
-      
+
       if (profileImageBase64) {
         // Remove data URL prefix if present
         const base64Data = profileImageBase64.replace(/^data:image\/\w+;base64,/, '');
-        
+        const buffer = Buffer.from(base64Data, 'base64');
+
+        // Check if image exceeds 100MB
+        const maxSize = 100 * 1024 * 1024; // 100MB in bytes
+        if (buffer.length > maxSize) {
+          throw new Error("Profile image size exceeds the 100MB limit.");
+        }
+
         const bucket = firebaseAdmin.storage().bucket();
         const fileName = `strive-tribe_profile_images/${Date.now()}_${Math.random().toString(36).substring(2, 8)}.jpg`;
         const file = bucket.file(fileName);
-        
-        const buffer = Buffer.from(base64Data, 'base64');
-        
+
         await file.save(buffer, {
           metadata: {
             contentType: 'image/jpeg',
@@ -34,7 +39,7 @@ export class RegisterUser {
             }
           }
         });
-        
+
         await file.makePublic();
         profileImageUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`;
       }

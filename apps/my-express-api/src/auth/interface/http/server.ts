@@ -1,10 +1,10 @@
+// src/auth/interface/http/server.ts
 import express from "express";
 import * as bodyParser from "body-parser";
 import helmet from "helmet";
 import { injectable } from "inversify";
 import cors from "cors";
 import IController from "./IController";
-import AuthController from "./auth.controller";
 import { errorHandler } from "../middleware/errorHandler";
 
 @injectable()
@@ -30,7 +30,6 @@ class Server {
       this.app.use("/api", controller.router);
     });
 
-    // Global Error Handling Middleware
     this.app.use(errorHandler);
   }
 

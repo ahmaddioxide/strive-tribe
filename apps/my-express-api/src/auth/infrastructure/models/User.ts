@@ -17,6 +17,8 @@ export interface IUser extends Document {
   activities: Activity[];
   signInWith: 'google' | 'facebook' | 'email_password';
   isVarified: boolean;
+  scheduledActivities?: string[]; // Optional field for scheduled activities
+  gamesPlayed?: number[]; // Optional field for games played
 }
 
 const UserSchema: Schema = new Schema({
@@ -37,7 +39,9 @@ const UserSchema: Schema = new Schema({
     enum: ['google', 'facebook', 'email_password'],
     required: true
   },
-  isVarified: { type: Boolean, default: false }
+  isVarified: { type: Boolean, default: false },
+  scheduledActivities: [{ type: String, default: [] }],
+  gamesPlayed: [{ type: Number, default: 0 }]
 }, { timestamps: true });
 
 export default mongoose.model<IUser>("User", UserSchema);

@@ -4,8 +4,9 @@ import { RegisterUser } from "../../application/register";
 import { LoginUser } from "../../application/login";
 import { UpdateUser } from "../../application/update";
 import { CheckUser } from "../../application/check";
+import { GetUser } from "../../application/getUser";
 import IController from "./IController";
-import { validateRegister, validateLogin, validateUpdate, validateCheckUser } from "../middleware/validation";
+import { validateRegister, validateLogin, validateUpdate, validateCheckUser, validateGetUser } from "../middleware/validation";
 
 @injectable()
 export default class AuthController implements IController {
@@ -15,17 +16,20 @@ export default class AuthController implements IController {
   private loginUser: LoginUser;
   private updateUser: UpdateUser;
   private checkUser: CheckUser;
+  private getUser: GetUser;
 
   constructor(
     @inject(RegisterUser) registerUser: RegisterUser,
     @inject(LoginUser) loginUser: LoginUser,
     @inject(UpdateUser) updateUser: UpdateUser,
-    @inject(CheckUser) checkUser: CheckUser
+    @inject(CheckUser) checkUser: CheckUser,
+    @inject(GetUser) getUser: GetUser
   ) {
     this.registerUser = registerUser;
     this.loginUser = loginUser;
     this.updateUser = updateUser;
     this.checkUser = checkUser;
+    this.getUser = getUser;
     this.initializeRoutes();
   }
 
@@ -49,6 +53,11 @@ export default class AuthController implements IController {
       `${this.path}/checkuser`,
       validateCheckUser,
       this.checkUserHandler.bind(this)
+    );
+    this.router.get(
+      `${this.path}/getuser`,
+      validateGetUser,
+      this.getUserHandler.bind(this)
     );
   }
 
@@ -143,4 +152,28 @@ export default class AuthController implements IController {
       });
     }
   };
+
+  private getUserHandler = async (req: Request, res: Response) => {
+    try {
+      const { user_id } = req.body;
+      const userData = await this.getUser.execute(user_id);
+      
+      res.status(200).json({
+        success: true,
+        user: userData
+      });
+    } catch (error: any) {
+      if (error.message === "User not found") {
+        res.status(404).json({
+          success: false,
+          error: "User not found"
+        });
+      } else {
+        res.status(500).json({ 
+          success: false,
+          error: error.message || "Failed to fetch user data"
+        });
+      }
+    }
+  }
 }

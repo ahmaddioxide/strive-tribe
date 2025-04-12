@@ -19,14 +19,14 @@ class OnboardingScreen extends StatelessWidget with DeviceSizeUtil {
     final double deviceWidth = getDeviceWidth();
 
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColors.black),
-          onPressed: () {
-            Get.back();
-          },
-        ),
-      ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     icon: const Icon(Icons.arrow_back, color: AppColors.black),
+      //     onPressed: () {
+      //       Get.back();
+      //     },
+      //   ),
+      // ),
       body: SafeArea(
         child: Column(
           children: [

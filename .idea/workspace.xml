@@ -4,25 +4,20 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="run on new laptop">
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/edit_profile/edit_profile_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/edit_profile/edit_profile_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" afterDir="false" />
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="User profile screen and edit profile UI">
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/login_reponse_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/login_reponse_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/services/auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/services/auth_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/services/shared_pref_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/services/shared_pref_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/edit_profile/edit_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/edit_profile/edit_profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="6718183e54a88d5f517e3e10b9eef702a68b5947" />
+        <entry key="$PROJECT_DIR$" value="app/authentication_integration" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,26 +77,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#2 on app/authentication__integration&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ahmad/Development/lobay/apps/lobay/assets/images&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flutter.main.dart.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "app/user__profile",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ahmad/Development/lobay/apps/lobay/assets/images",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "dart.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/lobay/assets/images" />
@@ -109,6 +104,7 @@
       <recent name="$PROJECT_DIR$/apps/lobay/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/lobay/lib/features/profile" />
       <recent name="$PROJECT_DIR$/apps/lobay/lib/features/authentication" />
       <recent name="$PROJECT_DIR$/apps/lobay/assets/images" />
       <recent name="$PROJECT_DIR$/apps/lobay/lib/utlilities/constants" />
@@ -229,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744314499849</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="User profile screen and edit profile UI">
+      <option name="closed" value="true" />
+      <created>1744466267919</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744466267919</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,7 +260,8 @@
     <MESSAGE value="reset password functionality" />
     <MESSAGE value="resolved email signup issue using google" />
     <MESSAGE value="run on new laptop" />
-    <option name="LAST_COMMIT_MESSAGE" value="run on new laptop" />
+    <MESSAGE value="User profile screen and edit profile UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="User profile screen and edit profile UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

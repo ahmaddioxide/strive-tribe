@@ -6,15 +6,14 @@ import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_drop_down.dart';
+import 'package:lobay/common_widgets/app_image_widget.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
+import 'package:lobay/common_widgets/app_text_field.dart';
+import 'package:lobay/generated/assets.dart';
+import 'package:lobay/utilities/app_utils/validators.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
-
-import '../../common_widgets/app_image_widget.dart';
-import '../../common_widgets/app_snackbars.dart';
-import '../../common_widgets/app_text_field.dart';
-import '../../generated/assets.dart';
-import '../../utilities/app_utils/validators.dart';
 import 'edit_profile_controller.dart';
 
 class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {

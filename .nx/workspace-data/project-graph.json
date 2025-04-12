@@ -11965,11 +11965,6 @@
       },
       {
         "source": "my-express-api",
-        "target": "npm:jsonwebtoken",
-        "type": "static"
-      },
-      {
-        "source": "my-express-api",
         "target": "npm:firebase-admin",
         "type": "static"
       },
@@ -11985,6 +11980,16 @@
       },
       {
         "source": "my-express-api",
+        "target": "npm:express-validator",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
         "target": "npm:body-parser",
         "type": "static"
       },
@@ -11996,11 +12001,6 @@
       {
         "source": "my-express-api",
         "target": "npm:cors",
-        "type": "static"
-      },
-      {
-        "source": "my-express-api",
-        "target": "npm:express-validator",
         "type": "static"
       },
       {
@@ -27861,5 +27861,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1744397874125
+  "computedAt": 1744468296747
 }

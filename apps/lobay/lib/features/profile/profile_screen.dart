@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
+import 'package:lobay/features/profile/edit_profile/edit_profile_controller.dart';
+import 'package:lobay/features/profile/edit_profile/edit_profile_screen.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
-
 import '../../generated/assets.dart';
 import '../../utilities/theme_utils/app_colors.dart';
-import '../edit_profile/edit_profile_screen.dart';
 
 class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
   const ProfileScreen({super.key});
@@ -15,6 +15,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
   Widget build(BuildContext context) {
     final height = getDeviceHeight();
     final width = getDeviceWidth();
+    final editProfileController = Get.put(EditProfileController());
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
@@ -196,7 +197,9 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                       ),
                       trailing:
                           Icon(Icons.arrow_forward_ios, color: AppColors.red),
-                      onTap: () {},
+                      onTap: () {
+                        editProfileController.showLogoutAlert(context);
+                      },
                     ),
                   ],
                 ),

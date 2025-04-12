@@ -77,11 +77,8 @@ class AuthenticationRepository {
     // Check if the user exists in the local storage
 
     final response = await apiClient.get(
-      EndPoints.userExists,
+      EndPoints.checkUserExistance(userId),
       retryCallback: () {},
-      data: {
-        'user_id': userId,
-      },
     );
     if (response.statusCode == 200) {
       final responseData = response.data;

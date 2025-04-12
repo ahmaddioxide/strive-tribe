@@ -1,14 +1,25 @@
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
+import 'package:lobay/core/network/network_models/get_user_reponse_body.dart';
 import 'package:lobay/features/authentication/repository/auth_repo.dart';
 import 'package:lobay/features/onboarding/onboarding_screen.dart';
+import 'package:lobay/features/profile/repository/profile_repo.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class EditProfileController extends GetxController {
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    getUser();
+  }
+
   RxBool isGoogleLogin = false.obs;
   final formKey = GlobalKey<FormState>();
 
@@ -21,6 +32,23 @@ class EditProfileController extends GetxController {
   RxString gender = 'Male'.obs;
   RxString profileImage = ''.obs;
   Rx<XFile> profileImageFile = XFile('').obs;
+
+  Rx<GetUserResponseBody?> userModel = Rx<GetUserResponseBody?>(null);
+
+  final profileRepo = ProfileRepo();
+
+  Future<void> getUser() async {
+    final userId = FirebaseAuth.instance.currentUser!.uid;
+
+    final response = await profileRepo.getUser(userId: userId);
+
+    if (response == null) {
+      AppSnackbar.showErrorSnackBar(
+          message: 'Something went wrong while fetching profile');
+      return;
+    }
+    userModel.value = response;
+  }
 
   Future<void> pickImage() async {
     final pickedFile =

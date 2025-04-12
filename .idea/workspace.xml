@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="User profile screen and edit profile UI">
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" afterDir="false" />
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="resolved json size issue in image">
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_user_reponse_body.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/edit_profile/edit_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/edit_profile/edit_profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +227,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744466267919</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="logout and profile repo half">
+      <option name="closed" value="true" />
+      <created>1744469983531</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744469983531</updated>
+    </task>
+    <task id="LOCAL-00015" summary="resolved json size issue in image">
+      <option name="closed" value="true" />
+      <created>1744470296369</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744470296369</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +271,9 @@
     <MESSAGE value="resolved email signup issue using google" />
     <MESSAGE value="run on new laptop" />
     <MESSAGE value="User profile screen and edit profile UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="User profile screen and edit profile UI" />
+    <MESSAGE value="logout and profile repo half" />
+    <MESSAGE value="resolved json size issue in image" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolved json size issue in image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

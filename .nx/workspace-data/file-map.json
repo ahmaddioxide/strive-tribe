@@ -373,7 +373,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "18073390904121032820"
+          "hash": "7804169205474360954"
         },
         {
           "file": ".prettierignore",
@@ -1361,11 +1361,15 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_constants.dart",
-          "hash": "18206481888069825153"
+          "hash": "4986414701317163476"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/enums/login_type.dart",
           "hash": "6398772785135861442"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/network_models/get_user_reponse_body.dart",
+          "hash": "14992052855427844948"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/login_body_model.dart",
@@ -1401,7 +1405,7 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/repository/auth_repo.dart",
-          "hash": "3847331382268854420"
+          "hash": "9241755430765960325"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_in/signin_controller.dart",
@@ -1504,6 +1508,10 @@
           "hash": "579987137180880736"
         },
         {
+          "file": "apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart",
+          "hash": "8013960785320933963"
+        },
+        {
           "file": "apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart",
           "hash": "8912331395207676673"
         },
@@ -1513,7 +1521,7 @@
         },
         {
           "file": "apps/lobay/lib/features/profile/repository/profile_repo.dart",
-          "hash": "4212495103603797570"
+          "hash": "17852512528313623304"
         },
         {
           "file": "apps/lobay/lib/firebase_options.dart",

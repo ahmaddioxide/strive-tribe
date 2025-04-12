@@ -11,8 +11,8 @@ class EndPoints {
   static const String register = 'api/auth/register';
   static const String login = 'api/auth/login';
 
-  static const  userExists = 'api/auth/checkuser';
+  static checkUserExistance(String userId) =>
+      'api/auth/checkuser?user_id=$userId';
 
-  static const getUser= 'api/user/getuser';
-
+  static getUser(String userId) => 'api/user/getuser?user_id=$userId';
 }

@@ -11,14 +11,22 @@ export interface IUser extends Document {
   name: string;
   gender: string;
   dateOfBirth: string;
-  location: string;
+  location: number;
   phoneNumber: string;
   profileImage?: string;
   activities: Activity[];
   signInWith: 'google' | 'facebook' | 'email_password';
   isVerified: boolean;
-  scheduledActivities?: string[]; // Optional field for scheduled activities
-  gamesPlayed?: number[]; // Optional field for games played
+  scheduledActivities?: string; 
+  gamesPlayed?: number;
+  placeName?: string;
+  countryName?: string;
+  longitude?: string;
+  latitude?: string;
+  state?: string;
+  postalCode?: string;
+  deviceToken?: string;
+
 }
 
 const UserSchema: Schema = new Schema({
@@ -27,7 +35,7 @@ const UserSchema: Schema = new Schema({
   name: { type: String, required: true },
   gender: { type: String, required: true },
   dateOfBirth: { type: String, required: true },
-  location: { type: String, required: true },
+  //location: { type: String },
   phoneNumber: { type: String, required: true },
   profileImage: { type: String },
   activities: [{
@@ -41,7 +49,15 @@ const UserSchema: Schema = new Schema({
   },
   isVerified: { type: Boolean, default: false },
   scheduledActivities: [{ type: String, default: [] }],
-  gamesPlayed: [{ type: Number, default: 0 }]
+  gamesPlayed: { type: Number, default: 0 },
+  placeName: { type: String },
+  countryName: { type: String },
+  longitude: { type: String },
+  latitude: { type: String },
+  deviceToken: { type: String, default: "" },
+  state: { type: String },
+  postalCode: { type: String, required: true },
+
 }, { timestamps: true });
 
 export default mongoose.model<IUser>("User", UserSchema);

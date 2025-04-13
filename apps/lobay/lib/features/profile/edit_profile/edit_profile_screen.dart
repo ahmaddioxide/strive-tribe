@@ -14,7 +14,7 @@ import 'package:lobay/utilities/app_utils/validators.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
-import 'edit_profile_controller.dart';
+import '../profile_controller.dart';
 
 class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
   const EditProfileScreen({super.key});
@@ -23,7 +23,7 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
   Widget build(BuildContext context) {
     final height = getDeviceHeight();
     final width = getDeviceWidth();
-    final controller = Get.find<EditProfileController>();
+    final controller = Get.find<ProfileController>();
 
     return Scaffold(
       appBar: AppBar(),
@@ -128,11 +128,11 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                   validator: Validator.validateDateOfBirth,
                 ),
                 SizedBox(height: height * 0.01),
-                Text('Location', style: TextStyle(color: AppColors.grey)),
+                Text('Postal Code', style: TextStyle(color: AppColors.grey)),
                 SizedBox(height: height * 0.006),
                 AppTextField(
-                  hintText: 'Set Location',
-                  controller: controller.locationController,
+                  hintText: 'Postal Code',
+                  controller: controller.postalCodeController,
                   keyboardType: TextInputType.streetAddress,
                   trailingIcon: Icon(
                     Icons.location_on_outlined,

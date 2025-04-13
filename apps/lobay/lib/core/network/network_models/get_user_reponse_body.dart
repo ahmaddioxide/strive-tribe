@@ -59,7 +59,7 @@ class UserModel {
   String dateOfBirth;
   bool isVerified;
   String gender;
-  String location;
+  String postalCode;
   List<dynamic> scheduledActivities;
   List<dynamic> gamesPlayed;
 
@@ -73,7 +73,7 @@ class UserModel {
     required this.signInWith,
     required this.gender,
     required this.dateOfBirth,
-    required this.location,
+    required this.postalCode,
 
 
 
@@ -94,7 +94,7 @@ class UserModel {
       gender: json['gender'],
       isVerified: json['isVarified'] ?? false,
       dateOfBirth: json['dateOfBirth'],
-      location: json['location'] ,
+      postalCode: json['postalCode']??'' ,
       scheduledActivities: json['scheduledActivities'] ?? [],
       gamesPlayed: json['gamesPlayed'] ?? [],
     );
@@ -111,7 +111,7 @@ class UserModel {
       'signInWith': signInWith,
       'isVarified': isVerified,
       'dateOfBirth': dateOfBirth,
-      'location':location,
+      'postalCode':postalCode,
       'gender':gender,
       'scheduledActivities': scheduledActivities,
       'gamesPlayed': gamesPlayed,

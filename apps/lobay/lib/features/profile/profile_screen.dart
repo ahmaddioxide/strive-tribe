@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
-import 'package:lobay/features/profile/edit_profile/edit_profile_controller.dart';
+import 'package:lobay/features/profile/profile_controller.dart';
 import 'package:lobay/features/profile/edit_profile/edit_profile_screen.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
   Widget build(BuildContext context) {
     final height = getDeviceHeight();
     final width = getDeviceWidth();
-    final editProfileController = Get.find<EditProfileController>();
+    final editProfileController = Get.find<ProfileController>();
     return Scaffold(
       appBar: AppBar(),
       body: Padding(

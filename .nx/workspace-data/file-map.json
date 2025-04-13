@@ -82,7 +82,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "3515210865179276174"
+          "hash": "16298580391823914269"
         },
         {
           "file": ".prettierignore",
@@ -1078,7 +1078,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/get_user_reponse_body.dart",
-          "hash": "1120364531648228306"
+          "hash": "3009134499154077496"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/login_body_model.dart",
@@ -1170,7 +1170,7 @@
         },
         {
           "file": "apps/lobay/lib/features/home/home_screen.dart",
-          "hash": "13897616187299980383"
+          "hash": "12312288851482185995"
         },
         {
           "file": "apps/lobay/lib/features/home/home_screen_controller.dart",
@@ -1209,16 +1209,16 @@
           "hash": "579987137180880736"
         },
         {
-          "file": "apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart",
-          "hash": "14059708199323736484"
+          "file": "apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart",
+          "hash": "18198566756360824956"
         },
         {
-          "file": "apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart",
-          "hash": "3436964335699955939"
+          "file": "apps/lobay/lib/features/profile/profile_controller.dart",
+          "hash": "14192700521898899776"
         },
         {
           "file": "apps/lobay/lib/features/profile/profile_screen.dart",
-          "hash": "770760800312002521"
+          "hash": "8066800083258628624"
         },
         {
           "file": "apps/lobay/lib/features/profile/repository/profile_repo.dart",

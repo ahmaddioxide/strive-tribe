@@ -5,7 +5,7 @@ import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/features/home/filter_bottomsheet_widget.dart';
 import 'package:lobay/features/home/home_screen_controller.dart';
 import 'package:lobay/features/home/widgets/activities.dart';
-import 'package:lobay/features/profile/edit_profile/edit_profile_controller.dart';
+import 'package:lobay/features/profile/profile_controller.dart';
 import 'package:lobay/features/profile/profile_screen.dart';
 import 'package:lobay/utilities/constants/app_enums.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
     final height = getDeviceHeight();
     final width = getDeviceWidth();
     final homeController = Get.put(HomeScreenController());
-    final profileController = Get.put(EditProfileController());
+    final profileController = Get.put(ProfileController());
 
     return Scaffold(
       appBar: AppBar(

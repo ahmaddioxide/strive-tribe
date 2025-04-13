@@ -15,7 +15,7 @@ import 'package:lobay/features/onboarding/onboarding_screen.dart';
 import 'package:lobay/features/profile/repository/profile_repo.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
-class EditProfileController extends GetxController {
+class ProfileController extends GetxController {
   RxBool isGoogleLogin = false.obs;
   RxBool isLoading = false.obs;
   RxBool isApiCalling = false.obs;
@@ -26,7 +26,7 @@ class EditProfileController extends GetxController {
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController dateOfBirthController = TextEditingController();
-  final TextEditingController locationController = TextEditingController();
+  final TextEditingController postalCodeController = TextEditingController();
   RxString gender = 'Male'.obs;
   RxString initialCountry = ''.obs;
   RxString profileImage = ''.obs;
@@ -61,7 +61,7 @@ class EditProfileController extends GetxController {
     phoneController.text = response.user.phoneNumber;
     dateOfBirthController.text = response.user.dateOfBirth;
     gender.value = response.user.gender;
-    locationController.text = response.user.location;
+    postalCodeController.text = response.user.postalCode;
     profileImage.value = response.user.profileImage;
   }
 
@@ -223,7 +223,7 @@ class EditProfileController extends GetxController {
         'dateOfBirth': dateOfBirthController.text,
         'phoneNumber': phoneController.text,
         'profile_image': 'data:image/png;base64, $imageBase64',
-        'location': locationController.text,
+        'postalCode': postalCodeController.text,
       };
     } else {
       newBody = {
@@ -232,7 +232,7 @@ class EditProfileController extends GetxController {
         'gender': gender.value,
         'dateOfBirth': dateOfBirthController.text,
         'phoneNumber': phoneController.text,
-        'location': locationController.text,
+        'postalCode': postalCodeController.text,
       };
     }
     final isUpdated = await profileRepo.updateUser(data: newBody);

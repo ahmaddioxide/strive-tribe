@@ -36,6 +36,7 @@ class ApiClient {
       onRequest: (options, handler) async {
         final token =
             await PreferencesManager.getInstance().getStringValue('token', '');
+        print('Token to send: $token');
         if (token != null && token.isNotEmpty) {
           options.headers['Authorization'] = 'Bearer $token';
         }

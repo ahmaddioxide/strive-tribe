@@ -25,31 +25,29 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
-          child: Obx(() {
-            return AppClickWidget(
-              onTap: () async {
-                if (profileController.isLoading.value) {
-                  return;
-                }
-                Get.to(() => ProfileScreen());
-              },
-              child: profileController.isLoading.value
-                  ? CircularProgressIndicator()
-                  : ClipOval(
-                      child: AppImageWidget(
-                          networkImage: profileController
-                                      .userModel.value?.user.profileImage !=
-                                  null ||
-                              profileController.userModel.value!.user
-                                  .profileImage.isNotEmpty,
-                          imagePathOrURL: profileController
-                                  .userModel.value?.user.profileImage ??
-                              ''),
-                    ),
-            );
-          }),
-        ),
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
+            child: Obx(() {
+              final userModel = profileController.userModel.value;
+              final profileImage = userModel?.user.profileImage;
+
+              return AppClickWidget(
+                onTap: () async {
+                  if (profileController.isLoading.value) {
+                    return;
+                  }
+                  Get.to(() => ProfileScreen());
+                },
+                child: profileController.isLoading.value
+                    ? CircularProgressIndicator()
+                    : ClipOval(
+                        child: AppImageWidget(
+                          networkImage:
+                              profileImage != null && profileImage.isNotEmpty,
+                          imagePathOrURL: profileImage ?? '',
+                        ),
+                      ),
+              );
+            })),
         title: Column(
           children: [
             Text(

@@ -31,7 +31,7 @@ class SignupController extends GetxController {
   final nameController = TextEditingController();
   final passwordController = TextEditingController();
   final dateOfBirthController = TextEditingController();
-  final locationController = TextEditingController();
+  final postalCodeController = TextEditingController();
   final phoneController = TextEditingController();
 
   RxList<Tuple> activities = <Tuple>[
@@ -205,7 +205,7 @@ class SignupController extends GetxController {
           name: nameController.text.trim(),
           gender: gender.value,
           dateOfBirth: dateOfBirthController.text,
-          location: locationController.text.trim(),
+          postalCode: postalCodeController.text.trim(),
           phone: phoneController.text.trim(),
           signInWith: 'email_password',
           activities: activities,
@@ -270,7 +270,7 @@ class SignupController extends GetxController {
           name: nameController.text.trim(),
           gender: gender.value,
           dateOfBirth: dateOfBirthController.text,
-          location: locationController.text.trim(),
+          postalCode: postalCodeController.text.trim(),
           phone: phoneController.text.trim(),
           signInWith: 'google',
           activities: activities,

@@ -167,9 +167,10 @@ class SignupForm extends StatelessWidget {
                       Text('Location', style: TextStyle(color: AppColors.grey)),
                       SizedBox(height: height * 0.006),
                       AppTextField(
-                        hintText: 'Set Location',
-                        controller: signupController.locationController,
-                        keyboardType: TextInputType.streetAddress,
+                        hintText: 'Postal Code',
+                        controller: signupController.postalCodeController,
+                        keyboardType: TextInputType.numberWithOptions(
+                            signed: false, decimal: false),
                         trailingIcon: Icon(
                           Icons.location_on_outlined,
                           color: AppColors.grey,

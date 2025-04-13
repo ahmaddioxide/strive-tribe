@@ -26,7 +26,7 @@ class RegisterBodyModel {
   String name;
   String gender;
   String dateOfBirth;
-  String location;
+  String postalCode;
   String phone;
   String signInWith;
   List<Activity> activities;
@@ -39,7 +39,7 @@ class RegisterBodyModel {
     required this.name,
     required this.gender,
     required this.dateOfBirth,
-    required this.location,
+    required this.postalCode,
     required this.phone,
     required this.signInWith,
     required this.activities,
@@ -55,7 +55,7 @@ class RegisterBodyModel {
       'name': name,
       'gender': gender,
       'dateOfBirth': dateOfBirth,
-      'location': location,
+      'postalCode': postalCode,
       'phone': phone,
       'signInWith': signInWith,
       'activities': activities.map((activity) => activity.toJson()).toList(),
@@ -71,7 +71,7 @@ class RegisterBodyModel {
       name: json['name'],
       gender: json['gender'],
       dateOfBirth: json['dateOfBirth'],
-      location: json['location'],
+      postalCode: json['postalCode'],
       phone: json['phone'],
       signInWith: json['signInWith'],
       activities: (json['activities'] as List)

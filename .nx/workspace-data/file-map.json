@@ -82,7 +82,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "3834952361345645230"
+          "hash": "12992103092462057786"
         },
         {
           "file": ".prettierignore",
@@ -1090,7 +1090,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/register_body_model.dart",
-          "hash": "768844773931401468"
+          "hash": "11825748154550936488"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/register_response_body.dart",
@@ -1130,11 +1130,11 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_controller.dart",
-          "hash": "2736632940396852862"
+          "hash": "10480184270290968849"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_screen.dart",
-          "hash": "10663482536030278353"
+          "hash": "18372949366150197863"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/widgets/activity_container.dart",
@@ -1520,11 +1520,12 @@
         },
         {
           "file": "apps/my-express-api/src/auth/application/register.ts",
-          "hash": "7707105297053242165",
+          "hash": "11761217573872694664",
           "deps": [
             "npm:inversify",
             "npm:firebase-admin",
-            "npm:jsonwebtoken"
+            "npm:jsonwebtoken",
+            "npm:axios"
           ]
         },
         {
@@ -1545,7 +1546,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/infrastructure/models/User.ts",
-          "hash": "6324798476117235115",
+          "hash": "8381394829647221496",
           "deps": [
             "npm:mongoose"
           ]
@@ -1597,7 +1598,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
-          "hash": "4551189725394703732",
+          "hash": "1014667604378333294",
           "deps": [
             "npm:express",
             "npm:express-validator"

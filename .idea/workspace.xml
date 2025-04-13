@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="edit screen api integrated with out update functionality &#10;populated existing data">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2025,_10_31 AM_[Changes]/nx_files.nxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2025,_10_31 AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2025__10_31AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" afterDir="false" />
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="edit profile with api integration">
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/apps/my-express-api/serve/tsconfig.generated.4af6d03e-241f-43f9-be92-b5c5b844889e.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744484920482</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="edit profile with api integration">
+      <option name="closed" value="true" />
+      <created>1744536981499</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1744536981499</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -304,7 +293,8 @@
     <MESSAGE value="resolved json size issue in image" />
     <MESSAGE value="get user api changes" />
     <MESSAGE value="edit screen api integrated with out update functionality &#10;populated existing data" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit screen api integrated with out update functionality &#10;populated existing data" />
+    <MESSAGE value="edit profile with api integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit profile with api integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

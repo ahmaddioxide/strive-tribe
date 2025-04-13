@@ -82,7 +82,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "11331270674440048631"
+          "hash": "3834952361345645230"
         },
         {
           "file": ".prettierignore",
@@ -1058,7 +1058,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/api_client.dart",
-          "hash": "12584438988757404461"
+          "hash": "13124554400734005629"
         },
         {
           "file": "apps/lobay/lib/core/network/api_exception.dart",
@@ -1218,7 +1218,7 @@
         },
         {
           "file": "apps/lobay/lib/features/profile/profile_screen.dart",
-          "hash": "4838482660712952139"
+          "hash": "770760800312002521"
         },
         {
           "file": "apps/lobay/lib/features/profile/repository/profile_repo.dart",

@@ -43,10 +43,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                 final bool ifImageExists =
                     editProfileController.userModel.value == null ||
                         (editProfileController
-                                    .userModel.value!.user.profileImage ==
-                                null ||
-                            editProfileController
-                                .userModel.value!.user.profileImage.isEmpty);
+                            .userModel.value!.user.profileImage.isEmpty);
                 return Align(
                   alignment: Alignment.center,
                   child: Column(

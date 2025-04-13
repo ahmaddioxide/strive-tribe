@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
-import 'package:lobay/features/authentication/repository/auth_repo.dart';
 import 'package:lobay/features/home/filter_bottomsheet_widget.dart';
 import 'package:lobay/features/home/home_screen_controller.dart';
 import 'package:lobay/features/home/widgets/activities.dart';
-import 'package:lobay/features/onboarding/onboarding_screen.dart';
+import 'package:lobay/features/profile/edit_profile/edit_profile_controller.dart';
 import 'package:lobay/features/profile/profile_screen.dart';
-import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/constants/app_enums.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
@@ -22,25 +20,35 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
     final height = getDeviceHeight();
     final width = getDeviceWidth();
     final homeController = Get.put(HomeScreenController());
+    final profileController = Get.put(EditProfileController());
+
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
-          child: AppClickWidget(
-            onTap: () async {
-              // await AuthenticationRepository().logout();
-              // Get.offAll(() => OnboardingScreen());
-              Get.to(()=>ProfileScreen());
-            },
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(height * 0.05),
-              child: AppImageWidget(
-                imagePathOrURL: Assets.imagesPlaceholderPerson,
-                height: height * 0.05,
-                width: width * 0.05,
-              ),
-            ),
-          ),
+          child: Obx(() {
+            return AppClickWidget(
+              onTap: () async {
+                if (profileController.isLoading.value) {
+                  return;
+                }
+                Get.to(() => ProfileScreen());
+              },
+              child: profileController.isLoading.value
+                  ? CircularProgressIndicator()
+                  : ClipOval(
+                      child: AppImageWidget(
+                          networkImage: profileController
+                                      .userModel.value?.user.profileImage !=
+                                  null ||
+                              profileController.userModel.value!.user
+                                  .profileImage.isNotEmpty,
+                          imagePathOrURL: profileController
+                                  .userModel.value?.user.profileImage ??
+                              ''),
+                    ),
+            );
+          }),
         ),
         title: Column(
           children: [

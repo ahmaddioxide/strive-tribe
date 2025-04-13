@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
@@ -7,6 +9,7 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
   final Function()? onPressed;
   final Widget? child;
   final bool isEnabled;
+  final bool isLoading;
 
   const AppButton({
     super.key,
@@ -14,6 +17,7 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
     this.onPressed,
     this.child,
     this.isEnabled = true,
+    this.isLoading = false,
   });
 
   @override
@@ -21,22 +25,31 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         minimumSize: Size(double.infinity, getDeviceHeight() * 0.06),
-        backgroundColor:isEnabled==true? AppColors.primaryLight:AppColors.grey,
+        backgroundColor:
+            isEnabled == true ? AppColors.primaryLight : AppColors.grey,
         padding: EdgeInsets.symmetric(vertical: 15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
       ),
-      onPressed: onPressed,
-      child: child ??
-          Text(
-            buttonText ?? '',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 17,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+      onPressed: isLoading
+          ? () {
+              log('Loading so on press will not work');
+            }
+          : onPressed,
+      child: isLoading
+          ? CircularProgressIndicator(
+              color: AppColors.white,
+            )
+          : child ??
+              Text(
+                buttonText ?? '',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
     );
   }
 }

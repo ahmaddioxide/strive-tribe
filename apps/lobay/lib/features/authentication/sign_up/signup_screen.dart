@@ -36,7 +36,11 @@ class SignupScreen extends StatelessWidget with DeviceSizeUtil {
         child: Column(
           children: [
             SignupScreenTopContainer(height: height, width: width),
-            SignupForm(height: height, width: width,isGoogleLogin: isGoogleLogin,),
+            SignupForm(
+              height: height,
+              width: width,
+              isGoogleLogin: isGoogleLogin,
+            ),
           ],
         ),
       ),
@@ -66,7 +70,6 @@ class SignupForm extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             SizedBox(height: height * 0.01),
             Text(
               'Email',
@@ -190,7 +193,7 @@ class SignupForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              initialCountryCode: 'GB',
+              initialCountryCode: 'US',
               autovalidateMode: AutovalidateMode.onUnfocus,
               onChanged: (phone) {
                 signupController.phoneController.text = phone.completeNumber;
@@ -258,43 +261,46 @@ class SignupForm extends StatelessWidget {
               );
             }),
             SizedBox(height: height * 0.02),
-            AppButton(
-              isEnabled: true,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Next',
-                    style: TextStyle(
-                      color: AppColors.white,
-                      fontWeight: FontWeight.bold,
+            Obx(() {
+              return AppButton(
+                isLoading: signupController.isApiCalling.value,
+                isEnabled: true,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Next',
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: width * 0.02,
-                  ),
-                  Icon(Icons.arrow_forward, color: AppColors.white),
-                ],
-              ),
-              onPressed: () async {
-                //validate form
-                // await signupController.signup();
+                    SizedBox(
+                      width: width * 0.02,
+                    ),
+                    Icon(Icons.arrow_forward, color: AppColors.white),
+                  ],
+                ),
+                onPressed: () async {
+                  //validate form
+                  // await signupController.signup();
 
-                if (signupController.formKey.currentState!.validate()) {
-                  // signupController.formKey.currentState!.save();
-                  Get.to(
-                    () => ActivitySelectionScreen(
-                      isGoogleLogin: isGoogleLogin,
-                    ),
-                  );
-                  log('Form is valid');
-                } else {
-                  log('Form is invalid');
-                  AppSnackbar.showErrorSnackBar(
-                      message: 'Please enter the valid values to continue');
-                }
-              },
-            ),
+                  if (signupController.formKey.currentState!.validate()) {
+                    // signupController.formKey.currentState!.save();
+                    Get.to(
+                      () => ActivitySelectionScreen(
+                        isGoogleLogin: isGoogleLogin,
+                      ),
+                    );
+                    log('Form is valid');
+                  } else {
+                    log('Form is invalid');
+                    AppSnackbar.showErrorSnackBar(
+                        message: 'Please enter the valid values to continue');
+                  }
+                },
+              );
+            }),
             SizedBox(height: height * 0.02),
           ],
         ),

@@ -25,6 +25,8 @@ class SignupController extends GetxController {
   final AuthenticationRepository _authRepo = AuthenticationRepository();
   final formKey = GlobalKey<FormState>();
 
+  RxBool isApiCalling = false.obs;
+
   final emailController = TextEditingController();
   final nameController = TextEditingController();
   final passwordController = TextEditingController();
@@ -54,7 +56,7 @@ class SignupController extends GetxController {
   Rx<XFile?> profileImage = Rx<XFile?>(null);
 
   void showDatePickerAdaptive(BuildContext context) {
-    if (GetPlatform.isAndroid) {
+    if (!GetPlatform.isAndroid) {
       showCupertinoModalPopup(
         context: context,
         builder: (_) => Container(

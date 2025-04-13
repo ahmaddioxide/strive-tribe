@@ -26,4 +26,24 @@ class ProfileRepo {
       return null;
     }
   }
+
+  Future<bool> updateUser({required Map<String, dynamic> data}) async {
+    try {
+      final response = await _apiClient.put(
+        EndPoints.updateuser,
+        data: data,
+        retryCallback: () {},
+      );
+      if (response.statusCode == 200) {
+        // Handle successful login
+        return true;
+      } else {
+        // Handle error response
+        throw Exception('Failed to put data: ${response.statusMessage}');
+      }
+    } on Exception catch (e) {
+      // Handle exceptions
+      return false;
+    }
+  }
 }

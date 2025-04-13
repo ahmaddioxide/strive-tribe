@@ -48,16 +48,21 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
             padding: EdgeInsets.symmetric(horizontal: width * 0.05),
             child: Obx(() {
               return AppButton(
+                isLoading: signupController.isApiCalling.value,
                 isEnabled: signupController.selectedActivities.isNotEmpty,
                 buttonText: 'Register',
                 onPressed: () async {
                   if (signupController.formKey.currentState!.validate()) {
+                    signupController.isApiCalling.value = true;
                     if (isGoogleLogin) {
                       await signupController.signupWithGoogle();
+                      signupController.isApiCalling.value = false;
                       return;
                     } else {
                       // Call the signup method
+                      signupController.isApiCalling.value = true;
                       await signupController.signup();
+                      signupController.isApiCalling.value = false;
                       return;
                     }
                   }

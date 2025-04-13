@@ -59,7 +59,7 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                   controller: controller.emailController,
                   keyboardType: TextInputType.emailAddress,
                   validator: Validator.validateEmail,
-                  enabled: !controller.isGoogleLogin.value,
+                  enabled: false,
                 ),
                 SizedBox(height: height * 0.01),
                 Row(
@@ -144,7 +144,15 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                 Text('Phone number', style: TextStyle(color: AppColors.grey)),
                 SizedBox(height: height * 0.006),
                 IntlPhoneField(
+                  initialCountryCode: controller.initialCountry.value,
                   controller: controller.phoneController,
+                  disableLengthCheck: true,
+                  validator: (value) {
+                    if (value == null || value.completeNumber.isEmpty) {
+                      return 'Please enter a valid phone number';
+                    }
+                    return null;
+                  },
                   decoration: InputDecoration(
                     hintText: '(123) 456-7890',
                     hintStyle: TextStyle(color: AppColors.grey),
@@ -154,7 +162,7 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                     ),
                   ),
                   // initialCountryCode: 'GB',
-                  autovalidateMode: AutovalidateMode.onUnfocus,
+                  autovalidateMode: AutovalidateMode.disabled,
                   onChanged: (phone) {
                     controller.phoneController.text = phone.completeNumber;
                   },
@@ -162,18 +170,18 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                   dropdownIconPosition: IconPosition.trailing,
                   flagsButtonPadding: EdgeInsets.only(left: 10),
                 ),
-                SizedBox(height: height * 0.01),
-                Text('Set password', style: TextStyle(color: AppColors.grey)),
-                SizedBox(height: height * 0.006),
-                !controller.isGoogleLogin.value
-                    ? AppTextField(
-                        hintText: 'Password',
-                        controller: controller.passwordController,
-                        keyboardType: TextInputType.visiblePassword,
-                        isPassword: true,
-                        validator: Validator.validatePassword,
-                      )
-                    : SizedBox.shrink(),
+                // SizedBox(height: height * 0.01),
+                // Text('Set password', style: TextStyle(color: AppColors.grey)),
+                // SizedBox(height: height * 0.006),
+                // !controller.isGoogleLogin.value
+                //     ? AppTextField(
+                //         hintText: 'Password',
+                //         controller: controller.passwordController,
+                //         keyboardType: TextInputType.visiblePassword,
+                //         isPassword: true,
+                //         validator: Validator.validatePassword,
+                //       )
+                //     : SizedBox.shrink(),
                 SizedBox(height: height * 0.01),
                 Text('Profile Picture',
                     style: TextStyle(color: AppColors.grey)),
@@ -234,30 +242,33 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                   },
                 ),
                 SizedBox(height: height * 0.02),
-                AppButton(
-                  isEnabled: true,
-                  child: Text(
-                    'Save',
-                    style: TextStyle(
-                      color: AppColors.white,
-                      fontWeight: FontWeight.bold,
+                Obx(() {
+                  return AppButton(
+                    isLoading: controller.isApiCalling.value,
+                    isEnabled: true,
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  onPressed: () async {
-                    //validate form
-                    // await signupController.signup();
+                    onPressed: () async {
+                      //validate form
+                      // await signupController.signup();
 
-                    if (controller.formKey.currentState!.validate()) {
-                      // signupController.formKey.currentState!.save();
-
-                      log('Form is valid');
-                    } else {
-                      log('Form is invalid');
-                      AppSnackbar.showErrorSnackBar(
-                          message: 'Please enter the valid values to continue');
-                    }
-                  },
-                ),
+                      if (controller.formKey.currentState!.validate()) {
+                        await controller.updateProfile();
+                        log('Form is valid');
+                      } else {
+                        log('Form is invalid');
+                        AppSnackbar.showErrorSnackBar(
+                            message:
+                                'Please enter the valid values to continue');
+                      }
+                    },
+                  );
+                }),
                 SizedBox(height: height * 0.03),
               ],
             ),

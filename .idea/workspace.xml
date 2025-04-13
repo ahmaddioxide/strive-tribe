@@ -4,19 +4,27 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="get user api changes">
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="edit screen api integrated with out update functionality &#10;populated existing data">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2025,_10_31 AM_[Changes]/nx_files.nxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2025,_10_31 AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2025__10_31AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_button.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_user_reponse_body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_user_reponse_body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/apps/my-express-api/serve/tsconfig.generated.ca376696-1f82-449e-afde-4d2245eeac00.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/apps/my-express-api/serve/tsconfig.generated.4af6d03e-241f-43f9-be92-b5c5b844889e.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +84,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flutter.main.dart.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "app/user__profile",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ahmad/Development/lobay/apps/lobay/assets/images",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "dart.settings",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;app/user__profile&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ahmad/Development/lobay/apps/lobay/assets/images&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/lobay/assets/images" />
@@ -256,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744479030863</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="edit screen api integrated with out update functionality &#10;populated existing data">
+      <option name="closed" value="true" />
+      <created>1744484920482</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1744484920482</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,7 +303,8 @@
     <MESSAGE value="logout and profile repo half" />
     <MESSAGE value="resolved json size issue in image" />
     <MESSAGE value="get user api changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="get user api changes" />
+    <MESSAGE value="edit screen api integrated with out update functionality &#10;populated existing data" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit screen api integrated with out update functionality &#10;populated existing data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -304,7 +321,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart</url>
-          <line>203</line>
+          <line>206</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>

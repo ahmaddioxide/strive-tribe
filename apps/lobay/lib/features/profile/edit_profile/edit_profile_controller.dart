@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'dart:developer' show log;
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -5,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:intl_phone_field/phone_number.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/get_user_reponse_body.dart';
 import 'package:lobay/features/authentication/repository/auth_repo.dart';
@@ -15,6 +18,7 @@ import 'package:lobay/utilities/theme_utils/app_colors.dart';
 class EditProfileController extends GetxController {
   RxBool isGoogleLogin = false.obs;
   RxBool isLoading = false.obs;
+  RxBool isApiCalling = false.obs;
   final formKey = GlobalKey<FormState>();
 
   final TextEditingController emailController = TextEditingController();
@@ -24,7 +28,7 @@ class EditProfileController extends GetxController {
   final TextEditingController dateOfBirthController = TextEditingController();
   final TextEditingController locationController = TextEditingController();
   RxString gender = 'Male'.obs;
-  RxString initialCountry = 'us'.obs;
+  RxString initialCountry = ''.obs;
   RxString profileImage = ''.obs;
   Rx<XFile?> profileImageFile = Rx<XFile?>(null);
 
@@ -51,6 +55,7 @@ class EditProfileController extends GetxController {
       return;
     }
     userModel.value = response;
+    extractAndRemoveCountryCode();
     emailController.text = response.user.email;
     nameController.text = response.user.name;
     phoneController.text = response.user.phoneNumber;
@@ -58,7 +63,6 @@ class EditProfileController extends GetxController {
     gender.value = response.user.gender;
     locationController.text = response.user.location;
     profileImage.value = response.user.profileImage;
-    removeCountryCode();
   }
 
   Future<void> pickImage() async {
@@ -195,9 +199,51 @@ class EditProfileController extends GetxController {
     }
   }
 
-  void removeCountryCode() {
-    initialCountry.value = phoneController.text =
-        phoneController.text.replaceAll(RegExp(r'^\+?\d{1,3}'), '');
-    // initialCountry.value=
+  Future<void> extractAndRemoveCountryCode() async {
+    String? phoneNumber = userModel.value?.user.phoneNumber;
+    final phoneNumberNew =
+        PhoneNumber.fromCompleteNumber(completeNumber: phoneNumber!);
+    initialCountry.value = phoneNumberNew.countryISOCode;
+    userModel.value?.user.phoneNumber = phoneNumberNew.number;
+  }
+
+  Future<void> updateProfile() async {
+    isApiCalling.value = true;
+    Map<String, dynamic> newBody = {};
+    if (profileImageFile.value != null) {
+      final String imageBase64 =
+          await profileImageFile.value!.readAsBytes().then((value) {
+        return base64Encode(value);
+      });
+
+      newBody = {
+        'user_id': '${userModel.value?.user.userId}',
+        'name': nameController.text,
+        'gender': gender.value,
+        'dateOfBirth': dateOfBirthController.text,
+        'phoneNumber': phoneController.text,
+        'profile_image': 'data:image/png;base64, $imageBase64',
+        'location': locationController.text,
+      };
+    } else {
+      newBody = {
+        'user_id': '${userModel.value?.user.userId}',
+        'name': nameController.text,
+        'gender': gender.value,
+        'dateOfBirth': dateOfBirthController.text,
+        'phoneNumber': phoneController.text,
+        'location': locationController.text,
+      };
+    }
+    final isUpdated = await profileRepo.updateUser(data: newBody);
+    isApiCalling.value = false;
+    if (isUpdated) {
+      Get.back();
+      AppSnackbar.showSuccessSnackBar(message: 'Profile updated successfully');
+      await getUser();
+    } else {
+      AppSnackbar.showErrorSnackBar(
+          message: 'Something went wrong while updating profile');
+    }
   }
 }

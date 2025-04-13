@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
   Widget build(BuildContext context) {
     final height = getDeviceHeight();
     final width = getDeviceWidth();
-    final editProfileController = Get.put(EditProfileController());
+    final editProfileController = Get.find<EditProfileController>();
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
@@ -32,7 +32,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: height * 0.02),
+              SizedBox(height: height * 0.01),
               Obx(() {
                 if (editProfileController.isLoading.value) {
                   return Center(
@@ -52,7 +52,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                   child: Column(
                     children: [
                       CircleAvatar(
-                        radius: height * 0.07,
+                        radius: height * 0.06,
                         backgroundColor: AppColors.grey,
                         child: ClipOval(
                           child: AppImageWidget(
@@ -61,8 +61,8 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                                 ? editProfileController
                                     .userModel.value!.user.profileImage
                                 : Assets.imagesPlaceholderPerson,
-                            height: height * 0.13,
-                            width: height * 0.13,
+                            height: height * 0.11,
+                            width: height * 0.11,
                           ),
                         ),
                       ),

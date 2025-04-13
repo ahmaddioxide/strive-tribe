@@ -4,12 +4,36 @@ import UserModel from "../infrastructure/models/User";
 import * as firebaseAdmin from "firebase-admin";
 import jwt from "jsonwebtoken";
 import { Config } from "../../config/config";
+import axios from "axios";
 
 @injectable()
 export class RegisterUser {
   constructor(
     @inject(Config) private config: Config
   ) {}
+
+  private async fetchLocationDetails(postalCode: string) {
+    try {
+      const response = await axios.get(`http://api.zippopotam.us/us/${postalCode}`);
+      const data = response.data;
+      
+      if (!data.places || data.places.length === 0) {
+        throw new Error("No location data found for this postal code");
+      }
+
+      const place = data.places[0];
+      return {
+        placeName: place["place name"],
+        countryName: data.country,
+        longitude: place.longitude,
+        latitude: place.latitude,
+        state: place.state
+      };
+    } catch (error: any) {
+      console.error("Error fetching location details:", error);
+      throw new Error("Failed to fetch location details for the provided postal code");
+    }
+  }
 
   async execute(userData: any, profileImageBase64?: string) {
     try {
@@ -44,13 +68,21 @@ export class RegisterUser {
         profileImageUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`;
       }
 
+      // Fetch location details from postal code
+      const locationDetails = await this.fetchLocationDetails(userData.postalCode);
+
       const newUser = new UserModel({ 
         userId: userData.user_id,
         email: userData.email,
         name: userData.name,
         gender: userData.gender,
         dateOfBirth: userData.dateOfBirth,
-        location: userData.location,
+        postalCode: userData.postalCode,
+        placeName: locationDetails.placeName,
+        countryName: locationDetails.countryName,
+        longitude: locationDetails.longitude,
+        latitude: locationDetails.latitude,
+        state: locationDetails.state,
         phoneNumber: userData.phone,
         profileImage: profileImageUrl,
         activities: userData.activities || [],
@@ -72,6 +104,13 @@ export class RegisterUser {
           userId: newUser.userId,
           name: newUser.name,
           email: newUser.email,
+          postalCode: newUser.postalCode,
+          placeName: newUser.placeName,
+          countryName: newUser.countryName,
+          longitude: newUser.longitude,
+          latitude: newUser.latitude,
+          state: newUser.state,
+          phoneNumber: newUser.phoneNumber,
           profileImage: newUser.profileImage,
           signInWith: newUser.signInWith,
           isVerified: newUser.isVerified

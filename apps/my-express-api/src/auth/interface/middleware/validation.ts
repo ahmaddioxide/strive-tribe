@@ -7,7 +7,7 @@ export const validateRegister = [
   body("name").notEmpty().withMessage("Name is required"),
   body("gender").notEmpty().withMessage("Gender is required"),
   body("dateOfBirth").notEmpty().withMessage("Invalid date format (YYYY-MM-DD)"),
-  body("location").notEmpty().withMessage("Location is required"),
+  body("postalCode").notEmpty().withMessage("postal code is required"),
   body("phone").notEmpty().withMessage("Phone number is required"),
   body("signInWith")
     .isIn(['google', 'facebook', 'email_password'])

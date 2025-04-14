@@ -1,6 +1,6 @@
 // src/activity/interface/http/validation.ts
 import { Request, Response, NextFunction } from "express";
-import { body, validationResult } from "express-validator";
+import { body, validationResult, query  } from "express-validator";
 
 export const validateAddActivity = [
   body("user_id")
@@ -36,4 +36,15 @@ export const validateAddActivity = [
     }
     next();
   }
+];
+
+export const validateFindNearbyActivities = [
+  query('activityName')
+    .optional()
+    .isString()
+    .withMessage('Activity name must be a string'),
+  query('playerLevel')
+    .optional()
+    .isString()
+    .withMessage('Player level must be a string')
 ];

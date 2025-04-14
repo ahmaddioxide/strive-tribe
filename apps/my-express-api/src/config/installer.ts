@@ -5,6 +5,7 @@ import { Database } from "../database/index";
 import { IDatabase } from "../database/IDatabase";
 import AuthController from "../auth/interface/http/auth.controller";
 import { ActivityController } from "../activity/interface/http/activity.controller";
+import { FindNearbyActivities } from "../activity/application/FindNearbyActivities";
 import { RegisterUser } from "../auth/application/register";
 import { LoginUser } from "../auth/application/login";
 import { UpdateUser } from "../auth/application/update";
@@ -24,6 +25,7 @@ container.bind<UpdateUser>(UpdateUser).toSelf();
 container.bind<CheckUser>(CheckUser).toSelf();
 container.bind<GetUser>(GetUser).toSelf();
 container.bind<AddActivity>(AddActivity).toSelf();
+container.bind<FindNearbyActivities>(FindNearbyActivities).toSelf();
 container.bind<AuthController>(Identifier.AuthController).to(AuthController);
 container.bind<ActivityController>(Identifier.ActivityController).to(ActivityController);
 

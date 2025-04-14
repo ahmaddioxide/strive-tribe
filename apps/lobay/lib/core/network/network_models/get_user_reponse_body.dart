@@ -61,7 +61,7 @@ class UserModel {
   String gender;
   String postalCode;
   List<dynamic> scheduledActivities;
-  List<dynamic> gamesPlayed;
+  int? gamesPlayed;
 
   UserModel({
     required this.id,
@@ -79,7 +79,7 @@ class UserModel {
 
     this.isVerified = false,
     this.scheduledActivities = const [],
-    this.gamesPlayed = const [],
+    this.gamesPlayed = 0,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
@@ -96,7 +96,7 @@ class UserModel {
       dateOfBirth: json['dateOfBirth'],
       postalCode: json['postalCode']??'' ,
       scheduledActivities: json['scheduledActivities'] ?? [],
-      gamesPlayed: json['gamesPlayed'] ?? [],
+      gamesPlayed: json['gamesPlayed'] ,
     );
   }
 

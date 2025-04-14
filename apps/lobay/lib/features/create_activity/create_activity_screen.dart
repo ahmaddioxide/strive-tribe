@@ -217,9 +217,9 @@ class CreateActivityScreen extends StatelessWidget with DeviceSizeUtil {
                 SizedBox(height: height * 0.02),
                 AppButton(
                     buttonText: 'Create',
-                    onPressed: () {
+                    onPressed: () async {
                       if (controller.formKey.currentState!.validate()) {
-                        // controller.createActivity();
+                        await controller.convertVideoToBase64();
                       } else {
                         print('Validation failed');
                       }

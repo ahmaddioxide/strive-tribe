@@ -65,8 +65,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                       ),
                       SizedBox(height: height * 0.01),
                       Text(
-                        editProfileController
-                                .userModel.value?.user.gamesPlayed.length
+                        editProfileController.userModel.value?.user.gamesPlayed
                                 .toString() ??
                             '0',
                         style: TextUtils.getStyle(

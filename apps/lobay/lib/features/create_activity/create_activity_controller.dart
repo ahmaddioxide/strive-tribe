@@ -1,7 +1,13 @@
+import 'dart:convert';
+import 'dart:developer';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lobay/core/network/network_models/create_activity_body.dart';
+import 'package:lobay/core/services/shared_pref_service.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class CreateActivityController extends GetxController {
@@ -154,5 +160,43 @@ class CreateActivityController extends GetxController {
     if (pickedFile != null) {
       videoFile.value = XFile(pickedFile.path);
     }
+  }
+
+  Future<bool> createActivity() async {
+    // video to base64
+    final bytes = await videoFile.value!.readAsBytes();
+    final String base64String = base64Encode(bytes);
+    log('BASE 64:$base64String');
+
+    final CreateActivityBody createActivityBody = CreateActivityBody(
+      userId: await PreferencesManager.getInstance()
+          .getStringValue('userId', FirebaseAuth.instance.currentUser!.uid),
+      selectActivity: selectedActivity.value,
+      selectPlayerLevel: selectedPlayerLevel.value,
+      selectDate: dateController.text,
+      selectTime: timeController.text,
+      notes: notesController.text,
+      video: 'data:video/mp4;base64,$base64String',
+    );
+
+    log(createActivityBody.video.toString());
+    return false;
+  }
+
+  Future<String> convertVideoToBase64() async {
+    // check video file is not null
+    if (videoFile.value == null) {
+      return '';
+    }
+    //check video size
+    final fileSize = await videoFile.value!.length();
+
+    log('Video file size: $fileSize');
+
+    final bytes = await videoFile.value!.readAsBytes();
+    log('Video bytes: ${bytes.length}');
+    final String base64String = base64Encode(bytes);
+    log('BASE 64:${base64String.substring(0,299)}');
+    return base64String;
   }
 }

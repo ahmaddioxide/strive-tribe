@@ -68,10 +68,10 @@ export const validateUpdate = [
     .optional()
     .isEmail().withMessage("Invalid email format"),
 
-  body("location")
+  body("postalCode")
     .optional()
-    .notEmpty().withMessage("Location cannot be empty")
-    .isString().withMessage("Location must be a string"),
+    .notEmpty().withMessage("postal Code cannot be empty")
+    .isString().withMessage("Postal Code must be a string"),
 
   body("phone")
     .optional()

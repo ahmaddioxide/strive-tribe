@@ -215,15 +215,26 @@ class CreateActivityScreen extends StatelessWidget with DeviceSizeUtil {
                   ),
                 ),
                 SizedBox(height: height * 0.02),
-                AppButton(
-                    buttonText: 'Create',
-                    onPressed: () async {
-                      if (controller.formKey.currentState!.validate()) {
-                        await controller.convertVideoToBase64();
-                      } else {
-                        print('Validation failed');
-                      }
-                    }),
+                Obx(() {
+                  return AppButton(
+                      isLoading: controller.isApiCalling.value,
+                      buttonText: 'Create',
+                      onPressed: () async {
+                        FocusScope.of(context).unfocus();
+                        controller.isApiCalling.value = true;
+                        if (controller.formKey.currentState!.validate()) {
+                          final isCrated = await controller.createActivity();
+                          if (isCrated) {
+                            Get.back();
+                          } else {
+                            print('Activity creation failed');
+                          }
+                        } else {
+                          print('Validation failed');
+                        }
+                        controller.isApiCalling.value = false;
+                      });
+                }),
                 SizedBox(height: height * 0.02),
               ],
             ),

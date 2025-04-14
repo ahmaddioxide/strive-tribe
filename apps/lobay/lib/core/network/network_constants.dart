@@ -19,5 +19,5 @@ class EndPoints {
 
   static const String updateuser= 'api/auth/update';
 
-  static const String createActivity = 'api/activity/create-activity';
+  static const String createActivity = 'api/activities/create-activity';
 }

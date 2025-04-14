@@ -82,7 +82,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "6503647727766103406"
+          "hash": "3255865815502492473"
         },
         {
           "file": ".prettierignore",
@@ -234,7 +234,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/configure_fingerprint.bin",
-          "hash": "15540017144209204289"
+          "hash": "2104414298923708635"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/metadata_generation_command.txt",
@@ -358,7 +358,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/configure_fingerprint.bin",
-          "hash": "10539455228052406285"
+          "hash": "12132901640408664832"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/metadata_generation_command.txt",
@@ -486,7 +486,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86/configure_fingerprint.bin",
-          "hash": "16967669067884915772"
+          "hash": "15140466461442611939"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86/metadata_generation_command.txt",
@@ -610,7 +610,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/configure_fingerprint.bin",
-          "hash": "15697691289364787308"
+          "hash": "2885933238127540836"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/metadata_generation_command.txt",
@@ -1070,11 +1070,11 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_constants.dart",
-          "hash": "9840662525427414625"
+          "hash": "2619584886190419313"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/create_activity_body.dart",
-          "hash": "3274857482055302138"
+          "hash": "18255375701703705638"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/enums/login_type.dart",
@@ -1161,12 +1161,16 @@
           "hash": "5641544053510562512"
         },
         {
+          "file": "apps/lobay/lib/features/create_activity/activity_repo/activity_repo.dart",
+          "hash": "11181503257457496254"
+        },
+        {
           "file": "apps/lobay/lib/features/create_activity/create_activity_controller.dart",
-          "hash": "809894932183209543"
+          "hash": "11881883051777664230"
         },
         {
           "file": "apps/lobay/lib/features/create_activity/create_activity_screen.dart",
-          "hash": "17785218340141322620"
+          "hash": "15257297728352963135"
         },
         {
           "file": "apps/lobay/lib/features/home/filter_bottomsheet_widget.dart",
@@ -1382,6 +1386,50 @@
           "hash": "16936441711144470533"
         }
       ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
+        }
+      ],
       "my-express-api": [
         {
           "file": "apps/my-express-api/.env.serve.development",
@@ -1408,6 +1456,13 @@
           ]
         },
         {
+          "file": "apps/my-express-api/src/activity/application/FindNearbyActivities.ts",
+          "hash": "80257808810759956",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
           "file": "apps/my-express-api/src/activity/domain/Activity.ts",
           "hash": "6806020649861951969"
         },
@@ -1427,7 +1482,7 @@
         },
         {
           "file": "apps/my-express-api/src/activity/interface/http/activity.controller.ts",
-          "hash": "10855431544904543147",
+          "hash": "1553829278100440247",
           "deps": [
             "npm:express",
             "npm:inversify"
@@ -1442,7 +1497,7 @@
         },
         {
           "file": "apps/my-express-api/src/activity/interface/middleware/validation.ts",
-          "hash": "13063024212552591063",
+          "hash": "6551593810383778557",
           "deps": [
             "npm:express",
             "npm:express-validator"
@@ -1486,10 +1541,11 @@
         },
         {
           "file": "apps/my-express-api/src/auth/application/update.ts",
-          "hash": "13365652098312862074",
+          "hash": "15266446297960727440",
           "deps": [
             "npm:inversify",
-            "npm:firebase-admin"
+            "npm:firebase-admin",
+            "npm:axios"
           ]
         },
         {
@@ -1554,7 +1610,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
-          "hash": "1014667604378333294",
+          "hash": "18201517670093604939",
           "deps": [
             "npm:express",
             "npm:express-validator"
@@ -1577,7 +1633,7 @@
         },
         {
           "file": "apps/my-express-api/src/config/installer.ts",
-          "hash": "14600871781668640942",
+          "hash": "10982299318522704034",
           "deps": [
             "npm:inversify"
           ]
@@ -1616,50 +1672,6 @@
         {
           "file": "apps/my-express-api/tsconfig.spec.json",
           "hash": "6622138706846345436"
-        }
-      ],
-      "my-express-api-e2e": [
-        {
-          "file": "apps/my-express-api-e2e/eslint.config.cjs",
-          "hash": "7759795430795630113"
-        },
-        {
-          "file": "apps/my-express-api-e2e/jest.config.ts",
-          "hash": "7741689681773748875"
-        },
-        {
-          "file": "apps/my-express-api-e2e/project.json",
-          "hash": "11462360534563815238"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
-          "hash": "4579662685003779048",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
-          "hash": "2568409276037275290"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
-          "hash": "5275447082211835490"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
-          "hash": "14954872453723519891"
         }
       ]
     }

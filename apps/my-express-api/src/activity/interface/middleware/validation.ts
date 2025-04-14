@@ -9,11 +9,17 @@ export const validateAddActivity = [
   
   body("selectActivity")
     .notEmpty().withMessage("Activity selection is required")
+    .isIn(['Soccer',
+    'Basketball',
+    'Tennis',
+    'Cricket',
+    'Badminton',
+    'Baseball'])
     .isString().withMessage("Invalid activity format"),
 
   body("selectPlayerLevel")
     .notEmpty().withMessage("Player level is required")
-    .isIn(['beginner', 'intermediate', 'advanced'])
+    .isIn(['Beginner', 'Intermediate', 'Professional'])
     .withMessage("Invalid player level"),
 
   body("selectDate")

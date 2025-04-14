@@ -52,5 +52,4 @@ class CreateActivityBody {
       video: json['video'],
     );
   }
-
 }

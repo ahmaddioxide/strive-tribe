@@ -54,10 +54,10 @@ export class AddActivity {
         activity: {
           id: newActivity._id,
           userId: newActivity.userId,
-          selectActivity: newActivity.selectActivity,
-          selectPlayerLevel: newActivity.selectPlayerLevel,
-          selectDate: newActivity.selectDate,
-          selectTime: newActivity.selectTime,
+          Activity: newActivity.Activity,
+          PlayerLevel: newActivity.PlayerLevel,
+          Date: newActivity.Date,
+          Time: newActivity.Time,
           notes: newActivity.notes,
           videoUrl: newActivity.videoUrl,
           createdAt: newActivity.createdAt

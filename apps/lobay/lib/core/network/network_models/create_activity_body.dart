@@ -10,19 +10,19 @@
 
 class CreateActivityBody {
   final String userId;
-  final String selectActivity;
-  final String selectPlayerLevel;
-  final String selectDate;
-  final String selectTime;
+  final String Activity;
+  final String PlayerLevel;
+  final String Date;
+  final String Time;
   final String notes;
   final String? video;
 
   CreateActivityBody({
     required this.userId,
-    required this.selectActivity,
-    required this.selectPlayerLevel,
-    required this.selectDate,
-    required this.selectTime,
+    required this.Activity,
+    required this.PlayerLevel,
+    required this.Date,
+    required this.Time,
     required this.notes,
     this.video,
   });
@@ -31,10 +31,10 @@ class CreateActivityBody {
   Map<String, dynamic> toJson() {
     return {
       'user_id': userId,
-      'selectActivity': selectActivity,
-      'selectPlayerLevel': selectPlayerLevel,
-      'selectDate': selectDate,
-      'selectTime': selectTime,
+      'Activity': Activity,
+      'PlayerLevel': PlayerLevel,
+      'Date': Date,
+      'Time': Time,
       'notes': notes,
       'video': video,
     };
@@ -44,10 +44,10 @@ class CreateActivityBody {
   factory CreateActivityBody.fromJson(Map<String, dynamic> json) {
     return CreateActivityBody(
       userId: json['user_id'],
-      selectActivity: json['selectActivity'],
-      selectPlayerLevel: json['selectPlayerLevel'],
-      selectDate: json['selectDate'],
-      selectTime: json['selectTime'],
+      Activity: json['Activity'],
+      PlayerLevel: json['PlayerLevel'],
+      Date: json['Date'],
+      Time: json['Time'],
       notes: json['notes'],
       video: json['video'],
     );

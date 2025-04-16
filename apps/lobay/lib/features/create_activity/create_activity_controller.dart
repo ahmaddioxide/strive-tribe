@@ -176,12 +176,12 @@ class CreateActivityController extends GetxController {
         .getStringValue('userId', FirebaseAuth.instance.currentUser!.uid);
     final CreateActivityBody createActivityBody = CreateActivityBody(
       userId: userId,
-      selectActivity: selectedActivity.value,
-      selectPlayerLevel: selectedPlayerLevel.value,
+      Activity: selectedActivity.value,
+      PlayerLevel: selectedPlayerLevel.value,
 
       ///format date to dd-mm-yyyy
-      selectDate: changedDate,
-      selectTime: timeController.text,
+      Date: changedDate,
+      Time: timeController.text,
       notes: notesController.text,
       video: 'data:video/mp4;base64,$base64String',
     );

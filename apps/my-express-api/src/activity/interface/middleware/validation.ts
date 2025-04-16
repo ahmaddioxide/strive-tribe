@@ -7,7 +7,7 @@ export const validateAddActivity = [
     .notEmpty().withMessage("User ID is required")
     .isString().withMessage("User ID must be a string"),
   
-  body("selectActivity")
+  body("Activity")
     .notEmpty().withMessage("Activity selection is required")
     .isIn(['Soccer',
     'Basketball',
@@ -17,17 +17,17 @@ export const validateAddActivity = [
     'Baseball'])
     .isString().withMessage("Invalid activity format"),
 
-  body("selectPlayerLevel")
+  body("PlayerLevel")
     .notEmpty().withMessage("Player level is required")
     .isIn(['Beginner', 'Intermediate', 'Professional'])
     .withMessage("Invalid player level"),
 
-  body("selectDate")
+  body("Date")
     .notEmpty().withMessage("Date is required")
     .matches(/^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\d{4}$/)
     .withMessage("Invalid date format (DD-MM-YYYY)"),
 
-  body("selectTime")
+  body("Time")
     .notEmpty().withMessage("Time is required")
     .matches(/^(0?[1-9]|1[0-2]):[0-5][0-9]\s(AM|PM)$/i)
     .withMessage("Invalid time format (HH:MM AM/PM)"),
@@ -53,4 +53,11 @@ export const validateFindNearbyActivities = [
     .optional()
     .isString()
     .withMessage('Player level must be a string')
+];
+
+
+export const validateGetActivitiesByDateTime = [
+  query('user_id').notEmpty().withMessage("User ID is required"),
+  query('date').matches(/^\d{2}-\d{2}-\d{4}$/).withMessage("Date must be in DD-MM-YYYY format"),
+  query('time').matches(/^\d{2}:\d{2} [AP]M$/).withMessage("Time must be in HH:MM AM/PM format")
 ];

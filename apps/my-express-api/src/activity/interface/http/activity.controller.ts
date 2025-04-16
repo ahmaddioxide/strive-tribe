@@ -3,7 +3,8 @@ import { Router, Request, Response } from "express";
 import { inject, injectable } from "inversify";
 import { AddActivity } from "../../application/AddActivity";
 import { FindNearbyActivities } from "../../application/FindNearbyActivities";
-import { validateAddActivity, validateFindNearbyActivities } from "../middleware/validation";
+import { GetUserActivitiesByDateTime } from "../../application/GetUserActivitiesByDateTime";
+import { validateAddActivity, validateFindNearbyActivities, validateGetActivitiesByDateTime } from "../middleware/validation";
 import IController from "../../../auth/interface/http/IController";
 
 @injectable()
@@ -13,7 +14,8 @@ export class ActivityController implements IController {
 
   constructor(
     @inject(AddActivity) private addActivity: AddActivity,
-    @inject(FindNearbyActivities) private findNearbyActivities: FindNearbyActivities
+    @inject(FindNearbyActivities) private findNearbyActivities: FindNearbyActivities,
+    @inject(GetUserActivitiesByDateTime) private getUserActivities: GetUserActivitiesByDateTime
   ) {
     this.initializeRoutes();
   }
@@ -29,6 +31,11 @@ export class ActivityController implements IController {
       validateFindNearbyActivities,
       this.findNearbyActivitiesHandler.bind(this)
     );
+    this.router.get(
+      `${this.path}/activity-by-date-time`,
+      validateGetActivitiesByDateTime,
+      this.getActivitiesByDateTimeHandler.bind(this)
+    );
   }
 
   private addActivityHandler = async (req: Request, res: Response) => {
@@ -37,10 +44,10 @@ export class ActivityController implements IController {
       const response = await this.addActivity.execute(
         {
           userId: activityData.user_id,
-          selectActivity: activityData.selectActivity,
-          selectPlayerLevel: activityData.selectPlayerLevel,
-          selectDate: activityData.selectDate,
-          selectTime: activityData.selectTime,
+          Activity: activityData.Activity,
+          PlayerLevel: activityData.PlayerLevel,
+          Date: activityData.Date,
+          Time: activityData.Time,
           notes: activityData.notes
         },
         video
@@ -71,6 +78,26 @@ export class ActivityController implements IController {
       res.status(500).json({
         success: false,
         error: error.message || "Failed to find nearby activities"
+      });
+    }
+  };
+
+
+  private getActivitiesByDateTimeHandler = async (req: Request, res: Response) => {
+    try {
+      const { user_id, date, time } = req.query;
+      
+      const response = await this.getUserActivities.execute(
+        user_id as string,
+        date as string,
+        time as string
+      );
+
+      res.status(200).json(response);
+    } catch (error: any) {
+      res.status(500).json({
+        success: false,
+        error: error.message || "Failed to fetch activities"
       });
     }
   };

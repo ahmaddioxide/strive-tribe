@@ -1,8 +1,43 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:lobay/core/network/network_models/register_body_model.dart';
+import 'package:lobay/core/services/shared_pref_service.dart';
 import 'package:lobay/utilities/commom_models/pairs_model.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 
+import '../../core/network/network_models/get_activities_body.dart';
+import 'repository/activities_repo.dart';
+
 class HomeScreenController extends GetxController {
+  final activityRepo = ActivityRepository();
+
+  @override
+  onInit() {
+    super.onInit();
+    getNearbyActivities();
+  }
+
+  RxList<ActivityFromGet> activitiesList = RxList<ActivityFromGet>();
+
+  Future<void> getNearbyActivities() async {
+    final currentUserId =
+        await PreferencesManager.getInstance().getStringValue('userId', '');
+    if (currentUserId.isEmpty) {
+      return;
+    }
+    final GetActivitiesResponse? response =
+        await activityRepo.getNearbyActivities(
+      userId: currentUserId,
+      activityName:
+          selectedActivities.isNotEmpty ? selectedActivities.join(',') : null,
+      playerLevel:
+          selectedPlayerLevel.isNotEmpty ? selectedPlayerLevel.join(',') : null,
+    );
+    if (response != null) {
+      activitiesList.value = response.activities;
+    }
+  }
+
   final RxList<Pair<String, RxBool>> activities = <Pair<String, RxBool>>[
     Pair(AppConstants.activities[0], false.obs),
     Pair(AppConstants.activities[1], false.obs),
@@ -47,5 +82,6 @@ class HomeScreenController extends GetxController {
     }
     selectedActivities.clear();
     selectedPlayerLevel.clear();
+    getNearbyActivities();
   }
 }

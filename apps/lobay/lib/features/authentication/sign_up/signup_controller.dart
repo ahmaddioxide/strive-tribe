@@ -225,7 +225,7 @@ class SignupController extends GetxController {
                 message: 'Registration successful');
 
             await PreferencesManager.getInstance()
-                .setStringValue('userId', registerResponse.user.id);
+                .setStringValue('userId', registerResponse.user.userId);
             await PreferencesManager.getInstance()
                 .setStringValue('userName', registerResponse.user.name);
             await PreferencesManager.getInstance()
@@ -290,7 +290,7 @@ class SignupController extends GetxController {
                 message: 'Registration successful');
 
             await PreferencesManager.getInstance()
-                .setStringValue('userId', registerResponse.user.id);
+                .setStringValue('userId', registerResponse.user.userId);
             await PreferencesManager.getInstance()
                 .setStringValue('userName', registerResponse.user.name);
             await PreferencesManager.getInstance()
@@ -322,7 +322,6 @@ class SignupController extends GetxController {
     if (FirebaseAuth.instance.currentUser != null) {
       emailController.text = FirebaseAuth.instance.currentUser!.email!;
       nameController.text = FirebaseAuth.instance.currentUser!.displayName!;
-
     }
   }
 }

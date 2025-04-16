@@ -38,7 +38,7 @@ class SignInController extends GetxController {
           await PreferencesManager.getInstance()
               .setStringValue('token', response.token);
           await PreferencesManager.getInstance()
-              .setStringValue('userId', response.user.id);
+              .setStringValue('userId', response.user.userId);
           await PreferencesManager.getInstance()
               .setStringValue('userName', response.user.name);
           await PreferencesManager.getInstance()

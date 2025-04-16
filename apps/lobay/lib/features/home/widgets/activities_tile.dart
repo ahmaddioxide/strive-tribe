@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lobay/utilities/app_utils/app_utils.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
@@ -9,7 +10,11 @@ class ActivitiesTile extends StatelessWidget with DeviceSizeUtil {
   final String subtitle;
   final DateTime date;
 
-  const ActivitiesTile({super.key, required this.title, required this.subtitle, required this.date});
+  const ActivitiesTile(
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      required this.date});
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +33,11 @@ class ActivitiesTile extends StatelessWidget with DeviceSizeUtil {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              date.month.toString(),
+              //month to name
+              AppUtils.monthToName(date.month),
               style: TextUtils.getStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -39,7 +45,7 @@ class ActivitiesTile extends StatelessWidget with DeviceSizeUtil {
               date.day.toString(),
               style: TextUtils.getStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),

@@ -164,6 +164,8 @@ class FilterBottomSheetWidget extends StatelessWidget with DeviceSizeUtil {
                     name: 'FilterBottomSheetWidget');
                 log('Player Level: ${controller.selectedPlayerLevel}',
                     name: 'FilterBottomSheetWidget');
+
+                controller.getNearbyActivities();
                 Get.back();
               },
             ),

@@ -11,13 +11,24 @@ class EndPoints {
   static const String register = 'api/auth/register';
   static const String login = 'api/auth/login';
 
-
   static checkUserExistance(String userId) =>
       'api/auth/checkuser?user_id=$userId';
 
   static getUser(String userId) => 'api/auth/getuser?user_id=$userId';
 
-  static const String updateuser= 'api/auth/update';
+  static const String updateuser = 'api/auth/update';
 
   static const String createActivity = 'api/activities/create-activity';
+
+  static getActivities({
+    required String userId,
+    String? activityName,
+    String? playerLevel,
+  }) {
+    final queryParams = {
+      if (activityName != null) 'activityName': activityName,
+      if (playerLevel != null) 'playerLevel': playerLevel,
+    };
+    return 'api/activities/nearby/$userId${queryParams.entries.map((e) => '?${e.key}=${e.value}').join('&')}';
+  }
 }

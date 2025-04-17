@@ -3,8 +3,8 @@ import { Router, Request, Response } from "express";
 import { inject, injectable } from "inversify";
 import { AddActivity } from "../../application/AddActivity";
 import { FindNearbyActivities } from "../../application/FindNearbyActivities";
-import { GetUserActivitiesByDateTime } from "../../application/GetUserActivitiesByDateTime";
-import { validateAddActivity, validateFindNearbyActivities, validateGetActivitiesByDateTime } from "../middleware/validation";
+import { GetActivityDetails } from "../../application/GetUserActivitiesById";
+import { validateAddActivity, validateFindNearbyActivities, validateActivityId } from "../middleware/validation";
 import IController from "../../../auth/interface/http/IController";
 
 @injectable()
@@ -15,7 +15,7 @@ export class ActivityController implements IController {
   constructor(
     @inject(AddActivity) private addActivity: AddActivity,
     @inject(FindNearbyActivities) private findNearbyActivities: FindNearbyActivities,
-    @inject(GetUserActivitiesByDateTime) private getUserActivities: GetUserActivitiesByDateTime
+    @inject(GetActivityDetails) private getActivityDetails: GetActivityDetails,
   ) {
     this.initializeRoutes();
   }
@@ -32,9 +32,9 @@ export class ActivityController implements IController {
       this.findNearbyActivitiesHandler.bind(this)
     );
     this.router.get(
-      `${this.path}/activity-by-date-time`,
-      validateGetActivitiesByDateTime,
-      this.getActivitiesByDateTimeHandler.bind(this)
+      `${this.path}/activity-by-id/:id`,
+      validateActivityId,
+      this.getActivityDetailsHandler.bind(this)
     );
   }
 
@@ -69,10 +69,10 @@ export class ActivityController implements IController {
 
       const response = await this.findNearbyActivities.execute(
         user_id,
-        activityName as string | undefined,
-        playerLevel as string | undefined
+        activityName as string | string[],
+        playerLevel as string | string[]
       );
-
+  
       res.status(200).json(response);
     } catch (error: any) {
       res.status(500).json({
@@ -83,21 +83,16 @@ export class ActivityController implements IController {
   };
 
 
-  private getActivitiesByDateTimeHandler = async (req: Request, res: Response) => {
+  private getActivityDetailsHandler = async (req: Request, res: Response) => {
     try {
-      const { user_id, date, time } = req.query;
-      
-      const response = await this.getUserActivities.execute(
-        user_id as string,
-        date as string,
-        time as string
-      );
 
+      const response = await this.getActivityDetails.execute(req.params.id);
       res.status(200).json(response);
     } catch (error: any) {
-      res.status(500).json({
+      const statusCode = error.message.includes("not found") ? 404 : 500;
+      res.status(statusCode).json({
         success: false,
-        error: error.message || "Failed to fetch activities"
+        error: error.message || "Failed to fetch activity details"
       });
     }
   };

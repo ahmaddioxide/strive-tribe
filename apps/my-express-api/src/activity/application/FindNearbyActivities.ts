@@ -66,8 +66,8 @@ export class FindNearbyActivities {
 
   async execute(
     userId: string,
-    activityName?: string,
-    playerLevel?: string
+    activityNames?: string | string[],
+    playerLevels?: string | string[]
   ) {
     try {
       const nearbyUsers = await this.getNearbyUsers(userId);
@@ -81,18 +81,32 @@ export class FindNearbyActivities {
         };
       }
 
-      const query: any = {
-        userId: { $in: nearbyUserIds }
+      const query: any = { 
+        userId: { $in: nearbyUserIds } 
       };
 
-      if (activityName) {
-        query.Activity = activityName;
-      }
-      if (playerLevel) {
-        query.PlayerLevel = playerLevel;
+      // Process activity names
+      if (activityNames) {
+        const activitiesArray = Array.isArray(activityNames) 
+          ? activityNames 
+          : activityNames.split(',');
+        
+        if (activitiesArray.length > 0) {
+          query.Activity = { $in: activitiesArray };
+        }
       }
 
-      // Make sure these fields exist in DB schema
+      // Process player levels
+      if (playerLevels) {
+        const levelsArray = Array.isArray(playerLevels)
+          ? playerLevels
+          : playerLevels.split(',');
+        
+        if (levelsArray.length > 0) {
+          query.PlayerLevel = { $in: levelsArray };
+        }
+      }
+
       const activities = await ActivityModel.find(query)
         .select('userId Activity PlayerLevel Date Time')
         .sort({ createdAt: -1 })
@@ -106,10 +120,10 @@ export class FindNearbyActivities {
       const formattedActivities = activities.map(activity => ({
         userId: activity.userId,
         name: userNameMap.get(activity.userId) || 'Unknown',
-        activity: activity.Activity || '',
-        playerLevel: activity.PlayerLevel || '',
-        date: activity.Date || '',
-        time: activity.Time || ''
+        activity: activity.Activity,
+        playerLevel: activity.PlayerLevel,
+        date: activity.Date,
+        time: activity.Time
       }));
 
       return {

@@ -1,6 +1,6 @@
 // src/activity/interface/http/validation.ts
 import { Request, Response, NextFunction } from "express";
-import { body, validationResult, query  } from "express-validator";
+import { body, validationResult, query, param  } from "express-validator";
 
 export const validateAddActivity = [
   body("user_id")
@@ -56,8 +56,18 @@ export const validateFindNearbyActivities = [
 ];
 
 
-export const validateGetActivitiesByDateTime = [
-  query('user_id').notEmpty().withMessage("User ID is required"),
-  query('date').matches(/^\d{2}-\d{2}-\d{4}$/).withMessage("Date must be in DD-MM-YYYY format"),
-  query('time').matches(/^\d{2}:\d{2} [AP]M$/).withMessage("Time must be in HH:MM AM/PM format")
+export const validateActivityId = [
+  param('id')
+    .notEmpty().withMessage("Activity ID is required")
+    .isMongoId().withMessage("Invalid activity ID format"),
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array() 
+      });
+    }
+    next();
+  }
 ];

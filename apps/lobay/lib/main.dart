@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       home: token.isEmpty
           ? OnboardingScreen()
-          : ActivityDetailsScreen(),
+          : BottomNavigationScreen(),
     );
   }
 }

@@ -30,9 +30,9 @@ class EndPoints {
       if (playerLevel != null) 'playerLevel': playerLevel,
     };
     if (queryParams.isNotEmpty) {
-      return 'api/activities/get-activities/$userId?${queryParams.entries.map((e) => '${e.key}=${e.value}').join('&')}';
+      return 'api/activities/nearby/$userId?${queryParams.entries.map((e) => '${e.key}=${e.value}').join('&')}';
     }
-    return 'api/activities/get-activities/$userId';
+    return 'api/activities/nearby/$userId';
   }
 
   //api/activities/activity-by-date-time?user_id=NRh76OzNtWaPcBMuWMuxjtN9WiW2&date=16-08-2023&time=09:30 PM

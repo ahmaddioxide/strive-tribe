@@ -28,6 +28,7 @@ export class AddActivity {
         const fileName = `activity_videos/${Date.now()}_${Math.random().toString(36).substring(2, 8)}.mp4`;
         const file = bucket.file(fileName);
 
+        // Upload video
         await file.save(buffer, {
           metadata: {
             contentType: 'video/mp4',
@@ -38,10 +39,14 @@ export class AddActivity {
           }
         });
 
+        // Make file publicly accessible
         await file.makePublic();
+        
+        // Get permanent URL
         videoUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`;
       }
 
+      // Save to database
       const newActivity = new ActivityModel({
         ...activityData,
         videoUrl
@@ -51,21 +56,21 @@ export class AddActivity {
 
       return {
         success: true,
-        activity: {
-          id: newActivity._id,
+        message: "Activity created successfully",
+        data: {
+          id: newActivity._id.toString(),
           userId: newActivity.userId,
-          Activity: newActivity.Activity,
-          PlayerLevel: newActivity.PlayerLevel,
-          Date: newActivity.Date,
-          Time: newActivity.Time,
-          notes: newActivity.notes,
+          activity: newActivity.Activity,
+          playerLevel: newActivity.PlayerLevel,
+          date: newActivity.Date,
+          time: newActivity.Time,
           videoUrl: newActivity.videoUrl,
           createdAt: newActivity.createdAt
         }
       };
     } catch (error: any) {
-      console.error("AddActivity error:", error);
-      throw new Error(error.message || "Failed to add activity");
+      console.error("Activity creation failed:", error);
+      throw new Error(error.message || "Activity creation failed. Please try again.");
     }
   }
 }

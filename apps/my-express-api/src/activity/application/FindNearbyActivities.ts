@@ -108,7 +108,7 @@ export class FindNearbyActivities {
       }
 
       const activities = await ActivityModel.find(query)
-        .select('userId Activity PlayerLevel Date Time')
+        .select('id userId Activity PlayerLevel Date Time')
         .sort({ createdAt: -1 })
         .lean();
 
@@ -118,6 +118,7 @@ export class FindNearbyActivities {
       });
 
       const formattedActivities = activities.map(activity => ({
+        id: activity._id,
         userId: activity.userId,
         name: userNameMap.get(activity.userId) || 'Unknown',
         activity: activity.Activity,

@@ -14,20 +14,42 @@ export class RegisterUser {
 
   private async fetchLocationDetails(postalCode: string) {
     try {
-      const response = await axios.get(`http://api.zippopotam.us/us/${postalCode}`);
+      const response = await axios.get(
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${postalCode}&key=${this.config.googleMapsApiKey}`
+      );
+      
       const data = response.data;
       
-      if (!data.places || data.places.length === 0) {
+      if (data.status !== 'OK' || data.results.length === 0) {
         throw new Error("No location data found for this postal code");
       }
 
-      const place = data.places[0];
+      const result = data.results[0];
+      const location = result.geometry.location;
+      
+      // Extract address components
+      let placeName = '';
+      let state = '';
+      let countryName = '';
+
+      for (const component of result.address_components) {
+        if (component.types.includes('locality')) {
+          placeName = component.long_name;
+        }
+        if (component.types.includes('administrative_area_level_1')) {
+          state = component.long_name;
+        }
+        if (component.types.includes('country')) {
+          countryName = component.long_name;
+        }
+      }
+
       return {
-        placeName: place["place name"],
-        countryName: data.country,
-        longitude: place.longitude,
-        latitude: place.latitude,
-        state: place.state
+        placeName,
+        countryName,
+        longitude: location.lng.toString(),
+        latitude: location.lat.toString(),
+        state
       };
     } catch (error: any) {
       console.error("Error fetching location details:", error);

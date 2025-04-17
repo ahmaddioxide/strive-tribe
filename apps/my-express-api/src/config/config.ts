@@ -19,6 +19,9 @@ export class Config {
     public firebaseServiceAccount: admin.ServiceAccount;
     public firebaseDatabaseURL: string;
     
+    // Google Services
+    public googleMapsApiKey: string;
+    
     constructor() {
         // Core App Config
         this.environment = process.env.LOBAY_BE_ENV || "development";
@@ -32,6 +35,9 @@ export class Config {
         this.firebaseApiKey = process.env.FIREBASE_API_KEY || "";
         this.firebaseClientEmail = process.env.FIREBASE_CLIENT_EMAIL || "";
         this.firebasePrivateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n') || "";
+        
+        // Google Maps
+        this.googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || "";
     }
     
     public initializeFirebase() {

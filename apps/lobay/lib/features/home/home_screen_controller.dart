@@ -1,6 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:lobay/core/network/network_models/register_body_model.dart';
 import 'package:lobay/core/services/shared_pref_service.dart';
 import 'package:lobay/utilities/commom_models/pairs_model.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';

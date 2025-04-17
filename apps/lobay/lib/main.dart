@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/core/network/api_client.dart';
 import 'package:lobay/core/network/network_constants.dart';
+import 'package:lobay/features/activity_details/activity_details_screen.dart';
 import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
 import 'package:lobay/features/onboarding/onboarding_screen.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       home: token.isEmpty
           ? OnboardingScreen()
-          : BottomNavigationScreen(),
+          : ActivityDetailsScreen(),
     );
   }
 }

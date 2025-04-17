@@ -1,133 +1,114 @@
+// ///{
+//     "success": true,
+//     "data": {
+//         "activity": {
+//             "_id": "67fe4d5d6f738db08310e9fa",
+//             "Activity": "Football",
+//             "PlayerLevel": "Intermediate",
+//             "Date": "15-08-2023",
+//             "Time": "08:30 PM",
+//             "notes": "Need to improve passing skills",
+//             "videoUrl": "https://storage.googleapis.com/strive-tribe.firebasestorage.app/activity_videos/1744719194873_if0mo3.mp4",
+//             "createdAt": "2025-04-15T12:13:17.039Z"
+//         },
+//         "userDetails": {
+//             "name": "Test Faiq another variable",
+//             "countryName": "United States",
+//             "state": "California"
+//         }
+//     }
+// }
+
 class GetActivityByDateTimeResponse {
   final bool success;
-  final int count;
-  final List<ActivityData> data;
-
+  final ActivityFromGetDateTime activity;
+  final UserDetails userDetails;
   GetActivityByDateTimeResponse({
     required this.success,
-    required this.count,
-    required this.data,
+    required this.activity,
+    required this.userDetails,
   });
 
   factory GetActivityByDateTimeResponse.fromJson(Map<String, dynamic> json) {
     return GetActivityByDateTimeResponse(
-      success: json['success'],
-      count: json['count'],
-      data: (json['data'] as List)
-          .map((item) => ActivityData.fromJson(item))
-          .toList(),
+      success: json['success'] as bool,
+      activity: ActivityFromGetDateTime.fromJson(json['data']['activity']),
+      userDetails: UserDetails.fromJson(json['data']['userDetails']),
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'success': success,
-      'count': count,
-      'data': data.map((item) => item.toJson()).toList(),
-    };
   }
 }
 
-class ActivityData {
-  final User user;
-  final ActivityByDateTime activity;
-
-  ActivityData({
-    required this.user,
-    required this.activity,
-  });
-
-  factory ActivityData.fromJson(Map<String, dynamic> json) {
-    return ActivityData(
-      user: User.fromJson(json['user']),
-      activity: ActivityByDateTime.fromJson(json['activity']),
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'user': user.toJson(),
-      'activity': activity.toJson(),
-    };
-  }
-}
-
-class User {
-  final String userId;
-  final String name;
-  final String email;
-  final String profileImage;
-
-  User({
-    required this.userId,
-    required this.name,
-    required this.email,
-    required this.profileImage,
-  });
-
-  factory User.fromJson(Map<String, dynamic> json) {
-    return User(
-      userId: json['userId'],
-      name: json['name'],
-      email: json['email'],
-      profileImage: json['profileImage'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'userId': userId,
-      'name': name,
-      'email': email,
-      'profileImage': profileImage,
-    };
-  }
-}
-
-class ActivityByDateTime {
+class ActivityFromGetDateTime {
   final String id;
-  final String activityName;
+  final String activity;
   final String playerLevel;
   final String date;
-  final String time;
-  final String notes;
   final String videoUrl;
   final String createdAt;
+  final String updatedAt;
 
-  ActivityByDateTime({
+  ActivityFromGetDateTime({
     required this.id,
-    required this.activityName,
+    required this.activity,
     required this.playerLevel,
     required this.date,
-    required this.time,
-    required this.notes,
     required this.videoUrl,
     required this.createdAt,
+    required this.updatedAt,
   });
 
-  factory ActivityByDateTime.fromJson(Map<String, dynamic> json) {
-    return ActivityByDateTime(
-      id: json['id'],
-      activityName: json['Activity'],
-      playerLevel: json['PlayerLevel'],
-      date: json['Date'],
-      time: json['Time'],
-      notes: json['notes'],
-      videoUrl: json['videoUrl'],
-      createdAt: json['createdAt'],
+  factory ActivityFromGetDateTime.fromJson(Map<String, dynamic> json) {
+    return ActivityFromGetDateTime(
+      id: json['_id'] as String,
+      activity: json['Activity'] as String,
+      playerLevel: json['PlayerLevel'] as String,
+      date: json['Date'] as String,
+      videoUrl: json['VideoUrl'] as String,
+      createdAt: json['CreatedAt'] as String,
+      updatedAt: json['UpdatedAt'] as String,
     );
   }
+}
 
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'Activity': activityName,
-      'PlayerLevel': playerLevel,
-      'Date': date,
-      'Time': time,
-      'notes': notes,
-      'videoUrl': videoUrl,
-      'createdAt': createdAt,
-    };
+class UserDetails {
+  final String name;
+  final String countryName;
+  final String state;
+
+  UserDetails({
+    required this.name,
+    required this.countryName,
+    required this.state,
+  });
+
+  factory UserDetails.fromJson(Map<String, dynamic> json) {
+    return UserDetails(
+      name: json['name'] as String,
+      countryName: json['countryName'] as String,
+      state: json['state'] as String,
+    );
   }
 }
+
+// class Activity {
+//   final String id;
+//   final String activity;
+//   final String playerLevel;
+//   final String date;
+
+//   Activity({
+//     required this.id,
+//     required this.activity,
+//     required this.playerLevel,
+//     required this.date,
+//   });
+
+//   factory Activity.fromJson(Map<String, dynamic> json) {
+//     return Activity(
+//       id: json['_id'] as String,
+//       activity: json['Activity'] as String,
+//       playerLevel: json['PlayerLevel'] as String,
+//       date: json['Date'] as String,
+//     );
+//   }
+// }

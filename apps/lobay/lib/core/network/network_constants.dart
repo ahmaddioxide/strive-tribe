@@ -29,6 +29,19 @@ class EndPoints {
       if (activityName != null) 'activityName': activityName,
       if (playerLevel != null) 'playerLevel': playerLevel,
     };
-    return 'api/activities/nearby/$userId${queryParams.entries.map((e) => '?${e.key}=${e.value}').join('&')}';
+    if (queryParams.isNotEmpty) {
+      return 'api/activities/get-activities/$userId?${queryParams.entries.map((e) => '${e.key}=${e.value}').join('&')}';
+    }
+    return 'api/activities/get-activities/$userId';
+  }
+
+  //api/activities/activity-by-date-time?user_id=NRh76OzNtWaPcBMuWMuxjtN9WiW2&date=16-08-2023&time=09:30 PM
+
+  static getActivityByDateTime({
+    required String userId,
+    required String date,
+    required String time,
+  }) {
+    return 'api/activities/activity-by-date-time?user_id=$userId&date=$date&time=$time';
   }
 }

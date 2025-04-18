@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 import 'package:video_player/video_player.dart';
+import '../../common_widgets/app_image_widget.dart';
 import 'activity_details_controller.dart';
 
 class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
@@ -12,7 +14,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
   Widget build(BuildContext context) {
     final controller = Get.put(ActivityDetailsController());
     final screenHeight = MediaQuery.of(context).size.height;
-    final videoHeight = screenHeight / 3;
+    final videoHeight = screenHeight / 2;
     final height = getDeviceHeight();
     final width = getDeviceWidth();
 
@@ -22,25 +24,36 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
           if (controller.isLoading.value) {
             return const Center(child: CircularProgressIndicator());
           }
-
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
+                height: screenHeight / 3,
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    Obx(() => controller.isInitialized.value
-                        ? GestureDetector(
-                            onTap: controller.togglePlayPause,
-                            child: AspectRatio(
-                              aspectRatio:
-                                  controller.videoController.value.aspectRatio,
-                              child: VideoPlayer(controller.videoController),
+                    Obx(
+                      () => controller.isInitialized.value
+                          ? GestureDetector(
+                              onTap: controller.togglePlayPause,
+                              child: AspectRatio(
+                                aspectRatio: controller
+                                    .videoController.value.aspectRatio,
+                                child: VideoPlayer(
+                                  controller.videoController,
+                                ),
+                              ),
+                            )
+                          : Container(
+                              color: Colors.black,
+                              child: const Center(
+                                child: CircularProgressIndicator(
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
-                          )
-                        : const Center(child: CircularProgressIndicator())),
+                    ),
                     // Centered play button
                     Obx(
                       () => controller.isPlaying.value
@@ -110,11 +123,17 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                     color: AppColors.black.withAlpha(100),
                   ),
                 ),
-                trailing: IconButton(
-                  icon: const Icon(Icons.favorite_border),
-                  onPressed: () {
-                    // Handle favorite action
-                  },
+                trailing: ClipOval(
+                  child: AppImageWidget(
+                    height: 60,
+                    width: 60,
+                    networkImage: controller
+                        .activity.userDetails.profilePicture.isNotEmpty,
+                    imagePathOrURL: controller
+                            .activity.userDetails.profilePicture.isNotEmpty
+                        ? controller.activity.userDetails.profilePicture
+                        : Assets.imagesPlaceholderPerson,
+                  ),
                 ),
               ),
               SizedBox(height: height * 0.01),
@@ -141,7 +160,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                     ),
                     SizedBox(width: width * 0.02),
                     Text(
-                      '${controller.activity.activity.date} ${controller.activity.activity.time}',
+                      '${controller.activity.activity.date} ${controller.activity.activity.time} ',
                       style: TextStyle(
                           fontSize: 18, color: AppColors.primaryLight),
                     ),
@@ -154,13 +173,34 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                 child: Row(
                   children: [
                     const Icon(
-                      Icons.location_on,
+                      Icons.location_city_outlined,
                       color: AppColors.primaryLight,
                       size: 28,
                     ),
                     SizedBox(width: width * 0.02),
                     Text(
                       '${controller.activity.userDetails.countryName}, ${controller.activity.userDetails.state}',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: AppColors.primaryLight,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: height * 0.02),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.location_on_outlined,
+                      color: AppColors.primaryLight,
+                      size: 28,
+                    ),
+                    SizedBox(width: width * 0.02),
+                    Text(
+                      controller.activity.userDetails.placeName,
                       style: TextStyle(
                         fontSize: 18,
                         color: AppColors.primaryLight,
@@ -208,7 +248,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                   ),
                 ),
                 subtitle: Text(
-                  'Player Level Description',
+                  controller.activity.activity.playerLevel,
                   style: TextStyle(
                     fontSize: 16,
                     color: AppColors.black.withAlpha(100),
@@ -230,7 +270,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                   ),
                 ),
                 subtitle: Text(
-                  '30 Total activitie',
+                  '30 activities',
                   style: TextStyle(
                     fontSize: 16,
                     color: AppColors.black.withAlpha(100),

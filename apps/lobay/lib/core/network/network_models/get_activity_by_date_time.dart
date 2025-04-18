@@ -23,6 +23,7 @@ class GetActivityByDateTimeResponse {
   final bool success;
   final ActivityFromGetDateTime activity;
   final UserDetails userDetails;
+
   GetActivityByDateTimeResponse({
     required this.success,
     required this.activity,
@@ -77,11 +78,17 @@ class UserDetails {
   final String name;
   final String countryName;
   final String state;
+  final String placeName;
+  final String profilePicture;
+
 
   UserDetails({
     required this.name,
     required this.countryName,
     required this.state,
+    this.placeName = '',
+    this.profilePicture = '',
+
   });
 
   factory UserDetails.fromJson(Map<String, dynamic> json) {
@@ -89,6 +96,8 @@ class UserDetails {
       name: json['name'] as String,
       countryName: json['countryName'] as String,
       state: json['state'] as String,
+      placeName: json['placeName'] as String,
+      profilePicture: json['profilePicture'] as String,
     );
   }
 }

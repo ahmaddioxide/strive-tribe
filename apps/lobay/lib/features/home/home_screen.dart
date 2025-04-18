@@ -25,8 +25,9 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
-            child: Obx(() {
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 5),
+          child: Obx(
+            () {
               final userModel = profileController.userModel.value;
               final profileImage = userModel?.user.profileImage;
 
@@ -47,7 +48,9 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
                         ),
                       ),
               );
-            })),
+            },
+          ),
+        ),
         title: Column(
           children: [
             Text(

@@ -26,7 +26,7 @@ export class GetActivityDetails {
 
       // 3. Find associated user details
       const user = await UserModel.findOne({ userId: activity.userId })
-        .select('name countryName state profileImage')
+        .select('name countryName state placeName profileImage')
         .lean();
 
       if (!user) {
@@ -51,7 +51,9 @@ export class GetActivityDetails {
             name: user.name,
             countryName: user.countryName,
             state: user.state,
-            profilePicture: user.profileImage // Assuming profileImageUrl is the correct field name in the User model
+            placeName: user.placeName,
+            profilePicture: user.profileImage 
+            // Assuming profileImageUrl is the correct field name in the User model
             // Remove profilePicture as it does not exist on the user object
                         // profilePicture: user.profilePicture
           }

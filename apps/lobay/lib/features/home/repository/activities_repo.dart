@@ -32,17 +32,13 @@ class ActivityRepository {
     }
   }
 
-  Future<GetActivityByDateTimeResponse> getActivityByDateTime({
-    required String userId,
-    required String date,
-    required String time,
+  Future<GetActivityByDateTimeResponse> getActivityById({
+    required String id,
   }) async {
     try {
       final response = await _apiClient.get(
-        EndPoints.getActivityByDateTime(
-          userId: userId,
-          date: date,
-          time: time,
+        EndPoints.getActivityById(
+          id: id,
         ),
         retryCallback: () {},
       );

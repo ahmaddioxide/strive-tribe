@@ -43,18 +43,20 @@ class ActivityFromGetDateTime {
   final String activity;
   final String playerLevel;
   final String date;
+  final String time;
   final String videoUrl;
   final String createdAt;
-  final String updatedAt;
+  final String notes;
 
   ActivityFromGetDateTime({
     required this.id,
     required this.activity,
     required this.playerLevel,
     required this.date,
+    required this.time,
     required this.videoUrl,
     required this.createdAt,
-    required this.updatedAt,
+    this.notes = '',
   });
 
   factory ActivityFromGetDateTime.fromJson(Map<String, dynamic> json) {
@@ -63,9 +65,10 @@ class ActivityFromGetDateTime {
       activity: json['Activity'] as String,
       playerLevel: json['PlayerLevel'] as String,
       date: json['Date'] as String,
-      videoUrl: json['VideoUrl'] as String,
-      createdAt: json['CreatedAt'] as String,
-      updatedAt: json['UpdatedAt'] as String,
+      time: json['Time'] as String,
+      notes: json['notes'] as String,
+      videoUrl: json['videoUrl'] as String,
+      createdAt: json['createdAt'] as String,
     );
   }
 }

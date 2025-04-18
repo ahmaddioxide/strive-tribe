@@ -1,4 +1,5 @@
 class ActivityFromGet {
+  final String id;
   final String userId;
   final String name;
   final String activity;
@@ -7,6 +8,7 @@ class ActivityFromGet {
   final String time;
 
   ActivityFromGet({
+    required this.id,
     required this.userId,
     required this.name,
     required this.activity,
@@ -17,6 +19,7 @@ class ActivityFromGet {
 
   factory ActivityFromGet.fromJson(Map<String, dynamic> json) {
     return ActivityFromGet(
+      id: json['id'] as String,
       userId: json['userId'] as String,
       name: json['name'] as String,
       activity: json['activity'] as String,
@@ -28,6 +31,7 @@ class ActivityFromGet {
 
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'userId': userId,
       'name': name,
       'activity': activity,

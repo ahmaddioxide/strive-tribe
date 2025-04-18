@@ -37,11 +37,9 @@ class EndPoints {
 
   //api/activities/activity-by-date-time?user_id=NRh76OzNtWaPcBMuWMuxjtN9WiW2&date=16-08-2023&time=09:30 PM
 
-  static getActivityByDateTime({
-    required String userId,
-    required String date,
-    required String time,
+  static getActivityById({
+    required String id,
   }) {
-    return 'api/activities/activity-by-date-time?user_id=$userId&date=$date&time=$time';
+    return 'api/activities/activity-by-id/$id';
   }
 }

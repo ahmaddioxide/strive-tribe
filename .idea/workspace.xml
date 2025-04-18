@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="developed activity details screen with activity get model">
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="get nearby activities api updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/ios/Podfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_activities_body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_activities_body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_activity_by_date_time.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_activity_by_date_time.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/repository/activities_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/repository/activities_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/widgets/activities.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/widgets/activities.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/apps/my-express-api/serve/tsconfig.generated.6c9432ec-05d7-4487-8516-30d234021019.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +366,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744915907423</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="get details on home screen api endpoint">
+      <option name="closed" value="true" />
+      <created>1744917357131</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1744917357131</updated>
+    </task>
+    <task id="LOCAL-00031" summary="get nearby activities api updated">
+      <option name="closed" value="true" />
+      <created>1744917641184</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1744917641184</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,8 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created common models and app utils" />
-    <MESSAGE value="Resolved api issues and tested login and signup api" />
     <MESSAGE value="Login and signup api integration" />
     <MESSAGE value="token handling in base client" />
     <MESSAGE value="resolved the api run issue" />
@@ -399,7 +420,9 @@
     <MESSAGE value="create activity model change" />
     <MESSAGE value="get nearby activities on home screen" />
     <MESSAGE value="developed activity details screen with activity get model" />
-    <option name="LAST_COMMIT_MESSAGE" value="developed activity details screen with activity get model" />
+    <MESSAGE value="get details on home screen api endpoint" />
+    <MESSAGE value="get nearby activities api updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="get nearby activities api updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

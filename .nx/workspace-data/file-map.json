@@ -38,7 +38,7 @@
         },
         {
           "file": ".env",
-          "hash": "6018708176701188613"
+          "hash": "4535450831344376495"
         },
         {
           "file": ".github/workflows/ci.yml",
@@ -82,7 +82,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "12765684654517610396"
+          "hash": "3920321300376778076"
         },
         {
           "file": ".prettierignore",
@@ -1406,7 +1406,7 @@
           ]
         },
         {
-          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.28075681-dc53-43eb-a13c-95b047bae0db.json",
+          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.f15f2028-dac7-4458-ab50-1687f8456095.json",
           "hash": "14086997084547600071"
         },
         {
@@ -1550,7 +1550,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/infrastructure/models/User.ts",
-          "hash": "8381394829647221496",
+          "hash": "11862602735803227909",
           "deps": [
             "npm:mongoose"
           ]

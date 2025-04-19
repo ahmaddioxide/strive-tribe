@@ -35,7 +35,6 @@ const UserSchema: Schema = new Schema({
   name: { type: String, required: true },
   gender: { type: String, required: true },
   dateOfBirth: { type: String, required: true },
-  //location: { type: String },
   phoneNumber: { type: String, required: true },
   profileImage: { type: String },
   activities: [{

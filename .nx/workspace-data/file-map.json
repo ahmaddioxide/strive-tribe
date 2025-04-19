@@ -82,7 +82,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "16467174283311794649"
+          "hash": "632817550523981561"
         },
         {
           "file": ".prettierignore",
@@ -1126,11 +1126,11 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_in/signin_controller.dart",
-          "hash": "17444596984802024914"
+          "hash": "14707375018270543407"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_in/signin_screen.dart",
-          "hash": "12055011541826859257"
+          "hash": "5575783483515160142"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart",
@@ -1138,7 +1138,7 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_controller.dart",
-          "hash": "14554853028974853830"
+          "hash": "990707278116746179"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_screen.dart",

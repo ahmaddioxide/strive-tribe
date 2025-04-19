@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="resolved api call issue on register">
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="resolved nearby activities issue, and password text field issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_text_field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/api_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/api_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/repository/profile_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/services/auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/services/auth_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745068318602</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="resolved nearby activities issue, and password text field issue">
+      <option name="closed" value="true" />
+      <created>1745070078544</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1745070078544</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -430,7 +431,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reset password functionality" />
     <MESSAGE value="resolved email signup issue using google" />
     <MESSAGE value="run on new laptop" />
     <MESSAGE value="User profile screen and edit profile UI" />
@@ -455,7 +455,8 @@
     <MESSAGE value="added notification service and tested from console" />
     <MESSAGE value="notification with device token update in the db" />
     <MESSAGE value="resolved api call issue on register" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolved api call issue on register" />
+    <MESSAGE value="resolved nearby activities issue, and password text field issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolved nearby activities issue, and password text field issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

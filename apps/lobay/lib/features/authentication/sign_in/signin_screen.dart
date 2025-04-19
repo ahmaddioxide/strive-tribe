@@ -251,20 +251,23 @@ class LoginForm extends StatelessWidget {
               ],
             ),
             SizedBox(height: height * 0.02),
-            AppButton(
-              buttonText: 'Log In',
-              onPressed: () async {
-                //validate and submit
-                if (signInController.formKey.currentState!.validate()) {
-                  // signInController.formKey.currentState!.save();
-                  await signInController.signin();
-                  log('Validated');
-                  // signInController.signIn();
-                } else {
-                  log('Not Validated');
-                }
-              },
-            ),
+            Obx(() {
+              return AppButton(
+                isLoading: signInController.isLoading.value,
+                buttonText: 'Log In',
+                onPressed: () async {
+                  //validate and submit
+                  if (signInController.formKey.currentState!.validate()) {
+                    // signInController.formKey.currentState!.save();
+                    await signInController.signin();
+                    log('Validated');
+                    // signInController.signIn();
+                  } else {
+                    log('Not Validated');
+                  }
+                },
+              );
+            }),
             //-----------------OR-----------------
             SizedBox(height: height * 0.02),
             Row(

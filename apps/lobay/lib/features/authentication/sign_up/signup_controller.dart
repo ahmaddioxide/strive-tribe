@@ -72,6 +72,8 @@ class SignupController extends GetxController {
                   onDateTimeChanged: (DateTime newDate) {
                     dateOfBirthController.text =
                         newDate.toLocal().toString().split(' ')[0];
+                    // Trigger form validation after date selection
+                    formKey.currentState?.validate();
                   },
                 ),
               ),
@@ -82,7 +84,11 @@ class SignupController extends GetxController {
                   style: TextStyle(
                       color: AppColors.white, fontWeight: FontWeight.bold),
                 ),
-                onPressed: () => Navigator.of(context).pop(),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  // // Trigger form validation after closing the picker
+                  formKey.currentState?.validate();
+                },
               )
             ],
           ),
@@ -114,6 +120,8 @@ class SignupController extends GetxController {
           if (pickedDate != null) {
             dateOfBirthController.text =
                 pickedDate.toLocal().toString().split(' ')[0];
+            // Trigger form validation after date selection
+            formKey.currentState?.validate();
           } else {
             dateOfBirthController.text = '';
           }

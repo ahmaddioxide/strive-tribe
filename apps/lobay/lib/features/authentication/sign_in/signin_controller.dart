@@ -22,9 +22,11 @@ class SignInController extends GetxController {
   final formKey = GlobalKey<FormState>();
 
   RxBool rememberMe = true.obs;
+  RxBool isLoading = false.obs;
 
   Future<bool> signin() async {
     try {
+      isLoading.value = true;
       final user = await AuthService().signInWithEmailAndPassword(
           email: emailController.text, password: passwordController.text);
       if (user != null) {
@@ -54,19 +56,23 @@ class SignInController extends GetxController {
           await Future.delayed(const Duration(milliseconds: 100));
 
           Get.offAll(() => BottomNavigationScreen());
+          isLoading.value = false;
           return true;
         } else {
           AppSnackbar.showErrorSnackBar(message: 'Login failed');
+          isLoading.value = false;
           return false;
         }
       } else {
         // Sign-in failed with firebase
         AppSnackbar.showErrorSnackBar(message: 'Sign-in failed');
+        isLoading.value = false;
         return false;
       }
     } on FirebaseAuthException catch (e) {
       log('Sign-up error: $e');
       AppSnackbar.showErrorSnackBar(message: e.message.toString());
+      isLoading.value = false;
       return false;
     }
   }

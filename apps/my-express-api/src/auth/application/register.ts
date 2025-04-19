@@ -17,20 +17,21 @@ export class RegisterUser {
       const response = await axios.get(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${postalCode}&key=${this.config.googleMapsApiKey}`
       );
-      
+
       const data = response.data;
-      
+
       if (data.status !== 'OK' || data.results.length === 0) {
         throw new Error("No location data found for this postal code");
       }
 
       const result = data.results[0];
       const location = result.geometry.location;
-      
+
       // Extract address components
       let placeName = '';
       let state = '';
       let countryName = '';
+      let countryShortName = '';
 
       for (const component of result.address_components) {
         if (component.types.includes('locality')) {
@@ -41,7 +42,13 @@ export class RegisterUser {
         }
         if (component.types.includes('country')) {
           countryName = component.long_name;
+          countryShortName = component.short_name;
         }
+      }
+
+      // ✅ Check if the country is United States
+      if (countryShortName !== 'US') {
+        throw new Error("Postal code does not exist in the United States.");
       }
 
       return {
@@ -52,8 +59,8 @@ export class RegisterUser {
         state
       };
     } catch (error: any) {
-      console.error("Error fetching location details:", error);
-      throw new Error("Failed to fetch location details for the provided postal code");
+      console.error("Error fetching location details:", error.message);
+      throw new Error(error.message || "Failed to fetch location details for the provided postal code");
     }
   }
 
@@ -62,11 +69,9 @@ export class RegisterUser {
       let profileImageUrl = "NULL";
 
       if (profileImageBase64) {
-        // Remove data URL prefix if present
         const base64Data = profileImageBase64.replace(/^data:image\/\w+;base64,/, '');
         const buffer = Buffer.from(base64Data, 'base64');
 
-        // Check if image exceeds 100MB
         const maxSize = 100 * 1024 * 1024; // 100MB in bytes
         if (buffer.length > maxSize) {
           throw new Error("Profile image size exceeds the 100MB limit.");
@@ -93,7 +98,7 @@ export class RegisterUser {
       // Fetch location details from postal code
       const locationDetails = await this.fetchLocationDetails(userData.postalCode);
 
-      const newUser = new UserModel({ 
+      const newUser = new UserModel({
         userId: userData.user_id,
         email: userData.email,
         name: userData.name,
@@ -111,7 +116,7 @@ export class RegisterUser {
         signInWith: userData.signInWith,
         isVerified: userData.isVerified
       });
-      
+
       await newUser.save();
 
       return {
@@ -139,7 +144,7 @@ export class RegisterUser {
         }
       };
     } catch (error: any) {
-      console.error("Registration error:", error);
+      console.error("Registration error:", error.message);
       throw new Error(error.message || "Registration failed");
     }
   }

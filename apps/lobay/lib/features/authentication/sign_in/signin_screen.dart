@@ -7,7 +7,7 @@ import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
-import 'package:lobay/core/services/auth_service.dart';
+import 'package:lobay/services/auth_service.dart';
 import 'package:lobay/features/authentication/sign_in/signin_controller.dart';
 import 'package:lobay/features/authentication/sign_up/signup_screen.dart';
 

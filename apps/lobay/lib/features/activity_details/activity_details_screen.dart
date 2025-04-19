@@ -19,12 +19,29 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
     final width = getDeviceWidth();
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Obx(() {
-          if (controller.isLoading.value) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          return Column(
+      body: Obx(() {
+        if (controller.isLoading.value) {
+          return const Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularProgressIndicator(),
+                SizedBox(height: 20),
+                Text(
+                  'Hold tight, we are loading your activity',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: AppColors.primaryLight,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+        return SingleChildScrollView(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -347,9 +364,9 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
               ),
               SizedBox(height: height * 0.03),
             ],
-          );
-        }),
-      ),
+          ),
+        );
+      }),
     );
   }
 }

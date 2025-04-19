@@ -6,9 +6,10 @@ import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/login_body_model.dart';
 import 'package:lobay/core/network/network_models/login_reponse_model.dart';
-import 'package:lobay/core/services/auth_service.dart';
-import 'package:lobay/core/services/shared_pref_service.dart';
+import 'package:lobay/services/auth_service.dart';
+import 'package:lobay/services/shared_pref_service.dart';
 import 'package:lobay/features/authentication/repository/auth_repo.dart';
+import 'package:lobay/services/notification_service.dart';
 
 import '../../bottom_navigation/bottom_navigation_main.dart';
 
@@ -43,6 +44,10 @@ class SignInController extends GetxController {
               .setStringValue('userName', response.user.name);
           await PreferencesManager.getInstance()
               .setStringValue('userEmail', response.user.email);
+
+          // Initialize notifications
+          await Get.find<NotificationService>().initialize();
+
           AppSnackbar.showSuccessSnackBar(message: 'Sign-in successful');
           Get.offAll(() => BottomNavigationScreen());
           return true;

@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:lobay/core/network/api_exception.dart';
 import 'package:lobay/core/network/app_config.dart';
 import 'package:lobay/core/network/network_constants.dart';
-import 'package:lobay/core/services/shared_pref_service.dart';
+import 'package:lobay/services/shared_pref_service.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class ApiClient {

@@ -31,302 +31,6 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
-      "my-express-api-e2e": [
-        {
-          "file": "apps/my-express-api-e2e/eslint.config.cjs",
-          "hash": "7759795430795630113"
-        },
-        {
-          "file": "apps/my-express-api-e2e/jest.config.ts",
-          "hash": "7741689681773748875"
-        },
-        {
-          "file": "apps/my-express-api-e2e/project.json",
-          "hash": "11462360534563815238"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
-          "hash": "4579662685003779048",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
-          "hash": "2568409276037275290"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
-          "hash": "5275447082211835490"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
-          "hash": "14954872453723519891"
-        }
-      ],
-      "my-express-api": [
-        {
-          "file": "apps/my-express-api/.env.serve.development",
-          "hash": "16883281129510416097"
-        },
-        {
-          "file": "apps/my-express-api/eslint.config.cjs",
-          "hash": "7759795430795630113"
-        },
-        {
-          "file": "apps/my-express-api/jest.config.ts",
-          "hash": "3923302940049323941"
-        },
-        {
-          "file": "apps/my-express-api/project.json",
-          "hash": "11775276660013653898"
-        },
-        {
-          "file": "apps/my-express-api/src/activity/application/AddActivity.ts",
-          "hash": "3006704109854586571",
-          "deps": [
-            "npm:inversify",
-            "npm:firebase-admin"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/activity/application/FindNearbyActivities.ts",
-          "hash": "17557426683655614709",
-          "deps": [
-            "npm:inversify"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/activity/application/GetUserActivitiesById.ts",
-          "hash": "18204979166825929603",
-          "deps": [
-            "npm:inversify",
-            "npm:mongoose"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/activity/domain/Activity.ts",
-          "hash": "15227579089413706726"
-        },
-        {
-          "file": "apps/my-express-api/src/activity/infrastructure/models/Activity.ts",
-          "hash": "6167283833298447540",
-          "deps": [
-            "npm:mongoose"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/activity/interface/http/IController.ts",
-          "hash": "6495262603730230775",
-          "deps": [
-            "npm:express"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/activity/interface/http/activity.controller.ts",
-          "hash": "135771564970212426",
-          "deps": [
-            "npm:express",
-            "npm:inversify"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/activity/interface/middleware/errorHandler.ts",
-          "hash": "13405577176580844872",
-          "deps": [
-            "npm:express"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/activity/interface/middleware/validation.ts",
-          "hash": "13159509547661630311",
-          "deps": [
-            "npm:express",
-            "npm:express-validator"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/my-express-api/src/auth/application/check.ts",
-          "hash": "17797461918742594613",
-          "deps": [
-            "npm:inversify"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/application/getUser.ts",
-          "hash": "1738978292851172377",
-          "deps": [
-            "npm:inversify"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/application/login.ts",
-          "hash": "3730909278014474067",
-          "deps": [
-            "npm:inversify",
-            "npm:jsonwebtoken"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/application/register.ts",
-          "hash": "4427714790113329491",
-          "deps": [
-            "npm:inversify",
-            "npm:firebase-admin",
-            "npm:jsonwebtoken",
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/application/update.ts",
-          "hash": "17620938397722455302",
-          "deps": [
-            "npm:inversify",
-            "npm:firebase-admin",
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/domain/user.ts",
-          "hash": "14796222402674905004"
-        },
-        {
-          "file": "apps/my-express-api/src/auth/infrastructure/database.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/my-express-api/src/auth/infrastructure/models/User.ts",
-          "hash": "8381394829647221496",
-          "deps": [
-            "npm:mongoose"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/http/IController.ts",
-          "hash": "7020420628230583663",
-          "deps": [
-            "npm:express"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/http/auth.controller.ts",
-          "hash": "1893742919869920992",
-          "deps": [
-            "npm:express",
-            "npm:inversify"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/http/docs/auth.swagger.json",
-          "hash": "4943592924709020321"
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/http/server.ts",
-          "hash": "12383336077015754086",
-          "deps": [
-            "npm:express",
-            "npm:body-parser",
-            "npm:helmet",
-            "npm:inversify",
-            "npm:cors"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/middleware/auth.ts",
-          "hash": "10004597076496442156",
-          "deps": [
-            "npm:express",
-            "npm:jsonwebtoken"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/middleware/errorHandler.ts",
-          "hash": "13405577176580844872",
-          "deps": [
-            "npm:express"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
-          "hash": "18201517670093604939",
-          "deps": [
-            "npm:express",
-            "npm:express-validator"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/config/config.ts",
-          "hash": "17249148860004206813",
-          "deps": [
-            "npm:inversify",
-            "npm:firebase-admin"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/config/firebase.ts",
-          "hash": "1657404876172512994",
-          "deps": [
-            "npm:firebase-admin"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/config/installer.ts",
-          "hash": "4934199316854968818",
-          "deps": [
-            "npm:inversify"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/constants/identifiers.ts",
-          "hash": "11727137067262500347"
-        },
-        {
-          "file": "apps/my-express-api/src/database/IDatabase.ts",
-          "hash": "18065881163473294224"
-        },
-        {
-          "file": "apps/my-express-api/src/database/index.ts",
-          "hash": "3080665628720662262",
-          "deps": [
-            "npm:mongoose",
-            "npm:inversify"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/src/main.ts",
-          "hash": "14896333839634290001",
-          "deps": [
-            "npm:dotenv"
-          ]
-        },
-        {
-          "file": "apps/my-express-api/tsconfig.app.json",
-          "hash": "7882563681638815931"
-        },
-        {
-          "file": "apps/my-express-api/tsconfig.json",
-          "hash": "3490524966360018312"
-        },
-        {
-          "file": "apps/my-express-api/tsconfig.spec.json",
-          "hash": "6622138706846345436"
-        }
-      ],
       "lobay": [
         {
           "file": ".DS_Store",
@@ -350,7 +54,7 @@
         },
         {
           "file": ".idea/libraries/Dart_Packages.xml",
-          "hash": "1983735206678730080"
+          "hash": "3831655986156561089"
         },
         {
           "file": ".idea/libraries/Dart_SDK.xml",
@@ -378,7 +82,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "18403379651793295672"
+          "hash": "12765684654517610396"
         },
         {
           "file": ".prettierignore",
@@ -530,7 +234,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/configure_fingerprint.bin",
-          "hash": "1924406204871222662"
+          "hash": "79330596642927975"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/metadata_generation_command.txt",
@@ -654,7 +358,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/configure_fingerprint.bin",
-          "hash": "5594448992347309496"
+          "hash": "8951027894357611112"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/metadata_generation_command.txt",
@@ -782,7 +486,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86/configure_fingerprint.bin",
-          "hash": "2410348517406931710"
+          "hash": "1806303486898369445"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86/metadata_generation_command.txt",
@@ -906,7 +610,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/configure_fingerprint.bin",
-          "hash": "7754534573489540162"
+          "hash": "12388401925768215423"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/metadata_generation_command.txt",
@@ -922,7 +626,7 @@
         },
         {
           "file": "apps/lobay/android/app/build.gradle",
-          "hash": "4209498354159379663"
+          "hash": "14833096717737264968"
         },
         {
           "file": "apps/lobay/android/app/google-services.json",
@@ -934,7 +638,7 @@
         },
         {
           "file": "apps/lobay/android/app/src/main/AndroidManifest.xml",
-          "hash": "4093173391939177742"
+          "hash": "4587861905655121661"
         },
         {
           "file": "apps/lobay/android/app/src/main/kotlin/com/lobay/app/lobay/MainActivity.kt",
@@ -1354,7 +1058,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/api_client.dart",
-          "hash": "16494135879900516496"
+          "hash": "13699018588648845492"
         },
         {
           "file": "apps/lobay/lib/core/network/api_exception.dart",
@@ -1405,18 +1109,6 @@
           "hash": "11869141909079480203"
         },
         {
-          "file": "apps/lobay/lib/core/repo/auth_repo.dart",
-          "hash": "892689367761870460"
-        },
-        {
-          "file": "apps/lobay/lib/core/services/auth_service.dart",
-          "hash": "13479131956819189484"
-        },
-        {
-          "file": "apps/lobay/lib/core/services/shared_pref_service.dart",
-          "hash": "9741044973567673040"
-        },
-        {
           "file": "apps/lobay/lib/core/shared_preferences/shared_pref.dart",
           "hash": "1775961838784076765"
         },
@@ -1426,19 +1118,19 @@
         },
         {
           "file": "apps/lobay/lib/features/activity_details/activity_details_screen.dart",
-          "hash": "17541954061614807195"
+          "hash": "66464930227122234"
         },
         {
           "file": "apps/lobay/lib/features/authentication/repository/auth_repo.dart",
-          "hash": "9771754740115920965"
+          "hash": "8563030721752140838"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_in/signin_controller.dart",
-          "hash": "14508103961826818772"
+          "hash": "13557059936588594106"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_in/signin_screen.dart",
-          "hash": "15892796524156861417"
+          "hash": "12055011541826859257"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart",
@@ -1446,7 +1138,7 @@
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_controller.dart",
-          "hash": "4637778597088969273"
+          "hash": "14554853028974853830"
         },
         {
           "file": "apps/lobay/lib/features/authentication/sign_up/signup_screen.dart",
@@ -1478,7 +1170,7 @@
         },
         {
           "file": "apps/lobay/lib/features/create_activity/create_activity_controller.dart",
-          "hash": "12323638959455200000"
+          "hash": "3083199687605599424"
         },
         {
           "file": "apps/lobay/lib/features/create_activity/create_activity_screen.dart",
@@ -1494,7 +1186,7 @@
         },
         {
           "file": "apps/lobay/lib/features/home/home_screen_controller.dart",
-          "hash": "17435527823142252573"
+          "hash": "6218145060283596398"
         },
         {
           "file": "apps/lobay/lib/features/home/repository/activities_repo.dart",
@@ -1558,7 +1250,23 @@
         },
         {
           "file": "apps/lobay/lib/main.dart",
-          "hash": "219156616523117171"
+          "hash": "4990278613530075313"
+        },
+        {
+          "file": "apps/lobay/lib/services/auth_service.dart",
+          "hash": "13479131956819189484"
+        },
+        {
+          "file": "apps/lobay/lib/services/notification_service.dart",
+          "hash": "1955128693511793897"
+        },
+        {
+          "file": "apps/lobay/lib/services/service_locator.dart",
+          "hash": "12677752176147652822"
+        },
+        {
+          "file": "apps/lobay/lib/services/shared_pref_service.dart",
+          "hash": "9741044973567673040"
         },
         {
           "file": "apps/lobay/lib/utilities/app_utils/app_utils.dart",
@@ -1602,11 +1310,11 @@
         },
         {
           "file": "apps/lobay/pubspec.lock",
-          "hash": "7239962673161403345"
+          "hash": "2484642738115487334"
         },
         {
           "file": "apps/lobay/pubspec.yaml",
-          "hash": "6046364805753200139"
+          "hash": "13591372183524290255"
         },
         {
           "file": "apps/lobay/test/widget_test.dart",
@@ -1698,16 +1406,308 @@
           ]
         },
         {
-          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.0027a5cd-fc3b-4861-a004-d26a0d7681b2.json",
-          "hash": "14086997084547600071"
-        },
-        {
-          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.9d6b18f8-0dd5-42a4-b013-fc2c23bfbf7c.json",
+          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.28075681-dc53-43eb-a13c-95b047bae0db.json",
           "hash": "14086997084547600071"
         },
         {
           "file": "tsconfig.base.json",
           "hash": "16936441711144470533"
+        }
+      ],
+      "my-express-api": [
+        {
+          "file": "apps/my-express-api/.env.serve.development",
+          "hash": "16883281129510416097"
+        },
+        {
+          "file": "apps/my-express-api/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api/jest.config.ts",
+          "hash": "3923302940049323941"
+        },
+        {
+          "file": "apps/my-express-api/project.json",
+          "hash": "11775276660013653898"
+        },
+        {
+          "file": "apps/my-express-api/src/activity/application/AddActivity.ts",
+          "hash": "3006704109854586571",
+          "deps": [
+            "npm:inversify",
+            "npm:firebase-admin"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/activity/application/FindNearbyActivities.ts",
+          "hash": "17557426683655614709",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/activity/application/GetUserActivitiesById.ts",
+          "hash": "18204979166825929603",
+          "deps": [
+            "npm:inversify",
+            "npm:mongoose"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/activity/domain/Activity.ts",
+          "hash": "15227579089413706726"
+        },
+        {
+          "file": "apps/my-express-api/src/activity/infrastructure/models/Activity.ts",
+          "hash": "6167283833298447540",
+          "deps": [
+            "npm:mongoose"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/activity/interface/http/IController.ts",
+          "hash": "6495262603730230775",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/activity/interface/http/activity.controller.ts",
+          "hash": "135771564970212426",
+          "deps": [
+            "npm:express",
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/activity/interface/middleware/errorHandler.ts",
+          "hash": "13405577176580844872",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/activity/interface/middleware/validation.ts",
+          "hash": "13159509547661630311",
+          "deps": [
+            "npm:express",
+            "npm:express-validator"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/my-express-api/src/auth/application/check.ts",
+          "hash": "17797461918742594613",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/application/getUser.ts",
+          "hash": "1738978292851172377",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/application/login.ts",
+          "hash": "3730909278014474067",
+          "deps": [
+            "npm:inversify",
+            "npm:jsonwebtoken"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/application/register.ts",
+          "hash": "4427714790113329491",
+          "deps": [
+            "npm:inversify",
+            "npm:firebase-admin",
+            "npm:jsonwebtoken",
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/application/update.ts",
+          "hash": "17620938397722455302",
+          "deps": [
+            "npm:inversify",
+            "npm:firebase-admin",
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/domain/user.ts",
+          "hash": "14796222402674905004"
+        },
+        {
+          "file": "apps/my-express-api/src/auth/infrastructure/database.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/my-express-api/src/auth/infrastructure/models/User.ts",
+          "hash": "8381394829647221496",
+          "deps": [
+            "npm:mongoose"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/IController.ts",
+          "hash": "7020420628230583663",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/auth.controller.ts",
+          "hash": "1893742919869920992",
+          "deps": [
+            "npm:express",
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/docs/auth.swagger.json",
+          "hash": "4943592924709020321"
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/http/server.ts",
+          "hash": "12383336077015754086",
+          "deps": [
+            "npm:express",
+            "npm:body-parser",
+            "npm:helmet",
+            "npm:inversify",
+            "npm:cors"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/middleware/auth.ts",
+          "hash": "10004597076496442156",
+          "deps": [
+            "npm:express",
+            "npm:jsonwebtoken"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/middleware/errorHandler.ts",
+          "hash": "13405577176580844872",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
+          "hash": "18201517670093604939",
+          "deps": [
+            "npm:express",
+            "npm:express-validator"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/config/config.ts",
+          "hash": "17249148860004206813",
+          "deps": [
+            "npm:inversify",
+            "npm:firebase-admin"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/config/firebase.ts",
+          "hash": "1657404876172512994",
+          "deps": [
+            "npm:firebase-admin"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/config/installer.ts",
+          "hash": "4934199316854968818",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/constants/identifiers.ts",
+          "hash": "11727137067262500347"
+        },
+        {
+          "file": "apps/my-express-api/src/database/IDatabase.ts",
+          "hash": "18065881163473294224"
+        },
+        {
+          "file": "apps/my-express-api/src/database/index.ts",
+          "hash": "3080665628720662262",
+          "deps": [
+            "npm:mongoose",
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/main.ts",
+          "hash": "14896333839634290001",
+          "deps": [
+            "npm:dotenv"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/tsconfig.app.json",
+          "hash": "7882563681638815931"
+        },
+        {
+          "file": "apps/my-express-api/tsconfig.json",
+          "hash": "3490524966360018312"
+        },
+        {
+          "file": "apps/my-express-api/tsconfig.spec.json",
+          "hash": "6622138706846345436"
+        }
+      ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
         }
       ]
     }

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lobay/core/network/network_models/create_activity_body.dart';
-import 'package:lobay/core/services/shared_pref_service.dart';
+import 'package:lobay/services/shared_pref_service.dart';
 import 'package:lobay/features/create_activity/activity_repo/activity_repo.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 

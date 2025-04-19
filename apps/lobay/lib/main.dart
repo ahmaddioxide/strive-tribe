@@ -5,13 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/core/network/api_client.dart';
 import 'package:lobay/core/network/network_constants.dart';
+import 'package:lobay/services/service_locator.dart';
 import 'package:lobay/features/activity_details/activity_details_screen.dart';
 import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
 import 'package:lobay/features/onboarding/onboarding_screen.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 import 'package:lobay/utilities/theme_utils/app_theme.dart';
 
-import 'core/services/shared_pref_service.dart';
+import 'services/shared_pref_service.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -21,6 +22,10 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Initialize services
+  ServiceLocator.init();
+
   final String token =
       await PreferencesManager.getInstance().getStringValue('token', '');
   runApp(
@@ -49,9 +54,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppConstants.appName,
       theme: AppTheme.lightTheme,
-      home: token.isEmpty
-          ? OnboardingScreen()
-          : BottomNavigationScreen(),
+      home: token.isEmpty ? OnboardingScreen() : BottomNavigationScreen(),
     );
   }
 }

@@ -7,7 +7,7 @@ import 'package:lobay/core/network/network_models/login_body_model.dart';
 import 'package:lobay/core/network/network_models/login_reponse_model.dart';
 import 'package:lobay/core/network/network_models/register_body_model.dart';
 import 'package:lobay/core/network/network_models/register_response_body.dart';
-import 'package:lobay/core/services/shared_pref_service.dart';
+import 'package:lobay/services/shared_pref_service.dart';
 
 class AuthenticationRepository {
   // This class will handle authentication-related tasks
@@ -92,11 +92,11 @@ class AuthenticationRepository {
         // User does not exist
         return false;
       }
-      return true;
     } else {
-      // Handle error
 
       return false;
     }
   }
+
+
 }

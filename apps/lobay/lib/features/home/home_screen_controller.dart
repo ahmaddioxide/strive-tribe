@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:lobay/core/services/shared_pref_service.dart';
+import 'package:lobay/services/shared_pref_service.dart';
+import 'package:lobay/services/notification_service.dart';
 import 'package:lobay/utilities/commom_models/pairs_model.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 
@@ -10,9 +11,15 @@ class HomeScreenController extends GetxController {
   final activityRepo = ActivityRepository();
 
   @override
-  onInit() {
+  onInit() async {
     super.onInit();
-    getNearbyActivities();
+    await getNearbyActivities();
+
+    // Initialize notifications if not already initialized
+    final notificationService = Get.find<NotificationService>();
+    if (notificationService.deviceToken == null) {
+      await notificationService.initialize();
+    }
   }
 
   RxList<ActivityFromGet> activitiesList = RxList<ActivityFromGet>();

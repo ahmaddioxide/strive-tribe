@@ -4,20 +4,37 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="activity detail screen partial">
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="added notification service and tested from console">
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/services/notification_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/services/service_locator.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/apps/my-express-api/serve/tsconfig.generated.28075681-dc53-43eb-a13c-95b047bae0db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86/configure_fingerprint.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_activity_by_date_time.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/get_activity_by_date_time.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/api_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/api_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/repo/auth_repo.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/services/auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/services/auth_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/services/shared_pref_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/services/shared_pref_service.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/my-express-api/src/activity/application/GetUserActivitiesById.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/my-express-api/src/activity/application/GetUserActivitiesById.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/repository/auth_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/create_activity/create_activity_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/create_activity/create_activity_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +125,7 @@
       <recent name="$PROJECT_DIR$/apps/lobay/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/lobay/lib/services" />
       <recent name="$PROJECT_DIR$/apps/lobay/lib/features/profile" />
       <recent name="$PROJECT_DIR$/apps/lobay/lib/features/authentication" />
       <recent name="$PROJECT_DIR$/apps/lobay/assets/images" />
@@ -389,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744998371673</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="activity details screen implementation">
+      <option name="closed" value="true" />
+      <created>1745001423347</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1745001423347</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -404,8 +430,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="token handling in base client" />
-    <MESSAGE value="resolved the api run issue" />
     <MESSAGE value="added check user id api only" />
     <MESSAGE value="login signup with google integrated" />
     <MESSAGE value="reset password functionality" />
@@ -429,7 +453,9 @@
     <MESSAGE value="get details on home screen api endpoint" />
     <MESSAGE value="get nearby activities api updated" />
     <MESSAGE value="activity detail screen partial" />
-    <option name="LAST_COMMIT_MESSAGE" value="activity detail screen partial" />
+    <MESSAGE value="activity details screen implementation" />
+    <MESSAGE value="added notification service and tested from console" />
+    <option name="LAST_COMMIT_MESSAGE" value="added notification service and tested from console" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

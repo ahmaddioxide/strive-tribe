@@ -14,7 +14,6 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
   Widget build(BuildContext context) {
     final controller = Get.put(ActivityDetailsController());
     final screenHeight = MediaQuery.of(context).size.height;
-    final videoHeight = screenHeight / 2;
     final height = getDeviceHeight();
     final width = getDeviceWidth();
 

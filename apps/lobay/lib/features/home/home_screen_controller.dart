@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:lobay/services/shared_pref_service.dart';
 import 'package:lobay/services/notification_service.dart';
@@ -11,35 +12,52 @@ class HomeScreenController extends GetxController {
   final activityRepo = ActivityRepository();
 
   @override
-  onInit() async {
+  onInit() {
+    getNearbyActivities();
+
     super.onInit();
-    await getNearbyActivities();
 
     // Initialize notifications if not already initialized
     final notificationService = Get.find<NotificationService>();
     if (notificationService.deviceToken == null) {
-      await notificationService.initialize();
+      notificationService.initialize();
     }
+  }
+
+  @override
+  onReady() async {
+    await getNearbyActivities();
+
+    super.onReady();
   }
 
   RxList<ActivityFromGet> activitiesList = RxList<ActivityFromGet>();
 
   Future<void> getNearbyActivities() async {
-    final currentUserId =
-        await PreferencesManager.getInstance().getStringValue('userId', '');
-    if (currentUserId.isEmpty) {
-      return;
-    }
-    final GetActivitiesResponse? response =
-        await activityRepo.getNearbyActivities(
-      userId: currentUserId,
-      activityName:
-          selectedActivities.isNotEmpty ? selectedActivities.join(',') : null,
-      playerLevel:
-          selectedPlayerLevel.isNotEmpty ? selectedPlayerLevel.join(',') : null,
-    );
-    if (response != null) {
-      activitiesList.value = response.activities;
+    try {
+      final currentUserId =
+          await PreferencesManager.getInstance().getStringValue('userId', '');
+      if (currentUserId.isEmpty) {
+        return;
+      }
+      final GetActivitiesResponse? response =
+          await activityRepo.getNearbyActivities(
+        userId: currentUserId,
+        activityName:
+            selectedActivities.isNotEmpty ? selectedActivities.join(',') : null,
+        playerLevel: selectedPlayerLevel.isNotEmpty
+            ? selectedPlayerLevel.join(',')
+            : null,
+      );
+      if (response != null) {
+        activitiesList.value = response.activities;
+      } else {
+      }
+    } catch (e) {
+      // Handle exceptions
+      if (kDebugMode) {
+        print('Error fetching activities: $e');
+      }
     }
   }
 

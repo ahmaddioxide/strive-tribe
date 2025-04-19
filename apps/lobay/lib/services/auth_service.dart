@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
@@ -42,7 +43,6 @@ class AuthService {
       rethrow;
     } catch (e) {
       // Unexpected errors
-      print('signUpWithEmailAndPassword error: $e');
       rethrow;
     }
   }
@@ -67,7 +67,9 @@ class AuthService {
       _handleAuthError(e);
       rethrow;
     } catch (e) {
-      print('signInWithEmailAndPassword error: $e');
+      if (kDebugMode) {
+        print('signInWithEmailAndPassword error: $e');
+      }
       rethrow;
     }
   }
@@ -105,7 +107,6 @@ class AuthService {
           await _firebaseAuth.signInWithCredential(credential);
       final User? user = userCredential.user;
 
-      print('User signed in with Google: ${user?.email}');
 
       // If it's a new user, optionally store data in backend
       // if (userCredential.additionalUserInfo?.isNewUser ?? false) {
@@ -142,7 +143,6 @@ class AuthService {
           Get.offAll(() => BottomNavigationScreen());
         }
       } else {
-        print('User does not exist in the backend');
         Get.offAll(SignupScreen(
           isGoogleLogin: true,
         ));
@@ -153,7 +153,6 @@ class AuthService {
       _handleAuthError(e);
       rethrow;
     } catch (e) {
-      print('signInWithGoogle error: $e');
       rethrow;
     }
   }
@@ -198,14 +197,12 @@ class AuthService {
         return user;
       } else {
         // Facebook login failed or canceled
-        print('Facebook sign-in failed: ${result.status}');
         return null;
       }
     } on FirebaseAuthException catch (e) {
       _handleAuthError(e);
       rethrow;
     } catch (e) {
-      print('signInWithFacebook error: $e');
       rethrow;
     }
   }
@@ -222,7 +219,6 @@ class AuthService {
       }
       await _facebookAuth.logOut();
     } catch (e) {
-      print('signOut error: $e');
       rethrow;
     }
   }
@@ -241,42 +237,33 @@ class AuthService {
   void _handleAuthError(FirebaseAuthException e) {
     switch (e.code) {
       case 'invalid-email':
-        print('Auth Error: The email is invalid.');
         // AppSnackbar().showErrorSnackBar(message: e.message.toString());
         break;
       case 'user-disabled':
-        print('Auth Error: This user has been disabled.');
         // AppSnackbar().showErrorSnackBar(message: e.message.toString());
 
         break;
       case 'user-not-found':
-        print('Auth Error: No user found for that email.');
         // AppSnackbar().showErrorSnackBar(message: e.message.toString());
 
         break;
       case 'wrong-password':
-        print('Auth Error: Wrong password provided for that user.');
         // AppSnackbar().showErrorSnackBar(message: e.message.toString());
 
         break;
       case 'email-already-in-use':
-        print('Auth Error: The email is already in use.');
         // AppSnackbar().showErrorSnackBar(message: e.message.toString());
 
         break;
       case 'operation-not-allowed':
-        print(
-            'Auth Error: Operation not allowed. Please enable it in Firebase.');
         // AppSnackbar().showErrorSnackBar(message: e.message.toString());
 
         break;
       case 'weak-password':
-        print('Auth Error: The password is too weak.');
         // AppSnackbar().showErrorSnackBar(message: e.message.toString());
 
         break;
       default:
-        print('Auth Error: ${e.code} - ${e.message}');
       // AppSnackbar().showErrorSnackBar(message: e.message.toString());
     }
   }

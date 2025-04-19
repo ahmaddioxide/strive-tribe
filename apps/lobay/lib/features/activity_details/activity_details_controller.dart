@@ -35,7 +35,7 @@ class ActivityDetailsController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    final args = Get.arguments as ActivityFromGet;
+    final args = Get.arguments as ActivityFromGet?;
     if (args != null) {
       // activity = args;
       loadActivityDetails(id: args.id);

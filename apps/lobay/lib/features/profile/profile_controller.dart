@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer' show log;
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -181,7 +180,7 @@ class ProfileController extends GetxController {
                 surface: Colors.white,
                 onSurface: Colors.black,
               ),
-              dialogBackgroundColor: Colors.white,
+              dialogTheme: DialogThemeData(backgroundColor: Colors.white),
             ),
             child: child!,
           );

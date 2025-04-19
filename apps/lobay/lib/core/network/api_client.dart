@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:lobay/core/network/api_exception.dart';
 import 'package:lobay/core/network/app_config.dart';
 import 'package:lobay/core/network/network_constants.dart';
@@ -35,8 +36,10 @@ class ApiClient {
       onRequest: (options, handler) async {
         final token =
             await PreferencesManager.getInstance().getStringValue('token', '');
-        print('Token to send: $token');
-        if (token != null && token.isNotEmpty) {
+        if (kDebugMode) {
+          print('Token to send: $token');
+        }
+        if (token.isNotEmpty) {
           options.headers['Authorization'] = 'Bearer $token';
         }
         return handler.next(options);

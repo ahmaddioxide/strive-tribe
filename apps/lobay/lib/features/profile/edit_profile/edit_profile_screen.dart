@@ -1,5 +1,4 @@
 import 'dart:developer';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -225,13 +224,13 @@ class EditProfileScreen extends StatelessWidget with DeviceSizeUtil {
                                 ? 'Upload profile picture'
                                 : 'Change profile picture',
                             style: TextStyle(
-                              color: controller.profileImage.value == null
+                              color: controller.profileImage.value.isNotEmpty
                                   ? AppColors.primaryLight
                                   : AppColors.grey,
                               fontWeight: FontWeight.bold,
                               decoration: TextDecoration.underline,
                               decorationColor:
-                                  controller.profileImage.value == null
+                                  controller.profileImage.value.isNotEmpty
                                       ? AppColors.primaryLight
                                       : AppColors.grey,
                             ),

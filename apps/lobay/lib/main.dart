@@ -1,12 +1,10 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/core/network/api_client.dart';
 import 'package:lobay/core/network/network_constants.dart';
 import 'package:lobay/services/service_locator.dart';
-import 'package:lobay/features/activity_details/activity_details_screen.dart';
 import 'package:lobay/features/bottom_navigation/bottom_navigation_main.dart';
 import 'package:lobay/features/onboarding/onboarding_screen.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';

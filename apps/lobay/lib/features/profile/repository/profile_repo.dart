@@ -21,7 +21,7 @@ class ProfileRepo {
         // Handle error response
         throw Exception('Failed to fetch data: ${response.statusMessage}');
       }
-    } on Exception catch (e) {
+    } on Exception {
       // Handle exceptions
       return null;
     }
@@ -41,7 +41,7 @@ class ProfileRepo {
         // Handle error response
         throw Exception('Failed to put data: ${response.statusMessage}');
       }
-    } on Exception catch (e) {
+    } on Exception {
       // Handle exceptions
       return false;
     }

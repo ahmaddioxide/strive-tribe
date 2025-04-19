@@ -57,7 +57,7 @@ class _AppTextFieldState extends State<AppTextField> {
   @override
   void initState() {
     super.initState();
-    _obscureText = widget.obscureText;
+    _obscureText = widget.isPassword ? true : widget.obscureText;
   }
 
   @override

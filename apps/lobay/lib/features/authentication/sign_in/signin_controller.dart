@@ -49,6 +49,10 @@ class SignInController extends GetxController {
           await Get.find<NotificationService>().initialize();
 
           AppSnackbar.showSuccessSnackBar(message: 'Sign-in successful');
+
+          // Add a small delay to ensure data is stored
+          await Future.delayed(const Duration(milliseconds: 100));
+
           Get.offAll(() => BottomNavigationScreen());
           return true;
         } else {

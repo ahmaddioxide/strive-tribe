@@ -65,3 +65,72 @@ export const validateActivityId = [
     next();
   }
 ];
+
+export const validateJoinActivity = [
+  query('userId')
+    .notEmpty().withMessage("Invalid user ID"),
+  query('activityId')
+    .isMongoId().notEmpty().withMessage("Invalid activity ID"),
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array() 
+      });
+    }
+    next();
+  }
+];
+
+export const validateUpdateParticipationStatus = [
+  param('id')
+    .notEmpty().isMongoId().withMessage("Participation ID is required")
+    .isMongoId().withMessage("Invalid participation ID format"),
+
+  body('status')
+    .notEmpty().withMessage("Status is required")
+    .isIn(['accepted', 'declined'])
+    .withMessage("Invalid status. Must be 'accepted' or 'declined'"),
+
+  body('notificationId')
+    .notEmpty().withMessage("Notification ID is required")
+    .isMongoId().withMessage("Invalid notification ID format"),
+
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        errors: errors.array()
+      });
+    }
+    next();
+  }
+
+];
+export const validateGetNotifications = [
+  param('userId')
+    .notEmpty().withMessage("User ID is required")
+    .withMessage("Invalid User ID format"),
+
+
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        errors: errors.array()
+      });
+    }
+    next();
+  }
+
+];
+
+// 1. Validation (add to existing validation file)
+// src/auth/interface/http/validation.ts
+export const validateGetScheduledActivities = [
+  param('userId')
+    .notEmpty().withMessage('User ID is required')
+];

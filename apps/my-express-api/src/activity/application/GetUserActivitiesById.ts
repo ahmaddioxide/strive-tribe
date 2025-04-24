@@ -3,7 +3,6 @@ import { Types } from "mongoose";
 import UserModel from "../../auth/infrastructure/models/User";
 import ActivityModel from "../infrastructure/models/Activity";
 import { Config } from "../../config/config";
-import { profile } from "console";
 
 @injectable()
 export class GetActivityDetails {

@@ -13,6 +13,11 @@ import { UpdateUser } from "../auth/application/update";
 import { CheckUser } from "../auth/application/check";
 import { GetUser } from "../auth/application/getUser";
 import { AddActivity } from "../activity/application/AddActivity";
+import { UpdateParticipationStatus } from "../activity/application/UpdateParticipationStatus";
+import { GetUserNotifications } from "../activity/application/GetNotifications";
+import { GetScheduledActivities } from "../activity/application/GetScheduledActivities";
+
+import { ParticipateActivity } from "../activity/application/ParticipateActivity";
 
 let container = new Container();
 
@@ -28,6 +33,10 @@ container.bind<GetUser>(GetUser).toSelf();
 container.bind<AddActivity>(AddActivity).toSelf();
 container.bind<FindNearbyActivities>(FindNearbyActivities).toSelf();
 container.bind<GetActivityDetails>(GetActivityDetails).toSelf();
+container.bind<ParticipateActivity>(ParticipateActivity).toSelf();
+container.bind<UpdateParticipationStatus>(UpdateParticipationStatus).toSelf();
+container.bind<GetUserNotifications>(GetUserNotifications).toSelf();
+container.bind<GetScheduledActivities>(GetScheduledActivities).toSelf();
 container.bind<AuthController>(Identifier.AuthController).to(AuthController);
 container.bind<ActivityController>(Identifier.ActivityController).to(ActivityController);
 

@@ -47,7 +47,12 @@ const UserSchema: Schema = new Schema({
     required: true
   },
   isVerified: { type: Boolean, default: false },
-  scheduledActivities: [{ type: String, default: [] }],
+  scheduledActivities: [{
+    activity: { type: String },
+    partnerName: { type: String },
+    date: { type: String },
+    time: { type: String }
+  }],
   gamesPlayed: { type: Number, default: 0 },
   placeName: { type: String },
   countryName: { type: String },

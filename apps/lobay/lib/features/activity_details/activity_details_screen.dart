@@ -345,11 +345,10 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                           if (controller.isJoining.value) {
                             return;
                           }
-                          controller.joinActivity().then((value){
-                            if(value){
+                          controller.joinActivity().then((value) {
+                            if (value) {
                               Get.back();
                             }
-
                           });
                         },
                         style: ElevatedButton.styleFrom(

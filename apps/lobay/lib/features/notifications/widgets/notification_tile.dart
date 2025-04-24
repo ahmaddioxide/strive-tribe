@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_button.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/notifications_reponse_model.dart';
+import 'package:lobay/features/notifications/notifications_controller.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class NotificationTile extends StatelessWidget with DeviceSizeUtil {
+  final _controller = Get.find<NotificationsController>();
   final NotificationModel notificationModel;
 
-  const NotificationTile({
+  NotificationTile({
     super.key,
     required this.notificationModel,
   });
@@ -29,7 +33,6 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
         SizedBox(
           width: width * 0.04,
         ),
-
         Flexible(
           flex: 3,
           child: Column(
@@ -57,7 +60,17 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
                     child: AppButton(
                       buttonText: 'Accept',
                       textSize: 16,
-                      onPressed: () {},
+                      onPressed: () async {
+                        _controller
+                            .acceptRequest(notificationId: notificationModel.id)
+                            .then((value) async {
+                          if (value) {
+                            AppSnackbar.showSuccessSnackBar(
+                                message: 'Accepted');
+                            await _controller.fetchNotifications();
+                          }
+                        });
+                      },
                     ),
                   ),
                   TextButton(
@@ -76,28 +89,6 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
             ],
           ),
         ),
-
-        // Column(
-        //
-        //
-        //   children: [
-        //     const Text('Lorem ipsum dolor sit amet, .'),
-        //     const SizedBox(
-        //       height: 5,
-        //     ),
-        //     Row(
-        //       children: [
-        //         AppButton(
-        //           buttonText: 'Accept',
-        //           onPressed: () {},
-        //         ),
-        //         const SizedBox(
-        //           width: 10,
-        //         ),
-        //       ],
-        //     ),
-        //   ],
-        // ),
       ],
     );
   }

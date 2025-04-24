@@ -1403,6 +1403,10 @@
           "hash": "7175491108031342924"
         },
         {
+          "file": "apps/lobay/lib/core/network/accept_participation_body_model.dart",
+          "hash": "1944933901621728729"
+        },
+        {
           "file": "apps/lobay/lib/core/network/api_client.dart",
           "hash": "16497314948821270179"
         },
@@ -1416,7 +1420,11 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_constants.dart",
-          "hash": "15082539535577829748"
+          "hash": "15211751584499995552"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/network_models/accept_participation_reponse_model.dart",
+          "hash": "2442265360865929022"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/create_activity_body.dart",
@@ -1472,7 +1480,7 @@
         },
         {
           "file": "apps/lobay/lib/features/activity_details/activity_details_screen.dart",
-          "hash": "14783084205898904498"
+          "hash": "8436869906282416022"
         },
         {
           "file": "apps/lobay/lib/features/authentication/repository/auth_repo.dart",
@@ -1564,7 +1572,7 @@
         },
         {
           "file": "apps/lobay/lib/features/notifications/notifications_controller.dart",
-          "hash": "9182078469610866225"
+          "hash": "15102082231920728012"
         },
         {
           "file": "apps/lobay/lib/features/notifications/notifications_screen.dart",
@@ -1572,11 +1580,11 @@
         },
         {
           "file": "apps/lobay/lib/features/notifications/repository/notification_repo.dart",
-          "hash": "5307069242915677778"
+          "hash": "784503347812235098"
         },
         {
           "file": "apps/lobay/lib/features/notifications/widgets/notification_tile.dart",
-          "hash": "17580654297906450129"
+          "hash": "17773295860070668368"
         },
         {
           "file": "apps/lobay/lib/features/onboarding/onboarding_controller.dart",

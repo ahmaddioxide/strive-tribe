@@ -17,7 +17,7 @@ class NotificationsController extends GetxController {
     fetchNotifications();
   }
 
-  void fetchNotifications() async {
+  Future<void> fetchNotifications() async {
     isLoading.value = true;
     try {
       final userId =
@@ -38,6 +38,18 @@ class NotificationsController extends GetxController {
       // Handle error
     } finally {
       isLoading.value = false;
+    }
+  }
+
+  Future<bool> acceptRequest({required String notificationId}) async {
+    try {
+      final response = await _notificationRepo.acceptNotification(
+        notificationId: notificationId,
+        status: 'accepted',
+      );
+      return response.success;
+    } catch (e) {
+      return false;
     }
   }
 }

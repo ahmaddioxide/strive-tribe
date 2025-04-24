@@ -20,6 +20,9 @@ class EndPoints {
 
   static const String createActivity = 'api/activities/create-activity';
 
+  static getNotifications(String userId) =>
+      'api/activities/notifications/$userId';
+
   static getActivities({
     required String userId,
     String? activityName,

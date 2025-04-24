@@ -28,53 +28,46 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
 
         Flexible(
           flex: 3,
-          child: Row(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 150,
-                        height: 50,
-                        child: AppButton(
-                          buttonText: 'Accept',
-                          onPressed: () {},
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Decline',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.black,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+              Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(
-                width: 10,
+                height: 5,
               ),
-              const Icon(
-                Icons.arrow_forward_ios,
-                color: AppColors.grey,
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    width: width * 0.3,
+                    height: height * 0.04,
+                    child: AppButton(
+                      buttonText: 'Accept',
+                      textSize: 16,
+                      onPressed: () {},
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Decline',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.black,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

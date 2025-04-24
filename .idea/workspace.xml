@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="resolved date of birth selection issue on register screen">
-      <change afterPath="$PROJECT_DIR$/apps/lobay/assets/images/no_notification_illustration.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/widgets/notification_tile.dart" afterDir="false" />
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="notification screen ui partial">
+      <change afterPath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/notifications_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/common_widgets/app_button.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/notifications_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/apps/my-express-api/serve/tsconfig.generated.74a91f8a-88b4-42ca-96df-86c88f719240.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/widgets/notification_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/widgets/notification_tile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="app/create_activity" />
+        <entry key="$PROJECT_DIR$" value="app/activity_details" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,7 +91,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;app/activity__details&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;app/notifications&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/ahmad/Development/lobay/apps/lobay/assets/images&quot;,
@@ -431,7 +429,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745071319375</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="notification screen ui partial">
+      <option name="closed" value="true" />
+      <created>1745261669317</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1745261669317</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -446,7 +452,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="run on new laptop" />
     <MESSAGE value="User profile screen and edit profile UI" />
     <MESSAGE value="logout and profile repo half" />
     <MESSAGE value="resolved json size issue in image" />
@@ -471,7 +476,8 @@
     <MESSAGE value="resolved api call issue on register" />
     <MESSAGE value="resolved nearby activities issue, and password text field issue" />
     <MESSAGE value="resolved date of birth selection issue on register screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolved date of birth selection issue on register screen" />
+    <MESSAGE value="notification screen ui partial" />
+    <option name="LAST_COMMIT_MESSAGE" value="notification screen ui partial" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

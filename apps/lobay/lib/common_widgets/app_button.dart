@@ -10,6 +10,7 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
   final Widget? child;
   final bool isEnabled;
   final bool isLoading;
+  final double textSize;
 
   const AppButton({
     super.key,
@@ -18,6 +19,7 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
     this.child,
     this.isEnabled = true,
     this.isLoading = false,
+    this.textSize = 17,
   });
 
   @override
@@ -27,7 +29,6 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
         minimumSize: Size(double.infinity, getDeviceHeight() * 0.06),
         backgroundColor:
             isEnabled == true ? AppColors.primaryLight : AppColors.grey,
-        padding: EdgeInsets.symmetric(vertical: 15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
@@ -46,7 +47,7 @@ class AppButton extends StatelessWidget with DeviceSizeUtil {
                 buttonText ?? '',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 17,
+                  fontSize: textSize,
                   fontWeight: FontWeight.bold,
                 ),
               ),

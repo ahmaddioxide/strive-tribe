@@ -1,29 +1,46 @@
 // src/notifications/application/GetUserNotifications.ts
 import { injectable } from "inversify";
 import NotificationModel from "../infrastructure/models/Notification";
+import Participation from "../infrastructure/models/Participation";
 
 @injectable()
 export class GetUserNotifications {
   async execute(userId: string) {
     const currentDate = new Date();
     
-    // Fetch notifications from database
+    // Fetch notifications
     const notifications = await NotificationModel.find({ userId }).lean();
 
-    // Business logic for filtering
-    return notifications.filter(notification => {
-      // Non-pending notifications always included
-      if (notification.status !== 'pending') return true;
+    // Prepare enhanced notifications
+    const enrichedNotifications = await Promise.all(
+      notifications.map(async (notification) => {
+        // Default: no participationId
+        let participationId = null;
 
-      // Parse activity datetime
-      const activityDateTime = this.parseActivityDateTime(
-        notification.activityDate,
-        notification.activityTime
-      );
+        if (notification.requesterId) {
+          const participation = await Participation.findOne({
+            userId: notification.requesterId,
+          }).lean();
 
-      // Include only if activity is in future
-      return activityDateTime > currentDate;
-    });
+          if (participation) {
+            participationId = participation._id;
+          }
+        }
+
+        // Filter logic
+        const includeNotification = (
+          notification.status !== 'pending' ||
+          this.parseActivityDateTime(notification.activityDate, notification.activityTime) > currentDate
+        );
+
+        return includeNotification
+          ? { ...notification, participationId }
+          : null;
+      })
+    );
+
+    // Remove nulls from filtered out notifications
+    return enrichedNotifications.filter(n => n !== null);
   }
 
   private parseActivityDateTime(date?: string, time?: string): Date {
@@ -38,7 +55,6 @@ export class GetUserNotifications {
     const minutes = parseInt(timeMatch[2]);
     const period = timeMatch[3].toUpperCase();
 
-    // Convert to 24h format
     if (period === 'PM' && hours !== 12) hours += 12;
     if (period === 'AM' && hours === 12) hours = 0;
 

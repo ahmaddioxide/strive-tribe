@@ -23,6 +23,9 @@ class CreateActivityController extends GetxController {
 
   final formKey = GlobalKey<FormState>();
 
+
+
+
   void showDatePickerAdaptive(BuildContext context) {
     // if (GetPlatform.isIOS) {
     //   showCupertinoModalPopup(
@@ -90,7 +93,7 @@ class CreateActivityController extends GetxController {
     // }
   }
 
-  void showTimePickerAdaptive(BuildContext context) {
+void showTimePickerAdaptive(BuildContext context) {
     if (GetPlatform.isIOS) {
       showCupertinoModalPopup(
         context: context,
@@ -106,11 +109,8 @@ class CreateActivityController extends GetxController {
                   initialDateTime: DateTime.now(),
                   mode: CupertinoDatePickerMode.time,
                   onDateTimeChanged: (DateTime newTime) {
-                    timeController.text = newTime
-                        .toLocal()
-                        .toString()
-                        .split(' ')[1]
-                        .substring(0, 5);
+                    final formattedTime = TimeOfDay.fromDateTime(newTime).format(context);
+                    timeController.text = formattedTime;
                   },
                 ),
               ),
@@ -156,7 +156,6 @@ class CreateActivityController extends GetxController {
       );
     }
   }
-
   Future<void> pickVideo() async {
     final pickedFile =
         await ImagePicker().pickVideo(source: ImageSource.gallery);

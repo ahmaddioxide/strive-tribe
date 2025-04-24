@@ -91,7 +91,9 @@ class NotificationsScreen extends StatelessWidget with DeviceSizeUtil {
               return Expanded(
                 child: ListView.separated(
                   itemBuilder: (context, index) {
-                    return const NotificationTile();
+                    return NotificationTile(
+                      notificationModel: _controller.notifications[index],
+                    );
                   },
                   separatorBuilder: (context, index) {
                     return const Divider();

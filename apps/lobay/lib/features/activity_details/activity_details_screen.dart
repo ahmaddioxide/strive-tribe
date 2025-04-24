@@ -338,26 +338,39 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                         iconSize: 30,
                       ),
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        // Handle button action
-                      },
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(width * 0.7, height * 0.07),
-                        backgroundColor: AppColors.primaryLight,
-                        padding: const EdgeInsets.symmetric(vertical: 16.0),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
+
+                    Obx(() {
+                      return ElevatedButton(
+                        onPressed: () {
+                          if (controller.isJoining.value) {
+                            return;
+                          }
+                          controller.joinActivity().then((value){
+                            if(value){
+                              Get.back();
+                            }
+
+                          });
+                        },
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: Size(width * 0.7, height * 0.07),
+                          backgroundColor: AppColors.primaryLight,
+                          padding: const EdgeInsets.symmetric(vertical: 16.0),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
                         ),
-                      ),
-                      child: Text(
-                        'Join',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                        child: controller.isJoining.value
+                            ? CircularProgressIndicator()
+                            : Text(
+                                'Join',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
+                              ),
+                      );
+                    }),
                   ],
                 ),
               ),

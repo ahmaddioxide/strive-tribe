@@ -1,16 +1,19 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/get_activities_body.dart';
 import 'package:lobay/features/home/repository/activities_repo.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../core/network/network_models/get_activity_by_date_time.dart';
+import '../../services/shared_pref_service.dart';
 
 class ActivityDetailsController extends GetxController {
   RxBool isLoading = true.obs;
   late VideoPlayerController videoController;
   final isPlaying = false.obs;
+  final RxBool isJoining = false.obs;
   final isInitialized = false.obs;
   final activityRepo = ActivityRepository();
   GetActivityByDateTimeResponse activity = GetActivityByDateTimeResponse(
@@ -119,6 +122,42 @@ class ActivityDetailsController extends GetxController {
       log('Stack trace: $stackTrace');
     } finally {
       isLoading.value = false;
+    }
+  }
+
+  Future<bool> joinActivity() async {
+    isJoining.value = true;
+    final userId =
+        await PreferencesManager.getInstance().getStringValue('userId', '');
+    final activityId = activity.activity.id;
+    if (userId == null || userId.isEmpty) {
+      log('User ID is null or empty');
+      return false;
+    }
+    if (activityId == null || activityId.isEmpty) {
+      log('Activity ID is null or empty');
+      return false;
+    }
+
+    try {
+      final response = await activityRepo.joinActivity(
+        userId: userId,
+        activityId: activityId,
+      );
+      if (response.success) {
+        AppSnackbar.showSuccessSnackBar(message: response.message);
+        return true;
+      } else {
+        log('Failed to join the activity');
+        AppSnackbar.showErrorSnackBar(message: response.message);
+        return false;
+      }
+    } catch (e) {
+      log('Error joining the activity: $e');
+      AppSnackbar.showErrorSnackBar(message: 'Failed to join the activity');
+      return false;
+    } finally {
+      isJoining.value = false;
     }
   }
 

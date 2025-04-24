@@ -23,6 +23,12 @@ class EndPoints {
   static getNotifications(String userId) =>
       'api/activities/notifications/$userId';
 
+  static joinActivity({
+    required String userId,
+    required String activityId,
+  }) =>
+      'api/activities/join?userId=$userId&activityId=$activityId';
+
   static getActivities({
     required String userId,
     String? activityName,

@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:lobay/common_widgets/app_button.dart';
+import 'package:lobay/core/network/network_models/notifications_reponse_model.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class NotificationTile extends StatelessWidget with DeviceSizeUtil {
-  const NotificationTile({super.key});
+  final NotificationModel notificationModel;
+
+  const NotificationTile({
+    super.key,
+    required this.notificationModel,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +22,8 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
         Flexible(
           flex: 1,
           child: CircleAvatar(
-            radius: height * 0.035,
-            backgroundImage: NetworkImage(
-              'https://images.unsplash.com/photo-1677631231234-1234567890ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60',
-            ),
+            radius: height * 0.04,
+            backgroundImage: NetworkImage(notificationModel.profileImage),
           ),
         ),
         SizedBox(
@@ -33,12 +37,12 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                notificationModel.title + notificationModel.message,
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
-                maxLines: 2,
+                maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(

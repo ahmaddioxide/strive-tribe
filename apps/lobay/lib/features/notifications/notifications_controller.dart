@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
+import 'package:lobay/core/network/network_models/notifications_reponse_model.dart';
 import 'package:lobay/core/shared_preferences/shared_pref.dart';
 
 import 'repository/notification_repo.dart';
@@ -8,7 +9,7 @@ import 'repository/notification_repo.dart';
 class NotificationsController extends GetxController {
   final _notificationRepo = NotificationRepository();
   RxBool isLoading = false.obs;
-  RxList notifications = [].obs;
+  RxList<NotificationModel> notifications = <NotificationModel>[].obs;
 
   @override
   void onInit() {
@@ -32,11 +33,7 @@ class NotificationsController extends GetxController {
       );
 
       // Fetch notifications from the server or local storage
-      notifications.value = [
-        'Notification 1',
-        'Notification 2',
-        'Notification 3',
-      ];
+      notifications.value = response.notifications;
     } catch (e) {
       // Handle error
     } finally {

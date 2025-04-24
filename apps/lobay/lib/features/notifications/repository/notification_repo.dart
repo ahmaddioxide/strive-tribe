@@ -28,15 +28,15 @@ class NotificationRepository {
   }
 
   Future<AcceptParticipationResponseModel> acceptNotification(
-      {required String notificationId, required String status}) async {
+      {required String notificationId, required String status, required String participationId}) async {
     final AcceptParticipationBodyModel acceptParticipationBodyModel =
         AcceptParticipationBodyModel(
       notificationId: notificationId,
       status: status,
     );
     try {
-      final response = await _apiClient.post(
-        EndPoints.acceptParticipation(notificationId: notificationId),
+      final response = await _apiClient.put(
+        EndPoints.acceptParticipation(participationID: participationId),
         retryCallback: () {},
         data: acceptParticipationBodyModel.toJson(),
       );

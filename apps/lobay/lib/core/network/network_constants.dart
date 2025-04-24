@@ -29,8 +29,8 @@ class EndPoints {
   }) =>
       'api/activities/join?userId=$userId&activityId=$activityId';
 
-  static acceptParticipation({required String notificationId}) =>
-      'api/activities/participation/$notificationId';
+  static acceptParticipation({required String participationID}) =>
+      'api/activities/participation/$participationID';
 
   static getActivities({
     required String userId,

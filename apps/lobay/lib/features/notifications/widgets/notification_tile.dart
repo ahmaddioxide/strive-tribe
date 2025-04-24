@@ -62,12 +62,18 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
                       textSize: 16,
                       onPressed: () async {
                         _controller
-                            .acceptRequest(notificationId: notificationModel.id)
+                            .acceptRequest(
+                          notificationId: notificationModel.id,
+                          participationId: notificationModel.activityId,
+                        )
                             .then((value) async {
                           if (value) {
                             AppSnackbar.showSuccessSnackBar(
                                 message: 'Accepted');
                             await _controller.fetchNotifications();
+                          } else {
+                            AppSnackbar.showErrorSnackBar(
+                                message: 'Failed to accept');
                           }
                         });
                       },

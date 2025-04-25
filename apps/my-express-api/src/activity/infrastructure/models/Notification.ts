@@ -24,7 +24,7 @@ const NotificationSchema = new Schema({
   activityDate: { type: String },
   activityTime: { type: String },
   read: { type: Boolean, default: false },
-  status: { type: String, enum: ['pending', 'accepted', 'decline'], default: 'pending' },
+  status: { type: String, enum: ['pending', 'accepted', 'declined'], default: 'pending' },
 }, { timestamps: true });
 
 export default mongoose.model<INotification>("Notification", NotificationSchema);

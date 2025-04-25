@@ -1,4 +1,3 @@
-// src/notifications/application/GetUserNotifications.ts
 import { injectable } from "inversify";
 import NotificationModel from "../infrastructure/models/Notification";
 import Participation from "../infrastructure/models/Participation";
@@ -8,13 +7,14 @@ export class GetUserNotifications {
   async execute(userId: string) {
     const currentDate = new Date();
     
-    // Fetch notifications
-    const notifications = await NotificationModel.find({ userId }).lean();
+    // Fetch only notifications with 'pending' status
+    const notifications = await NotificationModel.find({
+      userId,
+      status: 'pending' // only pending status
+    }).lean();
 
-    // Prepare enhanced notifications
     const enrichedNotifications = await Promise.all(
       notifications.map(async (notification) => {
-        // Default: no participationId
         let participationId = null;
 
         if (notification.requesterId) {
@@ -27,11 +27,9 @@ export class GetUserNotifications {
           }
         }
 
-        // Filter logic
-        const includeNotification = (
-          notification.status !== 'pending' ||
-          this.parseActivityDateTime(notification.activityDate, notification.activityTime) > currentDate
-        );
+        // Check if the activity is in the future
+        const activityDateTime = this.parseActivityDateTime(notification.activityDate, notification.activityTime);
+        const includeNotification = activityDateTime > currentDate;
 
         return includeNotification
           ? { ...notification, participationId }
@@ -39,12 +37,11 @@ export class GetUserNotifications {
       })
     );
 
-    // Remove nulls from filtered out notifications
     return enrichedNotifications.filter(n => n !== null);
   }
 
   private parseActivityDateTime(date?: string, time?: string): Date {
-    if (!date || !time) return new Date(0); // Invalid date
+    if (!date || !time) return new Date(0);
 
     const [day, month, year] = date.split('-').map(Number);
     const timeMatch = time.match(/(\d+):(\d+) (AM|PM)/i);

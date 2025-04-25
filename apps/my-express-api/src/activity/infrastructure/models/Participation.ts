@@ -4,7 +4,7 @@ export interface IParticipation extends Document {
   activityId: mongoose.Types.ObjectId;
   userId: string;
   joinedAt: Date;
-  status: 'pending' | 'accepted' | 'decline';
+  status: 'pending' | 'accepted' | 'declined';
 }
 
 const ParticipationSchema: Schema = new Schema({
@@ -20,7 +20,7 @@ const ParticipationSchema: Schema = new Schema({
   },
   status: {
     type: String,
-    enum: ['pending', 'accepted', 'decline'],
+    enum: ['pending', 'accepted', 'declined'],
     default: 'pending'
   },
   joinedAt: {

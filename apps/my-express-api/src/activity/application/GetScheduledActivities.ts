@@ -1,11 +1,9 @@
-// 2. Use Case (business logic)
-// src/auth/application/GetScheduledActivities.ts
 import { injectable } from "inversify";
 import UserModel from "../../auth/infrastructure/models/User";
 
 @injectable()
 export class GetScheduledActivities {
-  async execute(userId: string) {
+  async execute(userId: string, activityFilter?: string | string[], playerLevelFilter?: string | string[]) {
     const currentDate = new Date();
     
     // Get user with scheduled activities
@@ -15,17 +13,31 @@ export class GetScheduledActivities {
 
     if (!user) throw new Error('User not found');
 
-    return Array.isArray(user.scheduledActivities) ? user.scheduledActivities
+    const activities = Array.isArray(user.scheduledActivities) ? user.scheduledActivities : [];
+
+    const activityArray = Array.isArray(activityFilter)
+      ? activityFilter
+      : activityFilter?.split(',') || [];
+
+    const levelArray = Array.isArray(playerLevelFilter)
+      ? playerLevelFilter
+      : playerLevelFilter?.split(',') || [];
+
+    return activities
       .filter(scheduled => 
-        this.isFutureActivity(scheduled.date, scheduled.time, currentDate)
+        this.isFutureActivity(scheduled.date, scheduled.time, currentDate) &&
+        (activityArray.length === 0 || activityArray.includes(scheduled.activity)) &&
+        (levelArray.length === 0 || levelArray.includes(scheduled.playerLevel))
       ).map(scheduled => ({
         id: scheduled._id.toString(),
+        activityId: scheduled.activityId,
         activity: scheduled.activity,
-        partnerName: scheduled.partnerName,
+        activityCreatorName: scheduled.partnerName,
+        playerLevel: scheduled.playerLevel,
         date: scheduled.date,
         time: scheduled.time,
         status: 'Upcoming'
-      })) : [];
+      }));
   }
 
   private isFutureActivity(dateStr: string, timeStr: string, now: Date): boolean {

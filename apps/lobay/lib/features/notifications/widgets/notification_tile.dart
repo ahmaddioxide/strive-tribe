@@ -4,6 +4,7 @@ import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/notifications_reponse_model.dart';
 import 'package:lobay/features/notifications/notifications_controller.dart';
+import 'package:lobay/utilities/app_utils/app_utils.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
@@ -39,14 +40,28 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                notificationModel.title + notificationModel.message,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      notificationModel.title + notificationModel.message,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  Text(
+                    AppUtils.timeAgo(notificationModel.createdAt),
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: AppColors.grey,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 5,
@@ -61,10 +76,10 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
                       buttonText: 'Accept',
                       textSize: 16,
                       onPressed: () async {
-                        _controller
+                        await _controller
                             .acceptRequest(
                           notificationId: notificationModel.id,
-                          participationId: notificationModel.activityId,
+                          participationId: notificationModel.participationId,
                         )
                             .then((value) async {
                           if (value) {
@@ -80,7 +95,22 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      await _controller
+                          .declineRequest(
+                        notificationId: notificationModel.id,
+                        participationId: notificationModel.participationId,
+                      )
+                          .then((value) async {
+                        if (value) {
+                          AppSnackbar.showSuccessSnackBar(message: 'Declined');
+                          await _controller.fetchNotifications();
+                        } else {
+                          AppSnackbar.showErrorSnackBar(
+                              message: 'Failed to decline');
+                        }
+                      });
+                    },
                     child: Text(
                       'Decline',
                       style: TextStyle(

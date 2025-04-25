@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget with DeviceSizeUtil {
           child: Obx(
             () {
               final userModel = profileController.userModel.value;
-              final profileImage = userModel?.user.profileImage;
+              final profileImage = userModel?.profileImage;
 
               return AppClickWidget(
                 onTap: () async {

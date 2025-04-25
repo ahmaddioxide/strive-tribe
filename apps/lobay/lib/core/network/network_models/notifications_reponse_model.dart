@@ -50,6 +50,7 @@ class NotificationModel {
   final String requesterId;
   final String activityDate;
   final String activityTime;
+  final String participationId;
   final bool read;
   final String status;
   final String createdAt;
@@ -63,6 +64,7 @@ class NotificationModel {
     required this.message,
     required this.profileImage,
     required this.activityId,
+    required this.participationId,
     required this.requesterId,
     required this.activityDate,
     required this.activityTime,
@@ -79,6 +81,7 @@ class NotificationModel {
       userId: json['userId'],
       title: json['title'],
       message: json['message'],
+      participationId: json['participationId'],
       profileImage: json['profileImage'],
       activityId: json['activityId'],
       requesterId: json['requesterId'],
@@ -99,6 +102,7 @@ class NotificationModel {
       'title': title,
       'message': message,
       'profileImage': profileImage,
+      'participationId': participationId,
       'activityId': activityId,
       'requesterId': requesterId,
       'activityDate': activityDate,

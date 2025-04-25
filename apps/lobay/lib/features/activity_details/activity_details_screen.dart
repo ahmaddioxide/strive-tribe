@@ -347,7 +347,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                           }
                           controller.joinActivity().then((value) {
                             if (value) {
-                              Get.back();
+                             Navigator.pop(context);
                             }
                           });
                         },

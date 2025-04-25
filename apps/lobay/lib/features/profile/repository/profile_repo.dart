@@ -7,7 +7,7 @@ class ProfileRepo {
 
   //get user
 
-  Future<GetUserResponseBody?> getUser({required final String userId}) async {
+  Future<UserModel?> getUser({required final String userId}) async {
     try {
       final response = await _apiClient.get(
         EndPoints.getUser(userId),
@@ -15,7 +15,7 @@ class ProfileRepo {
       );
       if (response.statusCode == 200) {
         // Handle successful login
-        final getUserResponse = GetUserResponseBody.fromJson(response.data);
+        final getUserResponse = UserModel.fromJson(response.data);
         return getUserResponse;
       } else {
         // Handle error response

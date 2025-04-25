@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/create_activity_body.dart';
 import 'package:lobay/services/shared_pref_service.dart';
 import 'package:lobay/features/create_activity/activity_repo/activity_repo.dart';
@@ -22,9 +23,6 @@ class CreateActivityController extends GetxController {
   Rx<XFile?> videoFile = Rx<XFile?>(null);
 
   final formKey = GlobalKey<FormState>();
-
-
-
 
   void showDatePickerAdaptive(BuildContext context) {
     // if (GetPlatform.isIOS) {
@@ -93,7 +91,7 @@ class CreateActivityController extends GetxController {
     // }
   }
 
-void showTimePickerAdaptive(BuildContext context) {
+  void showTimePickerAdaptive(BuildContext context) {
     if (GetPlatform.isIOS) {
       showCupertinoModalPopup(
         context: context,
@@ -109,7 +107,8 @@ void showTimePickerAdaptive(BuildContext context) {
                   initialDateTime: DateTime.now(),
                   mode: CupertinoDatePickerMode.time,
                   onDateTimeChanged: (DateTime newTime) {
-                    final formattedTime = TimeOfDay.fromDateTime(newTime).format(context);
+                    final formattedTime =
+                        TimeOfDay.fromDateTime(newTime).format(context);
                     timeController.text = formattedTime;
                   },
                 ),
@@ -156,6 +155,7 @@ void showTimePickerAdaptive(BuildContext context) {
       );
     }
   }
+
   Future<void> pickVideo() async {
     final pickedFile =
         await ImagePicker().pickVideo(source: ImageSource.gallery);
@@ -173,6 +173,11 @@ void showTimePickerAdaptive(BuildContext context) {
     final changedDate = dateController.text.split('-').reversed.join('-');
     final userId = await PreferencesManager.getInstance()
         .getStringValue('userId', FirebaseAuth.instance.currentUser!.uid);
+
+    if (base64String.isEmpty) {
+      AppSnackbar.showErrorSnackBar(message: 'Please select a video');
+      return false;
+    }
     final CreateActivityBody createActivityBody = CreateActivityBody(
       userId: userId,
       Activity: selectedActivity.value,
@@ -182,7 +187,9 @@ void showTimePickerAdaptive(BuildContext context) {
       Date: changedDate,
       Time: timeController.text,
       notes: notesController.text,
-      video: 'data:video/mp4;base64,$base64String',
+      video: base64String.isNotEmpty
+          ? 'data:video/mp4;base64,$base64String'
+          : null,
     );
 
     log(createActivityBody.video.toString());

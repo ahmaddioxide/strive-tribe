@@ -43,7 +43,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                 final bool ifImageExists =
                     editProfileController.userModel.value == null ||
                         (editProfileController
-                            .userModel.value!.user.profileImage.isEmpty);
+                            .userModel.value!.profileImage.isEmpty);
                 return Align(
                   alignment: Alignment.center,
                   child: Column(
@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                             networkImage: !ifImageExists,
                             imagePathOrURL: !ifImageExists
                                 ? editProfileController
-                                    .userModel.value!.user.profileImage
+                                    .userModel.value!.profileImage
                                 : Assets.imagesPlaceholderPerson,
                             height: height * 0.11,
                             width: height * 0.11,
@@ -65,7 +65,7 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                       ),
                       SizedBox(height: height * 0.01),
                       Text(
-                        editProfileController.userModel.value?.user.gamesPlayed
+                        editProfileController.userModel.value?.gamesPlayed
                                 .toString() ??
                             '0',
                         style: TextUtils.getStyle(

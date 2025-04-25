@@ -25,7 +25,6 @@ class NotificationsScreen extends StatelessWidget with DeviceSizeUtil {
           horizontal: width * 0.05,
         ),
         child: Column(
-          // mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -48,6 +47,7 @@ class NotificationsScreen extends StatelessWidget with DeviceSizeUtil {
                 color: AppColors.grey,
               ),
             ),
+            SizedBox(height: height * 0.02),
             Obx(() {
               if (_controller.isLoading.value) {
                 return Column(
@@ -90,6 +90,7 @@ class NotificationsScreen extends StatelessWidget with DeviceSizeUtil {
               }
               return Expanded(
                 child: ListView.separated(
+                  padding: EdgeInsets.zero,
                   itemBuilder: (context, index) {
                     return NotificationTile(
                       notificationModel: _controller.notifications[index],

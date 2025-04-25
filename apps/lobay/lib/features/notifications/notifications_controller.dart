@@ -53,4 +53,16 @@ class NotificationsController extends GetxController {
       return false;
     }
   }
+  Future<bool> declineRequest({required String notificationId, required String participationId}) async {
+    try {
+      final response = await _notificationRepo.acceptNotification(
+        notificationId: notificationId,
+        participationId:participationId,
+        status: 'declined',
+      );
+      return response.success;
+    } catch (e) {
+      return false;
+    }
+  }
 }

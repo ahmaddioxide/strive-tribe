@@ -31,7 +31,7 @@ class ProfileController extends GetxController {
   RxString profileImage = ''.obs;
   Rx<XFile?> profileImageFile = Rx<XFile?>(null);
 
-  Rx<GetUserResponseBody?> userModel = Rx<GetUserResponseBody?>(null);
+  Rx<UserModel?> userModel = Rx<UserModel?>(null);
 
   final profileRepo = ProfileRepo();
 
@@ -55,13 +55,13 @@ class ProfileController extends GetxController {
     }
     userModel.value = response;
     extractAndRemoveCountryCode();
-    emailController.text = response.user.email;
-    nameController.text = response.user.name;
-    phoneController.text = response.user.phoneNumber;
-    dateOfBirthController.text = response.user.dateOfBirth;
-    gender.value = response.user.gender;
-    postalCodeController.text = response.user.postalCode;
-    profileImage.value = response.user.profileImage;
+    emailController.text = response.email;
+    nameController.text = response.name;
+    phoneController.text = response.phoneNumber;
+    dateOfBirthController.text = response.dateOfBirth;
+    gender.value = response.gender;
+    postalCodeController.text = response.postalCode;
+    profileImage.value = response.profileImage;
   }
 
   Future<void> pickImage() async {
@@ -199,11 +199,11 @@ class ProfileController extends GetxController {
   }
 
   Future<void> extractAndRemoveCountryCode() async {
-    String? phoneNumber = userModel.value?.user.phoneNumber;
+    String? phoneNumber = userModel.value?.phoneNumber;
     final phoneNumberNew =
         PhoneNumber.fromCompleteNumber(completeNumber: phoneNumber!);
     initialCountry.value = phoneNumberNew.countryISOCode;
-    userModel.value?.user.phoneNumber = phoneNumberNew.number;
+    userModel.value?.phoneNumber = phoneNumberNew.number;
   }
 
   Future<void> updateProfile() async {
@@ -216,7 +216,7 @@ class ProfileController extends GetxController {
       });
 
       newBody = {
-        'user_id': '${userModel.value?.user.userId}',
+        'user_id': '${userModel.value?.userId}',
         'name': nameController.text,
         'gender': gender.value,
         'dateOfBirth': dateOfBirthController.text,
@@ -226,7 +226,7 @@ class ProfileController extends GetxController {
       };
     } else {
       newBody = {
-        'user_id': '${userModel.value?.user.userId}',
+        'user_id': '${userModel.value?.userId}',
         'name': nameController.text,
         'gender': gender.value,
         'dateOfBirth': dateOfBirthController.text,

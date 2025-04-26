@@ -32,6 +32,23 @@ class EndPoints {
   static acceptParticipation({required String participationID}) =>
       'api/activities/participation/$participationID';
 
+  static getScheduledActivities({
+    required String userId,
+    String? activity,
+    String? playerLevel,
+  }) {
+    // /api/activities/scheduled/LRh76OzNtWaPcBMuWMuxjtN9WiW2?activity=Tenis, Football&playerLevel=Intermediate
+    final queryParams = {
+      if (activity != null && activity.isNotEmpty) 'activity': activity,
+      if (playerLevel != null && playerLevel.isNotEmpty)
+        'playerLevel': playerLevel,
+    };
+    if (queryParams.isNotEmpty) {
+      return 'api/activities/scheduled/$userId?${queryParams.entries.map((e) => '${e.key}=${e.value}').join('&')}';
+    }
+    return 'api/activities/scheduled/$userId';
+  }
+
   static getActivities({
     required String userId,
     String? activityName,

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/features/profile/profile_controller.dart';
 import 'package:lobay/features/profile/edit_profile/edit_profile_screen.dart';
+import 'package:lobay/features/scheduled_activities/scheduled_activities_screen.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import '../../generated/assets.dart';
@@ -131,7 +132,11 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                       ),
                       trailing:
                           Icon(Icons.arrow_forward_ios, color: AppColors.grey),
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(
+                          () => ScheduledActivitiesScreen(),
+                        );
+                      },
                     ),
                     ListTile(
                       leading: Icon(Icons.sports_tennis_outlined),

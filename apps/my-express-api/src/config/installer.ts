@@ -16,6 +16,7 @@ import { AddActivity } from "../activity/application/AddActivity";
 import { UpdateParticipationStatus } from "../activity/application/UpdateParticipationStatus";
 import { GetUserNotifications } from "../activity/application/GetNotifications";
 import { GetScheduledActivities } from "../activity/application/GetScheduledActivities";
+import { GetUserStats } from "../../src/auth/application/GetUserStats";
 
 import { ParticipateActivity } from "../activity/application/ParticipateActivity";
 
@@ -37,6 +38,7 @@ container.bind<ParticipateActivity>(ParticipateActivity).toSelf();
 container.bind<UpdateParticipationStatus>(UpdateParticipationStatus).toSelf();
 container.bind<GetUserNotifications>(GetUserNotifications).toSelf();
 container.bind<GetScheduledActivities>(GetScheduledActivities).toSelf();
+container.bind<GetUserStats>(GetUserStats).toSelf();
 container.bind<AuthController>(Identifier.AuthController).to(AuthController);
 container.bind<ActivityController>(Identifier.ActivityController).to(ActivityController);
 

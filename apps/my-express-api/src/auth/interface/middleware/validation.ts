@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import e, { Request, Response, NextFunction } from "express";
 import { body, validationResult, query, param } from "express-validator";
 
 export const validateRegister = [
@@ -156,3 +156,17 @@ export const validateGetUser = [
     next();
   }
 ];
+  
+export const validateGetUserById = [
+  query("userId").notEmpty().withMessage("userId is required"),
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array() 
+      });
+    }
+    next();
+  }
+]

@@ -5,8 +5,9 @@ import { LoginUser } from "../../application/login";
 import { UpdateUser } from "../../application/update";
 import { CheckUser } from "../../application/check";
 import { GetUser } from "../../application/getUser";
+import { GetUserStats } from "../../application/GetUserStats";
 import IController from "./IController";
-import { validateRegister, validateLogin, validateUpdate, validateCheckUser, validateGetUser } from "../middleware/validation";
+import { validateRegister, validateLogin, validateUpdate, validateCheckUser, validateGetUser, validateGetUserById } from "../middleware/validation";
 
 @injectable()
 export default class AuthController implements IController {
@@ -17,19 +18,22 @@ export default class AuthController implements IController {
   private updateUser: UpdateUser;
   private checkUser: CheckUser;
   private getUser: GetUser;
+  private getUserStats: GetUserStats;
 
   constructor(
     @inject(RegisterUser) registerUser: RegisterUser,
     @inject(LoginUser) loginUser: LoginUser,
     @inject(UpdateUser) updateUser: UpdateUser,
     @inject(CheckUser) checkUser: CheckUser,
-    @inject(GetUser) getUser: GetUser
+    @inject(GetUser) getUser: GetUser,
+    @inject(GetUserStats) getUserStats: GetUserStats
   ) {
     this.registerUser = registerUser;
     this.loginUser = loginUser;
     this.updateUser = updateUser;
     this.checkUser = checkUser;
     this.getUser = getUser;
+    this.getUserStats = getUserStats;
     this.initializeRoutes();
   }
 
@@ -58,6 +62,11 @@ export default class AuthController implements IController {
       `${this.path}/getuser`,
       validateGetUser,
       this.getUserHandler.bind(this)
+    );
+    this.router.get(
+      `${this.path}/user-stats`,
+      validateGetUserById,
+      this.handleGetStats.bind(this)
     );
   }
 
@@ -174,6 +183,22 @@ export default class AuthController implements IController {
           error: error.message || "Failed to fetch user data"
         });
       }
+    }
+  }
+
+  private async handleGetStats(req: Request, res: Response) {
+    try {
+      const result = await this.getUserStats.execute(req.query.userId as string);
+      res.status(200).json({
+        success: true,
+        data: result
+      });
+    } catch (error: any) {
+      const statusCode = error.message.includes('not found') ? 404 : 500;
+      res.status(statusCode).json({
+        success: false,
+        error: error.message
+      });
     }
   }
 }

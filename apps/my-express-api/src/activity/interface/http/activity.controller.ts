@@ -191,14 +191,18 @@ export class ActivityController implements IController {
 
   private async handleScheduledActivities(req: Request, res: Response) {
     try {
-      const result = await this.getScheduledActivities.execute(req.params.userId);
-      
+      const result = await this.getScheduledActivities.execute(
+        req.params.userId,
+        req.query.activity as string | string[],
+        req.query.playerLevel as string | string[]
+      );
+  
       res.status(200).json({
         success: true,
         count: result.length,
         scheduledActivities: result
       });
-      
+  
     } catch (error: any) {
       const statusCode = error.message.includes('not found') ? 404 : 500;
       res.status(statusCode).json({
@@ -207,5 +211,6 @@ export class ActivityController implements IController {
       });
     }
   }
+  
   
 }

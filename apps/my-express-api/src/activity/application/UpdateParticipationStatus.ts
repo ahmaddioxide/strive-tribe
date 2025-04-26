@@ -30,8 +30,10 @@ export class UpdateParticipationStatus {
 
   private formatActivityEntry(activity: any, partnerName: string): object {
     return {
+      activityId: activity._id,
       activity: activity.Activity,
       partnerName: partnerName,
+      playerLevel: activity.PlayerLevel,
       date: activity.Date,
       time: activity.Time,
     };
@@ -41,57 +43,71 @@ export class UpdateParticipationStatus {
     const participation = await ParticipationModel.findById(id)
       .populate({
         path: 'activityId',
-        select: 'Date Time Activity userId'
+        select: 'Date Time Activity userId PlayerLevel',
       });
-
+  
     if (!participation) {
       throw new Error("Participation record not found");
     }
-
+  
     if (!participation.activityId) {
       throw new Error("Associated activity not found");
     }
-
+  
     const activity = participation.activityId as any;
-
-    // Validate only if accepting
+  
     if (status === 'accepted') {
       const activityDateTime = this.parseActivityDateTime(activity.Date, activity.Time);
       if (new Date() >= activityDateTime) {
         throw new Error("Cannot accept - activity has already occurred");
       }
     }
-
-    // Update status and mark as read
+  
     const updatedParticipation = await ParticipationModel.findByIdAndUpdate(
       id,
       { status },
       { new: true }
     );
-
+  
     if (notificationId) {
       await NotificationModel.findByIdAndUpdate(
         notificationId,
-        { status},
-        { read: true }
-        
+        { status, read: true }
       );
     }
-
-    // Only update scheduledActivities if status is 'accepted'
+  
     if (status === 'accepted' && updatedParticipation) {
       const [requester, creator] = await Promise.all([
         UserModel.findOne({ userId: participation.userId }),
         UserModel.findOne({ userId: activity.userId })
       ]);
-
+  
       if (!requester || !creator) {
         throw new Error("User records not found");
       }
-
+  
+      // 🔽🔽🔽 Added duplicate check using activityId 🔽🔽🔽
+      const activityId = activity._id.toString();
+      
+      const [requesterHasActivity, creatorHasActivity] = await Promise.all([
+        UserModel.countDocuments({
+          _id: requester._id,
+          'scheduledActivities.activityId': activityId
+        }),
+        UserModel.countDocuments({
+          _id: creator._id,
+          'scheduledActivities.activityId': activityId
+        })
+      ]);
+  
+      if (requesterHasActivity > 0 || creatorHasActivity > 0) {
+        throw new Error("Activity already scheduled for one of the participants");
+      }
+      // 🔼🔼🔼 End of duplicate check 🔼🔼🔼
+  
       const requesterEntry = this.formatActivityEntry(activity, creator.name);
       const creatorEntry = this.formatActivityEntry(activity, requester.name);
-
+  
       await Promise.all([
         UserModel.findByIdAndUpdate(
           requester._id,
@@ -103,7 +119,7 @@ export class UpdateParticipationStatus {
         )
       ]);
     }
-
+  
     return updatedParticipation;
   }
 }

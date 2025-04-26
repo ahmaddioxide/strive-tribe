@@ -139,4 +139,13 @@ export const validateGetNotifications = [
 export const validateGetScheduledActivities = [
   param('userId')
     .notEmpty().withMessage('User ID is required')
+    .isMongoId().withMessage('Invalid user ID format'),
+  query('activity')
+    .optional()
+    .isString()
+    .withMessage('Activity filter must be a comma-separated string'),
+  query('playerLevel')
+    .optional()
+    .isString()
+    .withMessage('Player level filter must be a comma-separated string')
 ];

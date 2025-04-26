@@ -159,6 +159,13 @@
           "hash": "3244421341483603138"
         },
         {
+          "file": "apps/my-express-api/src/auth/application/GetUserStats.ts",
+          "hash": "6893685277458022650",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
           "file": "apps/my-express-api/src/auth/application/check.ts",
           "hash": "17797461918742594613",
           "deps": [
@@ -223,7 +230,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/auth.controller.ts",
-          "hash": "1893742919869920992",
+          "hash": "1400677515356285558",
           "deps": [
             "npm:express",
             "npm:inversify"
@@ -261,7 +268,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
-          "hash": "11432321178996017964",
+          "hash": "9129258778955329181",
           "deps": [
             "npm:express",
             "npm:express-validator"
@@ -284,7 +291,7 @@
         },
         {
           "file": "apps/my-express-api/src/config/installer.ts",
-          "hash": "6914754745246344176",
+          "hash": "8932479225800372361",
           "deps": [
             "npm:inversify"
           ]
@@ -572,7 +579,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/configure_fingerprint.bin",
-          "hash": "1022446948444375689"
+          "hash": "9715258496826889857"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/arm64-v8a/metadata_generation_command.txt",
@@ -696,7 +703,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/configure_fingerprint.bin",
-          "hash": "9578538448640814228"
+          "hash": "762255116255739058"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/metadata_generation_command.txt",
@@ -824,7 +831,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86/configure_fingerprint.bin",
-          "hash": "5423919436727802630"
+          "hash": "17411039531999667507"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86/metadata_generation_command.txt",
@@ -948,7 +955,7 @@
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/configure_fingerprint.bin",
-          "hash": "10467043268011570561"
+          "hash": "757062835111122960"
         },
         {
           "file": "apps/lobay/android/app/.cxx/Debug/t8683b11/x86_64/metadata_generation_command.txt",
@@ -1392,7 +1399,7 @@
         },
         {
           "file": "apps/lobay/lib/common_widgets/app_image_widget.dart",
-          "hash": "10548402880080922780"
+          "hash": "17995318518758008864"
         },
         {
           "file": "apps/lobay/lib/common_widgets/app_snackbars.dart",
@@ -1424,7 +1431,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_constants.dart",
-          "hash": "8358303143379046411"
+          "hash": "6591912927530759147"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/accept_participation_reponse_model.dart",
@@ -1479,12 +1486,16 @@
           "hash": "12245702576380340273"
         },
         {
+          "file": "apps/lobay/lib/core/network/network_models/user_stats_response_model.dart",
+          "hash": "17403966909357117936"
+        },
+        {
           "file": "apps/lobay/lib/core/shared_preferences/shared_pref.dart",
           "hash": "1775961838784076765"
         },
         {
           "file": "apps/lobay/lib/features/activity_details/activity_details_controller.dart",
-          "hash": "10969595168870711548"
+          "hash": "913451190200319255"
         },
         {
           "file": "apps/lobay/lib/features/activity_details/activity_details_screen.dart",
@@ -1560,7 +1571,7 @@
         },
         {
           "file": "apps/lobay/lib/features/home/repository/activities_repo.dart",
-          "hash": "4576528188564645273"
+          "hash": "4190322242654700136"
         },
         {
           "file": "apps/lobay/lib/features/home/widgets/activities.dart",
@@ -1579,8 +1590,8 @@
           "hash": "3071819273245505564"
         },
         {
-          "file": "apps/lobay/lib/features/notifications/notification_details_screen.dart",
-          "hash": "15246286862892624653"
+          "file": "apps/lobay/lib/features/notifications/notification_details_and_user_stats_screen.dart",
+          "hash": "9627493083433437547"
         },
         {
           "file": "apps/lobay/lib/features/notifications/notifications_controller.dart",
@@ -1595,8 +1606,12 @@
           "hash": "13237632521205385157"
         },
         {
+          "file": "apps/lobay/lib/features/notifications/user_stat_controller.dart",
+          "hash": "10721808955793577072"
+        },
+        {
           "file": "apps/lobay/lib/features/notifications/widgets/notification_tile.dart",
-          "hash": "2211053816887741656"
+          "hash": "16425688454517401121"
         },
         {
           "file": "apps/lobay/lib/features/onboarding/onboarding_controller.dart",
@@ -1632,7 +1647,7 @@
         },
         {
           "file": "apps/lobay/lib/features/profile/repository/profile_repo.dart",
-          "hash": "1255781533288688953"
+          "hash": "8460467661385994972"
         },
         {
           "file": "apps/lobay/lib/features/scheduled_activities/filter_bottomsheet_widget.dart",
@@ -1821,10 +1836,6 @@
         },
         {
           "file": "tmp/apps/my-express-api/serve/tsconfig.generated.7f32174a-ddaa-4701-a12c-0d84b2e92ea7.json",
-          "hash": "14086997084547600071"
-        },
-        {
-          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.fb2e5777-e0bf-4a1d-b880-d9eb75c3d69d.json",
           "hash": "14086997084547600071"
         },
         {

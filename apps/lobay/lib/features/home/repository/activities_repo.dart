@@ -66,10 +66,11 @@ class ActivityRepository {
         retryCallback: () {},
       );
 
-      if (response.statusCode! >= 200 || response.statusCode! < 300) {
+      if (response.statusCode! >= 200 && response.statusCode! < 300) {
         return JoinActivityResponseModel.fromJson(response.data);
       } else {
-        throw Exception('Failed to join activity: ${response.statusMessage}');
+        throw Exception(
+            '${response.data['error']}');
       }
     } catch (e) {
       rethrow;

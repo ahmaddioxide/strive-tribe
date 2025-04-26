@@ -154,7 +154,7 @@ class ActivityDetailsController extends GetxController {
       }
     } catch (e) {
       log('Error joining the activity: $e');
-      AppSnackbar.showErrorSnackBar(message: 'Failed to join the activity');
+      AppSnackbar.showErrorSnackBar(message: e.toString());
       return false;
     } finally {
       isJoining.value = false;

@@ -16,6 +16,8 @@ class EndPoints {
 
   static getUser(String userId) => 'api/auth/getuser?user_id=$userId';
 
+  static getUserStats(String userId) => 'api/auth/user-stats?userId=$userId';
+
   static const String updateuser = 'api/auth/update';
 
   static const String createActivity = 'api/activities/create-activity';

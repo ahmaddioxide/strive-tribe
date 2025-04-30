@@ -6,8 +6,9 @@ import { UpdateUser } from "../../application/update";
 import { CheckUser } from "../../application/check";
 import { GetUser } from "../../application/getUser";
 import { GetUserStats } from "../../application/GetUserStats";
+import { FindNearbyPlayers } from "../../application/FindNearbyPlayers";
 import IController from "./IController";
-import { validateRegister, validateLogin, validateUpdate, validateCheckUser, validateGetUser, validateGetUserById } from "../middleware/validation";
+import { validateRegister, validateLogin, validateUpdate, validateCheckUser, validateGetUser, validateGetUserById, validateNearPlayerByUserById } from "../middleware/validation";
 
 @injectable()
 export default class AuthController implements IController {
@@ -19,6 +20,7 @@ export default class AuthController implements IController {
   private checkUser: CheckUser;
   private getUser: GetUser;
   private getUserStats: GetUserStats;
+  private findNearbyPlayers: FindNearbyPlayers;
 
   constructor(
     @inject(RegisterUser) registerUser: RegisterUser,
@@ -26,7 +28,8 @@ export default class AuthController implements IController {
     @inject(UpdateUser) updateUser: UpdateUser,
     @inject(CheckUser) checkUser: CheckUser,
     @inject(GetUser) getUser: GetUser,
-    @inject(GetUserStats) getUserStats: GetUserStats
+    @inject(GetUserStats) getUserStats: GetUserStats,
+    @inject(FindNearbyPlayers) findNearbyPlayers: FindNearbyPlayers
   ) {
     this.registerUser = registerUser;
     this.loginUser = loginUser;
@@ -34,6 +37,7 @@ export default class AuthController implements IController {
     this.checkUser = checkUser;
     this.getUser = getUser;
     this.getUserStats = getUserStats;
+    this.findNearbyPlayers = findNearbyPlayers;
     this.initializeRoutes();
   }
 
@@ -67,6 +71,11 @@ export default class AuthController implements IController {
       `${this.path}/user-stats`,
       validateGetUserById,
       this.handleGetStats.bind(this)
+    );
+    this.router.get(
+      `${this.path}/nearby-players/:userId`,
+      validateNearPlayerByUserById,
+      this.handleNearbyPlayers.bind(this)
     );
   }
 
@@ -195,6 +204,27 @@ export default class AuthController implements IController {
       });
     } catch (error: any) {
       const statusCode = error.message.includes('not found') ? 404 : 500;
+      res.status(statusCode).json({
+        success: false,
+        error: error.message
+      });
+    }
+  }
+
+  private async handleNearbyPlayers(req: Request, res: Response) {
+    try {
+      const activities = req.query.activity 
+        ? (req.query.activity as string).split(',').map(a => a.trim())
+        : [];
+  
+      const result = await this.findNearbyPlayers.execute(
+        req.params.userId,
+        activities
+      );
+      
+      res.status(200).json(result);
+    } catch (error: any) {
+      const statusCode = error.message.includes("not found") ? 404 : 500;
       res.status(statusCode).json({
         success: false,
         error: error.message

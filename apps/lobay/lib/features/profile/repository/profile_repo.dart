@@ -48,15 +48,16 @@ class ProfileRepo {
     }
   }
 
-  Future<UserStatsResponseModel?> getUserStats({required String userId}) async {
+  Future<GetUserActivityResponseModel?> getUserStats(
+      {required String requesterId, required String activityId}) async {
     try {
       final response = await _apiClient.get(
-        EndPoints.getUserStats(userId),
+        EndPoints.getUserStats(requesterId, activityId),
         retryCallback: () {},
       );
       if (response.statusCode == 200) {
         // Handle successful login
-        final getUserResponse = UserStatsResponseModel.fromJson(response.data);
+        final getUserResponse = GetUserActivityResponseModel.fromJson(response.data);
         return getUserResponse;
       } else {
         // Handle error response

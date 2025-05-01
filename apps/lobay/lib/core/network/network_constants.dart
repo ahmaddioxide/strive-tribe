@@ -16,7 +16,8 @@ class EndPoints {
 
   static getUser(String userId) => 'api/auth/getuser?user_id=$userId';
 
-  static getUserStats(String userId) => 'api/auth/user-stats?userId=$userId';
+  static getUserStats(String requesterId, String activityId) =>
+      'api/auth/user-stats?requesterId=$requesterId&activityId=$activityId';
 
   static const String updateuser = 'api/auth/update';
 

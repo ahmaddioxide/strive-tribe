@@ -1,3 +1,7 @@
+// {
+// "success": true,
+// "notifications": [
+// {
 // "_id": "680a55914c942c4d5555bd78",
 // "userId": "LRh76OzNtWaPcBMuWMuxjtN9WiW2",
 // "title": "Test User is requesting to play",
@@ -12,7 +16,9 @@
 // "createdAt": "2025-04-24T15:15:29.423Z",
 // "updatedAt": "2025-04-24T15:19:05.010Z",
 // "__v": 0
-
+// }
+// ]
+// }
 
 class NotificationsResponse {
   final bool success;
@@ -35,7 +41,8 @@ class NotificationsResponse {
   Map<String, dynamic> toJson() {
     return {
       'success': success,
-      'notifications': notifications.map((notification) => notification.toJson()).toList(),
+      'notifications':
+          notifications.map((notification) => notification.toJson()).toList(),
     };
   }
 }

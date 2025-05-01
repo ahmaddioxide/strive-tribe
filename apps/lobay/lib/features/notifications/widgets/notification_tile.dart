@@ -25,16 +25,19 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
     final width = getDeviceWidth();
     return AppClickWidget(
       onTap: () {
-        Get.to(NotificationAndUserStatsScreen(
-          userId: notificationModel.userId,
-          sport: notificationModel.message,
-        ),
+        Get.to(
+            NotificationAndUserStatsScreen(
+              requestorId: notificationModel.requesterId,
+              activityId: notificationModel.activityId,
+              participationId: notificationModel.participationId,
+              notificationId: notificationModel.id,
+            ),
             arguments: {
-          'notificationId': notificationModel.id,
-          'participationId': notificationModel.participationId,
-          'userId': notificationModel.userId,
-          'isFromNotification': true,
-        });
+              'notificationId': notificationModel.id,
+              'participationId': notificationModel.participationId,
+              'userId': notificationModel.userId,
+              'isFromNotification': true,
+            });
       },
       child: Row(
         mainAxisSize: MainAxisSize.min,

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.nx/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.nx/workspace-data" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/Runner.xcworkspace/xcuserdata" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/image_picker_ios/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/image_picker_ios/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/image_picker_ios/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/image_picker_ios/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/image_picker_ios/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/image_picker_ios/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/path_provider_foundation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/path_provider_foundation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/path_provider_foundation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/path_provider_foundation/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/path_provider_foundation/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/path_provider_foundation/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/shared_preferences_foundation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/shared_preferences_foundation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/shared_preferences_foundation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/shared_preferences_foundation/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/shared_preferences_foundation/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/shared_preferences_foundation/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/sqflite_darwin/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/sqflite_darwin/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/sqflite_darwin/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/sqflite_darwin/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/sqflite_darwin/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/sqflite_darwin/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_auth/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_auth/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_auth/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_auth/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_auth/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_auth/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_core/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_core/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/firebase_core/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_facebook_auth/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_facebook_auth/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_facebook_auth/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_secure_storage/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_secure_storage/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_secure_storage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_secure_storage/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_secure_storage/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/flutter_secure_storage/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/google_sign_in_ios/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/google_sign_in_ios/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/google_sign_in_ios/build" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/google_sign_in_ios/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/google_sign_in_ios/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/lobay/ios/.symlinks/plugins/google_sign_in_ios/example/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>

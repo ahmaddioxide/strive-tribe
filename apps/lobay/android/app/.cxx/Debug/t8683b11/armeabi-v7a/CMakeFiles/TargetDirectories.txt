@@ -1,0 +1,2 @@
+/Users/ahmad/Development/lobay/apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/ahmad/Development/lobay/apps/lobay/android/app/.cxx/Debug/t8683b11/armeabi-v7a/CMakeFiles/rebuild_cache.dir

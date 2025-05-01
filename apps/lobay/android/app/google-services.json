@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "529754058814",
+    "project_id": "strive-tribe",
+    "storage_bucket": "strive-tribe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529754058814:android:35672621796c153a4ea16f",
+        "android_client_info": {
+          "package_name": "com.lobay.app.lobay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5Ho9l1K4hP6LshzwmdqzbcHjg3oUdiLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

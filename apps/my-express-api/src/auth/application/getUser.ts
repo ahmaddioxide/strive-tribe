@@ -9,7 +9,7 @@ export class GetUser {
     // Get user data with scheduled activities
     const [user, totalActivities] = await Promise.all([
       UserModel.findOne({ userId })
-        .select('id name email profileImage placeName state countryName scheduledActivities gamesPlayed')
+        .select('id name email profileImage placeName state countryName scheduledActivities gamesPlayed activities')
         .lean(),
       ActivityModel.countDocuments({ userId })
     ]);
@@ -48,15 +48,18 @@ export class GetUser {
     const activitiesPerMonth = Array.from(monthlyCounts.values()).map(count => ({ count }));
 
     // Exclude _id and scheduledActivities from final response
-    const { scheduledActivities: _, _id, ...restUser } = user;
+    const { scheduledActivities: _, _id, activities, ...restUser } = user;
 
     const userWithStats = {
       ...restUser,
+      userId,
       id: _id?.toString() || '',
+      activities,
       totalActivities,
       gamesPlayed,
       differentOpponents: opponentIds.size,
-      activitiesPerMonth
+      activitiesPerMonth,
+      
     };
 
     return userWithStats;

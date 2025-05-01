@@ -14,7 +14,7 @@ class EndPoints {
   static checkUserExistance(String userId) =>
       'api/auth/checkuser?user_id=$userId';
 
-  static getUser(String userId) => 'api/auth/getuser?user_id=$userId';
+  static getUser(String userId) => 'api/auth/getuser?userId=$userId';
 
   static getUserStats(String requesterId, String activityId) =>
       'api/auth/user-stats?requesterId=$requesterId&activityId=$activityId';

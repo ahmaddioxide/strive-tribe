@@ -199,7 +199,7 @@ class ProfileController extends GetxController {
   }
 
   Future<void> extractAndRemoveCountryCode() async {
-    String? phoneNumber = userModel.value?.phoneNumber;
+    String? phoneNumber = userModel.value?.;
     final phoneNumberNew =
         PhoneNumber.fromCompleteNumber(completeNumber: phoneNumber!);
     initialCountry.value = phoneNumberNew.countryISOCode;

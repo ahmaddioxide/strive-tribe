@@ -158,7 +158,22 @@ export const validateGetUser = [
 ];
   
 export const validateGetUserById = [
-  query("userId").notEmpty().withMessage("userId is required"),
+  query("requesterId").notEmpty().withMessage("requesterId is required"),
+  query("activityId").notEmpty().withMessage("userId is required"),
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array() 
+      });
+    }
+    next();
+  }
+]
+
+export const validateNearPlayerByUserById = [
+  param("userId").notEmpty().withMessage("userId is required"),
   (req: Request, res: Response, next: NextFunction) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

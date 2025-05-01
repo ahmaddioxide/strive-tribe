@@ -48,6 +48,7 @@ const UserSchema: Schema = new Schema({
   },
   isVerified: { type: Boolean, default: false },
   scheduledActivities: [{
+    userId: { type: String },
     activityId: { type: String },
     activity: { type: String },
     partnerName: { type: String },

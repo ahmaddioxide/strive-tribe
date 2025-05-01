@@ -4180,9 +4180,9 @@
       "type": "npm",
       "name": "npm:axios",
       "data": {
-        "version": "1.7.9",
+        "version": "1.8.4",
         "packageName": "axios",
-        "hash": "sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw=="
+        "hash": "sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw=="
       }
     },
     "npm:babel-jest": {

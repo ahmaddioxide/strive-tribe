@@ -49,7 +49,7 @@
   "nx": {},
   "dependencies": {
     "aws-sdk": "^2.1692.0",
-    "axios": "^1.6.0",
+    "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "express": "^4.18.1",

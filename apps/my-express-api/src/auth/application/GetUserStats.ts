@@ -1,5 +1,3 @@
-// 1. Create new use case
-// src/user/application/GetUserStats.ts
 import { injectable } from "inversify";
 import UserModel from "../infrastructure/models/User";
 import ActivityModel from "../../activity/infrastructure/models/Activity";
@@ -17,6 +15,33 @@ export class GetUserStats {
 
     if (!user) throw new Error('User not found');
 
+    // Calculate activities per month
+    const monthlyActivities = new Map<string, number>();
+    Array.isArray(user.scheduledActivities) && user.scheduledActivities.forEach(activity => {
+      if (typeof activity.date === 'string') {
+        try {
+          const [day, month, year] = activity.date.split('-');
+          const monthYear = `${month}-${year}`;
+          monthlyActivities.set(monthYear, (monthlyActivities.get(monthYear) || 0) + 1);
+        } catch {
+          // Ignore invalid dates
+        }
+      }
+    });
+
+    // Convert map to sorted array
+    const activitiesPerMonth = Array.from(monthlyActivities)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([monthYear, count]) => ({
+        count
+      }));
+
+    // Calculate different opponents
+    const opponentIds = new Set<string>();
+    Array.isArray(user.scheduledActivities) && user.scheduledActivities.forEach(activity => {
+      if (activity.userId) opponentIds.add(activity.userId);
+    });
+
     return {
       basicInfo: {
         name: user.name,
@@ -27,7 +52,8 @@ export class GetUserStats {
           state: user.state || ''
         }
       },
-      opponents: user.scheduledActivities?.length || 0,
+      differentOpponents: opponentIds.size,
+      activitiesPerMonth,
       totalActivities: activityCount,
       activityDetails: activityDetails ? {
         activity: activityDetails.Activity,

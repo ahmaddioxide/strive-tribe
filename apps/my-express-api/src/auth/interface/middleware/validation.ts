@@ -142,9 +142,9 @@ export const validateCheckUser = [
 ];
 
 export const validateGetUser = [
-  query("user_id")
-    .notEmpty().withMessage("user_id is required")
-    .isString().withMessage("user_id must be a string"),
+  query("userId")
+    .notEmpty().withMessage("userId is required")
+    .isString().withMessage("userId must be a string"),
   (req: Request, res: Response, next: NextFunction) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

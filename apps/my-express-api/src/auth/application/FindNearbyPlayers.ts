@@ -52,10 +52,6 @@ export class FindNearbyPlayers {
           placeName: mainUser.placeName || '',
           countryName: mainUser.countryName || '',
           state: mainUser.state || ''
-        },
-        coordinates: {
-          latitude: mainUser.latitude,
-          longitude: mainUser.longitude
         }
       };
 
@@ -106,15 +102,7 @@ export class FindNearbyPlayers {
         userId: user.userId,
         name: user.name,
         profileImage: user.profileImage || '',
-        location: {
-          placeName: user.placeName || '',
-          countryName: user.countryName || '',
-          state: user.state || ''
-        },
-        coordinates: {
-          latitude: user.latitude,
-          longitude: user.longitude
-        },
+        gamesPlayed: user.scheduledActivities?.length || 0,
         activities: activityMap.get(user.userId) || []
       }));
 

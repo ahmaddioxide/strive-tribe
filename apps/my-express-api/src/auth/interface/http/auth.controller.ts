@@ -197,7 +197,7 @@ export default class AuthController implements IController {
 
   private async handleGetStats(req: Request, res: Response) {
     try {
-      const result = await this.getUserStats.execute(req.query.userId as string);
+      const result = await this.getUserStats.execute(req.query.requesterId as string, req.query.activityId as string);
       res.status(200).json({
         success: true,
         data: result

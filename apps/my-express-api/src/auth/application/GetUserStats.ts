@@ -6,12 +6,13 @@ import ActivityModel from "../../activity/infrastructure/models/Activity";
 
 @injectable()
 export class GetUserStats {
-  async execute(userId: string) {
-    const [user, activityCount] = await Promise.all([
-      UserModel.findOne({ userId })
-        .select('name profileImage placeName countryName state activities scheduledActivities')
+  async execute(requesterId: string, activityId: string) {
+    const [user, activityCount, activityDetails] = await Promise.all([
+      UserModel.findOne({ userId: requesterId })
+        .select('name profileImage placeName countryName state scheduledActivities')
         .lean(),
-      ActivityModel.countDocuments({ userId })
+      ActivityModel.countDocuments({ userId: requesterId }),
+      activityId ? ActivityModel.findById(activityId) : null
     ]);
 
     if (!user) throw new Error('User not found');
@@ -26,14 +27,12 @@ export class GetUserStats {
           state: user.state || ''
         }
       },
-      activities: {
-        details: user.activities.map(activity => ({
-          name: activity.name,
-          expertiseLevel: activity.expertise_level
-        }))
-      },
       opponents: user.scheduledActivities?.length || 0,
-      totalActivities: activityCount
+      totalActivities: activityCount,
+      activityDetails: activityDetails ? {
+        activity: activityDetails.Activity,
+        playerLevel: activityDetails.PlayerLevel
+      } : null
     };
   }
 }

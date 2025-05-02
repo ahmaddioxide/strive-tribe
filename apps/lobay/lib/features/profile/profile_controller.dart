@@ -66,7 +66,7 @@ class ProfileController extends GetxController {
 
   Future<void> pickImage() async {
     final pickedFile =
-        await ImagePicker().pickImage(source: ImageSource.gallery);
+    await ImagePicker().pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       profileImageFile.value = XFile(pickedFile.path);
       update();
@@ -135,34 +135,35 @@ class ProfileController extends GetxController {
     if (!GetPlatform.isAndroid) {
       showCupertinoModalPopup(
         context: context,
-        builder: (_) => Container(
-          height: 300,
-          color: AppColors.white,
-          child: Column(
-            children: [
-              SizedBox(
-                height: 200,
-                child: CupertinoDatePicker(
-                  initialDateTime: DateTime.now(),
-                  mode: CupertinoDatePickerMode.date,
-                  onDateTimeChanged: (DateTime newDate) {
-                    dateOfBirthController.text =
+        builder: (_) =>
+            Container(
+              height: 300,
+              color: AppColors.white,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 200,
+                    child: CupertinoDatePicker(
+                      initialDateTime: DateTime.now(),
+                      mode: CupertinoDatePickerMode.date,
+                      onDateTimeChanged: (DateTime newDate) {
+                        dateOfBirthController.text =
                         newDate.toLocal().toString().split(' ')[0];
-                  },
-                ),
+                      },
+                    ),
+                  ),
+                  CupertinoButton(
+                    color: AppColors.primaryLight,
+                    child: Text(
+                      'Done',
+                      style: TextStyle(
+                          color: AppColors.white, fontWeight: FontWeight.bold),
+                    ),
+                    onPressed: () => Navigator.of(context).pop(),
+                  )
+                ],
               ),
-              CupertinoButton(
-                color: AppColors.primaryLight,
-                child: Text(
-                  'Done',
-                  style: TextStyle(
-                      color: AppColors.white, fontWeight: FontWeight.bold),
-                ),
-                onPressed: () => Navigator.of(context).pop(),
-              )
-            ],
-          ),
-        ),
+            ),
       );
     } else {
       showDatePicker(
@@ -186,10 +187,10 @@ class ProfileController extends GetxController {
           );
         },
       ).then(
-        (pickedDate) {
+            (pickedDate) {
           if (pickedDate != null) {
             dateOfBirthController.text =
-                pickedDate.toLocal().toString().split(' ')[0];
+            pickedDate.toLocal().toString().split(' ')[0];
           } else {
             dateOfBirthController.text = '';
           }
@@ -199,9 +200,9 @@ class ProfileController extends GetxController {
   }
 
   Future<void> extractAndRemoveCountryCode() async {
-    String? phoneNumber = userModel.value?.;
+    String? phoneNumber = userModel.value?.phoneNumber??'';
     final phoneNumberNew =
-        PhoneNumber.fromCompleteNumber(completeNumber: phoneNumber!);
+    PhoneNumber.fromCompleteNumber(completeNumber: phoneNumber!);
     initialCountry.value = phoneNumberNew.countryISOCode;
     userModel.value?.phoneNumber = phoneNumberNew.number;
   }
@@ -211,7 +212,7 @@ class ProfileController extends GetxController {
     Map<String, dynamic> newBody = {};
     if (profileImageFile.value != null) {
       final String imageBase64 =
-          await profileImageFile.value!.readAsBytes().then((value) {
+      await profileImageFile.value!.readAsBytes().then((value) {
         return base64Encode(value);
       });
 

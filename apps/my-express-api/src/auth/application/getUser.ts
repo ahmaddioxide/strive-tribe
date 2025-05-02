@@ -9,7 +9,7 @@ export class GetUser {
     // Get user data with scheduled activities
     const [user, totalActivities] = await Promise.all([
       UserModel.findOne({ userId })
-        .select('id name email profileImage placeName state countryName scheduledActivities gamesPlayed activities')
+        .select('id name email profileImage placeName state countryName scheduledActivities gamesPlayed activities dateOfBirth phoneNumber postalCode gender')
         .lean(),
       ActivityModel.countDocuments({ userId })
     ]);

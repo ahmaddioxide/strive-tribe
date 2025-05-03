@@ -27,11 +27,11 @@ export class UpdateParticipationStatus {
   private formatActivityEntry(
     activity: any, 
     partnerName: string,
-    userId: string // Added userId parameter
+    userId: string
   ): object {
     return {
       activityId: activity._id.toString(),
-      userId: userId, // Added userId field
+      userId: userId,
       activity: activity.Activity,
       partnerName: partnerName,
       playerLevel: activity.PlayerLevel,
@@ -88,35 +88,42 @@ export class UpdateParticipationStatus {
       }
 
       const activityId = activity._id.toString();
-      
+      const activityDate = activity.Date;
+      const activityTime = activity.Time;
+
+      // Updated duplicate check with date/time
       const [requesterHasActivity, creatorHasActivity] = await Promise.all([
         UserModel.countDocuments({
           _id: requester._id,
-          'scheduledActivities.activityId': activityId
+          'scheduledActivities.activityId': activityId,
+          'scheduledActivities.date': activityDate,
+          'scheduledActivities.time': activityTime
         }),
         UserModel.countDocuments({
           _id: creator._id,
-          'scheduledActivities.activityId': activityId
+          'scheduledActivities.activityId': activityId,
+          'scheduledActivities.date': activityDate,
+          'scheduledActivities.time': activityTime
         })
       ]);
 
       if (requesterHasActivity > 0 || creatorHasActivity > 0) {
-        throw new Error("Activity already scheduled for one of the participants");
+        throw new Error("Same activity already scheduled at this date/time");
       }
 
-      // Create entries with user IDs
+      // Create entries
       const requesterEntry = this.formatActivityEntry(
         activity, 
         creator.name,
-        //participation.userId,
-        activity.userId // Creator's user ID
+        //participation.userId
+        activity.userId
       );
       
       const creatorEntry = this.formatActivityEntry(
         activity,
         requester.name,
-        //activity.userId, // Creator's user ID
-        participation.userId // Requester's user ID
+        //activity.userId
+        participation.userId
       );
 
       await Promise.all([

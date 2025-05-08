@@ -31,50 +31,6 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
-      "my-express-api-e2e": [
-        {
-          "file": "apps/my-express-api-e2e/eslint.config.cjs",
-          "hash": "7759795430795630113"
-        },
-        {
-          "file": "apps/my-express-api-e2e/jest.config.ts",
-          "hash": "7741689681773748875"
-        },
-        {
-          "file": "apps/my-express-api-e2e/project.json",
-          "hash": "11462360534563815238"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
-          "hash": "4579662685003779048",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
-          "hash": "2568409276037275290"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
-          "hash": "5275447082211835490"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
-          "hash": "14954872453723519891"
-        }
-      ],
       "my-express-api": [
         {
           "file": "apps/my-express-api/.env.serve.development",
@@ -1633,20 +1589,28 @@
           "hash": "15804503972865012716"
         },
         {
+          "file": "apps/lobay/lib/features/players/filter_bottomsheet_widget.dart",
+          "hash": "13106120068546720439"
+        },
+        {
           "file": "apps/lobay/lib/features/players/players_controller.dart",
-          "hash": "114625098929192313"
+          "hash": "8467571002627422383"
         },
         {
           "file": "apps/lobay/lib/features/players/players_screen.dart",
-          "hash": "880071277865310320"
+          "hash": "999647071926009557"
         },
         {
           "file": "apps/lobay/lib/features/players/repo/players_repo.dart",
           "hash": "7096445382059375013"
         },
         {
+          "file": "apps/lobay/lib/features/players/widgets/player_detail_screen.dart",
+          "hash": "13434987499665204447"
+        },
+        {
           "file": "apps/lobay/lib/features/players/widgets/players_tile.dart",
-          "hash": "7106398736158719259"
+          "hash": "12074925033557453706"
         },
         {
           "file": "apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart",
@@ -1854,12 +1818,60 @@
           "hash": "14086997084547600071"
         },
         {
+          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.b9e435d5-740a-4b3b-8aff-a2703be3b60e.json",
+          "hash": "14086997084547600071"
+        },
+        {
           "file": "tmp/apps/my-express-api/serve/tsconfig.generated.json",
           "hash": "4508182324654425681"
         },
         {
           "file": "tsconfig.base.json",
           "hash": "16936441711144470533"
+        }
+      ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
         }
       ]
     }

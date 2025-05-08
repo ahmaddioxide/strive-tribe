@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lobay/common_widgets/app_click_widget.dart';
+import 'package:lobay/features/players/filter_bottomsheet_widget.dart';
 import 'package:lobay/features/players/players_controller.dart';
 import 'package:lobay/features/players/widgets/players_tile.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -56,14 +58,42 @@ class PlayersScreen extends StatelessWidget with DeviceSizeUtil {
                   ],
                 ),
                 SizedBox(height: height * 0.01),
-                Container(
-                  margin: EdgeInsets.only(right: width * 0.02),
-                  padding: EdgeInsets.all(height * 0.01),
-                  decoration: BoxDecoration(
-                    color: AppColors.grey.withAlpha(50),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Icon(Icons.filter_list_rounded),
+                AppClickWidget(
+                  onTap: () {
+                    Get.isBottomSheetOpen!
+                        ? Get.back()
+                        : Get.bottomSheet(
+                            const PlayersFilterBottomSheet(),
+                            isScrollControlled: true,
+                            backgroundColor: AppColors.white,
+                            barrierColor: AppColors.black.withAlpha(50),
+                            isDismissible: true,
+                          );
+                  },
+                  child: Obx(() {
+                    return controller.selectedActivities.isNotEmpty
+                        ? Container(
+                            margin: EdgeInsets.only(right: width * 0.02),
+                            padding: EdgeInsets.all(height * 0.01),
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryLight,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Icon(
+                              Icons.filter_list_rounded,
+                              color: AppColors.white,
+                            ),
+                          )
+                        : Container(
+                            margin: EdgeInsets.only(right: width * 0.02),
+                            padding: EdgeInsets.all(height * 0.01),
+                            decoration: BoxDecoration(
+                              color: AppColors.grey.withAlpha(50),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Icon(Icons.filter_list_rounded),
+                          );
+                  }),
                 ),
               ],
             ),
@@ -99,15 +129,15 @@ class PlayersScreen extends StatelessWidget with DeviceSizeUtil {
               );
             }
 
-
-
             return Expanded(
               child: ListView.builder(
                 padding: EdgeInsets.zero,
-                itemCount: controller.nearbyPlayersRes.value?.nearbyPlayers?.count,
+                itemCount:
+                    controller.nearbyPlayersRes.value?.nearbyPlayers?.count,
                 itemBuilder: (context, index) {
                   return PlayersTile(
-                    player: controller.nearbyPlayersRes.value!.nearbyPlayers!.players[index],
+                    player: controller
+                        .nearbyPlayersRes.value!.nearbyPlayers!.players[index],
                   );
                 },
               ),

@@ -5,6 +5,8 @@ import 'package:lobay/core/network/network_models/get_user_reponse_body.dart';
 import 'package:lobay/core/shared_preferences/shared_pref.dart';
 import 'package:lobay/features/players/repo/players_repo.dart';
 import 'package:lobay/features/profile/repository/profile_repo.dart';
+import 'package:lobay/utilities/commom_models/pairs_model.dart';
+import 'package:lobay/utilities/constants/app_constants.dart';
 
 class PlayersController extends GetxController {
   final Rx<UserModel?> user = Rx<UserModel?>(null);
@@ -13,7 +15,17 @@ class PlayersController extends GetxController {
   final ProfileRepo profileRepo = ProfileRepo();
   final PlayersRepository playersRepo = PlayersRepository();
   final RxBool isLoading = true.obs;
-  final RxString selectedActivity = ''.obs;
+
+  final RxList<Pair<String, RxBool>> activities = <Pair<String, RxBool>>[
+    Pair(AppConstants.activities[0], false.obs),
+    Pair(AppConstants.activities[1], false.obs),
+    Pair(AppConstants.activities[2], false.obs),
+    Pair(AppConstants.activities[3], false.obs),
+    Pair(AppConstants.activities[4], false.obs),
+    Pair(AppConstants.activities[5], false.obs),
+  ].obs;
+
+  final RxList<String> selectedActivities = <String>[].obs;
 
   @override
   void onInit() {
@@ -46,7 +58,7 @@ class PlayersController extends GetxController {
       nearbyPlayersRes.value = await playersRepo.getPlayers(
         userId: userId!,
         selectedActivity:
-            selectedActivity.value.isNotEmpty ? selectedActivity.value : null,
+            selectedActivities.isNotEmpty ? selectedActivities.join(',') : null,
       );
 
       if (nearbyPlayersRes.value == null) {
@@ -61,5 +73,22 @@ class PlayersController extends GetxController {
     } finally {
       isLoading.value = false;
     }
+  }
+
+  void toggleActivitySelection(Pair<String, RxBool> activity) {
+    activity.second.value = !activity.second.value;
+    if (activity.second.value) {
+      selectedActivities.add(activity.first);
+    } else {
+      selectedActivities.remove(activity.first);
+    }
+  }
+
+  void resetFilter() {
+    for (final activity in activities) {
+      activity.second.value = false;
+    }
+    selectedActivities.clear();
+    getNearbyPlayer();
   }
 }

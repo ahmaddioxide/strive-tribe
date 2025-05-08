@@ -4,7 +4,8 @@ import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 
 class PlayersTile extends StatelessWidget {
   final Player player;
-  const PlayersTile({super.key,required this.player});
+
+  const PlayersTile({super.key, required this.player});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class PlayersTile extends StatelessWidget {
         ),
         subtitle: Row(
           children: [
-            Icon(Icons.bar_chart),
+            Icon(Icons.bar_chart_outlined),
             SizedBox(width: 5),
             Text(
               '${player.gamesPlayed.toString()} games played',

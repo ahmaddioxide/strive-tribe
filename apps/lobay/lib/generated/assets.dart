@@ -3,10 +3,12 @@ class Assets {
   Assets._();
 
   static const String assetsGoogleIcon = 'assets/google_icon.png';
+  static const String imagesActivityIcon = 'assets/images/activity_icon.png';
   static const String imagesAppIconWhite = 'assets/images/app_icon_white.png';
   static const String imagesBadminton = 'assets/images/badminton.png';
   static const String imagesBaseball = 'assets/images/baseball.png';
   static const String imagesBaseketball = 'assets/images/baseketball.png';
+  static const String imagesCalendarRange = 'assets/images/calendar-range.png';
   static const String imagesCricket = 'assets/images/cricket.png';
   static const String imagesFacebookLogo = 'assets/images/facebook_logo.png';
   static const String imagesNoNotificationIllustration = 'assets/images/no_notification_illustration.png';
@@ -14,8 +16,10 @@ class Assets {
   static const String imagesOnboarding1 = 'assets/images/onboarding_1.png';
   static const String imagesOnboarding2 = 'assets/images/onboarding_2.png';
   static const String imagesOnboarding3 = 'assets/images/onboarding_3.png';
+  static const String imagesOpponentIcon = 'assets/images/opponent_icon.png';
   static const String imagesPlaceholder = 'assets/images/placeholder.jpg';
   static const String imagesPlaceholderPerson = 'assets/images/placeholder_person.jpg';
+  static const String imagesPlayerLevelIcon = 'assets/images/player_level_icon.png';
   static const String imagesSoccer = 'assets/images/soccer.png';
   static const String imagesTennis = 'assets/images/tennis.png';
   static const String svgsAppIcon = 'assets/svgs/app_icon.svg';

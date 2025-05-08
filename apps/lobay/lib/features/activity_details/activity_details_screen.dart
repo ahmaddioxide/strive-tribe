@@ -250,10 +250,10 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
               ),
               SizedBox(height: height * 0.02),
               ListTile(
-                leading: Icon(
-                  Icons.speed_rounded,
-                  color: AppColors.primaryLight,
-                  size: 45,
+                leading: AppImageWidget(
+                  imagePathOrURL: Assets.imagesPlayerLevelIcon,
+                  height: 45,
+                  width: 45,
                 ),
                 title: Text(
                   'Player Level',
@@ -272,10 +272,10 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                 ),
               ),
               ListTile(
-                leading: Icon(
-                  Icons.speed_rounded,
-                  color: AppColors.primaryLight,
-                  size: 45,
+                leading: AppImageWidget(
+                  imagePathOrURL: Assets.imagesActivityIcon,
+                  height: 45,
+                  width: 45,
                 ),
                 title: Text(
                   'Activity',
@@ -300,7 +300,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                   size: 45,
                 ),
                 title: Text(
-                  'Activity',
+                  'Opponents',
                   style: TextStyle(
                     fontSize: 18,
                     color: AppColors.primaryLight,
@@ -347,7 +347,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                           }
                           controller.joinActivity().then((value) {
                             if (value) {
-                             Navigator.pop(context);
+                              Navigator.pop(context);
                             }
                           });
                         },

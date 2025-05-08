@@ -16,6 +16,7 @@ class PlayersController extends GetxController {
   final ProfileRepo profileRepo = ProfileRepo();
   final PlayersRepository playersRepo = PlayersRepository();
   final RxBool isLoading = true.obs;
+  final RxBool isLoadingUserDetails = false.obs;
 
   final RxList<Pair<String, RxBool>> activities = <Pair<String, RxBool>>[
     Pair(AppConstants.activities[0], false.obs),
@@ -51,15 +52,15 @@ class PlayersController extends GetxController {
   }
 
   Future<void> fetchUserDetails(String userId) async {
-    isLoading.value = true;
+    isLoadingUserDetails.value = true;
     try {
       userDetails.value = await profileRepo.getUser(userId: userId);
     } catch (e) {
       AppSnackbar.showErrorSnackBar(message: 'Failed to fetch user details');
       print('Error fetching user details: $e');
-      userDetails.value = null; // Set userDetails to null in case of error
+      userDetails.value = null;
     } finally {
-      isLoading.value = false;
+      isLoadingUserDetails.value = false;
     }
   }
 

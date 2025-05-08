@@ -81,15 +81,38 @@ class PlayersScreen extends StatelessWidget with DeviceSizeUtil {
             ),
           ),
           Divider(),
-          Expanded(
-            child: ListView.builder(
-              padding: EdgeInsets.zero,
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return PlayersTile();
-              },
-            ),
-          ),
+          Obx(() {
+            if (controller.isLoading.value) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            if (controller.nearbyPlayersRes.value?.nearbyPlayers?.count == 0) {
+              return Center(
+                child: Text(
+                  'No players found',
+                  style: TextUtils.getStyle(
+                    color: AppColors.grey,
+                    fontSize: width * 0.04,
+                  ),
+                ),
+              );
+            }
+
+
+
+            return Expanded(
+              child: ListView.builder(
+                padding: EdgeInsets.zero,
+                itemCount: controller.nearbyPlayersRes.value?.nearbyPlayers?.count,
+                itemBuilder: (context, index) {
+                  return PlayersTile(
+                    player: controller.nearbyPlayersRes.value!.nearbyPlayers!.players[index],
+                  );
+                },
+              ),
+            );
+          }),
         ],
       ),
     );

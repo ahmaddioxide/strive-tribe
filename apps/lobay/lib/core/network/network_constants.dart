@@ -23,6 +23,13 @@ class EndPoints {
 
   static const String createActivity = 'api/activities/create-activity';
 
+  static String getPlayers(String? activity, String userId) {
+    if(activity!=null) {
+      return 'api/auth/nearby-players/$userId?activity=$activity';
+    }
+    return 'api/auth/nearby-players/$userId';
+  }
+
   static getNotifications(String userId) =>
       'api/activities/notifications/$userId';
 

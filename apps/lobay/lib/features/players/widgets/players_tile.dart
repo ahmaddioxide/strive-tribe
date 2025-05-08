@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lobay/core/network/network_models/get_nearby_players_response_model.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 
 class PlayersTile extends StatelessWidget {
-  const PlayersTile({super.key});
+  final Player player;
+  const PlayersTile({super.key,required this.player});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +14,11 @@ class PlayersTile extends StatelessWidget {
         leading: CircleAvatar(
           radius: 30,
           backgroundImage: NetworkImage(
-            'https://example.com/profile_image.jpg', // Replace with actual image URL
+            player.profileImage, // Replace with actual image URL
           ),
         ),
         title: Text(
-          'Player Name',
+          player.name,
           style: TextUtils.getStyle(
             color: Colors.black,
             fontSize: 18,
@@ -28,7 +30,7 @@ class PlayersTile extends StatelessWidget {
             Icon(Icons.bar_chart),
             SizedBox(width: 5),
             Text(
-              '10 games played]',
+              '${player.gamesPlayed.toString()} games played',
               style: TextUtils.getStyle(
                 color: Colors.grey,
                 fontSize: 14,

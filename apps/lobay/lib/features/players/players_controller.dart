@@ -10,6 +10,7 @@ import 'package:lobay/utilities/constants/app_constants.dart';
 
 class PlayersController extends GetxController {
   final Rx<UserModel?> user = Rx<UserModel?>(null);
+  final Rx<UserModel?> userDetails = Rx<UserModel?>(null);
   final Rx<GetNearbyPlayersResponseModel?> nearbyPlayersRes =
       Rx<GetNearbyPlayersResponseModel?>(null);
   final ProfileRepo profileRepo = ProfileRepo();
@@ -44,6 +45,19 @@ class PlayersController extends GetxController {
       AppSnackbar.showErrorSnackBar(message: 'Failed to fetch user data');
       print('Error fetching user data: $e');
       user.value = null; // Set user to null in case of error
+    } finally {
+      isLoading.value = false;
+    }
+  }
+
+  Future<void> fetchUserDetails(String userId) async {
+    isLoading.value = true;
+    try {
+      userDetails.value = await profileRepo.getUser(userId: userId);
+    } catch (e) {
+      AppSnackbar.showErrorSnackBar(message: 'Failed to fetch user details');
+      print('Error fetching user details: $e');
+      userDetails.value = null; // Set userDetails to null in case of error
     } finally {
       isLoading.value = false;
     }

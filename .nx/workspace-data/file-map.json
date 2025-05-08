@@ -1425,6 +1425,10 @@
           "hash": "6356473038801339076"
         },
         {
+          "file": "apps/lobay/lib/core/network/network_models/get_user_stats_response_model.dart",
+          "hash": "4055606894390288348"
+        },
+        {
           "file": "apps/lobay/lib/core/network/network_models/join_activity_response_model.dart",
           "hash": "5144619705388896843"
         },
@@ -1441,6 +1445,10 @@
           "hash": "12797866413784863486"
         },
         {
+          "file": "apps/lobay/lib/core/network/network_models/pairs_model.dart",
+          "hash": "12763382644007338865"
+        },
+        {
           "file": "apps/lobay/lib/core/network/network_models/register_body_model.dart",
           "hash": "11825748154550936488"
         },
@@ -1453,8 +1461,16 @@
           "hash": "12245702576380340273"
         },
         {
+          "file": "apps/lobay/lib/core/network/network_models/user_model.dart",
+          "hash": "4488480473377841400"
+        },
+        {
           "file": "apps/lobay/lib/core/network/network_models/user_stats_response_model.dart",
           "hash": "8865240802716488284"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/network_services/api_service.dart",
+          "hash": "4055606894390288348"
         },
         {
           "file": "apps/lobay/lib/core/shared_preferences/shared_pref.dart",
@@ -1593,8 +1609,12 @@
           "hash": "13106120068546720439"
         },
         {
+          "file": "apps/lobay/lib/features/players/player_details_screen.dart",
+          "hash": "1608597075007878978"
+        },
+        {
           "file": "apps/lobay/lib/features/players/players_controller.dart",
-          "hash": "8467571002627422383"
+          "hash": "12576888936374146333"
         },
         {
           "file": "apps/lobay/lib/features/players/players_screen.dart",
@@ -1605,12 +1625,8 @@
           "hash": "7096445382059375013"
         },
         {
-          "file": "apps/lobay/lib/features/players/widgets/player_detail_screen.dart",
-          "hash": "13434987499665204447"
-        },
-        {
           "file": "apps/lobay/lib/features/players/widgets/players_tile.dart",
-          "hash": "12074925033557453706"
+          "hash": "18221040356197199930"
         },
         {
           "file": "apps/lobay/lib/features/profile/edit_profile/edit_profile_screen.dart",

@@ -149,3 +149,52 @@ export const validateGetScheduledActivities = [
     .isString()
     .withMessage('Player level filter must be a comma-separated string')
 ];
+
+
+export const validateRequestActivity = [
+  body('reqFrom')
+    .notEmpty().withMessage("Requester ID is required"),
+    
+  body('reqTo')
+    .notEmpty().withMessage("Recipient ID is required"),
+    
+  body('activityId')
+    .notEmpty().withMessage("Activity ID is required")
+    .isMongoId().withMessage("Invalid Activity ID format"),
+    
+  body('activityName')
+    .notEmpty().withMessage("Activity name is required")
+    .isString().withMessage("Activity name must be a string"),
+    
+  body('activityLevel')
+    .notEmpty().withMessage("Activity level is required")
+    .isString().withMessage("Activity level must be a string"),
+    
+  body('activityDate')
+    .notEmpty().withMessage("Activity date is required")
+    .matches(/^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-\d{4}$/).withMessage("Invalid date format (DD-MM-YYYY)"),
+    
+  body('activityTime')
+    .notEmpty().withMessage("Activity time is required")
+    .matches(/^(1[0-2]|0?[1-9]):[0-5][0-9] (AM|PM)$/i).withMessage("Invalid time format (HH:MM AM/PM)"),
+    
+  body('note')
+    .optional()
+    .isString().withMessage("Note must be a string"),
+    
+  body('video')
+    .optional()
+    .isString().withMessage("Video must be a base64 string")
+    .matches(/^data:video\/\w+;base64,/).withMessage("Invalid video format. Must start with 'data:video/*;base64,'"),
+
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array() 
+      });
+    }
+    next();
+  }
+];

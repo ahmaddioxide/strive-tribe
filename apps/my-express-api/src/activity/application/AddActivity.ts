@@ -1,3 +1,4 @@
+// src/activity/application/AddActivity.ts
 import { injectable, inject } from "inversify";
 import ActivityModel from "../infrastructure/models/Activity";
 import { Activity } from "../domain/Activity";

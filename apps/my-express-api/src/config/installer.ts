@@ -18,6 +18,7 @@ import { GetUserNotifications } from "../activity/application/GetNotifications";
 import { GetScheduledActivities } from "../activity/application/GetScheduledActivities";
 import { GetUserStats } from "../../src/auth/application/GetUserStats";
 import { FindNearbyPlayers } from "../auth/application/FindNearbyPlayers";
+import { SendRequestActivity } from "../activity/application/SendRequestActivity";
 
 
 import { ParticipateActivity } from "../activity/application/ParticipateActivity";
@@ -42,6 +43,7 @@ container.bind<GetUserNotifications>(GetUserNotifications).toSelf();
 container.bind<GetScheduledActivities>(GetScheduledActivities).toSelf();
 container.bind<GetUserStats>(GetUserStats).toSelf();
 container.bind<FindNearbyPlayers>(FindNearbyPlayers).toSelf();
+container.bind<SendRequestActivity>(SendRequestActivity).toSelf();
 container.bind<AuthController>(Identifier.AuthController).to(AuthController);
 container.bind<ActivityController>(Identifier.ActivityController).to(ActivityController);
 

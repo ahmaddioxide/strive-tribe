@@ -8,7 +8,8 @@ import { ParticipateActivity } from "../../application/ParticipateActivity";
 import { UpdateParticipationStatus } from "../../application/UpdateParticipationStatus";
 import { GetUserNotifications } from "../../application/GetNotifications";
 import { GetScheduledActivities } from "../../application/GetScheduledActivities";
-import { validateAddActivity, validateFindNearbyActivities, validateActivityId, validateJoinActivity, validateUpdateParticipationStatus, validateGetNotifications, validateGetScheduledActivities } from "../middleware/validation";
+import { SendRequestActivity } from "../../application/SendRequestActivity";
+import { validateAddActivity, validateFindNearbyActivities, validateActivityId, validateJoinActivity, validateUpdateParticipationStatus, validateGetNotifications, validateGetScheduledActivities, validateRequestActivity } from "../middleware/validation";
 import IController from "../../../auth/interface/http/IController";
 
 @injectable()
@@ -23,7 +24,9 @@ export class ActivityController implements IController {
     @inject(ParticipateActivity) private participateActivity: ParticipateActivity,
     @inject(UpdateParticipationStatus) private UpdateParticipationStatus: UpdateParticipationStatus,
     @inject(GetUserNotifications) private getUserNotification: GetUserNotifications,
-    @inject(GetScheduledActivities) private getScheduledActivities: GetScheduledActivities
+    @inject(GetScheduledActivities) private getScheduledActivities: GetScheduledActivities,
+    @inject(SendRequestActivity) private sendRequest: SendRequestActivity
+
     
   ) {
     this.initializeRoutes();
@@ -64,6 +67,11 @@ export class ActivityController implements IController {
       `${this.path}/scheduled/:userId`,
       validateGetScheduledActivities,
       this.handleScheduledActivities.bind(this)
+    );
+    this.router.post(
+      `${this.path}/request-avtivity`,
+      validateRequestActivity,
+      this.handleRequestActivity.bind(this)
     );
 
   }
@@ -211,6 +219,30 @@ export class ActivityController implements IController {
       });
     }
   }
+
+  private handleRequestActivity = async (req: Request, res: Response) => {
+    try {
+      const { reqFrom, reqTo, activityId, activityName, activityLevel, video, note, activityDate, activityTime } = req.body;
+      
+      const response = await this.sendRequest.execute({
+        reqFrom,
+        reqTo,
+        activityId,
+        activityName,
+        activityLevel,
+        activityDate,
+        activityTime,
+        note
+      }, video);
+
+      res.status(201).json(response);
+    } catch (error: any) {
+      res.status(500).json({
+        success: false,
+        error: error.message || "Failed to send activity request"
+      });
+    }
+  };
   
   
 }

@@ -1,6 +1,8 @@
 import { injectable, inject } from "inversify";
+import mongoose from "mongoose";
 import ParticipationModel from "../infrastructure/models/Participation";
 import ActivityModel from "../infrastructure/models/Activity";
+import RequestActivityModel from "../infrastructure/models/RequestActivity";
 import UserModel from "../../auth/infrastructure/models/User";
 import NotificationModel from "../infrastructure/models/Notification";
 import { Config } from "../../config/config";
@@ -10,9 +12,16 @@ export class UpdateParticipationStatus {
   constructor(@inject(Config) private config: Config) {}
 
   private parseActivityDateTime(dateStr: string, timeStr: string): Date {
+    if (!dateStr || !timeStr) {
+      throw new Error("Date or time field is missing");
+    }
+
     const [day, month, year] = dateStr.split('-').map(Number);
-    const timeMatch = timeStr.match(/^(\d{1,2}):(\d{2})\s(AM|PM)$/i);
-    if (!timeMatch) throw new Error("Invalid time format");
+    const timeMatch = timeStr.match(/^(\d{1,2}):(\d{2})\s?(AM|PM)$/i);
+
+    if (!timeMatch) {
+      throw new Error(`Invalid time format: '${timeStr}'`);
+    }
 
     let hours = parseInt(timeMatch[1]);
     const minutes = parseInt(timeMatch[2]);
@@ -25,115 +34,158 @@ export class UpdateParticipationStatus {
   }
 
   private formatActivityEntry(
-    activity: any, 
+    activity: any,
     partnerName: string,
-    userId: string
+    userId: string,
+    isRequestActivity: boolean
   ): object {
     return {
       activityId: activity._id.toString(),
       userId: userId,
-      activity: activity.Activity,
+      activity: isRequestActivity ? activity.activityName : activity.Activity,
       partnerName: partnerName,
-      playerLevel: activity.PlayerLevel,
-      date: activity.Date,
-      time: activity.Time,
+      playerLevel: isRequestActivity ? activity.activityLevel : activity.PlayerLevel,
+      date: isRequestActivity ? activity.activityDate : activity.Date,
+      time: isRequestActivity ? activity.activityTime : activity.Time,
     };
   }
 
   async execute(id: string, status: 'accepted' | 'declined', notificationId?: string) {
-    const participation = await ParticipationModel.findById(id)
-      .populate({
-        path: 'activityId',
-        select: 'Date Time Activity userId PlayerLevel',
+    const participation = await ParticipationModel.findById(id);
+    if (!participation) throw new Error("Participation record not found");
+
+    // Try to find in Activity collection first
+    let activity = await ActivityModel.findById(participation.activityId);
+    let isRequestActivity = false;
+
+    // If not found, check RequestActivity collection
+    if (!activity) {
+      activity = await RequestActivityModel.findOne({
+        activityId: participation.activityId.toString()
       });
 
-    if (!participation) {
-      throw new Error("Participation record not found");
+      if (!activity) {
+        throw new Error("Associated activity not found");
+      }
+      isRequestActivity = true;
     }
 
-    if (!participation.activityId) {
-      throw new Error("Associated activity not found");
-    }
-
-    const activity = participation.activityId as any;
-
+    // Handle acceptance validation
     if (status === 'accepted') {
-      const activityDateTime = this.parseActivityDateTime(activity.Date, activity.Time);
+      const dateField = isRequestActivity 
+        ? (activity as any).activityDate 
+        : (activity as any).Date;
+
+      const timeField = isRequestActivity 
+        ? (activity as any).activityTime 
+        : (activity as any).Time;
+
+      const activityDateTime = this.parseActivityDateTime(dateField, timeField);
       if (new Date() >= activityDateTime) {
         throw new Error("Cannot accept - activity has already occurred");
       }
     }
 
+    // Update participation status
     const updatedParticipation = await ParticipationModel.findByIdAndUpdate(
       id,
       { status },
       { new: true }
     );
 
+    // Update notification if provided
     if (notificationId) {
-      await NotificationModel.findByIdAndUpdate(
-        notificationId,
-        { status, read: true }
+      await NotificationModel.findByIdAndUpdate(notificationId, {
+        status,
+        read: true,
+      });
+    }
+
+    // Update RequestActivity status if applicable
+    if (isRequestActivity) {
+      await RequestActivityModel.findByIdAndUpdate(
+        activity._id,
+        { status },
+        { new: true }
       );
     }
 
+    // Handle acceptance logic
     if (status === 'accepted' && updatedParticipation) {
-      const [requester, creator] = await Promise.all([
-        UserModel.findOne({ userId: participation.userId }),
-        UserModel.findOne({ userId: activity.userId })
+      let creatorId: string;
+      let participantId: string;
+
+      if (isRequestActivity) {
+        // For request activities
+        creatorId = (activity as any).reqFrom; // Original requester
+        participantId = (activity as any).reqTo; // The user being requested
+      } else {
+        // For regular activities
+        creatorId = (activity as any).userId; // Activity owner
+        participantId = participation.userId; // Participant
+      }
+
+      const [creatorUser, participantUser] = await Promise.all([
+        UserModel.findOne({ userId: creatorId }),
+        UserModel.findOne({ userId: participantId })
       ]);
 
-      if (!requester || !creator) {
+      if (!creatorUser || !participantUser) {
         throw new Error("User records not found");
       }
 
       const activityId = activity._id.toString();
-      const activityDate = activity.Date;
-      const activityTime = activity.Time;
+      const activityDate = isRequestActivity 
+        ? (activity as any).activityDate 
+        : (activity as any).Date;
+      const activityTime = isRequestActivity 
+        ? (activity as any).activityTime 
+        : (activity as any).Time;
 
-      // Updated duplicate check with date/time
-      const [requesterHasActivity, creatorHasActivity] = await Promise.all([
+      // Check for existing scheduled activities
+      const [creatorHasActivity, participantHasActivity] = await Promise.all([
         UserModel.countDocuments({
-          _id: requester._id,
+          _id: creatorUser._id,
           'scheduledActivities.activityId': activityId,
           'scheduledActivities.date': activityDate,
           'scheduledActivities.time': activityTime
         }),
         UserModel.countDocuments({
-          _id: creator._id,
+          _id: participantUser._id,
           'scheduledActivities.activityId': activityId,
           'scheduledActivities.date': activityDate,
           'scheduledActivities.time': activityTime
         })
       ]);
 
-      if (requesterHasActivity > 0 || creatorHasActivity > 0) {
+      if (creatorHasActivity > 0 || participantHasActivity > 0) {
         throw new Error("Same activity already scheduled at this date/time");
       }
 
-      // Create entries
-      const requesterEntry = this.formatActivityEntry(
-        activity, 
-        creator.name,
-        //participation.userId
-        activity.userId
-      );
-      
+      // Create entries for both users
       const creatorEntry = this.formatActivityEntry(
         activity,
-        requester.name,
-        //activity.userId
-        participation.userId
+        participantUser.name,
+        participantId,
+        isRequestActivity
       );
 
+      const participantEntry = this.formatActivityEntry(
+        activity,
+        creatorUser.name,
+        creatorId,
+        isRequestActivity
+      );
+
+      // Update both users' schedules
       await Promise.all([
         UserModel.findByIdAndUpdate(
-          requester._id,
-          { $addToSet: { scheduledActivities: requesterEntry } }
+          creatorUser._id,
+          { $addToSet: { scheduledActivities: creatorEntry } }
         ),
         UserModel.findByIdAndUpdate(
-          creator._id,
-          { $addToSet: { scheduledActivities: creatorEntry } }
+          participantUser._id,
+          { $addToSet: { scheduledActivities: participantEntry } }
         )
       ]);
     }

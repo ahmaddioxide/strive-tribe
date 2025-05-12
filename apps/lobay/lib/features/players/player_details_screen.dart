@@ -4,6 +4,7 @@ import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/core/network/network_models/get_nearby_players_response_model.dart';
 import 'package:lobay/features/players/players_controller.dart';
+import 'package:lobay/features/players/request_activity_screen.dart';
 import 'package:lobay/generated/assets.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
@@ -193,7 +194,7 @@ class _PlayerDetailsScreenState extends State<PlayerDetailsScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: height * 0.02),
+                    SizedBox(height: height * 0.1),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -215,7 +216,7 @@ class _PlayerDetailsScreenState extends State<PlayerDetailsScreen> {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            // TODO: Implement request to play functionality
+                            Get.to(() => RequestActivityScreen());
                           },
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(width * 0.7, height * 0.07),
@@ -226,7 +227,7 @@ class _PlayerDetailsScreenState extends State<PlayerDetailsScreen> {
                             ),
                           ),
                           child: Text(
-                            'Request to Play',
+                            'Request Game',
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,

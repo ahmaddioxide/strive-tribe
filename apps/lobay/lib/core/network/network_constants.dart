@@ -24,7 +24,7 @@ class EndPoints {
   static const String createActivity = 'api/activities/create-activity';
 
   static String getPlayers(String? activity, String userId) {
-    if(activity!=null) {
+    if (activity != null) {
       return 'api/auth/nearby-players/$userId?activity=$activity';
     }
     return 'api/auth/nearby-players/$userId';
@@ -81,4 +81,6 @@ class EndPoints {
   }) {
     return 'api/activities/activity-by-id/$id';
   }
+
+  static const requestActivity = 'api/activities/request-avtivity';
 }

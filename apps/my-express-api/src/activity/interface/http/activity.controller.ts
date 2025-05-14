@@ -222,12 +222,11 @@ export class ActivityController implements IController {
 
   private handleRequestActivity = async (req: Request, res: Response) => {
     try {
-      const { reqFrom, reqTo, activityId, activityName, activityLevel, video, note, activityDate, activityTime } = req.body;
+      const { reqFrom, reqTo, activityName, activityLevel, video, note, activityDate, activityTime } = req.body;
       
       const response = await this.sendRequest.execute({
         reqFrom,
         reqTo,
-        activityId,
         activityName,
         activityLevel,
         activityDate,

@@ -1,12 +1,15 @@
 import 'dart:convert';
+import 'dart:io';
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
+import 'package:lobay/core/network/network_models/request_activity_body.dart';
+import 'package:lobay/features/players/repo/players_repo.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
-
-import '../../../core/shared_preferences/shared_pref.dart';
-import '../repo/players_repo.dart';
+import 'package:lobay/core/shared_preferences/shared_pref.dart';
 
 class ActivityRequestController extends GetxController {
   final playersRepo = PlayersRepository();
@@ -15,11 +18,18 @@ class ActivityRequestController extends GetxController {
   final selectedDate = Rxn<DateTime>();
   final selectedTime = Rxn<TimeOfDay>();
   final notesController = TextEditingController();
-  final requestTo = RxnString();
   Rx<XFile?> videoFile = Rx<XFile?>(null);
+  final RxString selectedPlayerId = RxString('');
 
   final playerLevels = AppConstants.expertiseLevel;
   final activities = AppConstants.activities;
+
+  // Computed property to check if all mandatory fields are filled
+  bool get isFormValid =>
+      selectedPlayerLevel.value != null &&
+      selectedActivity.value != null &&
+      selectedDate.value != null &&
+      selectedTime.value != null;
 
   Future<void> selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
@@ -92,26 +102,47 @@ class ActivityRequestController extends GetxController {
       base64Video = await convertVideoToBase64();
     }
 
-    // TODO: Add your API call here
-    print('Submitting request with:');
-    print('Player Level: ${selectedPlayerLevel.value}');
-    print('Activity: ${selectedActivity.value}');
-    print('Date: ${selectedDate.value}');
-    print('Time: ${selectedTime.value}');
-    print('Notes: ${notesController.text}');
-    if (base64Video.isNotEmpty) {
-      print('Video: data:video/mp4;base64,$base64Video');
-    }
     final currentUserId =
-        await PreferencesManager.getInstance().getStringValue('userId', '');
-    // final requestActivityBody = RequestActivityBody(
-    //   reqFrom: currentUserId,
-    //   reqTo: requestTo.value,
-    //   activityId: selectedActivity.value,
-    //   activityName: selectedActivity.value,
-    //   activityLevel: selectedPlayerLevel.value,
-    //
-    // );
+        await PreferencesManager.getInstance().getStringValue('userId', '') ??
+            '';
+
+    final selectedDateString =
+        DateFormat('dd-MM-yyyy').format(selectedDate.value!);
+    final selectedTimeString = DateFormat('hh:mm a').format(DateTime(
+      DateTime.now().year,
+      DateTime.now().month,
+      DateTime.now().day,
+      selectedTime.value!.hour,
+      selectedTime.value!.minute,
+    ));
+
+    final requestActivityBody = RequestActivityBody(
+      reqFrom: currentUserId,
+      reqTo: selectedPlayerId.value,
+      activityName: selectedActivity.value!,
+      activityLevel: selectedPlayerLevel.value!,
+      activityDate: selectedDateString,
+      activityTime: selectedTimeString,
+      note:
+          notesController.text.trim().isNotEmpty ? notesController.text : null,
+      video:
+          base64Video.isNotEmpty ? 'data:video/mp4;base64,$base64Video' : null,
+    );
+
+    try {
+      final response = await playersRepo.requestActivity(requestActivityBody);
+      // final requestResponse  RequestActivityResponse.fromJson(response);
+
+      if (response) {
+        Get.back();
+        AppSnackbar.showSuccessSnackBar(message: 'Request Sent');
+      } else {
+        AppSnackbar.showErrorSnackBar(message: 'Failed to send request');
+      }
+    } catch (e) {
+      log('Failed to send request: $e');
+      AppSnackbar.showErrorSnackBar(message: 'Failed to send request');
+    }
   }
 
   @override

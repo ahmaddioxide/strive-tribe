@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
+import 'package:lobay/core/network/network_models/get_nearby_players_response_model.dart';
 import 'package:lobay/features/players/controllers/activity_request_controller.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class RequestActivityScreen extends StatelessWidget with DeviceSizeUtil {
-  const RequestActivityScreen({super.key});
+  final Player userModel;
+
+  const RequestActivityScreen({super.key, required this.userModel});
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(ActivityRequestController());
     final height = getDeviceHeight();
     final width = getDeviceWidth();
+    controller.selectedPlayerId.value = userModel.userId;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -270,24 +274,28 @@ class RequestActivityScreen extends StatelessWidget with DeviceSizeUtil {
               // Submit Button
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: controller.submitRequest,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primaryLight,
-                    padding: EdgeInsets.symmetric(vertical: height * 0.02),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Text(
-                    'Request',
-                    style: TextUtils.getStyle(
-                      color: Colors.white,
-                      fontSize: width * 0.04,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
+                child: Obx(() => ElevatedButton(
+                      onPressed: controller.isFormValid
+                          ? controller.submitRequest
+                          : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.primaryLight,
+                        padding: EdgeInsets.symmetric(vertical: height * 0.02),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        disabledBackgroundColor:
+                            AppColors.primaryLight.withOpacity(0.5),
+                      ),
+                      child: Text(
+                        'Request',
+                        style: TextUtils.getStyle(
+                          color: Colors.white,
+                          fontSize: width * 0.04,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    )),
               ),
               SizedBox(height: height * 0.04),
             ],

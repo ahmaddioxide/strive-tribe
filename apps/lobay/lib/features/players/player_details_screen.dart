@@ -216,7 +216,9 @@ class _PlayerDetailsScreenState extends State<PlayerDetailsScreen> {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            Get.to(() => RequestActivityScreen());
+                            Get.to(() => RequestActivityScreen(
+                              userModel: widget.player,
+                            ));
                           },
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(width * 0.7, height * 0.07),

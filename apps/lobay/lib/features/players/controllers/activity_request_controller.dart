@@ -5,12 +5,17 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lobay/utilities/constants/app_constants.dart';
 
+import '../../../core/shared_preferences/shared_pref.dart';
+import '../repo/players_repo.dart';
+
 class ActivityRequestController extends GetxController {
+  final playersRepo = PlayersRepository();
   final selectedPlayerLevel = RxnString();
   final selectedActivity = RxnString();
   final selectedDate = Rxn<DateTime>();
   final selectedTime = Rxn<TimeOfDay>();
   final notesController = TextEditingController();
+  final requestTo = RxnString();
   Rx<XFile?> videoFile = Rx<XFile?>(null);
 
   final playerLevels = AppConstants.expertiseLevel;
@@ -97,6 +102,16 @@ class ActivityRequestController extends GetxController {
     if (base64Video.isNotEmpty) {
       print('Video: data:video/mp4;base64,$base64Video');
     }
+    final currentUserId =
+        await PreferencesManager.getInstance().getStringValue('userId', '');
+    final requestActivityBody = RequestActivityBody(
+      reqFrom: currentUserId,
+      reqTo: requestTo.value,
+      activityId: selectedActivity.value,
+      activityName: selectedActivity.value,
+      activityLevel: selectedPlayerLevel.value,
+      
+    );
   }
 
   @override

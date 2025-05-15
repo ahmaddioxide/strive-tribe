@@ -104,14 +104,14 @@ class ActivityRequestController extends GetxController {
     }
     final currentUserId =
         await PreferencesManager.getInstance().getStringValue('userId', '');
-    final requestActivityBody = RequestActivityBody(
-      reqFrom: currentUserId,
-      reqTo: requestTo.value,
-      activityId: selectedActivity.value,
-      activityName: selectedActivity.value,
-      activityLevel: selectedPlayerLevel.value,
-      
-    );
+    // final requestActivityBody = RequestActivityBody(
+    //   reqFrom: currentUserId,
+    //   reqTo: requestTo.value,
+    //   activityId: selectedActivity.value,
+    //   activityName: selectedActivity.value,
+    //   activityLevel: selectedPlayerLevel.value,
+    //
+    // );
   }
 
   @override

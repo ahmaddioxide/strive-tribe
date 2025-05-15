@@ -2,7 +2,6 @@
 export interface RequestActivity {
     reqFrom: string;
     reqTo: string;
-    activityId: string;
     activityName: string;
     activityLevel: string;
     activityDate: string; // DD-MM-YYYY format

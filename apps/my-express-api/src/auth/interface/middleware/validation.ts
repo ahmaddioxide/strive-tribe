@@ -185,3 +185,24 @@ export const validateNearPlayerByUserById = [
     next();
   }
 ]
+
+export const validateCommonActivities = [
+  query("reqFrom")
+    .notEmpty().withMessage("reqFrom is required")
+    .isString().withMessage("reqFrom must be a string"),
+
+  query("reqTo")
+    .notEmpty().withMessage("reqTo is required")
+    .isString().withMessage("reqTo must be a string"),
+
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        errors: errors.array()
+      });
+    }
+    next();
+  }
+];

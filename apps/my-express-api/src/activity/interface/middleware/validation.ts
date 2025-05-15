@@ -158,10 +158,6 @@ export const validateRequestActivity = [
   body('reqTo')
     .notEmpty().withMessage("Recipient ID is required"),
     
-  body('activityId')
-    .notEmpty().withMessage("Activity ID is required")
-    .isMongoId().withMessage("Invalid Activity ID format"),
-    
   body('activityName')
     .notEmpty().withMessage("Activity name is required")
     .isString().withMessage("Activity name must be a string"),

@@ -66,6 +66,22 @@ export class RegisterUser {
 
   async execute(userData: any, profileImageBase64?: string) {
     try {
+      const userId = userData.user_id;
+
+      // Initialize Firebase Admin
+      const firebase = this.config.initializeFirebase();
+
+      // 1. Verify Firebase user exists first
+      try {
+        await firebase.auth().getUser(userId);
+      } catch (error: any) {
+        if (error.code === 'auth/user-not-found') {
+          throw new Error('User not registered in Firebase. Please authenticate first.');
+        }
+        throw new Error(`Firebase verification failed: ${error.message}`);
+      }
+
+
       let profileImageUrl = "NULL";
 
       if (profileImageBase64) {

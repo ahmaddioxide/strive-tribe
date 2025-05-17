@@ -104,9 +104,12 @@ export default class AuthController implements IController {
       const response = await this.registerUser.execute(userData, profile_image);
       res.status(201).json(response);
     } catch (error: any) {
-      res.status(500).json({ 
+      const statusCode = error.message.includes('Firebase') ? 401 : 500;
+      const errorMessage = error.message.replace('Firebase verification failed: ', '');
+
+      res.status(statusCode).json({ 
         success: false,
-        error: error.message || "Registration failed",
+        error: errorMessage || "Registration failed",
         ...(process.env.NODE_ENV === 'development' && { stack: error.stack })
       });
     }

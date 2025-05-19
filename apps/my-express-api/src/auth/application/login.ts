@@ -10,14 +10,27 @@ export class LoginUser {
   ) {}
 
   async execute(userId: string) {
-    // Find user by userId only
+    // ✅ Initialize Firebase Admin
+    const firebase = this.config.initializeFirebase();
+
+    // ✅ Verify Firebase user exists
+    try {
+      await firebase.auth().getUser(userId);
+    } catch (error: any) {
+      if (error.code === 'auth/user-not-found') {
+        throw new Error('User not registered in Firebase. Please authenticate first.');
+      }
+      throw new Error(`Firebase verification failed: ${error.message}`);
+    }
+
+    // ✅ Check user in local DB
     const user = await UserModel.findOne({ userId });
-    
+
     if (!user) {
       throw new Error("User not registered");
     }
 
-    // Generate JWT token
+    // ✅ Generate JWT token
     const token = jwt.sign(
       { id: user._id, userId: user.userId },
       this.config.jwt_token_secret,

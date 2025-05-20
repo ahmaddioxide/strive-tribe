@@ -19,6 +19,8 @@ export class Config {
     
     // Google Services
     public googleMapsApiKey: string;
+
+    public gmailAppPassword: string;
     
     constructor() {
         // Core App Config
@@ -36,6 +38,9 @@ export class Config {
         
         // Google Maps
         this.googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || "";
+
+        // Gmail
+        this.gmailAppPassword = process.env.GMAIL_APP_PASSWORD || "";
     }
     
     public initializeFirebase() {

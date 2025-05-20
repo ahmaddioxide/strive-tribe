@@ -5,6 +5,7 @@ import * as firebaseAdmin from "firebase-admin";
 import jwt from "jsonwebtoken";
 import { Config } from "../../config/config";
 import axios from "axios";
+import nodemailer from "nodemailer";
 
 @injectable()
 export class RegisterUser {
@@ -27,7 +28,6 @@ export class RegisterUser {
       const result = data.results[0];
       const location = result.geometry.location;
 
-      // Extract address components
       let placeName = '';
       let state = '';
       let countryName = '';
@@ -46,7 +46,6 @@ export class RegisterUser {
         }
       }
 
-      // ✅ Check if the country is United States
       if (countryShortName !== 'US') {
         throw new Error("Postal code does not exist in the United States.");
       }
@@ -67,11 +66,8 @@ export class RegisterUser {
   async execute(userData: any, profileImageBase64?: string) {
     try {
       const userId = userData.user_id;
-
-      // Initialize Firebase Admin
       const firebase = this.config.initializeFirebase();
 
-      // 1. Verify Firebase user exists first
       try {
         await firebase.auth().getUser(userId);
       } catch (error: any) {
@@ -81,14 +77,13 @@ export class RegisterUser {
         throw new Error(`Firebase verification failed: ${error.message}`);
       }
 
-
       let profileImageUrl = "NULL";
 
       if (profileImageBase64) {
         const base64Data = profileImageBase64.replace(/^data:image\/\w+;base64,/, '');
         const buffer = Buffer.from(base64Data, 'base64');
 
-        const maxSize = 100 * 1024 * 1024; // 100MB in bytes
+        const maxSize = 100 * 1024 * 1024;
         if (buffer.length > maxSize) {
           throw new Error("Profile image size exceeds the 100MB limit.");
         }
@@ -111,7 +106,6 @@ export class RegisterUser {
         profileImageUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`;
       }
 
-      // Fetch location details from postal code
       const locationDetails = await this.fetchLocationDetails(userData.postalCode);
 
       const newUser = new UserModel({
@@ -134,6 +128,36 @@ export class RegisterUser {
       });
 
       await newUser.save();
+
+      // Send Welcome Email
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'muhammadyounasqayyum009@gmail.com',
+          pass: this.config.gmailAppPassword // ✅ Put this in .env
+        }
+      });
+
+      const mailOptions = {
+        from: '"Strive Tribe" <muhammadyounasqayyum009@gmail.com>',
+        to: newUser.email,
+        subject: 'Welcome to Strive Tribe!',
+        html: `
+          <h2>Welcome to Strive Tribe, ${newUser.name}!</h2>
+          <p>We’re thrilled to have you join our community. 🎉</p>
+          <p>Start exploring new activities, meet like-minded people, and grow your tribe!</p>
+          <br />
+          <p>Stay connected,</p>
+          <p><strong>Strive Tribe Team</strong></p>
+        `
+      };
+
+      try {
+        await transporter.sendMail(mailOptions);
+        console.log(`Welcome email sent to ${newUser.email}`);
+      } catch (emailError) {
+        console.error('Failed to send welcome email:', emailError);
+      }
 
       return {
         success: true,

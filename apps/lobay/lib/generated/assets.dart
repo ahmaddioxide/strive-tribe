@@ -11,6 +11,7 @@ class Assets {
   static const String imagesCalendarRange = 'assets/images/calendar-range.png';
   static const String imagesCricket = 'assets/images/cricket.png';
   static const String imagesFacebookLogo = 'assets/images/facebook_logo.png';
+  static const String imagesMessageEmpty = 'assets/images/message_empty.png';
   static const String imagesNoNotificationIllustration = 'assets/images/no_notification_illustration.png';
   static const String imagesNotificationBell = 'assets/images/notification_bell.png';
   static const String imagesOnboarding1 = 'assets/images/onboarding_1.png';

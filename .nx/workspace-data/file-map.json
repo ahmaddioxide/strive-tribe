@@ -745,6 +745,10 @@
           "hash": "9512436441072692577"
         },
         {
+          "file": "apps/lobay/assets/images/message_empty.png",
+          "hash": "5511683304407527851"
+        },
+        {
           "file": "apps/lobay/assets/images/no_notification_illustration.png",
           "hash": "842800297833789341"
         },
@@ -1290,7 +1294,11 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/inbox_screen.dart",
-          "hash": "3071819273245505564"
+          "hash": "10246416701274232820"
+        },
+        {
+          "file": "apps/lobay/lib/features/inbox/widgets/no_chat_widget.dart",
+          "hash": "4494082321853641327"
         },
         {
           "file": "apps/lobay/lib/features/notifications/notification_details_and_user_stats_screen.dart",
@@ -1398,7 +1406,7 @@
         },
         {
           "file": "apps/lobay/lib/generated/assets.dart",
-          "hash": "14028752352209274584"
+          "hash": "263511314814565791"
         },
         {
           "file": "apps/lobay/lib/main.dart",

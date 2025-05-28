@@ -12060,7 +12060,48 @@
         "type": "implicit"
       }
     ],
-    "my-express-api": [],
+    "my-express-api": [
+      {
+        "source": "my-express-api",
+        "target": "npm:express",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:socket.io",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:helmet",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:cors",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:inversify",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:dotenv",
+        "type": "static"
+      }
+    ],
     "lobay": [],
     "npm:@ampproject/remapping": [
       {
@@ -27775,5 +27816,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1748349678505
+  "computedAt": 1748456870110
 }

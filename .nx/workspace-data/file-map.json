@@ -958,7 +958,7 @@
         },
         {
           "file": "apps/lobay/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
-          "hash": "15140801185183868753"
+          "hash": "3801572788241144170"
         },
         {
           "file": "apps/lobay/ios/Runner.xcworkspace/contents.xcworkspacedata",
@@ -1102,7 +1102,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/api_client.dart",
-          "hash": "16497314948821270179"
+          "hash": "18372693785162449781"
         },
         {
           "file": "apps/lobay/lib/core/network/api_exception.dart",
@@ -1114,11 +1114,15 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_constants.dart",
-          "hash": "16050155665171431112"
+          "hash": "12268129793274665892"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/accept_participation_reponse_model.dart",
           "hash": "2442265360865929022"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/network_models/all_chats_reponse.dart",
+          "hash": "18079720332532948566"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/create_activity_body.dart",
@@ -1293,8 +1297,20 @@
           "hash": "10964320604201572963"
         },
         {
+          "file": "apps/lobay/lib/features/inbox/inbox_controller.dart",
+          "hash": "10312003367597397595"
+        },
+        {
           "file": "apps/lobay/lib/features/inbox/inbox_screen.dart",
-          "hash": "10246416701274232820"
+          "hash": "14553286344717400476"
+        },
+        {
+          "file": "apps/lobay/lib/features/inbox/reposities/chat_repo.dart",
+          "hash": "13318239723846734112"
+        },
+        {
+          "file": "apps/lobay/lib/features/inbox/widgets/chat_room_tile.dart",
+          "hash": "9121110400798736232"
         },
         {
           "file": "apps/lobay/lib/features/inbox/widgets/no_chat_widget.dart",
@@ -1509,12 +1525,54 @@
           "hash": "14086997084547600071"
         },
         {
+          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.db5cedc3-95c1-4e19-ada1-7ebcb7357387.json",
+          "hash": "14086997084547600071"
+        },
+        {
           "file": "tmp/apps/my-express-api/serve/tsconfig.generated.json",
           "hash": "4508182324654425681"
         },
         {
           "file": "tsconfig.base.json",
           "hash": "16936441711144470533"
+        }
+      ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
         }
       ],
       "my-express-api": [
@@ -1644,7 +1702,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/domain/user.ts",
-          "hash": "14796222402674905004"
+          "hash": "11931455006466450237"
         },
         {
           "file": "apps/my-express-api/src/auth/infrastructure/database.ts",
@@ -1656,7 +1714,10 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/IController.ts",
-          "hash": "7020420628230583663"
+          "hash": "11496389772896501812",
+          "deps": [
+            "npm:express"
+          ]
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/auth.controller.ts",
@@ -1668,11 +1729,23 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/server.ts",
-          "hash": "12383336077015754086"
+          "hash": "13502927153559536161",
+          "deps": [
+            "npm:express",
+            "npm:socket.io",
+            "npm:helmet",
+            "npm:cors",
+            "npm:inversify",
+            "npm:jsonwebtoken"
+          ]
         },
         {
           "file": "apps/my-express-api/src/auth/interface/middleware/auth.ts",
-          "hash": "10004597076496442156"
+          "hash": "13921246705224645442",
+          "deps": [
+            "npm:express",
+            "npm:jsonwebtoken"
+          ]
         },
         {
           "file": "apps/my-express-api/src/auth/interface/middleware/errorHandler.ts",
@@ -1681,6 +1754,36 @@
         {
           "file": "apps/my-express-api/src/auth/interface/middleware/validation.ts",
           "hash": "7985640198951005275"
+        },
+        {
+          "file": "apps/my-express-api/src/chat/application/ChatService.ts",
+          "hash": "4490766492538731772",
+          "deps": [
+            "npm:inversify"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/chat/infrastructure/models/Conversation.ts",
+          "hash": "11968046951867107948",
+          "deps": [
+            "npm:mongoose"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/chat/infrastructure/models/Message.ts",
+          "hash": "12974511500624946471",
+          "deps": [
+            "npm:mongoose"
+          ]
+        },
+        {
+          "file": "apps/my-express-api/src/chat/interface/http/chat.controller.ts",
+          "hash": "3222658146576348108",
+          "deps": [
+            "npm:express",
+            "npm:inversify",
+            "npm:socket.io"
+          ]
         },
         {
           "file": "apps/my-express-api/src/config/config.ts",
@@ -1692,11 +1795,14 @@
         },
         {
           "file": "apps/my-express-api/src/config/installer.ts",
-          "hash": "1931719146272793018"
+          "hash": "3443862059674326147",
+          "deps": [
+            "npm:inversify"
+          ]
         },
         {
           "file": "apps/my-express-api/src/constants/identifiers.ts",
-          "hash": "11727137067262500347"
+          "hash": "13952654153533385148"
         },
         {
           "file": "apps/my-express-api/src/database/IDatabase.ts",
@@ -1708,7 +1814,10 @@
         },
         {
           "file": "apps/my-express-api/src/main.ts",
-          "hash": "14896333839634290001"
+          "hash": "6146695029278267477",
+          "deps": [
+            "npm:dotenv"
+          ]
         },
         {
           "file": "apps/my-express-api/tsconfig.app.json",
@@ -1721,44 +1830,6 @@
         {
           "file": "apps/my-express-api/tsconfig.spec.json",
           "hash": "6622138706846345436"
-        }
-      ],
-      "my-express-api-e2e": [
-        {
-          "file": "apps/my-express-api-e2e/eslint.config.cjs",
-          "hash": "7759795430795630113"
-        },
-        {
-          "file": "apps/my-express-api-e2e/jest.config.ts",
-          "hash": "7741689681773748875"
-        },
-        {
-          "file": "apps/my-express-api-e2e/project.json",
-          "hash": "11462360534563815238"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
-          "hash": "4579662685003779048"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
-          "hash": "2568409276037275290"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
-          "hash": "5275447082211835490"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
-          "hash": "14954872453723519891"
         }
       ]
     }

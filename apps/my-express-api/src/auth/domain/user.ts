@@ -1,3 +1,4 @@
+//src/auth/domain/user.ts
 export class User {
     public name: string;
     public email: string;

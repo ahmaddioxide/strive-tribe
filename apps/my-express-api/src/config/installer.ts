@@ -1,3 +1,4 @@
+//src/config/installer.ts
 import { Container } from "inversify";
 import { Identifier } from "../constants/identifiers";
 import { Config } from "./config";
@@ -19,7 +20,9 @@ import { GetScheduledActivities } from "../activity/application/GetScheduledActi
 import { GetUserStats } from "../../src/auth/application/GetUserStats";
 import { FindNearbyPlayers } from "../auth/application/FindNearbyPlayers";
 import { SendRequestActivity } from "../activity/application/SendRequestActivity";
-import { GetCommonActivities } from "../auth/application/GetCommonActivities"
+import { GetCommonActivities } from "../auth/application/GetCommonActivities";
+import { ChatController } from "../chat/interface/http/chat.controller";
+import { ChatService } from "../chat/application/ChatService";
 
 
 import { ParticipateActivity } from "../activity/application/ParticipateActivity";
@@ -46,6 +49,8 @@ container.bind<GetUserStats>(GetUserStats).toSelf();
 container.bind<FindNearbyPlayers>(FindNearbyPlayers).toSelf();
 container.bind<SendRequestActivity>(SendRequestActivity).toSelf();
 container.bind<GetCommonActivities>(GetCommonActivities).toSelf();
+container.bind<ChatService>(ChatService).toSelf();
+container.bind<ChatController>(Identifier.ChatController).to(ChatController);
 container.bind<AuthController>(Identifier.AuthController).to(AuthController);
 container.bind<ActivityController>(Identifier.ActivityController).to(ActivityController);
 

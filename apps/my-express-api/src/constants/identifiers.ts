@@ -4,4 +4,5 @@ export class Identifier {
     public static Config = Symbol("Config"); // Changed to PascalCase
     public static AuthController = Symbol("AuthController");
     public static ActivityController = Symbol("ActivityController");
+    public static ChatController = Symbol("ChatController");
 }

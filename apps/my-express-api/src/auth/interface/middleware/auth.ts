@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { Config } from "../../../config/config";
 import UserModel from "../../infrastructure/models/User";
 
+
 // Extend Express Request with user property
 declare global {
   namespace Express {
@@ -25,7 +26,7 @@ export const authenticate = async (req: Request, res: Response, next: NextFuncti
 
   try {
     // Verify token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as { id: string };
+    const decoded = jwt.verify(token, process.env.LOBAY_SECRET as string) as { id: string };
     
     // Check if user still exists in database
     const user = await UserModel.findById(decoded.id).select('_id userId');

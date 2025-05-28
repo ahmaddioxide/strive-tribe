@@ -1,7 +1,7 @@
 // src/auth/interface/http/server.ts
 import express from "express";
 import * as http from "http";
-import { Server as SocketIOServer } from "socket.io";
+import { Server as SocketIOServer, Socket } from "socket.io";
 import helmet from "helmet";
 import cors from "cors";
 import { injectable } from "inversify";
@@ -10,7 +10,7 @@ import { errorHandler } from "../middleware/errorHandler";
 import UserModel from "../../infrastructure/models/User";
 import jwt from "jsonwebtoken";
 import { Config } from "../../../config/config";
-import {ChatService} from "../../../chat/application/ChatService"; // Make sure path is correct
+import { ChatService } from "../../../chat/application/ChatService";
 
 @injectable()
 class Server {
@@ -28,11 +28,24 @@ class Server {
     this.app = express();
     this.port = port;
     this.server = http.createServer(this.app);
+    
+    // Updated Socket.IO configuration
     this.io = new SocketIOServer(this.server, {
       cors: {
         origin: "*",
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allowedHeaders: ["Authorization", "Content-Type"],
+        credentials: true
       },
+      transports: ["websocket", "polling"],
+      allowEIO3: true,
+      pingInterval: 10000,
+      pingTimeout: 5000,
+      cookie: false,
+      serveClient: false
     });
+
+    
 
     this.initializeMiddlewares();
     this.initializeControllers(controllers);
@@ -55,35 +68,81 @@ class Server {
   }
 
   private initializeSocket() {
-    this.io.use(async (socket, next) => {
-      const token = socket.handshake.auth.token;
-      if (!token) return next(new Error("Authentication required"));
+    // Add connection error handler
+    this.io.on("connection_error", (err) => {
+      console.error("Socket connection error:", err.message);
+    });
+
+    this.io.use(async (socket: Socket, next) => {
+      // Check token in multiple locations
+      const token = 
+        socket.handshake.auth?.token || 
+        socket.handshake.query?.token || 
+        (socket.handshake.headers.authorization?.startsWith("Bearer ") 
+          ? socket.handshake.headers.authorization.split(" ")[1] 
+          : null);
+      
+      if (!token) {
+        console.log("No token provided");
+        return next(new Error("Authentication required"));
+      }
 
       try {
         const decoded = jwt.verify(token, this.config.jwt_token_secret) as { id: string };
         const user = await UserModel.findById(decoded.id);
-        if (!user) return next(new Error("User not found"));
+        
+        if (!user) {
+          console.log(`User not found for ID: ${decoded.id}`);
+          return next(new Error("User not found"));
+        }
+        
         socket.data.userId = user.userId;
+        console.log(`Authenticated user: ${user.userId}`);
         next();
-      } catch (error) {
+      } catch (error: any) {
+        console.error("Token verification error:", error.message);
         next(new Error("Invalid token"));
       }
     });
 
-    this.io.on("connection", (socket) => {
+    this.io.on("connection", (socket: Socket) => {
+      console.log(`New connection: ${socket.id} (User: ${socket.data.userId})`);
+      
       socket.join(socket.data.userId);
+      
+      // Add ping/pong for testing
+      socket.on("ping", (callback) => {
+        console.log(`Ping from ${socket.data.userId}`);
+        callback("pong");
+      });
 
       socket.on("sendMessage", async ({ recipientId, content }) => {
         try {
+          console.log(`Message from ${socket.data.userId} to ${recipientId}: ${content}`);
+          
           const message = await this.chatService.sendMessage(
             socket.data.userId,
             recipientId,
             content
           );
+          
+          // Emit to specific room
           this.io.to(recipientId).emit("receiveMessage", message);
+          
+          // Also send to sender for UI update
+          socket.emit("receiveMessage", message);
         } catch (error: any) {
-          socket.emit("error", { message: error.message });
+          console.error("Message send error:", error.message);
+          socket.emit("error", { 
+            event: "sendMessage", 
+            message: error.message 
+          });
         }
+      });
+
+      // Handle disconnections
+      socket.on("disconnect", (reason) => {
+        console.log(`Disconnected: ${socket.id} - ${reason}`);
       });
     });
   }
@@ -91,6 +150,7 @@ class Server {
   public listen() {
     this.server.listen(this.port, () => {
       console.log(`Server listening on port ${this.port}`);
+      console.log(`Socket.IO endpoint: ws://localhost:${this.port}`);
     });
   }
 }

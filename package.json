@@ -49,6 +49,7 @@
   ],
   "nx": {},
   "dependencies": {
+    "@d3vision/socket.io-rate-limiter": "^1.0.1",
     "aws-sdk": "^2.1692.0",
     "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",

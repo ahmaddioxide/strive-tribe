@@ -3,6 +3,7 @@ import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/network_models/all_chats_reponse.dart';
 import 'package:lobay/core/shared_preferences/shared_pref.dart';
 import 'package:lobay/features/inbox/reposities/chat_repo.dart';
+import 'package:lobay/services/socket_service.dart';
 
 class InboxController extends GetxController {
   final ChatRepo chatRepo = ChatRepo();
@@ -16,9 +17,16 @@ class InboxController extends GetxController {
   }
 
   @override
-  void onReady() {
+  Future<void> onReady() async {
     super.onReady();
     getChats();
+
+    // Initialize the service
+    final socketService = SocketService();
+    await socketService.initialize();
+
+    // Connect to the socket
+    socketService.connect();
   }
 
   Future<void> getChats() async {

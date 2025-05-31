@@ -208,6 +208,47 @@ class Server {
         }
       });
 
+      socket.on('markAsRead', async (data: any) => {
+        try {
+          if (!data || typeof data !== 'object') {
+            throw new Error('Invalid request format');
+          }
+
+          const { recipientId } = data;
+
+          if (!recipientId) {
+            socket.emit('error', {
+              event: 'markAsRead',
+              message: 'recipientId is required',
+            });
+            return;
+          }
+
+          await this.chatService.markMessagesAsRead(
+            socket.data.userId,
+            recipientId
+          );
+
+          socket.emit('markAsReadSuccess', {
+            success: true,
+            message: 'Messages marked as read',
+          });
+
+          // // Optionally, notify recipient
+          // this.io.to(recipientId).emit('messagesReadBy', {
+          //   from: socket.data.userId,
+          // });
+
+        } catch (error: any) {
+          console.error('markAsRead error:', error.message);
+          socket.emit('error', {
+            event: 'markAsRead',
+            message: error.message || 'Failed to mark messages as read',
+          });
+        }
+      });
+
+
 
       socket.on('disconnect', (reason) => {
         console.log(`Disconnected: ${socket.id} - ${reason}`);

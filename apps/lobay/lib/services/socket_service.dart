@@ -115,6 +115,19 @@ class SocketService {
       }
       log('========================================\n');
     });
+
+    // Add receive message event listener
+    socket.on('receiveMessage', (data) {
+      log('\n=== Received Message ===');
+      log('Room ID: ${data['roomId']}');
+      log('Sender ID: ${data['senderId']}');
+      log('Recipient ID: ${data['recipientId']}');
+      log('Content: ${data['content']}');
+      log('Read Status: ${data['read']}');
+      log('Message ID: ${data['_id']}');
+      log('Timestamp: ${data['timestamp']}');
+      log('========================================\n');
+    });
   }
 
   void connect() {
@@ -165,8 +178,22 @@ class SocketService {
   void getAllRooms() {
     if (_isConnected) {
       log('getAllRooms emitting');
-      socket.emit('getAllRooms');
+      socket.emit('getAllRoom');
       log('getAllRooms emitted');
+    } else {
+      log('Socket is not connected');
+    }
+  }
+
+  /// Emits sendMessage event to send a message to a recipient
+  void sendMessage(String recipientId, String content) {
+    if (_isConnected) {
+      final data = {
+        'recipientId': recipientId,
+        'content': content,
+      };
+      log('Emitting sendMessage event with data: $data');
+      socket.emit('sendMessage', data);
     } else {
       log('Socket is not connected');
     }

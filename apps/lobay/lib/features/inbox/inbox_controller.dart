@@ -28,7 +28,9 @@ class InboxController extends GetxController {
     // Connect to the socket
     socketService.connect();
     Future.delayed(const Duration(seconds: 1), () {
-      socketService.getAllChat('aa5vQ2sht3gblxv2EgLDOJjcHr92');
+      // socketService.getAllChat('aa5vQ2sht3gblxv2EgLDOJjcHr92');
+      socketService.getAllRooms();
+      socketService.sendMessage('LlMzMbLYw8hBROWjyn1kd1BXs2S2', 'Hello');
     });
   }
 

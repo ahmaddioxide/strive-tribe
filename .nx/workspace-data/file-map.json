@@ -1297,12 +1297,24 @@
           "hash": "10964320604201572963"
         },
         {
+          "file": "apps/lobay/lib/features/inbox/chat_room_screen.dart",
+          "hash": "3244421341483603138"
+        },
+        {
           "file": "apps/lobay/lib/features/inbox/inbox_controller.dart",
-          "hash": "15644614433614476225"
+          "hash": "14831791961862078452"
         },
         {
           "file": "apps/lobay/lib/features/inbox/inbox_screen.dart",
-          "hash": "14553286344717400476"
+          "hash": "7379874320601288078"
+        },
+        {
+          "file": "apps/lobay/lib/features/inbox/presentation/controllers/chat_controller.dart",
+          "hash": "11205628020441546468"
+        },
+        {
+          "file": "apps/lobay/lib/features/inbox/presentation/screens/chat_screen.dart",
+          "hash": "1077367431349441896"
         },
         {
           "file": "apps/lobay/lib/features/inbox/reposities/chat_repo.dart",
@@ -1310,7 +1322,7 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/widgets/chat_room_tile.dart",
-          "hash": "9121110400798736232"
+          "hash": "17171115314021054547"
         },
         {
           "file": "apps/lobay/lib/features/inbox/widgets/no_chat_widget.dart",
@@ -1358,7 +1370,7 @@
         },
         {
           "file": "apps/lobay/lib/features/players/player_details_screen.dart",
-          "hash": "3438442285115358981"
+          "hash": "2276086745257511264"
         },
         {
           "file": "apps/lobay/lib/features/players/players_controller.dart",
@@ -1446,7 +1458,7 @@
         },
         {
           "file": "apps/lobay/lib/services/socket_service.dart",
-          "hash": "12362356107684151967"
+          "hash": "10503325482884333084"
         },
         {
           "file": "apps/lobay/lib/utilities/app_utils/app_utils.dart",
@@ -1752,7 +1764,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/server.ts",
-          "hash": "1525772882717777160",
+          "hash": "3372555613553531542",
           "deps": [
             "npm:express",
             "npm:socket.io",

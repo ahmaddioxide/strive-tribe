@@ -5,7 +5,7 @@ import 'package:socket_io_client/socket_io_client.dart' as IO;
 import '../core/shared_preferences/shared_pref.dart';
 
 class SocketService {
-  late IO.Socket socket;
+  IO.Socket? socket;
   final String _baseUrl = 'http://localhost:3000';
   bool _isConnected = false;
 
@@ -31,56 +31,81 @@ class SocketService {
   }
 
   void _setupSocketListeners() {
-    socket.onConnect((_) {
+    if (socket == null) return;
+
+    socket!.onConnect((_) {
       _isConnected = true;
       log('Socket connected');
     });
 
-    socket.onDisconnect((_) {
+    socket!.onDisconnect((_) {
       _isConnected = false;
       log('Socket disconnected');
     });
 
-    socket.onError((error) {
+    socket!.onError((error) {
       log('Socket error: $error');
     });
 
-    socket.onConnectError((error) {
+    socket!.onConnectError((error) {
       log('Connection error: $error');
     });
 
     // Add chat rooms event listener
-    socket.on('chatRooms', (data) {
+    socket!.on('chatRooms', (data) {
       log('\n=== Received Chat Rooms Data ===');
-      if (data['success'] == true && data['rooms'] != null) {
-        final rooms = data['rooms'] as List;
-        log('Total rooms: ${rooms.length}');
+      log('Raw data type: ${data.runtimeType}');
+      log('Raw data: $data');
 
-        for (var room in rooms) {
-          log('\nRoom ID: ${room['_id']}');
-          log('Last Message: ${room['lastMessage']}');
-          log('Last Message Time: ${room['lastMessageTimestamp']}');
-          log('Unread Count: ${room['unreadCount']}');
+      try {
+        if (data is Map<String, dynamic>) {
+          log('Data is Map<String, dynamic>');
+          if (data['success'] == true && data['rooms'] != null) {
+            final rooms = data['rooms'];
+            log('Rooms type: ${rooms.runtimeType}');
+            log('Rooms data: $rooms');
 
-          if (room['recipient'] != null) {
-            final recipient = room['recipient'];
-            log('Recipient:');
-            log('  - ID: ${recipient['_id']}');
-            log('  - User ID: ${recipient['userId']}');
-            log('  - Name: ${recipient['name']}');
-            log('  - Profile Image: ${recipient['profileImage']}');
+            if (rooms is List) {
+              log('Total rooms: ${rooms.length}');
+              for (var room in rooms) {
+                log('Room type: ${room.runtimeType}');
+                log('Room data: $room');
+                if (room is Map<String, dynamic>) {
+                  log('\nRoom ID: ${room['_id']}');
+                  log('Last Message: ${room['lastMessage']}');
+                  log('Last Message Time: ${room['lastMessageTimestamp']}');
+                  log('Unread Count: ${room['unreadCount']}');
+
+                  if (room['recipient'] != null &&
+                      room['recipient'] is Map<String, dynamic>) {
+                    final recipient = room['recipient'] as Map<String, dynamic>;
+                    log('Recipient:');
+                    log('  - ID: ${recipient['_id']}');
+                    log('  - User ID: ${recipient['userId']}');
+                    log('  - Name: ${recipient['name']}');
+                    log('  - Profile Image: ${recipient['profileImage']}');
+                  }
+                  log('----------------------------------------');
+                }
+              }
+            } else {
+              log('Error: rooms is not a List');
+            }
+          } else {
+            log('Error: Invalid data format or unsuccessful response');
           }
-          log('----------------------------------------');
+        } else {
+          log('Error: data is not Map<String, dynamic>');
         }
-      } else {
-        log('Error: Invalid data format or unsuccessful response');
-        log('Raw data: $data');
+      } catch (e, stackTrace) {
+        log('Error processing chatRooms data: $e');
+        log('Stack trace: $stackTrace');
       }
       log('========================================\n');
     });
 
     // Add new message event listener
-    socket.on('newMessage', (data) {
+    socket!.on('newMessage', (data) {
       log('\n=== Received New Message ===');
       log('Room ID: ${data['roomId']}');
       log('Sender ID: ${data['senderId']}');
@@ -93,7 +118,7 @@ class SocketService {
     });
 
     // Add message history event listener
-    socket.on('historyMessage', (data) {
+    socket!.on('historyMessage', (data) {
       log('\n=== Received Message History ===');
       if (data['success'] == true && data['messages'] != null) {
         final messages = data['messages'] as List;
@@ -117,7 +142,7 @@ class SocketService {
     });
 
     // Add receive message event listener
-    socket.on('receiveMessage', (data) {
+    socket!.on('receiveMessage', (data) {
       log('\n=== Received Message ===');
       log('Room ID: ${data['roomId']}');
       log('Sender ID: ${data['senderId']}');
@@ -131,20 +156,20 @@ class SocketService {
   }
 
   void connect() {
-    if (!_isConnected) {
-      socket.connect();
+    if (!_isConnected && socket != null) {
+      socket!.connect();
     }
   }
 
   void disconnect() {
-    if (_isConnected) {
-      socket.disconnect();
+    if (_isConnected && socket != null) {
+      socket!.disconnect();
     }
   }
 
   void emit(String event, dynamic data) {
-    if (_isConnected) {
-      socket.emit(event, data);
+    if (_isConnected && socket != null) {
+      socket!.emit(event, data);
       log('Emitting $event event with data: $data');
     } else {
       log('Socket is not connected');
@@ -152,33 +177,36 @@ class SocketService {
   }
 
   void on(String event, Function(dynamic) callback) {
-    socket.on(event, callback);
+    if (socket != null) {
+      socket!.on(event, callback);
+    }
   }
 
   void off(String event) {
-    socket.off(event);
+    if (socket != null) {
+      socket!.off(event);
+    }
   }
 
   bool get isConnected => _isConnected;
 
   /// Emits getAllChat event to fetch all chat rooms for a recipient
   void getAllChat(String recipientId) {
-    log('getAllChat: $recipientId');
-    if (_isConnected) {
+    if (_isConnected && socket != null) {
       final data = {
         'recipientId': recipientId,
       };
       log('Emitting getAllChat event with data: $data');
-      socket.emit('getAllChat', data);
+      socket!.emit('getAllChat', data);
     } else {
       log('Socket is not connected');
     }
   }
 
   void getAllRooms() {
-    if (_isConnected) {
+    if (_isConnected && socket != null) {
       log('getAllRooms emitting');
-      socket.emit('getAllRoom');
+      socket!.emit('getAllRoom');
       log('getAllRooms emitted');
     } else {
       log('Socket is not connected');
@@ -187,13 +215,13 @@ class SocketService {
 
   /// Emits sendMessage event to send a message to a recipient
   void sendMessage(String recipientId, String content) {
-    if (_isConnected) {
+    if (_isConnected && socket != null) {
       final data = {
         'recipientId': recipientId,
         'content': content,
       };
       log('Emitting sendMessage event with data: $data');
-      socket.emit('sendMessage', data);
+      socket!.emit('sendMessage', data);
     } else {
       log('Socket is not connected');
     }
@@ -201,12 +229,12 @@ class SocketService {
 
   /// Emits markAsRead event to mark messages as read for a recipient
   void markAsRead(String recipientId) {
-    if (_isConnected) {
+    if (_isConnected && socket != null) {
       final data = {
         'recipientId': recipientId,
       };
       log('Emitting markAsRead event with data: $data');
-      socket.emit('markAsRead', data);
+      socket!.emit('markAsRead', data);
     } else {
       log('Socket is not connected');
     }

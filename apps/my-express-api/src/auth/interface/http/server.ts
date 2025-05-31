@@ -132,11 +132,16 @@ class Server {
             recipientId,
             content
           );
+          const chatList = await this.chatService.getChatList(socket.data.userId);
 
           // Emit to recipient and sender
           this.io.to(recipientId).emit('receiveMessage', message);
           socket.emit('receiveMessage', message);
-
+          this.io.to(recipientId).emit('chatRooms', chatList)
+          socket.emit('chatRooms', {
+              success: true,
+              rooms: chatList,
+            });
           // Also emit `newMessage` to recipient for new chat alert
           this.io.to(recipientId).emit('newMessage', message);
         } catch (error: any) {

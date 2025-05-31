@@ -44,29 +44,33 @@ class InboxScreen extends StatelessWidget {
         ),
         SizedBox(height: MediaQuery.of(context).size.height * 0.02),
         Expanded(
-          child: ListView.builder(
-            itemCount: 10,
-            padding: EdgeInsets.symmetric(
-                horizontal: MediaQuery.of(context).size.width * 0.01),
-            itemBuilder: (context, index) {
-              return ChatRoomTile();
+          child: Obx(
+            () {
+              if (controller.isLoading.value) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              if (controller.chatRooms.isEmpty) {
+                return const Center(child: NoChatWidget());
+              }
+              return ListView.builder(
+                itemCount: controller.chatRooms.length,
+                padding: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.width * 0.01),
+                itemBuilder: (context, index) {
+                  final room = controller.chatRooms[index];
+                  return ChatRoomTile(
+                    roomId: room['_id'],
+                    recipientId: room['recipient']['userId'],
+                    recipientName: room['recipient']['name'],
+                    lastMessage: room['lastMessage'],
+                    lastMessageTime: room['lastMessageTimestamp'],
+                    unreadCount: room['unreadCount'],
+                    profileImage: room['recipient']['profileImage'],
+                  );
+                },
+              );
             },
           ),
-          // child: Obx(
-          //   () {
-          //     if (controller.isLoading.value) {
-          //       return const Center(child: CircularProgressIndicator());
-          //     }
-          //     if (controller.allChatsResponse.value!.conversations.isEmpty) {
-          //       return const Center(child: NoChatWidget());
-          //     }
-          //     return ListView.builder(
-          //       itemBuilder: (context, index) {
-          //         return ChatRoomTile();
-          //       },
-          //     );
-          //   },
-          // ),
         ),
       ],
     );

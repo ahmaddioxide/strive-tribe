@@ -10,6 +10,8 @@ import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
+import '../inbox/presentation/screens/chat_screen.dart';
+
 class PlayerDetailsScreen extends StatefulWidget with DeviceSizeUtil {
   final Player player;
 
@@ -84,7 +86,15 @@ class _PlayerDetailsScreenState extends State<PlayerDetailsScreen> {
                         ),
                         Spacer(),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(
+                              () => ChatScreen(
+                                recipientId: widget.player.userId,
+                                recipientName: widget.player.name,
+                                recipientImage: widget.player.profileImage,
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.message_rounded,
                             color: AppColors.primaryLight,
@@ -217,8 +227,8 @@ class _PlayerDetailsScreenState extends State<PlayerDetailsScreen> {
                         ElevatedButton(
                           onPressed: () {
                             Get.to(() => RequestActivityScreen(
-                              userModel: widget.player,
-                            ));
+                                  userModel: widget.player,
+                                ));
                           },
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(width * 0.7, height * 0.07),

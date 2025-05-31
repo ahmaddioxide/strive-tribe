@@ -152,10 +152,19 @@ class Server {
       socket.on('getAllRoom', async () => {
         try {
           const chatList = await this.chatService.getChatList(socket.data.userId);
-          socket.emit('chatRooms', {
-            success: true,
-            rooms: chatList,
-          });
+
+          if (chatList.length === 0) {
+            socket.emit('chatRooms', {
+              success: true,
+              rooms: [],
+              message: 'No chat rooms found.',
+            });
+          } else {
+            socket.emit('chatRooms', {
+              success: true,
+              rooms: chatList,
+            });
+          }
         } catch (err: any) {
           console.error('getAllRoom error:', err.message);
           socket.emit('error', {

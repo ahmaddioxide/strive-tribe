@@ -1,3 +1,4 @@
+//src/chat/infrastructure/models/Conversation.ts
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface IConversation extends Document {

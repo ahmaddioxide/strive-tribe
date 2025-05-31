@@ -31,44 +31,6 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
-      "my-express-api-e2e": [
-        {
-          "file": "apps/my-express-api-e2e/eslint.config.cjs",
-          "hash": "7759795430795630113"
-        },
-        {
-          "file": "apps/my-express-api-e2e/jest.config.ts",
-          "hash": "7741689681773748875"
-        },
-        {
-          "file": "apps/my-express-api-e2e/project.json",
-          "hash": "11462360534563815238"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
-          "hash": "4579662685003779048"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
-          "hash": "2568409276037275290"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
-          "hash": "5275447082211835490"
-        },
-        {
-          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
-          "hash": "14954872453723519891"
-        }
-      ],
       "lobay": [
         {
           "file": ".DS_Store",
@@ -1336,7 +1298,7 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/inbox_controller.dart",
-          "hash": "18350858123740489460"
+          "hash": "18351422688593405336"
         },
         {
           "file": "apps/lobay/lib/features/inbox/inbox_screen.dart",
@@ -1484,7 +1446,7 @@
         },
         {
           "file": "apps/lobay/lib/services/socket_service.dart",
-          "hash": "17115357187057007934"
+          "hash": "18381745196472375813"
         },
         {
           "file": "apps/lobay/lib/utilities/app_utils/app_utils.dart",
@@ -1556,14 +1518,75 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "5137588149077811973"
+          "hash": "8946462028319009840"
         },
         {
           "file": "package.json",
-          "hash": "2958186335719813294"
+          "hash": "3720941799948160397",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/express",
+            "npm:@nx/jest",
+            "npm:@nx/js",
+            "npm:@nx/node",
+            "npm:@nx/web",
+            "npm:@nx/webpack",
+            "npm:@nxrocks/nx-flutter",
+            "npm:@pmmmwh/react-refresh-webpack-plugin",
+            "npm:@svgr/webpack",
+            "npm:@swc-node/register",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@types/aws-sdk",
+            "npm:@types/jest",
+            "npm:@types/jsonwebtoken",
+            "npm:@types/multer",
+            "npm:@types/node",
+            "npm:@types/socket.io",
+            "npm:@types/uuid",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:jest",
+            "npm:jest-environment-node",
+            "npm:nodemon",
+            "npm:nx",
+            "npm:prettier",
+            "npm:react-refresh",
+            "npm:ts-jest",
+            "npm:ts-node",
+            "npm:ts-node-dev",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:webpack-cli",
+            "npm:@d3vision/socket.io-rate-limiter",
+            "npm:aws-sdk",
+            "npm:axios",
+            "npm:bcryptjs",
+            "npm:cors",
+            "npm:express",
+            "npm:express-validator",
+            "npm:fb",
+            "npm:firebase-admin",
+            "npm:google-auth-library",
+            "npm:helmet",
+            "npm:inversify",
+            "npm:jsonwebtoken",
+            "npm:mongoose",
+            "npm:multer",
+            "npm:nodemailer",
+            "npm:socket.io",
+            "npm:uuid"
+          ]
         },
         {
           "file": "tmp/apps/my-express-api/serve/tsconfig.generated.7f32174a-ddaa-4701-a12c-0d84b2e92ea7.json",
+          "hash": "14086997084547600071"
+        },
+        {
+          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.eae6d30b-b352-4063-a593-d6d01b3dadb9.json",
           "hash": "14086997084547600071"
         },
         {
@@ -1729,7 +1752,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/server.ts",
-          "hash": "6654231385252822006",
+          "hash": "3957587502049696341",
           "deps": [
             "npm:express",
             "npm:socket.io",
@@ -1757,28 +1780,35 @@
         },
         {
           "file": "apps/my-express-api/src/chat/application/ChatService.ts",
-          "hash": "4490766492538731772",
+          "hash": "3898974883560720655",
           "deps": [
             "npm:inversify"
           ]
         },
         {
+          "file": "apps/my-express-api/src/chat/infrastructure/models/ChatRoom.ts",
+          "hash": "13926306759684502136",
+          "deps": [
+            "npm:mongoose"
+          ]
+        },
+        {
           "file": "apps/my-express-api/src/chat/infrastructure/models/Conversation.ts",
-          "hash": "11968046951867107948",
+          "hash": "10415778401944524834",
           "deps": [
             "npm:mongoose"
           ]
         },
         {
           "file": "apps/my-express-api/src/chat/infrastructure/models/Message.ts",
-          "hash": "12974511500624946471",
+          "hash": "5698478871533881615",
           "deps": [
             "npm:mongoose"
           ]
         },
         {
           "file": "apps/my-express-api/src/chat/interface/http/chat.controller.ts",
-          "hash": "3222658146576348108",
+          "hash": "2141124389579432251",
           "deps": [
             "npm:express",
             "npm:inversify",
@@ -1830,6 +1860,44 @@
         {
           "file": "apps/my-express-api/tsconfig.spec.json",
           "hash": "6622138706846345436"
+        }
+      ],
+      "my-express-api-e2e": [
+        {
+          "file": "apps/my-express-api-e2e/eslint.config.cjs",
+          "hash": "7759795430795630113"
+        },
+        {
+          "file": "apps/my-express-api-e2e/jest.config.ts",
+          "hash": "7741689681773748875"
+        },
+        {
+          "file": "apps/my-express-api-e2e/project.json",
+          "hash": "11462360534563815238"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/my-express-api/my-express-api.spec.ts",
+          "hash": "4579662685003779048"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-setup.ts",
+          "hash": "2568409276037275290"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/global-teardown.ts",
+          "hash": "5275447082211835490"
+        },
+        {
+          "file": "apps/my-express-api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/my-express-api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
         }
       ]
     }

@@ -34,20 +34,86 @@ class SocketService {
     socket.onConnect((_) {
       _isConnected = true;
       log('Socket connected');
-      print('Socket connected');
     });
 
     socket.onDisconnect((_) {
       _isConnected = false;
-      print('Socket disconnected');
+      log('Socket disconnected');
     });
 
     socket.onError((error) {
-      print('Socket error: $error');
+      log('Socket error: $error');
     });
 
     socket.onConnectError((error) {
-      print('Connection error: $error');
+      log('Connection error: $error');
+    });
+
+    // Add chat rooms event listener
+    socket.on('chatRooms', (data) {
+      log('\n=== Received Chat Rooms Data ===');
+      if (data['success'] == true && data['rooms'] != null) {
+        final rooms = data['rooms'] as List;
+        log('Total rooms: ${rooms.length}');
+
+        for (var room in rooms) {
+          log('\nRoom ID: ${room['_id']}');
+          log('Last Message: ${room['lastMessage']}');
+          log('Last Message Time: ${room['lastMessageTimestamp']}');
+          log('Unread Count: ${room['unreadCount']}');
+
+          if (room['recipient'] != null) {
+            final recipient = room['recipient'];
+            log('Recipient:');
+            log('  - ID: ${recipient['_id']}');
+            log('  - User ID: ${recipient['userId']}');
+            log('  - Name: ${recipient['name']}');
+            log('  - Profile Image: ${recipient['profileImage']}');
+          }
+          log('----------------------------------------');
+        }
+      } else {
+        log('Error: Invalid data format or unsuccessful response');
+        log('Raw data: $data');
+      }
+      log('========================================\n');
+    });
+
+    // Add new message event listener
+    socket.on('newMessage', (data) {
+      log('\n=== Received New Message ===');
+      log('Room ID: ${data['roomId']}');
+      log('Sender ID: ${data['senderId']}');
+      log('Recipient ID: ${data['recipientId']}');
+      log('Content: ${data['content']}');
+      log('Read Status: ${data['read']}');
+      log('Message ID: ${data['_id']}');
+      log('Timestamp: ${data['timestamp']}');
+      log('========================================\n');
+    });
+
+    // Add message history event listener
+    socket.on('historyMessage', (data) {
+      log('\n=== Received Message History ===');
+      if (data['success'] == true && data['messages'] != null) {
+        final messages = data['messages'] as List;
+        log('Total messages: ${messages.length}');
+
+        for (var message in messages) {
+          log('\nMessage ID: ${message['_id']}');
+          log('Room ID: ${message['roomId']}');
+          log('Sender ID: ${message['senderId']}');
+          log('Recipient ID: ${message['recipientId']}');
+          log('Content: ${message['content']}');
+          log('Read Status: ${message['read']}');
+          log('Timestamp: ${message['timestamp']}');
+          log('----------------------------------------');
+        }
+      } else {
+        log('Error: Invalid data format or unsuccessful response');
+        log('Raw data: $data');
+      }
+      log('========================================\n');
     });
   }
 
@@ -66,8 +132,9 @@ class SocketService {
   void emit(String event, dynamic data) {
     if (_isConnected) {
       socket.emit(event, data);
+      log('Emitting $event event with data: $data');
     } else {
-      print('Socket is not connected');
+      log('Socket is not connected');
     }
   }
 
@@ -80,4 +147,28 @@ class SocketService {
   }
 
   bool get isConnected => _isConnected;
+
+  /// Emits getAllChat event to fetch all chat rooms for a recipient
+  void getAllChat(String recipientId) {
+    log('getAllChat: $recipientId');
+    if (_isConnected) {
+      final data = {
+        'recipientId': recipientId,
+      };
+      log('Emitting getAllChat event with data: $data');
+      socket.emit('getAllChat', data);
+    } else {
+      log('Socket is not connected');
+    }
+  }
+
+  void getAllRooms() {
+    if (_isConnected) {
+      log('getAllRooms emitting');
+      socket.emit('getAllRooms');
+      log('getAllRooms emitted');
+    } else {
+      log('Socket is not connected');
+    }
+  }
 }

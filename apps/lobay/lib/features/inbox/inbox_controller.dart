@@ -19,7 +19,7 @@ class InboxController extends GetxController {
   @override
   Future<void> onReady() async {
     super.onReady();
-    getChats();
+    // getChats();
 
     // Initialize the service
     final socketService = SocketService();
@@ -27,6 +27,9 @@ class InboxController extends GetxController {
 
     // Connect to the socket
     socketService.connect();
+    Future.delayed(const Duration(seconds: 1), () {
+      socketService.getAllChat('aa5vQ2sht3gblxv2EgLDOJjcHr92');
+    });
   }
 
   Future<void> getChats() async {

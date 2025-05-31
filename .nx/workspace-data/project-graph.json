@@ -1494,6 +1494,24 @@
         "hash": "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="
       }
     },
+    "npm:@d3vision/ip-token-bucket": {
+      "type": "npm",
+      "name": "npm:@d3vision/ip-token-bucket",
+      "data": {
+        "version": "1.0.1",
+        "packageName": "@d3vision/ip-token-bucket",
+        "hash": "sha512-biHaY95U5i4lAoJ7PpCAeh9t5iuBG1CcjQw7DW2hofVLNQhbzZduIM09N6LCmbAJ20yghIHVx4lMRzG4GRpyNQ=="
+      }
+    },
+    "npm:@d3vision/socket.io-rate-limiter": {
+      "type": "npm",
+      "name": "npm:@d3vision/socket.io-rate-limiter",
+      "data": {
+        "version": "1.0.1",
+        "packageName": "@d3vision/socket.io-rate-limiter",
+        "hash": "sha512-UVjEnFM49KlGAyeHzlRLeE/BxYj2oatb2ck1gGSnRs5At5BWnfer5jM+L6KMeWitrjNrsbjtZBUA0MGUmcCMOg=="
+      }
+    },
     "npm:@discoveryjs/json-ext": {
       "type": "npm",
       "name": "npm:@discoveryjs/json-ext",
@@ -12102,7 +12120,283 @@
         "type": "static"
       }
     ],
-    "lobay": [],
+    "lobay": [
+      {
+        "source": "lobay",
+        "target": "npm:@eslint/js",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/eslint",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/express",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/js",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/web",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nx/webpack",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@nxrocks/nx-flutter",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@pmmmwh/react-refresh-webpack-plugin",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@svgr/webpack",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@swc-node/register",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@swc/core",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@swc/helpers",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/aws-sdk",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/multer",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/socket.io",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@types/uuid",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:eslint",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:eslint-config-prettier",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:jest-environment-node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:nodemon",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:nx",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:prettier",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:react-refresh",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:ts-jest",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:ts-node",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:ts-node-dev",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:typescript-eslint",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:webpack-cli",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:@d3vision/socket.io-rate-limiter",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:aws-sdk",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:axios",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:bcryptjs",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:cors",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:express",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:express-validator",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:fb",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:firebase-admin",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:google-auth-library",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:helmet",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:inversify",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:multer",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:nodemailer",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:socket.io",
+        "type": "static"
+      },
+      {
+        "source": "lobay",
+        "target": "npm:uuid",
+        "type": "static"
+      }
+    ],
     "npm:@ampproject/remapping": [
       {
         "source": "npm:@ampproject/remapping",
@@ -14329,6 +14623,13 @@
       {
         "source": "npm:@jridgewell/trace-mapping@0.3.9",
         "target": "npm:@jridgewell/sourcemap-codec",
+        "type": "static"
+      }
+    ],
+    "npm:@d3vision/socket.io-rate-limiter": [
+      {
+        "source": "npm:@d3vision/socket.io-rate-limiter",
+        "target": "npm:@d3vision/ip-token-bucket",
         "type": "static"
       }
     ],
@@ -27816,5 +28117,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1748609975297
+  "computedAt": 1748689195848
 }

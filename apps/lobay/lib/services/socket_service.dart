@@ -198,4 +198,17 @@ class SocketService {
       log('Socket is not connected');
     }
   }
+
+  /// Emits markAsRead event to mark messages as read for a recipient
+  void markAsRead(String recipientId) {
+    if (_isConnected) {
+      final data = {
+        'recipientId': recipientId,
+      };
+      log('Emitting markAsRead event with data: $data');
+      socket.emit('markAsRead', data);
+    } else {
+      log('Socket is not connected');
+    }
+  }
 }

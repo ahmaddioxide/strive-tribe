@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_button.dart';
@@ -30,10 +32,10 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
               requestorId: notificationModel.requesterId,
               activityId: notificationModel.activityId,
               participationId: notificationModel.participationId,
-              notificationId: notificationModel.id,
+              notificationId: notificationModel.notificationId,
             ),
             arguments: {
-              'notificationId': notificationModel.id,
+              'notificationId': notificationModel.notificationId,
               'participationId': notificationModel.participationId,
               'userId': notificationModel.userId,
               'isFromNotification': true,
@@ -94,9 +96,11 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
                         buttonText: 'Accept',
                         textSize: 16,
                         onPressed: () async {
+                          log('Notification id ${notificationModel.notificationId}');
+                          log('Participation id ${notificationModel.participationId}');
                           await _controller
                               .acceptRequest(
-                            notificationId: notificationModel.id,
+                            notificationId: notificationModel.notificationId,
                             participationId: notificationModel.participationId,
                           )
                               .then((value) async {
@@ -116,7 +120,7 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
                       onPressed: () async {
                         await _controller
                             .declineRequest(
-                          notificationId: notificationModel.id,
+                          notificationId: notificationModel.notificationId,
                           participationId: notificationModel.participationId,
                         )
                             .then((value) async {

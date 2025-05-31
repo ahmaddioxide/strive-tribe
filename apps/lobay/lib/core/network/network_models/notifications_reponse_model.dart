@@ -48,7 +48,7 @@ class NotificationsResponse {
 }
 
 class NotificationModel {
-  final String id;
+  final String notificationId;
   final String userId;
   final String title;
   final String message;
@@ -65,7 +65,7 @@ class NotificationModel {
   final int version;
 
   NotificationModel({
-    required this.id,
+    required this.notificationId,
     required this.userId,
     required this.title,
     required this.message,
@@ -84,7 +84,7 @@ class NotificationModel {
 
   factory NotificationModel.fromJson(Map<String, dynamic> json) {
     return NotificationModel(
-      id: json['_id'],
+      notificationId: json['_id'],
       userId: json['userId'],
       title: json['title'],
       message: json['message'],
@@ -104,7 +104,7 @@ class NotificationModel {
 
   Map<String, dynamic> toJson() {
     return {
-      '_id': id,
+      '_id': notificationId,
       'userId': userId,
       'title': title,
       'message': message,

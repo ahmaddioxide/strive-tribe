@@ -65,16 +65,24 @@ export class ChatService {
     return messages;
   }
   // 🔹 Mark messages as read
-  async markMessagesAsRead(userId: string, recipientId: string) {
-    const participants = [userId, recipientId].sort();
+  async markMessagesAsRead(userId: string, otherUserId: string) {
+    const participants = [userId, otherUserId].sort();
     const room = await ChatRoomModel.findOne({ participants });
     if (!room) return;
 
     await MessageModel.updateMany(
-      { roomId: room._id, recipientId: userId, senderId: recipientId, read: false },
+      {
+        roomId: room._id,
+        read: false,
+        $or: [
+          { senderId: userId, recipientId: otherUserId },
+          { senderId: otherUserId, recipientId: userId },
+        ],
+      },
       { $set: { read: true } }
     );
   }
+
 
   // 🔹 Enriched chat list for frontend display
   async getChatList(userId: string) {

@@ -113,7 +113,7 @@ class Server {
       });
 
       // Updated sendMessage with validation & detailed logging
-      socket.on('sendMessage', async ({recipientId, content}) => {
+      socket.on('sendMessage', async ({ recipientId, content }) => {
         console.log('Received sendMessage payload:', { recipientId, content });
 
         if (!recipientId || !content) {
@@ -133,8 +133,12 @@ class Server {
             content
           );
 
+          // Emit to recipient and sender
           this.io.to(recipientId).emit('receiveMessage', message);
           socket.emit('receiveMessage', message);
+
+          // Also emit `newMessage` to recipient for new chat alert
+          this.io.to(recipientId).emit('newMessage', message);
         } catch (error: any) {
           console.error('Message send error:', error.message);
           socket.emit('error', {
@@ -144,43 +148,57 @@ class Server {
         }
       });
 
-      // Fetch chat history between users
-      socket.on('getAllChat', async (data: any, callback?: Function) => {
+
+      socket.on('getAllRoom', async () => {
         try {
-          // Validate parameters
+          const chatList = await this.chatService.getChatList(socket.data.userId);
+          socket.emit('chatRooms', {
+            success: true,
+            rooms: chatList,
+          });
+        } catch (err: any) {
+          console.error('getAllRoom error:', err.message);
+          socket.emit('error', {
+            event: 'getAllRoom',
+            message: err.message || 'Could not fetch chat rooms',
+          });
+        }
+      });
+      // Fetch chat history between users
+      socket.on('getAllChat', async (data: any) => {
+        try {
           if (!data || typeof data !== 'object') {
             throw new Error('Invalid request format');
           }
 
           const { recipientId } = data;
-          
-          // Check required fields
+
           if (!recipientId) {
-            throw new Error('recipientId is required');
+            socket.emit('error', {
+              event: 'getAllChat',
+              message: 'recipientId is required',
+            });
+            return;
           }
 
-          // Process request
           const messages = await this.chatService.getMessages(
             socket.data.userId,
             recipientId
           );
 
-          // Send response only if callback exists
-          if (typeof callback === 'function') {
-            callback({ success: true, messages });
-          }
+          socket.emit('historyMessage', {
+            success: true,
+            messages,
+          });
         } catch (error: any) {
           console.error('GetAllChat error:', error.message);
-          
-          // Send error response if callback exists
-          if (typeof callback === 'function') {
-            callback({ 
-              success: false, 
-              error: error.message || 'Unknown error' 
-            });
-          }
+          socket.emit('error', {
+            event: 'getAllChat',
+            message: error.message || 'Unknown error',
+          });
         }
       });
+
 
       socket.on('disconnect', (reason) => {
         console.log(`Disconnected: ${socket.id} - ${reason}`);

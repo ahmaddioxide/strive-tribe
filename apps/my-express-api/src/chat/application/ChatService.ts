@@ -1,3 +1,4 @@
+//src/chat/application/ChatService.ts
 import { injectable } from 'inversify';
 import MessageModel from '../infrastructure/models/Message';
 import ConversationModel from '../infrastructure/models/Conversation';

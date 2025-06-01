@@ -15,6 +15,5 @@ const ConversationSchema: Schema = new Schema({
     unreadCount: { type: Number, default: 0 }
 });
 
-ConversationSchema.index({ participants: 1 }, { unique: true });
 
 export default mongoose.model<IConversation>("Conversation", ConversationSchema);

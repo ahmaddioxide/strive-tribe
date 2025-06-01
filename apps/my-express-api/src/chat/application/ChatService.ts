@@ -64,22 +64,30 @@ export class ChatService {
     console.log(`Found ${messages.length} messages`);
     return messages;
   }
+  
   // 🔹 Mark messages as read
   async markMessagesAsRead(userId: string, otherUserId: string) {
     const participants = [userId, otherUserId].sort();
+
     const room = await ChatRoomModel.findOne({ participants });
     if (!room) return;
 
+    // Mark messages as read
     await MessageModel.updateMany(
       {
         roomId: room._id,
         read: false,
         $or: [
-          { senderId: userId, recipientId: otherUserId },
-          { senderId: otherUserId, recipientId: userId },
+          { senderId: otherUserId, recipientId: userId } // Only mark messages *to* the user
         ],
       },
       { $set: { read: true } }
+    );
+
+    // 🔸 Reset unread count in conversation
+    await ConversationModel.findOneAndUpdate(
+      { participants },
+      { $set: { unreadCount: 0 } }
     );
   }
 
@@ -119,6 +127,7 @@ export class ChatService {
 
     if (!room) {
       room = new ChatRoomModel({ participants });
+      console.log("room baby",room)
       await room.save();
     }
 

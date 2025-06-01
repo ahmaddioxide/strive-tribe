@@ -4,7 +4,9 @@ import 'package:lobay/features/inbox/presentation/controllers/chat_controller.da
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
-class ChatScreen extends StatelessWidget {
+import '../../../../utilities/mixins/device_size_util.dart';
+
+class ChatScreen extends StatelessWidget with DeviceSizeUtil {
   final String recipientId;
   final String recipientName;
   final String recipientImage;
@@ -28,6 +30,8 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<ChatController>();
+    final height = getDeviceHeight();
+    final width = getDeviceWidth();
 
     return Scaffold(
       appBar: AppBar(
@@ -35,9 +39,9 @@ class ChatScreen extends StatelessWidget {
           children: [
             CircleAvatar(
               backgroundImage: NetworkImage(recipientImage),
-              radius: 20,
+              radius: width * 0.05,
             ),
-            const SizedBox(width: 10),
+            SizedBox(width: 10),
             Text(
               recipientName,
               style: TextUtils.getStyle(
@@ -77,40 +81,80 @@ class ChatScreen extends StatelessWidget {
                       final message = controller.messages[index];
                       final isMe =
                           message['senderId'] == controller.currentUserId.value;
-                      return Align(
-                        alignment:
-                            isMe ? Alignment.centerRight : Alignment.centerLeft,
-                        child: Container(
-                          margin: const EdgeInsets.only(bottom: 16),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 10),
-                          decoration: BoxDecoration(
-                            color: isMe
-                                ? AppColors.primaryLight
-                                : Colors.grey[300],
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                message['content'],
-                                style: TextUtils.getStyle(
-                                  fontSize: 16,
-                                  color: isMe ? Colors.white : Colors.black,
-                                ),
+
+                      // Add date separator if needed
+                      Widget? dateSeparator;
+                      if (index == 0 ||
+                          !_isSameDay(
+                            _parseTimestamp(
+                                controller.messages[index - 1]['timestamp']),
+                            _parseTimestamp(message['timestamp']),
+                          )) {
+                        dateSeparator = Container(
+                          margin: const EdgeInsets.symmetric(vertical: 16),
+                          child: Center(
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: Colors.grey[200],
+                                borderRadius: BorderRadius.circular(12),
                               ),
-                              const SizedBox(height: 4),
-                              Text(
-                                _formatTimestamp(message['timestamp']),
+                              child: Text(
+                                _getDateSeparator(
+                                    _parseTimestamp(message['timestamp'])),
                                 style: TextUtils.getStyle(
                                   fontSize: 12,
-                                  color: isMe ? Colors.white70 : Colors.black54,
+                                  color: AppColors.primaryLight,
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                        );
+                      }
+
+                      return Column(
+                        children: [
+                          if (dateSeparator != null) dateSeparator,
+                          Align(
+                            alignment: isMe
+                                ? Alignment.centerRight
+                                : Alignment.centerLeft,
+                            child: Container(
+                              margin: const EdgeInsets.only(bottom: 16),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 10),
+                              decoration: BoxDecoration(
+                                color: isMe
+                                    ? AppColors.primaryLight
+                                    : Colors.grey[300],
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    message['content'],
+                                    style: TextUtils.getStyle(
+                                      fontSize: 16,
+                                      color: isMe ? Colors.white : Colors.black,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    _formatTimestamp(message['timestamp']),
+                                    style: TextUtils.getStyle(
+                                      fontSize: 12,
+                                      color: isMe
+                                          ? Colors.white70
+                                          : Colors.black54,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       );
                     },
                   );
@@ -119,12 +163,18 @@ class ChatScreen extends StatelessWidget {
             }),
           ),
           Container(
-            padding: const EdgeInsets.all(8),
+            width: width,
+            height: height * 0.1,
+            padding: EdgeInsets.only(
+                left: width * 0.05,
+                right: width * 0.05,
+                bottom: height * 0.03,
+                top: height * 0.01),
             decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.2),
+                  color: Colors.grey.withAlpha(20),
                   spreadRadius: 1,
                   blurRadius: 3,
                   offset: const Offset(0, -1),
@@ -156,6 +206,7 @@ class ChatScreen extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 IconButton(
+                  iconSize: 30,
                   onPressed: controller.sendMessage,
                   icon: const Icon(Icons.send),
                   color: AppColors.primaryLight,
@@ -163,6 +214,7 @@ class ChatScreen extends StatelessWidget {
               ],
             ),
           ),
+          // SizedBox(height: height * 0.03),
         ],
       ),
     );
@@ -176,5 +228,35 @@ class ChatScreen extends StatelessWidget {
       return '${dateTime.hour}:${dateTime.minute.toString().padLeft(2, '0')}';
     }
     return '';
+  }
+
+  String _getDateSeparator(DateTime date) {
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final yesterday = today.subtract(const Duration(days: 1));
+    final messageDate = DateTime(date.year, date.month, date.day);
+
+    if (messageDate == today) {
+      return 'Today';
+    } else if (messageDate == yesterday) {
+      return 'Yesterday';
+    } else {
+      return '${date.day}/${date.month}/${date.year}';
+    }
+  }
+
+  bool _isSameDay(DateTime date1, DateTime date2) {
+    return date1.year == date2.year &&
+        date1.month == date2.month &&
+        date1.day == date2.day;
+  }
+
+  DateTime _parseTimestamp(dynamic timestamp) {
+    if (timestamp is DateTime) {
+      return timestamp;
+    } else if (timestamp is String) {
+      return DateTime.parse(timestamp);
+    }
+    return DateTime.now();
   }
 }

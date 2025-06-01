@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lobay/features/inbox/presentation/screens/chat_screen.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
+import 'package:intl/intl.dart' as intl;
 
 import '../../../utilities/theme_utils/app_colors.dart';
 
@@ -53,6 +54,8 @@ class ChatRoomTile extends StatelessWidget with DeviceSizeUtil {
       ),
       subtitle: Text(
         lastMessage,
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
         style: TextUtils.getStyle(
           fontSize: 14,
           fontWeight: FontWeight.w400,
@@ -63,7 +66,22 @@ class ChatRoomTile extends StatelessWidget with DeviceSizeUtil {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(
-            lastMessageTime,
+            (() {
+              final messageDate = DateTime.parse(lastMessageTime);
+              final now = DateTime.now();
+              final today = DateTime(now.year, now.month, now.day);
+              final yesterday = today.subtract(const Duration(days: 1));
+              final messageDay = DateTime(
+                  messageDate.year, messageDate.month, messageDate.day);
+
+              if (messageDay == today) {
+                return 'Today, ${intl.DateFormat('h:mm a').format(messageDate)}';
+              } else if (messageDay == yesterday) {
+                return 'Yesterday, ${intl.DateFormat('h:mm a').format(messageDate)}';
+              } else {
+                return intl.DateFormat('MMM d, h:mm a').format(messageDate);
+              }
+            })(),
             style: TextUtils.getStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -72,10 +90,10 @@ class ChatRoomTile extends StatelessWidget with DeviceSizeUtil {
           SizedBox(height: height * 0.005),
           if (unreadCount > 0)
             Container(
-              width: width * 0.05,
-              height: width * 0.05,
+              width: width * 0.06,
+              height: width * 0.06,
               decoration: BoxDecoration(
-                color: AppColors.primaryLight,
+                color: AppColors.black,
                 shape: BoxShape.circle,
               ),
               child: Center(

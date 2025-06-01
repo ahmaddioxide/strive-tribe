@@ -40,6 +40,7 @@ class ChatController extends GetxController {
     _setupSocketListeners();
     _requestChatHistory();
     _listenToMessageStream();
+    _markMessagesAsRead();
   }
 
   void _listenToMessageStream() {
@@ -74,7 +75,7 @@ class ChatController extends GetxController {
   void _setupSocketListeners() {
     // Listen for chat history
     socketService.on('historyMessage', (data) {
-      log('historyMessage received in chat controller: $data');
+      // log('historyMessage received in chat controller: $data');
       if (data['success'] == true && data['messages'] != null) {
         final List<dynamic> historyMessages = data['messages'];
         messages.clear(); // Clear existing messages
@@ -181,6 +182,16 @@ class ChatController extends GetxController {
         curve: Curves.easeOut,
       );
     }
+  }
+
+  void _markMessagesAsRead() {
+    log('Marking messages as read for recipientId: $recipientId');
+    // socketService.emit('markAsRead', {
+    //   'recipientId': recipientId,
+    //   'senderId': currentUserId.value,
+    // });
+
+    socketService.markAsRead(recipientId);
   }
 
   @override

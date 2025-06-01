@@ -1608,15 +1608,15 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/inbox_screen.dart",
-          "hash": "7379874320601288078"
+          "hash": "2619392816131371466"
         },
         {
           "file": "apps/lobay/lib/features/inbox/presentation/controllers/chat_controller.dart",
-          "hash": "11205628020441546468"
+          "hash": "7666186262870083881"
         },
         {
           "file": "apps/lobay/lib/features/inbox/presentation/screens/chat_screen.dart",
-          "hash": "1077367431349441896"
+          "hash": "13472611361595883980"
         },
         {
           "file": "apps/lobay/lib/features/inbox/reposities/chat_repo.dart",
@@ -1624,7 +1624,7 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/widgets/chat_room_tile.dart",
-          "hash": "17171115314021054547"
+          "hash": "14261739445527683441"
         },
         {
           "file": "apps/lobay/lib/features/inbox/widgets/no_chat_widget.dart",

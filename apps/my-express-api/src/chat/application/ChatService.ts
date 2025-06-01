@@ -24,15 +24,36 @@ export class ChatService {
     await message.save();
 
     const participants = [senderId, recipientId].sort();
-    await ConversationModel.findOneAndUpdate(
-      { participants },
-      {
+
+    let conversation = await ConversationModel.findOne({ participants });
+
+    if (!conversation) {
+      // First time creating conversation
+      const unreadCounts = new Map<string, number>();
+      unreadCounts.set(senderId, 0);
+      unreadCounts.set(recipientId, 1);
+
+      conversation = new ConversationModel({
+        participants,
         lastMessage: content,
         lastMessageTimestamp: new Date(),
-        $inc: { [`unreadCounts.${recipientId}`]: 1 },
-      },
-      { upsert: true, new: true }
-    );
+        unreadCounts,
+      });
+      await conversation.save();
+    } else {
+      // Update existing conversation
+      let currentCount = 0;
+      if (conversation.unreadCounts instanceof Map) {
+        currentCount = conversation.unreadCounts.get(recipientId) || 0;
+        conversation.unreadCounts.set(recipientId, currentCount + 1);
+      } else if (conversation.unreadCounts && typeof conversation.unreadCounts === 'object') {
+        currentCount = conversation.unreadCounts[recipientId] || 0;
+        conversation.unreadCounts[recipientId] = currentCount + 1;
+      }
+      conversation.lastMessage = content;
+      conversation.lastMessageTimestamp = new Date();
+      await conversation.save();
+    }
 
     return message;
   }
@@ -96,7 +117,10 @@ export class ChatService {
           _id: conv._id,
           lastMessage: conv.lastMessage,
           lastMessageTimestamp: conv.lastMessageTimestamp,
-          unreadCount: conv.unreadCounts?.[userId] || 0,
+          unreadCount:
+            conv.unreadCounts instanceof Map
+              ? conv.unreadCounts.get(userId) || 0
+              : conv.unreadCounts?.[userId] || 0,
           recipient,
         };
       })

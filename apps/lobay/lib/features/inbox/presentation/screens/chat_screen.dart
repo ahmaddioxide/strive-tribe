@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-cached import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:lobay/features/inbox/presentation/controllers/chat_controller.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';

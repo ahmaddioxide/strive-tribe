@@ -90,7 +90,10 @@
         },
         {
           "file": "apps/my-express-api/src/activity/infrastructure/models/Activity.ts",
-          "hash": "6167283833298447540"
+          "hash": "18044900104512382002",
+          "deps": [
+            "npm:mongoose"
+          ]
         },
         {
           "file": "apps/my-express-api/src/activity/infrastructure/models/Notification.ts",
@@ -185,7 +188,7 @@
         },
         {
           "file": "apps/my-express-api/src/auth/interface/http/server.ts",
-          "hash": "9175279745454478905",
+          "hash": "13612785105090951418",
           "deps": [
             "npm:express",
             "npm:socket.io",
@@ -213,28 +216,28 @@
         },
         {
           "file": "apps/my-express-api/src/chat/application/ChatService.ts",
-          "hash": "4566045449584337466",
+          "hash": "12203894586519960456",
           "deps": [
             "npm:inversify"
           ]
         },
         {
           "file": "apps/my-express-api/src/chat/infrastructure/models/ChatRoom.ts",
-          "hash": "13926306759684502136",
+          "hash": "3474661046930252775",
           "deps": [
             "npm:mongoose"
           ]
         },
         {
           "file": "apps/my-express-api/src/chat/infrastructure/models/Conversation.ts",
-          "hash": "10415778401944524834",
+          "hash": "8609090932587113824",
           "deps": [
             "npm:mongoose"
           ]
         },
         {
           "file": "apps/my-express-api/src/chat/infrastructure/models/Message.ts",
-          "hash": "5698478871533881615",
+          "hash": "17475100002761831604",
           "deps": [
             "npm:mongoose"
           ]
@@ -1616,7 +1619,7 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/presentation/screens/chat_screen.dart",
-          "hash": "4124918527816041515"
+          "hash": "16464893447268176521"
         },
         {
           "file": "apps/lobay/lib/features/inbox/reposities/chat_repo.dart",
@@ -1900,7 +1903,7 @@
           "hash": "14086997084547600071"
         },
         {
-          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.fcc2679e-9b19-4094-83af-b7c07e768adb.json",
+          "file": "tmp/apps/my-express-api/serve/tsconfig.generated.bc0cb74f-e288-46ff-a908-7626a50d5dae.json",
           "hash": "14086997084547600071"
         },
         {

@@ -12081,6 +12081,11 @@
     "my-express-api": [
       {
         "source": "my-express-api",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
         "target": "npm:express",
         "type": "static"
       },
@@ -12107,11 +12112,6 @@
       {
         "source": "my-express-api",
         "target": "npm:jsonwebtoken",
-        "type": "static"
-      },
-      {
-        "source": "my-express-api",
-        "target": "npm:mongoose",
         "type": "static"
       },
       {
@@ -28117,5 +28117,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1748779280970
+  "computedAt": 1748781958338
 }

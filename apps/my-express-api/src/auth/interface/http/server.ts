@@ -250,6 +250,10 @@ class Server {
             message: 'Messages marked as read',
           });
 
+          const chatList1 = await this.chatService.getChatList(socket.data.userId);
+
+          this.io.to(socket.data.userId).emit('chatRooms', {success: true, rooms: chatList1});
+
         } catch (error: any) {
           console.error('markAsRead error:', error.message);
           socket.emit('error', {

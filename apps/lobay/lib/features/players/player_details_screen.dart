@@ -174,7 +174,7 @@ class _PlayerDetailsScreenState extends State<PlayerDetailsScreen> {
                         ),
                       ),
                       subtitle: Text(
-                        '${userDetails.activitiesPerMonth.first.count} activities',
+                        '${userDetails.activitiesPerMonth.isNotEmpty ? userDetails.activitiesPerMonth.first.count : 0} activities',
                         style: TextStyle(
                           fontSize: 16,
                           color: AppColors.black.withAlpha(100),

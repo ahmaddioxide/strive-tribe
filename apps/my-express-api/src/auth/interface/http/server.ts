@@ -138,22 +138,14 @@ class Server {
           // Emit to recipient and sender
           this.io.to(recipientId).emit('receiveMessage', message);
           socket.emit('receiveMessage', message);
-          // this.io.to(recipientId).emit('chatRooms', {success: true, rooms: chatList2});
-          // /*socket.emit('chatRooms', {
-          //     success: true,
-          //     rooms: chatList1,
-          //   });
-          // Also emit newMessage to recipient for new chat alert
+          
           this.io.to(recipientId).emit('newMessage', message);
           // const chatList = await this.chatService.getChatList(socket.data.userId);
 
 
           this.io.to(socket.data.userId).emit('chatRooms', {success: true, rooms: chatList1});
           this.io.to(recipientId).emit('chatRooms', {success: true, rooms: chatList2});
-          // socket.emit('chatRooms', {
-          //   success: true,
-          //   rooms: chatList,
-          // });
+          
         } catch (error: any) {
           console.error('Message send error:', error.message);
           socket.emit('error', {

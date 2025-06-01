@@ -11,7 +11,7 @@ const ActivitySchema: Schema = new Schema({
   Date: { type: String, required: true },
   Time: { type: String, required: true },
   notes: { type: String },
-  videoUrl: { type: String, required: true },
+  videoUrl: { type: String },
 }, { timestamps: true });
 
 export default mongoose.model<IActivity>("Activity", ActivitySchema);

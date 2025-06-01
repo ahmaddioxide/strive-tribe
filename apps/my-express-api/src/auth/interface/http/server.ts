@@ -143,7 +143,7 @@ class Server {
           //     success: true,
           //     rooms: chatList1,
           //   });
-          // Also emit `newMessage` to recipient for new chat alert
+          // Also emit newMessage to recipient for new chat alert
           this.io.to(recipientId).emit('newMessage', message);
           // const chatList = await this.chatService.getChatList(socket.data.userId);
 
@@ -162,6 +162,7 @@ class Server {
           });
         }
       });
+
 
 
       socket.on('getAllRoom', async () => {
@@ -248,11 +249,6 @@ class Server {
             success: true,
             message: 'Messages marked as read',
           });
-
-          // // Optionally, notify recipient
-          // this.io.to(recipientId).emit('messagesReadBy', {
-          //   from: socket.data.userId,
-          // });
 
         } catch (error: any) {
           console.error('markAsRead error:', error.message);

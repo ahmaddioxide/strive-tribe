@@ -12,8 +12,7 @@ const ChatRoomSchema: Schema = new Schema(
     participants: {
       type: [String],
       required: true,
-      validate: [(val: string[]) => val.length === 2, 'Participants must be exactly 2'],
-      index: true,
+      validate: [(val: string[]) => val.length == 2, 'Participants must be exactly 2']
     },
   },
   { timestamps: true }

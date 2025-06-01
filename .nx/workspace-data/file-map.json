@@ -1564,11 +1564,11 @@
         },
         {
           "file": "apps/lobay/lib/features/create_activity/create_activity_controller.dart",
-          "hash": "7899403707378019568"
+          "hash": "10434580655868811446"
         },
         {
           "file": "apps/lobay/lib/features/create_activity/create_activity_screen.dart",
-          "hash": "15257297728352963135"
+          "hash": "2018305338001832041"
         },
         {
           "file": "apps/lobay/lib/features/home/filter_bottomsheet_widget.dart",
@@ -1616,7 +1616,7 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/presentation/screens/chat_screen.dart",
-          "hash": "13472611361595883980"
+          "hash": "4124918527816041515"
         },
         {
           "file": "apps/lobay/lib/features/inbox/reposities/chat_repo.dart",
@@ -1624,7 +1624,7 @@
         },
         {
           "file": "apps/lobay/lib/features/inbox/widgets/chat_room_tile.dart",
-          "hash": "14261739445527683441"
+          "hash": "15838770265503802637"
         },
         {
           "file": "apps/lobay/lib/features/inbox/widgets/no_chat_widget.dart",
@@ -1808,7 +1808,7 @@
         },
         {
           "file": "apps/lobay/pubspec.yaml",
-          "hash": "1507473495870262645"
+          "hash": "17764811128566981781"
         },
         {
           "file": "apps/lobay/test/widget_test.dart",

@@ -131,12 +131,23 @@ class CreateActivityScreen extends StatelessWidget with DeviceSizeUtil {
                   validator: Validator.validateTime,
                 ),
                 SizedBox(height: height * 0.02),
-                Text(
-                  'Upload video (optional)',
-                  style: TextUtils.getStyle(
-                    fontSize: width * 0.034,
-                    color: AppColors.grey,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      'Upload video',
+                      style: TextUtils.getStyle(
+                        fontSize: width * 0.034,
+                        color: AppColors.grey,
+                      ),
+                    ),
+                    Text(
+                      ' (Optional)',
+                      style: TextUtils.getStyle(
+                        fontSize: width * 0.034,
+                        color: AppColors.grey.withOpacity(0.7),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(height: height * 0.006),
                 Obx(() {

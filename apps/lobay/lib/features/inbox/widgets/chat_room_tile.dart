@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:lobay/features/inbox/presentation/screens/chat_screen.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
@@ -43,7 +44,7 @@ class ChatRoomTile extends StatelessWidget with DeviceSizeUtil {
       onTap: _navigateToChat,
       leading: CircleAvatar(
         radius: width * 0.06,
-        backgroundImage: NetworkImage(profileImage),
+        backgroundImage: CachedNetworkImageProvider(profileImage),
       ),
       title: Text(
         recipientName,

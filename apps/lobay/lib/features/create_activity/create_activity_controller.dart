@@ -165,29 +165,23 @@ class CreateActivityController extends GetxController {
   }
 
   Future<bool> createActivity() async {
-    // video to base64
-
-    final String base64String = await convertVideoToBase64();
-    // log('BASE 64:$base64String');
+    String? base64String;
+    if (videoFile.value != null) {
+      base64String = await convertVideoToBase64();
+    }
 
     final changedDate = dateController.text.split('-').reversed.join('-');
     final userId = await PreferencesManager.getInstance()
         .getStringValue('userId', FirebaseAuth.instance.currentUser!.uid);
 
-    if (base64String.isEmpty) {
-      AppSnackbar.showErrorSnackBar(message: 'Please select a video');
-      return false;
-    }
     final CreateActivityBody createActivityBody = CreateActivityBody(
       userId: userId,
       Activity: selectedActivity.value,
       PlayerLevel: selectedPlayerLevel.value,
-
-      ///format date to dd-mm-yyyy
       Date: changedDate,
       Time: timeController.text,
       notes: notesController.text,
-      video: base64String.isNotEmpty
+      video: base64String != null && base64String.isNotEmpty
           ? 'data:video/mp4;base64,$base64String'
           : null,
     );

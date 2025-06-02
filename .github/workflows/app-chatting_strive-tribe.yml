@@ -24,9 +24,9 @@ jobs:
       - name: Build the Nx app
         run: npx nx build my-express-api
 
-     - name: Deploy to Azure Web App
-  uses: azure/webapps-deploy@v2
-  with:
-    app-name: strive-tribe
-    publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-    package: ./dist/apps/my-express-api
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: strive-tribe
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          package: ./dist/apps/my-express-api

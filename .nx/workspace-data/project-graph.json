@@ -313,7 +313,8 @@
         "metadata": {
           "targetGroups": {
             "NPM Scripts": [
-              "graph"
+              "graph",
+              "build:azure"
             ]
           },
           "description": "",
@@ -332,6 +333,18 @@
             "metadata": {
               "scriptContent": "nx graph",
               "runCommand": "npm run graph"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build:azure": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:azure"
+            },
+            "metadata": {
+              "scriptContent": "npx nx build my-express-api",
+              "runCommand": "npm run build:azure"
             },
             "configurations": {},
             "parallelism": true
@@ -28117,5 +28130,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1748842744907
+  "computedAt": 1748849922184
 }

@@ -1534,7 +1534,7 @@
         },
         {
           "file": "package.json",
-          "hash": "3720941799948160397",
+          "hash": "10914951995389303113",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/eslint",
@@ -1621,7 +1621,7 @@
       "my-express-api": [
         {
           "file": "apps/my-express-api/.env.serve.development",
-          "hash": "15370098924913737739"
+          "hash": "10723873487539126946"
         },
         {
           "file": "apps/my-express-api/eslint.config.cjs",

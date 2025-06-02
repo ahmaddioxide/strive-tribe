@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="notification screen ui partial">
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="azure cli added">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
@@ -429,7 +430,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745261669317</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="azure cli aded">
+      <option name="closed" value="true" />
+      <created>1748850474219</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1748850474219</updated>
+    </task>
+    <task id="LOCAL-00040" summary="azure cli added">
+      <option name="closed" value="true" />
+      <created>1748850738814</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1748850738814</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,8 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="User profile screen and edit profile UI" />
-    <MESSAGE value="logout and profile repo half" />
     <MESSAGE value="resolved json size issue in image" />
     <MESSAGE value="get user api changes" />
     <MESSAGE value="edit screen api integrated with out update functionality &#10;populated existing data" />
@@ -469,7 +484,9 @@
     <MESSAGE value="resolved nearby activities issue, and password text field issue" />
     <MESSAGE value="resolved date of birth selection issue on register screen" />
     <MESSAGE value="notification screen ui partial" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification screen ui partial" />
+    <MESSAGE value="azure cli aded" />
+    <MESSAGE value="azure cli added" />
+    <option name="LAST_COMMIT_MESSAGE" value="azure cli added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -41,6 +41,10 @@
           "hash": "18202584204078748354"
         },
         {
+          "file": ".github/instructions/workflows/app-chatting_strive-tribe.yml",
+          "hash": "12514658285290713666"
+        },
+        {
           "file": ".github/workflows/azure-webapps-my-express-api.yml",
           "hash": "5790354112809504119"
         },
@@ -86,7 +90,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "5617352291991607496"
+          "hash": "12695237977226704502"
         },
         {
           "file": ".prettierignore",

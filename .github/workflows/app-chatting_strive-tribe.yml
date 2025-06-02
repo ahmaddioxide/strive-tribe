@@ -1,5 +1,4 @@
 name: Build and deploy my-express-api to Azure
-slot-name: staging
 
 on:
   push:

@@ -1,4 +1,5 @@
 name: Build and deploy my-express-api to Azure
+slot-name: staging
 
 on:
   push:
@@ -28,5 +29,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: strive-tribe
+          slot-name: staging
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           package: ./dist/apps/my-express-api

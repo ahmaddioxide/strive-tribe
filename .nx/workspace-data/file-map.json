@@ -41,6 +41,10 @@
           "hash": "18202584204078748354"
         },
         {
+          "file": ".github/workflows/azure-webapps-my-express-api.yml",
+          "hash": "5790354112809504119"
+        },
+        {
           "file": ".github/workflows/ci.yml",
           "hash": "6968453139367291536"
         },
@@ -82,7 +86,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "9649231691654483474"
+          "hash": "5617352291991607496"
         },
         {
           "file": ".prettierignore",

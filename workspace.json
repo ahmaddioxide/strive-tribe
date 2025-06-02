@@ -1,0 +1,13 @@
+{
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "options": {
+        "outputPath": "dist/apps/my-express-api",
+        "main": "apps/my-express-api/src/main.ts",
+        "tsConfig": "apps/my-express-api/tsconfig.app.json",
+        "assets": []
+      }
+    }
+  }
+}

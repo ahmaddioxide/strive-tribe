@@ -1110,7 +1110,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/app_config.dart",
-          "hash": "407327238527491294"
+          "hash": "11564853360339628599"
         },
         {
           "file": "apps/lobay/lib/core/network/network_constants.dart",
@@ -1458,7 +1458,7 @@
         },
         {
           "file": "apps/lobay/lib/services/socket_service.dart",
-          "hash": "10503325482884333084"
+          "hash": "6109932137358486235"
         },
         {
           "file": "apps/lobay/lib/utilities/app_utils/app_utils.dart",
@@ -1612,6 +1612,10 @@
         {
           "file": "vercel.json",
           "hash": "9495053202890026468"
+        },
+        {
+          "file": "workspace.json",
+          "hash": "810318897123135401"
         }
       ],
       "my-express-api": [

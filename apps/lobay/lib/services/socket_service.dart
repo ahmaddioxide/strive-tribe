@@ -1,12 +1,13 @@
 import 'dart:developer';
 
+import 'package:lobay/core/network/app_config.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 import '../core/shared_preferences/shared_pref.dart';
 
 class SocketService {
   IO.Socket? socket;
-  final String _baseUrl = 'http://localhost:3000';
+  final String _baseUrl = AppConfig.baseUrl;
   bool _isConnected = false;
 
   // Singleton pattern

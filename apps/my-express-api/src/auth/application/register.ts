@@ -68,13 +68,40 @@ export class RegisterUser {
       const userId = userData.user_id;
       const firebase = this.config.initializeFirebase();
 
+      // try {
+      //   await firebase.auth().getUser(userId);
+      // } catch (error: any) {
+      //   if (error.code === 'auth/user-not-found') {
+      //     throw new Error('User not registered in Firebase. Please authenticate first.');
+      //   }
+      //   throw new Error(`Firebase verification failed: ${error.message}`);
+      // }
+      let firebaseUserExists = false;
       try {
         await firebase.auth().getUser(userId);
+        firebaseUserExists = true;
       } catch (error: any) {
         if (error.code === 'auth/user-not-found') {
           throw new Error('User not registered in Firebase. Please authenticate first.');
         }
         throw new Error(`Firebase verification failed: ${error.message}`);
+      }
+
+      //const locationDetails = await this.fetchLocationDetails(userData.postalCode);
+
+      let locationDetails
+      try {
+        locationDetails = await this.fetchLocationDetails(userData.postalCode);
+      } catch (error: any) {
+        if (firebaseUserExists) {
+          try {
+            await firebase.auth().deleteUser(userId);
+            console.log(`Firebase user ${userId} deleted due to invalid postal code`);
+          } catch (deleteError) {
+            console.error(`Failed to delete Firebase user ${userId}:`, deleteError);
+          }
+        }
+        throw new Error(error.message || "Invalid postal code");
       }
 
       let profileImageUrl = "NULL";
@@ -106,7 +133,8 @@ export class RegisterUser {
         profileImageUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`;
       }
 
-      const locationDetails = await this.fetchLocationDetails(userData.postalCode);
+      
+
 
       const newUser = new UserModel({
         userId: userData.user_id,

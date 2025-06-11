@@ -6,11 +6,14 @@ import { LoginUser } from "../../application/login";
 import { UpdateUser } from "../../application/update";
 import { CheckUser } from "../../application/check";
 import { GetUser } from "../../application/getUser";
+import { GetUserActivities } from "../../application/getUserActivities";
 import { GetUserStats } from "../../application/GetUserStats";
 import { FindNearbyPlayers } from "../../application/FindNearbyPlayers";
 import { GetCommonActivities } from "../../application/GetCommonActivities";
+import { GetTerms } from "../../application/getTerms";
+import { ReportProblem } from "../../application/reportProblem";
 import IController from "./IController";
-import { validateRegister, validateLogin, validateUpdate, validateCheckUser, validateGetUser, validateGetUserById, validateNearPlayerByUserById, validateCommonActivities } from "../middleware/validation";
+import { validateRegister, validateLogin, validateUpdate, validateCheckUser, validateGetUser, validateGetUserById, validateNearPlayerByUserById, validateCommonActivities, validateGetActivities, validateReportProblem } from "../middleware/validation";
 
 @injectable()
 export default class AuthController implements IController {
@@ -24,6 +27,9 @@ export default class AuthController implements IController {
   private getUserStats: GetUserStats;
   private findNearbyPlayers: FindNearbyPlayers;
   private getCommonActivities: GetCommonActivities;
+  private getUserActivities: GetUserActivities;
+  private getTerms: GetTerms;
+  private reportProblem: ReportProblem;
 
   constructor(
     @inject(RegisterUser) registerUser: RegisterUser,
@@ -33,7 +39,10 @@ export default class AuthController implements IController {
     @inject(GetUser) getUser: GetUser,
     @inject(GetUserStats) getUserStats: GetUserStats,
     @inject(FindNearbyPlayers) findNearbyPlayers: FindNearbyPlayers,
-    @inject(GetCommonActivities) getCommonActivities: GetCommonActivities
+    @inject(GetCommonActivities) getCommonActivities: GetCommonActivities,
+    @inject(GetUserActivities) getUserActivities: GetUserActivities,
+    @inject(GetTerms) getTerms: GetTerms,
+    @inject(ReportProblem) reportProblem: ReportProblem
   ) {
     this.registerUser = registerUser;
     this.loginUser = loginUser;
@@ -43,6 +52,9 @@ export default class AuthController implements IController {
     this.getUserStats = getUserStats;
     this.findNearbyPlayers = findNearbyPlayers;
     this.getCommonActivities = getCommonActivities;
+    this.getUserActivities = getUserActivities;
+    this.getTerms = getTerms;
+    this.reportProblem = reportProblem;
     this.initializeRoutes();
   }
 
@@ -86,6 +98,20 @@ export default class AuthController implements IController {
       `${this.path}/common_activities`,
       validateCommonActivities,
       this.handleCommonActivities.bind(this)
+    );
+    this.router.get(
+      `${this.path}/my_activities`,
+      validateGetActivities,
+      this.handleGetActivities.bind(this)
+    );
+    this.router.get(
+      `${this.path}/terms-and-conditions`,
+      this.handleGetTerms.bind(this)
+    );
+    this.router.post(
+      `${this.path}/report-problem`,
+      validateReportProblem,
+      this.handleReportProblem.bind(this)
     );
   }
 
@@ -259,6 +285,61 @@ export default class AuthController implements IController {
       res.status(500).json({
         success: false,
         error: error.message || "Failed to fetch common activities",
+      });
+    }
+  }
+
+  private async handleGetActivities(req: Request, res: Response) {
+    try {
+      const userId = req.query.userId as string;
+      const activities = await this.getUserActivities.execute(userId);
+
+      res.status(200).json({
+        success: true,
+        activities
+      });
+    } catch (error: any) {
+      res.status(500).json({
+        success: false,
+        error: error.message || "Failed to fetch activities"
+      });
+    }
+  }
+  private async handleGetTerms(req: Request, res: Response) {
+    try {
+      const terms = await this.getTerms.execute();
+      
+      res.status(200).json({
+        success: true,
+        terms
+      });
+    } catch (error: any) {
+      res.status(500).json({
+        success: false,
+        error: error.message || "Failed to fetch terms and conditions"
+      });
+    }
+  }
+
+  private async handleReportProblem(req: Request, res: Response) {
+    try {
+      const { name, email, description } = req.body;
+      
+      const report = await this.reportProblem.execute(
+        name,
+        email,
+        description
+      );
+      
+      res.status(201).json({
+        success: true,
+        message: "Problem report submitted successfully",
+        report
+      });
+    } catch (error: any) {
+      res.status(500).json({
+        success: false,
+        error: error.message || "Failed to submit problem report"
       });
     }
   }

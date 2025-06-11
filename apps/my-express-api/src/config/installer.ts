@@ -23,7 +23,9 @@ import { SendRequestActivity } from "../activity/application/SendRequestActivity
 import { GetCommonActivities } from "../auth/application/GetCommonActivities";
 import { ChatController } from "../chat/interface/http/chat.controller";
 import { ChatService } from "../chat/application/ChatService";
-
+import { GetUserActivities } from "../auth/application/getUserActivities";
+import { GetTerms } from "../auth/application/getTerms";
+import { ReportProblem } from "../auth/application/reportProblem";
 
 import { ParticipateActivity } from "../activity/application/ParticipateActivity";
 
@@ -50,6 +52,9 @@ container.bind<FindNearbyPlayers>(FindNearbyPlayers).toSelf();
 container.bind<SendRequestActivity>(SendRequestActivity).toSelf();
 container.bind<GetCommonActivities>(GetCommonActivities).toSelf();
 container.bind<ChatService>(ChatService).toSelf();
+container.bind<GetUserActivities>(GetUserActivities).toSelf();
+container.bind<GetTerms>(GetTerms).toSelf();
+container.bind<ReportProblem>(ReportProblem).toSelf();
 container.bind<ChatController>(Identifier.ChatController).to(ChatController);
 container.bind<AuthController>(Identifier.AuthController).to(AuthController);
 container.bind<ActivityController>(Identifier.ActivityController).to(ActivityController);

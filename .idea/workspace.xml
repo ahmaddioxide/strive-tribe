@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="notification screen ui partial">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+    <list default="true" id="07d31179-e853-45fd-a354-deed88fc27e4" name="Changes" comment="resolved minor issue, snackbars on error, go back buttons, signup without images">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
@@ -14,29 +13,10 @@
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/app_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/app_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/register_body_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_models/register_body_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/activity_details/activity_details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_in/signin_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/activity_selection_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/authentication/sign_up/signup_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/create_activity/create_activity_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/create_activity/create_activity_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/create_activity/create_activity_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/create_activity/create_activity_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/home/home_screen_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/inbox/presentation/controllers/chat_controller.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/inbox/presentation/screens/chat_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/inbox/widgets/chat_room_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/inbox/widgets/chat_room_tile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/repository/notification_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/repository/notification_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/widgets/notification_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/notifications/widgets/notification_tile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/onboarding/onboarding_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/players/controllers/activity_request_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/players/controllers/activity_request_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/players/player_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/players/player_details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/players/players_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/players/players_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/players/repo/players_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/players/repo/players_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/scheduled_activities/scheduled_activities_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/scheduled_activities/scheduled_activities_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/services/notification_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/services/notification_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/services/socket_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/services/socket_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/utilities/constants/app_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/utilities/constants/app_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/core/network/network_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/lib/features/profile/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/lobay/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -457,7 +437,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745261669317</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="resolved minor issue, snackbars on error, go back buttons, signup without images">
+      <option name="closed" value="true" />
+      <created>1749794111205</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1749794111205</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,7 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="User profile screen and edit profile UI" />
     <MESSAGE value="logout and profile repo half" />
     <MESSAGE value="resolved json size issue in image" />
     <MESSAGE value="get user api changes" />
@@ -497,7 +484,8 @@
     <MESSAGE value="resolved nearby activities issue, and password text field issue" />
     <MESSAGE value="resolved date of birth selection issue on register screen" />
     <MESSAGE value="notification screen ui partial" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="resolved minor issue, snackbars on error, go back buttons, signup without images" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolved minor issue, snackbars on error, go back buttons, signup without images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

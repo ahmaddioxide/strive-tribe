@@ -12086,6 +12086,31 @@
       },
       {
         "source": "my-express-api",
+        "target": "npm:inversify",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:firebase-admin",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:axios",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
+        "target": "npm:nodemailer",
+        "type": "static"
+      },
+      {
+        "source": "my-express-api",
         "target": "npm:express",
         "type": "static"
       },
@@ -12106,12 +12131,7 @@
       },
       {
         "source": "my-express-api",
-        "target": "npm:inversify",
-        "type": "static"
-      },
-      {
-        "source": "my-express-api",
-        "target": "npm:jsonwebtoken",
+        "target": "npm:express-validator",
         "type": "static"
       },
       {
@@ -28117,5 +28137,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1748962787592
+  "computedAt": 1749841424688
 }

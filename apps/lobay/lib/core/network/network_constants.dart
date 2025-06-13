@@ -84,6 +84,8 @@ class EndPoints {
 
   static const requestActivity = 'api/activities/request-avtivity';
 
+  static const String termsAndPolicy = 'api/auth/terms-and-conditions';
+
   // api/chat/chat-lists/?userId=MRh76OzNtWaPcBMuWMuxjtN9WiW2
   static getChats(String userId) => 'api/chat/chat-lists/?userId=$userId';
 }

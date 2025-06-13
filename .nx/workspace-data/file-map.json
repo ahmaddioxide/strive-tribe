@@ -438,7 +438,7 @@
         },
         {
           "file": ".idea/workspace.xml",
-          "hash": "7888063340705152406"
+          "hash": "4184686899901227032"
         },
         {
           "file": ".prettierignore",
@@ -1470,7 +1470,7 @@
         },
         {
           "file": "apps/lobay/lib/core/network/network_constants.dart",
-          "hash": "4556477801234740357"
+          "hash": "10542855405040069799"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/accept_participation_reponse_model.dart",
@@ -1535,6 +1535,14 @@
         {
           "file": "apps/lobay/lib/core/network/network_models/register_response_body.dart",
           "hash": "11869141909079480203"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/network_models/report_problem_body.dart",
+          "hash": "12533751098989284701"
+        },
+        {
+          "file": "apps/lobay/lib/core/network/network_models/report_problem_response.dart",
+          "hash": "6930488605185244497"
         },
         {
           "file": "apps/lobay/lib/core/network/network_models/request_activity_body.dart",
@@ -1762,11 +1770,27 @@
         },
         {
           "file": "apps/lobay/lib/features/profile/profile_screen.dart",
-          "hash": "4876441968037082856"
+          "hash": "18223645996928687304"
         },
         {
           "file": "apps/lobay/lib/features/profile/repository/profile_repo.dart",
           "hash": "7845531760258061530"
+        },
+        {
+          "file": "apps/lobay/lib/features/report_problem/report_problem_controller.dart",
+          "hash": "11312089612485337859"
+        },
+        {
+          "file": "apps/lobay/lib/features/report_problem/report_problem_repo/report_problem_repo.dart",
+          "hash": "5686950641232388399"
+        },
+        {
+          "file": "apps/lobay/lib/features/report_problem/report_problem_repo/report_problem_screen.dart",
+          "hash": "4055606894390288348"
+        },
+        {
+          "file": "apps/lobay/lib/features/report_problem/report_problem_screen.dart",
+          "hash": "11399881547097503705"
         },
         {
           "file": "apps/lobay/lib/features/scheduled_activities/filter_bottomsheet_widget.dart",

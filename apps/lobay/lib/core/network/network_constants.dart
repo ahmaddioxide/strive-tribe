@@ -88,4 +88,6 @@ class EndPoints {
 
   // api/chat/chat-lists/?userId=MRh76OzNtWaPcBMuWMuxjtN9WiW2
   static getChats(String userId) => 'api/chat/chat-lists/?userId=$userId';
+
+  static const String reportProblem = 'api/auth/report-problem';
 }

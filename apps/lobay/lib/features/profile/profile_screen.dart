@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_image_widget.dart';
 import 'package:lobay/features/profile/profile_controller.dart';
 import 'package:lobay/features/profile/edit_profile/edit_profile_screen.dart';
+import 'package:lobay/features/report_problem/report_problem_screen.dart';
 import 'package:lobay/features/scheduled_activities/scheduled_activities_screen.dart';
 import 'package:lobay/features/terms_and_policy/terms_and_pilicy_widget.dart';
 import 'package:lobay/utilities/mixins/device_size_util.dart';
@@ -183,7 +184,11 @@ class ProfileScreen extends StatelessWidget with DeviceSizeUtil {
                       ),
                       trailing:
                           Icon(Icons.arrow_forward_ios, color: AppColors.grey),
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(
+                          () => ReportProblemScreen(),
+                        );
+                      },
                     ),
                     ListTile(
                       leading: Icon(Icons.format_align_justify_rounded),

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "graph": "nx graph"
+    "graph": "nx graph",
+    "build:azure": "npx nx build my-express-api"
   },
   "author": "",
   "license": "ISC",

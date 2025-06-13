@@ -1,7 +1,7 @@
 import 'package:lobay/utilities/constants/app_enums.dart';
 
 class AppConfig {
-  static Environment environment = Environment.dev;
+  static Environment environment = Environment.staging;
 
   static String get baseUrl {
     switch (environment) {

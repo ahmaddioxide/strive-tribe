@@ -1,0 +1,82 @@
+name: Build and deploy my-express-api to Azure Web App - strive-tribe
+
+on:
+  push:
+    branches:
+      - app/chatting
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'  # Use a stable LTS version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the Nx app (my-express-api)
+        run: npx nx build my-express-api
+
+      - name: Zip built output
+        run: |
+          cd dist/apps/my-express-api
+          zip -r ../../my-express-api.zip ./
+
+      - name: Upload artifact for deploy job
+        uses: actions/upload-artifact@v4
+        with:
+          name: node-app
+          path: dist/my-express-api.zip
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Download artifact from build
+        uses: actions/download-artifact@v4
+        with:
+          name: node-app
+
+      - name: Unzip for deployment
+        run: unzip dist/my-express-api.zip -d deploy
+
+      # OPTION A: If using Azure federated credentials
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      # OPTION B (RECOMMENDED FOR SIMPLICITY): Use publish profile instead
+      # Uncomment this and comment out the above login block
+      # - name: Deploy to Azure Web App using publish profile
+      #   uses: azure/webapps-deploy@v3
+      #   with:
+      #     app-name: 'strive-tribe'
+      #     publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+      #     package: ./deploy
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'strive-tribe'
+          slot-name: 'Production'
+          package: ./deploy

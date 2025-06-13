@@ -1,0 +1,39 @@
+trigger:
+  - app/chatting
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  webAppName: 'lobay'
+  packagePath: '$(System.DefaultWorkingDirectory)/dist/apps/my-express-api'
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '22'
+    displayName: 'Install Node.js'
+
+  - script: |
+      echo "Installing dependencies..."
+      npm install
+      echo "Building Nx app..."
+      npx nx build my-express-api
+    displayName: 'Install and Build'
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(packagePath)'
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/lobay.zip'
+      replaceExistingArchive: true
+    displayName: 'Zip build output'
+
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: '$(azureSubscription)'  # Use your Azure service connection
+      appType: 'webApp'
+      appName: '$(webAppName)'
+      package: '$(Build.ArtifactStagingDirectory)/lobay.zip'
+    displayName: 'Deploy to Azure App Service'

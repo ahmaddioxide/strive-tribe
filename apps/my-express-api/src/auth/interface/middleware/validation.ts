@@ -206,3 +206,51 @@ export const validateCommonActivities = [
     next();
   }
 ];
+
+
+export const validateGetActivities = [
+  query("userId")
+    .notEmpty().withMessage("User ID is required")
+    .isString().withMessage("User ID must be a string")
+    .trim(),
+    
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        errors: errors.array()
+      });
+    }
+    next();
+  }
+];
+
+export const validateReportProblem = [
+  body("name")
+    .trim()
+    .notEmpty().withMessage("Name is required")
+    .isLength({ min: 3, max: 50 }).withMessage("Name must be 2-50 characters"),
+
+  body("email")
+    .trim()
+    .notEmpty().withMessage("Email is required")
+    .isEmail().withMessage("Invalid email format")
+    .normalizeEmail(),
+    
+  body("description")
+    .trim()
+    .notEmpty().withMessage("Description is required")
+    .isLength({ min: 5, max: 2000 }).withMessage("Description must be 5-1000 characters"),
+    
+  (req: Request, res: Response, next: NextFunction) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        errors: errors.array()
+      });
+    }
+    next();
+  }
+];

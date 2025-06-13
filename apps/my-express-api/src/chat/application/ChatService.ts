@@ -3,6 +3,7 @@ import MessageModel from '../infrastructure/models/Message';
 import ConversationModel from '../infrastructure/models/Conversation';
 import ChatRoomModel from '../infrastructure/models/ChatRoom';
 import UserModel from '../../auth/infrastructure/models/User';
+import admin from 'firebase-admin';
 
 @injectable()
 export class ChatService {
@@ -12,6 +13,9 @@ export class ChatService {
 
     const recipient = await UserModel.findOne({ userId: recipientId });
     if (!recipient) throw new Error('Recipient not found');
+
+    const sender = await UserModel.findOne({ userId: senderId });
+    if (!sender) throw new Error('Sender not found');
 
     const room = await this.getOrCreateRoom(senderId, recipientId);
 
@@ -28,7 +32,6 @@ export class ChatService {
     let conversation = await ConversationModel.findOne({ participants });
 
     if (!conversation) {
-      // First time creating conversation
       const unreadCounts = new Map<string, number>();
       unreadCounts.set(senderId, 0);
       unreadCounts.set(recipientId, 1);
@@ -41,7 +44,6 @@ export class ChatService {
       });
       await conversation.save();
     } else {
-      // Update existing conversation
       let currentCount = 0;
       if (conversation.unreadCounts instanceof Map) {
         currentCount = conversation.unreadCounts.get(recipientId) || 0;
@@ -53,6 +55,24 @@ export class ChatService {
       conversation.lastMessage = content;
       conversation.lastMessageTimestamp = new Date();
       await conversation.save();
+    }
+
+    // 🔔 Send Push Notification directly here
+    if (recipient.deviceToken) {
+      const notificationMessage = {
+        token: recipient.deviceToken,
+        notification: {
+          title: sender.name,
+          body: content,
+        },
+      };
+
+      try {
+        await admin.messaging().send(notificationMessage);
+        console.log('Notification sent successfully');
+      } catch (error) {
+        console.error('Error sending notification:', error);
+      }
     }
 
     return message;

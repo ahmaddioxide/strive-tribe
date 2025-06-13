@@ -35,19 +35,19 @@ class SignupController extends GetxController {
   final phoneController = TextEditingController();
 
   RxList<Tuple> activities = <Tuple>[
-    Tuple(
-        first: 'Badminton',
-        second: Assets.imagesBadminton,
-        third: RxBool(false)),
-    Tuple(
-        first: 'Basketball',
-        second: Assets.imagesBaseketball,
-        third: RxBool(false)),
-    Tuple(first: 'Cricket', second: Assets.imagesCricket, third: RxBool(false)),
-    Tuple(first: 'Soccer', second: Assets.imagesSoccer, third: RxBool(false)),
+    // Tuple(
+    // first: 'Badminton',
+    // second: Assets.imagesBadminton,
+    // third: RxBool(false)),
+    // Tuple(
+    // first: 'Basketball',
+    // second: Assets.imagesBaseketball,
+    // third: RxBool(false)),
+    // Tuple(first: 'Cricket', second: Assets.imagesCricket, third: RxBool(false)),
+    // Tuple(first: 'Soccer', second: Assets.imagesSoccer, third: RxBool(false)),
     Tuple(first: 'Tennis', second: Assets.imagesTennis, third: RxBool(false)),
-    Tuple(
-        first: 'Baseball', second: Assets.imagesBaseball, third: RxBool(false)),
+    // Tuple(
+    //     first: 'Baseball', second: Assets.imagesBaseball, third: RxBool(false)),
   ].obs;
   RxList<Pair> selectedActivities = <Pair>[].obs;
   List<String> expertiseLevel = AppConstants.expertiseLevel;
@@ -194,7 +194,6 @@ class SignupController extends GetxController {
   }
 
   Future<bool> signup() async {
-    // return false;
     try {
       final User? user = await AuthService().signUpWithEmailAndPassword(
           email: emailController.text.trim(),
@@ -207,6 +206,8 @@ class SignupController extends GetxController {
             expertiseLevel: activity.second,
           ));
         }
+
+        // Create base model without profile image
         final RegisterBodyModel registerBodyModel = RegisterBodyModel(
           userId: user.uid,
           email: emailController.text,
@@ -217,10 +218,14 @@ class SignupController extends GetxController {
           phone: phoneController.text.trim(),
           signInWith: 'email_password',
           activities: activities,
-          profileImage: await profileImage.value!
-              .readAsBytes()
-              .then((value) => 'data:image/png;base64,${base64Encode(value)}'),
         );
+
+        // Only add profile image if it exists
+        if (profileImage.value != null) {
+          registerBodyModel.profileImage = await profileImage.value!
+              .readAsBytes()
+              .then((value) => 'data:image/png;base64,${base64Encode(value)}');
+        }
 
         final RegisterResponseBody? registerResponse =
             await _authRepo.register(registerBodyModel);
@@ -272,6 +277,8 @@ class SignupController extends GetxController {
             expertiseLevel: activity.second,
           ));
         }
+
+        // Create base model without profile image
         final RegisterBodyModel registerBodyModel = RegisterBodyModel(
           userId: user.uid,
           email: emailController.text,
@@ -282,10 +289,14 @@ class SignupController extends GetxController {
           phone: phoneController.text.trim(),
           signInWith: 'google',
           activities: activities,
-          profileImage: await profileImage.value!
-              .readAsBytes()
-              .then((value) => 'data:image/png;base64,${base64Encode(value)}'),
         );
+
+        // Only add profile image if it exists
+        if (profileImage.value != null) {
+          registerBodyModel.profileImage = await profileImage.value!
+              .readAsBytes()
+              .then((value) => 'data:image/png;base64,${base64Encode(value)}');
+        }
 
         final RegisterResponseBody? registerResponse =
             await _authRepo.register(registerBodyModel);

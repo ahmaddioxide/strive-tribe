@@ -6,6 +6,7 @@ import 'package:lobay/features/authentication/sign_up/widgets/activity_container
 import 'package:lobay/features/authentication/sign_up/widgets/select_activity_top_bar.dart';
 
 import 'package:lobay/utilities/mixins/device_size_util.dart';
+import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
 class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
   final bool isGoogleLogin;
@@ -41,6 +42,13 @@ class ActivitySelectionScreen extends StatelessWidget with DeviceSizeUtil {
               ),
             );
           }),
+          SizedBox(
+            height: height * 0.02,
+          ),
+          Text(
+            '*Note: More activities will be added soon',
+            style: TextStyle(color: AppColors.grey, fontSize: 12),
+          ),
           SizedBox(
             height: height * 0.02,
           ),

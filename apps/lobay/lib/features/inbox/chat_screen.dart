@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:lobay/features/inbox/presentation/controllers/chat_controller.dart';
+import 'package:lobay/features/inbox/chat_controller.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
-import '../../../../utilities/mixins/device_size_util.dart';
+import '../../utilities/mixins/device_size_util.dart';
 
 class ChatScreen extends StatelessWidget with DeviceSizeUtil {
   final String recipientId;
@@ -66,7 +66,7 @@ class ChatScreen extends StatelessWidget with DeviceSizeUtil {
             child: Obx(() {
               if (controller.messages.isEmpty) {
                 return const Center(
-                  child: CircularProgressIndicator(),
+                  child: Text('No messages yet'),
                 );
               }
 

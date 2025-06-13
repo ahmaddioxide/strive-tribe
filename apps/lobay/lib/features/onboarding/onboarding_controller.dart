@@ -24,8 +24,9 @@ class OnboardingController extends GetxController {
 
   /// Skip directly to the last page
   void skipOnboarding() {
-    pageController.jumpToPage(2);
-    currentPage.value = 2;
+    // pageController.jumpToPage(2);
+    // currentPage.value = 2;
+    Get.offAll(() => SigninScreen());
   }
 
   /// Restart onboarding from first page

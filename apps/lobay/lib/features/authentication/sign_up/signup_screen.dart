@@ -84,6 +84,7 @@ class SignupForm extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               validator: Validator.validateEmail,
               enabled: !isGoogleLogin,
+              autoValidateMode: AutovalidateMode.onUserInteraction,
             ),
             SizedBox(height: height * 0.01),
             Row(
@@ -105,6 +106,7 @@ class SignupForm extends StatelessWidget {
                         keyboardType: TextInputType.name,
                         validator: Validator.validateName,
                         enabled: !isGoogleLogin,
+                        autoValidateMode: AutovalidateMode.onUserInteraction,
                       ),
                     ],
                   ),
@@ -155,6 +157,7 @@ class SignupForm extends StatelessWidget {
                           signupController.showDatePickerAdaptive(context);
                         },
                         validator: Validator.validateDateOfBirth,
+                        autoValidateMode: AutovalidateMode.onUserInteraction,
                       ),
                     ],
                   ),
@@ -176,6 +179,7 @@ class SignupForm extends StatelessWidget {
                           color: AppColors.grey,
                         ),
                         validator: Validator.validateLocation,
+                        autoValidateMode: AutovalidateMode.onUserInteraction,
                       ),
                     ],
                   ),
@@ -212,6 +216,7 @@ class SignupForm extends StatelessWidget {
                     keyboardType: TextInputType.visiblePassword,
                     isPassword: true,
                     validator: Validator.validatePassword,
+                    autoValidateMode: AutovalidateMode.onUserInteraction,
                   )
                 : SizedBox.shrink(),
             SizedBox(height: height * 0.01),
@@ -284,10 +289,9 @@ class SignupForm extends StatelessWidget {
                 ),
                 onPressed: () async {
                   //validate form
-                  // await signupController.signup();
 
                   if (signupController.formKey.currentState!.validate()) {
-                    // signupController.formKey.currentState!.save();
+                    // signupController.formKey.currentState!.();
                     Get.to(
                       () => ActivitySelectionScreen(
                         isGoogleLogin: isGoogleLogin,

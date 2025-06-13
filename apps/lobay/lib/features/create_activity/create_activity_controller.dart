@@ -15,7 +15,7 @@ import 'package:lobay/utilities/theme_utils/app_colors.dart';
 class CreateActivityController extends GetxController {
   RxBool isApiCalling = false.obs;
   final ActivityRepo activityRepo = ActivityRepo();
-  RxString selectedActivity = 'Badminton'.obs;
+  RxString selectedActivity = 'Tennis'.obs;
   RxString selectedPlayerLevel = 'Beginner'.obs;
   final dateController = TextEditingController();
   final timeController = TextEditingController();

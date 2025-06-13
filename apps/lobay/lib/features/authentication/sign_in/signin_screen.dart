@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -147,6 +148,7 @@ class LoginForm extends StatelessWidget {
               controller: signInController.emailController,
               keyboardType: TextInputType.emailAddress,
               validator: Validator.validateEmail,
+              autoValidateMode: AutovalidateMode.onUserInteraction,
             ),
             SizedBox(height: height * 0.02),
             Text(
@@ -162,6 +164,7 @@ class LoginForm extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               isPassword: true,
               validator: Validator.validatePassword,
+              autoValidateMode: AutovalidateMode.onUserInteraction,
             ),
             SizedBox(height: height * 0.01),
             Row(
@@ -303,6 +306,11 @@ class LoginForm extends StatelessWidget {
               children: [
                 AppClickWidget(
                   onTap: () async {
+                    if (Platform.isIOS) {
+                      AppSnackbar.showErrorSnackBar(
+                          message: 'Feature coming soon for iOS');
+                      return;
+                    }
                     await AuthService().signInWithGoogle();
                   },
                   child: Container(

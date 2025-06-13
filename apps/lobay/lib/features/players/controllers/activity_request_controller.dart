@@ -137,11 +137,11 @@ class ActivityRequestController extends GetxController {
         Get.back();
         AppSnackbar.showSuccessSnackBar(message: 'Request Sent');
       } else {
-        AppSnackbar.showErrorSnackBar(message: 'Failed to send request');
+        // AppSnackbar.showErrorSnackBar(message: 'Failed to send request');
       }
     } catch (e) {
       log('Failed to send request: $e');
-      AppSnackbar.showErrorSnackBar(message: 'Failed to send request');
+      // AppSnackbar.showErrorSnackBar(message: 'Failed to send request');
     }
   }
 

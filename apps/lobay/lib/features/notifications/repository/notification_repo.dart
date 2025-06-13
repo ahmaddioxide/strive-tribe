@@ -1,3 +1,6 @@
+import 'dart:developer' show log;
+
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/accept_participation_body_model.dart';
 import 'package:lobay/core/network/api_client.dart';
 import 'package:lobay/core/network/network_constants.dart';
@@ -28,7 +31,9 @@ class NotificationRepository {
   }
 
   Future<AcceptParticipationResponseModel> acceptNotification(
-      {required String notificationId, required String status, required String participationId}) async {
+      {required String notificationId,
+      required String status,
+      required String participationId}) async {
     final AcceptParticipationBodyModel acceptParticipationBodyModel =
         AcceptParticipationBodyModel(
       notificationId: notificationId,
@@ -43,9 +48,11 @@ class NotificationRepository {
       if (response == null) {
         throw Exception('No response from server');
       }
-      if (response.statusCode! >= 200 || response.statusCode! < 300) {
+      log('response.data ${response.data}');
+      if (response.statusCode! >= 200 && response.statusCode! < 300) {
         return AcceptParticipationResponseModel.fromJson(response.data);
       } else {
+        AppSnackbar.showErrorSnackBar(message: response.data['error']);
         throw Exception('Failed to accept participation');
       }
     } catch (e) {

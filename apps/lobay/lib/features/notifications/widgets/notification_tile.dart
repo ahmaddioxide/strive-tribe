@@ -109,8 +109,9 @@ class NotificationTile extends StatelessWidget with DeviceSizeUtil {
                                   message: 'Accepted');
                               await _controller.fetchNotifications();
                             } else {
-                              AppSnackbar.showErrorSnackBar(
-                                  message: 'Failed to accept');
+                              // AppSnackbar.showErrorSnackBar(
+                              //     message: 'Failed to accept');
+                              return;
                             }
                           });
                         },

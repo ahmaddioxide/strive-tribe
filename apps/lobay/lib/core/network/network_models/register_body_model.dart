@@ -30,7 +30,7 @@ class RegisterBodyModel {
   String phone;
   String signInWith;
   List<Activity> activities;
-  String profileImage;
+  String? profileImage;
 
   //constructor
   RegisterBodyModel({
@@ -43,7 +43,7 @@ class RegisterBodyModel {
     required this.phone,
     required this.signInWith,
     required this.activities,
-    required this.profileImage,
+    this.profileImage,
   });
 
   //toJson
@@ -59,7 +59,7 @@ class RegisterBodyModel {
       'phone': phone,
       'signInWith': signInWith,
       'activities': activities.map((activity) => activity.toJson()).toList(),
-      'profile_image': profileImage,
+      if (profileImage != null) 'profile_image': profileImage,
     };
   }
 
@@ -77,7 +77,7 @@ class RegisterBodyModel {
       activities: (json['activities'] as List)
           .map((activity) => Activity.fromJson(activity))
           .toList(),
-      profileImage: json['profile_image'],
+      profileImage: json['profile_image'] ?? null,
     );
   }
 }

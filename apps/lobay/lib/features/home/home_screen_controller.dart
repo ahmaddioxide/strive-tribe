@@ -51,8 +51,7 @@ class HomeScreenController extends GetxController {
       );
       if (response != null) {
         activitiesList.value = response.activities;
-      } else {
-      }
+      } else {}
     } catch (e) {
       // Handle exceptions
       if (kDebugMode) {
@@ -63,11 +62,11 @@ class HomeScreenController extends GetxController {
 
   final RxList<Pair<String, RxBool>> activities = <Pair<String, RxBool>>[
     Pair(AppConstants.activities[0], false.obs),
-    Pair(AppConstants.activities[1], false.obs),
-    Pair(AppConstants.activities[2], false.obs),
-    Pair(AppConstants.activities[3], false.obs),
-    Pair(AppConstants.activities[4], false.obs),
-    Pair(AppConstants.activities[5], false.obs),
+    // Pair(AppConstants.activities[1], false.obs),
+    // Pair(AppConstants.activities[2], false.obs),
+    // Pair(AppConstants.activities[3], false.obs),
+    // Pair(AppConstants.activities[4], false.obs),
+    // Pair(AppConstants.activities[5], false.obs),
   ].obs;
   final RxList<Pair<String, RxBool>> playerLevel = <Pair<String, RxBool>>[
     Pair(AppConstants.expertiseLevel[0], false.obs),

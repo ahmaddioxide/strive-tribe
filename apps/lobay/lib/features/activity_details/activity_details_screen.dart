@@ -53,12 +53,26 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                       () => controller.isInitialized.value
                           ? GestureDetector(
                               onTap: controller.togglePlayPause,
-                              child: AspectRatio(
-                                aspectRatio: controller
-                                    .videoController.value.aspectRatio,
-                                child: VideoPlayer(
-                                  controller.videoController,
-                                ),
+                              child: Builder(
+                                builder: (_) {
+                                  final aspectRatio = controller
+                                      .videoController.value.aspectRatio;
+                                  final videoWidget = AspectRatio(
+                                    aspectRatio: aspectRatio,
+                                    child:
+                                        VideoPlayer(controller.videoController),
+                                  );
+                                  // If portrait (aspectRatio < 1), center horizontally
+                                  if (aspectRatio < 1) {
+                                    return Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [videoWidget],
+                                    );
+                                  } else {
+                                    return videoWidget;
+                                  }
+                                },
                               ),
                             )
                           : Container(
@@ -141,6 +155,7 @@ class ActivityDetailsScreen extends StatelessWidget with DeviceSizeUtil {
                 ),
                 trailing: ClipOval(
                   child: AppImageWidget(
+                    boxFit: BoxFit.cover,
                     height: 60,
                     width: 60,
                     networkImage: controller

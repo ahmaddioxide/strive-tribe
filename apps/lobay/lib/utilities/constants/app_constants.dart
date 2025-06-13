@@ -8,12 +8,12 @@ class AppConstants {
   static String authBaseToken = '';
 
   static const List<String> activities = [
-    'Soccer',
-    'Basketball',
+    // 'Soccer',
+    // 'Basketball',
     'Tennis',
-    'Cricket',
-    'Badminton',
-    'Baseball',
+    // 'Cricket',
+    // 'Badminton',
+    // 'Baseball',
   ];
 
   static const List<String> expertiseLevel = [

@@ -10,7 +10,7 @@ import 'package:lobay/utilities/mixins/device_size_util.dart';
 import 'package:lobay/utilities/text_utils/text_style_utils.dart';
 import 'package:lobay/utilities/theme_utils/app_colors.dart';
 
-import '../inbox/presentation/screens/chat_screen.dart';
+import '../inbox/chat_screen.dart';
 
 class PlayerDetailsScreen extends StatefulWidget with DeviceSizeUtil {
   final Player player;

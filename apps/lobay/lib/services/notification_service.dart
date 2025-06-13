@@ -44,9 +44,13 @@ class NotificationService {
     await _localNotifications.initialize(initSettings);
 
     // Get the device token
-    _deviceToken = await _firebaseMessaging.getToken();
+    try {
+      _deviceToken = await _firebaseMessaging.getToken();
+      await updateUserToken(deviceToken: _deviceToken!);
+    } catch (e) {
+      debugPrint('Error getting FCM token: $e');
+    }
     debugPrint('FCM Token: $_deviceToken');
-    await updateUserToken(deviceToken: _deviceToken!);
 
     // Handle token refresh
     _firebaseMessaging.onTokenRefresh.listen((token) async {

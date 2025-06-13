@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/core/network/api_client.dart';
 import 'package:lobay/core/network/network_constants.dart';
 import 'package:lobay/core/network/network_models/get_nearby_players_response_model.dart';
@@ -31,9 +32,11 @@ class PlayersRepository {
       final response = await _apiClient.post(EndPoints.requestActivity,
           data: requestActivityBody.toJsonString(), retryCallback: () {});
 
-      if (response.statusCode! >= 200 && response.statusCode! < 300) {
+      if (response.statusCode! > 300) {
+        AppSnackbar.showErrorSnackBar(message: response.data['error']);
         throw Exception('Failed to request activity');
       }
+
       return true;
     } catch (e) {
       log('Failed to request activity: $e');

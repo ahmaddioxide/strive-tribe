@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lobay/common_widgets/app_button.dart';
 import 'package:lobay/common_widgets/app_click_widget.dart';
 import 'package:lobay/common_widgets/app_drop_down.dart';
+import 'package:lobay/common_widgets/app_snackbars.dart';
 import 'package:lobay/common_widgets/app_text_field.dart';
 import 'package:lobay/features/create_activity/create_activity_controller.dart';
 import 'package:lobay/utilities/app_utils/validators.dart';
@@ -96,6 +97,7 @@ class CreateActivityScreen extends StatelessWidget with DeviceSizeUtil {
                   controller: controller.dateController,
                   keyboardType: TextInputType.datetime,
                   // enabled: false,/
+                  autoValidateMode: AutovalidateMode.onUserInteraction,
                   readOnly: true,
                   trailingIcon: Icon(
                     Icons.calendar_month_rounded,
@@ -120,6 +122,7 @@ class CreateActivityScreen extends StatelessWidget with DeviceSizeUtil {
                   controller: controller.timeController,
                   keyboardType: TextInputType.datetime,
                   // enabled: false,/
+                  autoValidateMode: AutovalidateMode.onUserInteraction,
                   readOnly: true,
                   trailingIcon: Icon(
                     Icons.access_time_outlined,
@@ -144,7 +147,7 @@ class CreateActivityScreen extends StatelessWidget with DeviceSizeUtil {
                       ' (Optional)',
                       style: TextUtils.getStyle(
                         fontSize: width * 0.034,
-                        color: AppColors.grey.withOpacity(0.7),
+                        color: AppColors.grey.withAlpha(500),
                       ),
                     ),
                   ],
@@ -236,7 +239,14 @@ class CreateActivityScreen extends StatelessWidget with DeviceSizeUtil {
                         if (controller.formKey.currentState!.validate()) {
                           final isCrated = await controller.createActivity();
                           if (isCrated) {
-                            Get.back();
+                            await AppSnackbar.showSuccessSnackBar(
+                                message: 'Activity created successfully');
+
+                            if (Navigator.canPop(context)) {
+                              Navigator.pop(context);
+                            } else {
+                              Get.back();
+                            }
                           } else {
                             print('Activity creation failed');
                           }
